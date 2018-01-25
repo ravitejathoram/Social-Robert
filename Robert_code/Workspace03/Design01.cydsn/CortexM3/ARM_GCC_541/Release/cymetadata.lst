@@ -1,0 +1,1016 @@
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.type	cy_meta_configecc, %object
+  26              		.size	cy_meta_configecc, 508
+  27              	cy_meta_configecc:
+  28 0000 02       		.byte	2
+  29 0001 52       		.byte	82
+  30 0002 00       		.byte	0
+  31 0003 40       		.byte	64
+  32 0004 02       		.byte	2
+  33 0005 64       		.byte	100
+  34 0006 00       		.byte	0
+  35 0007 40       		.byte	64
+  36 0008 41       		.byte	65
+  37 0009 02       		.byte	2
+  38 000a 01       		.byte	1
+  39 000b 40       		.byte	64
+  40 000c 1E       		.byte	30
+  41 000d 03       		.byte	3
+  42 000e 01       		.byte	1
+  43 000f 40       		.byte	64
+  44 0010 45       		.byte	69
+  45 0011 04       		.byte	4
+  46 0012 01       		.byte	1
+  47 0013 40       		.byte	64
+  48 0014 25       		.byte	37
+  49 0015 05       		.byte	5
+  50 0016 01       		.byte	1
+  51 0017 40       		.byte	64
+  52 0018 02       		.byte	2
+  53 0019 07       		.byte	7
+  54 001a 01       		.byte	1
+  55 001b 40       		.byte	64
+  56 001c 08       		.byte	8
+  57 001d 41       		.byte	65
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 2
+
+
+  58 001e 01       		.byte	1
+  59 001f 40       		.byte	64
+  60 0020 04       		.byte	4
+  61 0021 42       		.byte	66
+  62 0022 01       		.byte	1
+  63 0023 40       		.byte	64
+  64 0024 01       		.byte	1
+  65 0025 43       		.byte	67
+  66 0026 01       		.byte	1
+  67 0027 40       		.byte	64
+  68 0028 03       		.byte	3
+  69 0029 50       		.byte	80
+  70 002a 01       		.byte	1
+  71 002b 40       		.byte	64
+  72 002c 00       		.byte	0
+  73 002d 41       		.byte	65
+  74 002e 01       		.byte	1
+  75 002f 01       		.byte	1
+  76 0030 83       		.byte	-125
+  77 0031 0F       		.byte	15
+  78 0032 85       		.byte	-123
+  79 0033 0F       		.byte	15
+  80 0034 40       		.byte	64
+  81 0035 60       		.byte	96
+  82 0036 41       		.byte	65
+  83 0037 05       		.byte	5
+  84 0038 49       		.byte	73
+  85 0039 FF       		.byte	-1
+  86 003a 4A       		.byte	74
+  87 003b FF       		.byte	-1
+  88 003c 4B       		.byte	75
+  89 003d FF       		.byte	-1
+  90 003e 4D       		.byte	77
+  91 003f A0       		.byte	-96
+  92 0040 4F       		.byte	79
+  93 0041 04       		.byte	4
+  94 0042 50       		.byte	80
+  95 0043 18       		.byte	24
+  96 0044 5A       		.byte	90
+  97 0045 04       		.byte	4
+  98 0046 5F       		.byte	95
+  99 0047 01       		.byte	1
+ 100 0048 60       		.byte	96
+ 101 0049 40       		.byte	64
+ 102 004a 62       		.byte	98
+ 103 004b C0       		.byte	-64
+ 104 004c 64       		.byte	100
+ 105 004d 40       		.byte	64
+ 106 004e 65       		.byte	101
+ 107 004f 40       		.byte	64
+ 108 0050 66       		.byte	102
+ 109 0051 C0       		.byte	-64
+ 110 0052 68       		.byte	104
+ 111 0053 C0       		.byte	-64
+ 112 0054 6A       		.byte	106
+ 113 0055 C0       		.byte	-64
+ 114 0056 6C       		.byte	108
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 3
+
+
+ 115 0057 C0       		.byte	-64
+ 116 0058 6E       		.byte	110
+ 117 0059 C0       		.byte	-64
+ 118 005a 89       		.byte	-119
+ 119 005b 02       		.byte	2
+ 120 005c 8D       		.byte	-115
+ 121 005d 08       		.byte	8
+ 122 005e 8E       		.byte	-114
+ 123 005f 02       		.byte	2
+ 124 0060 92       		.byte	-110
+ 125 0061 01       		.byte	1
+ 126 0062 97       		.byte	-105
+ 127 0063 03       		.byte	3
+ 128 0064 9A       		.byte	-102
+ 129 0065 0E       		.byte	14
+ 130 0066 9B       		.byte	-101
+ 131 0067 0C       		.byte	12
+ 132 0068 A6       		.byte	-90
+ 133 0069 08       		.byte	8
+ 134 006a AA       		.byte	-86
+ 135 006b 04       		.byte	4
+ 136 006c B0       		.byte	-80
+ 137 006d 08       		.byte	8
+ 138 006e B1       		.byte	-79
+ 139 006f 04       		.byte	4
+ 140 0070 B2       		.byte	-78
+ 141 0071 02       		.byte	2
+ 142 0072 B3       		.byte	-77
+ 143 0073 01       		.byte	1
+ 144 0074 B4       		.byte	-76
+ 145 0075 01       		.byte	1
+ 146 0076 B5       		.byte	-75
+ 147 0077 08       		.byte	8
+ 148 0078 B6       		.byte	-74
+ 149 0079 04       		.byte	4
+ 150 007a B7       		.byte	-73
+ 151 007b 02       		.byte	2
+ 152 007c BE       		.byte	-66
+ 153 007d 04       		.byte	4
+ 154 007e C0       		.byte	-64
+ 155 007f 20       		.byte	32
+ 156 0080 C1       		.byte	-63
+ 157 0081 05       		.byte	5
+ 158 0082 C5       		.byte	-59
+ 159 0083 D5       		.byte	-43
+ 160 0084 C7       		.byte	-57
+ 161 0085 21       		.byte	33
+ 162 0086 C8       		.byte	-56
+ 163 0087 33       		.byte	51
+ 164 0088 C9       		.byte	-55
+ 165 0089 FF       		.byte	-1
+ 166 008a CA       		.byte	-54
+ 167 008b FF       		.byte	-1
+ 168 008c CB       		.byte	-53
+ 169 008d FF       		.byte	-1
+ 170 008e CD       		.byte	-51
+ 171 008f AF       		.byte	-81
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 4
+
+
+ 172 0090 CE       		.byte	-50
+ 173 0091 0F       		.byte	15
+ 174 0092 CF       		.byte	-49
+ 175 0093 04       		.byte	4
+ 176 0094 D0       		.byte	-48
+ 177 0095 18       		.byte	24
+ 178 0096 D2       		.byte	-46
+ 179 0097 80       		.byte	-128
+ 180 0098 D4       		.byte	-44
+ 181 0099 07       		.byte	7
+ 182 009a D8       		.byte	-40
+ 183 009b 04       		.byte	4
+ 184 009c D9       		.byte	-39
+ 185 009d 04       		.byte	4
+ 186 009e DA       		.byte	-38
+ 187 009f 04       		.byte	4
+ 188 00a0 DB       		.byte	-37
+ 189 00a1 04       		.byte	4
+ 190 00a2 DF       		.byte	-33
+ 191 00a3 01       		.byte	1
+ 192 00a4 E0       		.byte	-32
+ 193 00a5 40       		.byte	64
+ 194 00a6 E2       		.byte	-30
+ 195 00a7 C0       		.byte	-64
+ 196 00a8 E4       		.byte	-28
+ 197 00a9 40       		.byte	64
+ 198 00aa E5       		.byte	-27
+ 199 00ab 40       		.byte	64
+ 200 00ac E6       		.byte	-26
+ 201 00ad C0       		.byte	-64
+ 202 00ae E8       		.byte	-24
+ 203 00af C0       		.byte	-64
+ 204 00b0 EA       		.byte	-22
+ 205 00b1 C0       		.byte	-64
+ 206 00b2 EC       		.byte	-20
+ 207 00b3 C0       		.byte	-64
+ 208 00b4 EE       		.byte	-18
+ 209 00b5 C0       		.byte	-64
+ 210 00b6 02       		.byte	2
+ 211 00b7 02       		.byte	2
+ 212 00b8 0A       		.byte	10
+ 213 00b9 44       		.byte	68
+ 214 00ba 10       		.byte	16
+ 215 00bb 28       		.byte	40
+ 216 00bc 19       		.byte	25
+ 217 00bd 04       		.byte	4
+ 218 00be 1A       		.byte	26
+ 219 00bf 04       		.byte	4
+ 220 00c0 1B       		.byte	27
+ 221 00c1 92       		.byte	-110
+ 222 00c2 20       		.byte	32
+ 223 00c3 50       		.byte	80
+ 224 00c4 22       		.byte	34
+ 225 00c5 50       		.byte	80
+ 226 00c6 30       		.byte	48
+ 227 00c7 28       		.byte	40
+ 228 00c8 38       		.byte	56
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 5
+
+
+ 229 00c9 50       		.byte	80
+ 230 00ca 42       		.byte	66
+ 231 00cb 04       		.byte	4
+ 232 00cc 48       		.byte	72
+ 233 00cd 20       		.byte	32
+ 234 00ce 49       		.byte	73
+ 235 00cf 01       		.byte	1
+ 236 00d0 4A       		.byte	74
+ 237 00d1 02       		.byte	2
+ 238 00d2 4E       		.byte	78
+ 239 00d3 02       		.byte	2
+ 240 00d4 4F       		.byte	79
+ 241 00d5 20       		.byte	32
+ 242 00d6 50       		.byte	80
+ 243 00d7 08       		.byte	8
+ 244 00d8 52       		.byte	82
+ 245 00d9 02       		.byte	2
+ 246 00da 59       		.byte	89
+ 247 00db 05       		.byte	5
+ 248 00dc 5A       		.byte	90
+ 249 00dd A0       		.byte	-96
+ 250 00de 72       		.byte	114
+ 251 00df 40       		.byte	64
+ 252 00e0 87       		.byte	-121
+ 253 00e1 80       		.byte	-128
+ 254 00e2 C0       		.byte	-64
+ 255 00e3 01       		.byte	1
+ 256 00e4 C2       		.byte	-62
+ 257 00e5 0A       		.byte	10
+ 258 00e6 C4       		.byte	-60
+ 259 00e7 06       		.byte	6
+ 260 00e8 CC       		.byte	-52
+ 261 00e9 06       		.byte	6
+ 262 00ea CE       		.byte	-50
+ 263 00eb 0C       		.byte	12
+ 264 00ec D0       		.byte	-48
+ 265 00ed 04       		.byte	4
+ 266 00ee D2       		.byte	-46
+ 267 00ef 38       		.byte	56
+ 268 00f0 D6       		.byte	-42
+ 269 00f1 0F       		.byte	15
+ 270 00f2 40       		.byte	64
+ 271 00f3 30       		.byte	48
+ 272 00f4 41       		.byte	65
+ 273 00f5 02       		.byte	2
+ 274 00f6 49       		.byte	73
+ 275 00f7 FF       		.byte	-1
+ 276 00f8 4A       		.byte	74
+ 277 00f9 FF       		.byte	-1
+ 278 00fa 4B       		.byte	75
+ 279 00fb FF       		.byte	-1
+ 280 00fc 4D       		.byte	77
+ 281 00fd A0       		.byte	-96
+ 282 00fe 4F       		.byte	79
+ 283 00ff 04       		.byte	4
+ 284 0100 50       		.byte	80
+ 285 0101 18       		.byte	24
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 6
+
+
+ 286 0102 5A       		.byte	90
+ 287 0103 04       		.byte	4
+ 288 0104 5D       		.byte	93
+ 289 0105 01       		.byte	1
+ 290 0106 5F       		.byte	95
+ 291 0107 01       		.byte	1
+ 292 0108 60       		.byte	96
+ 293 0109 40       		.byte	64
+ 294 010a 62       		.byte	98
+ 295 010b C0       		.byte	-64
+ 296 010c 64       		.byte	100
+ 297 010d 40       		.byte	64
+ 298 010e 65       		.byte	101
+ 299 010f 40       		.byte	64
+ 300 0110 66       		.byte	102
+ 301 0111 C0       		.byte	-64
+ 302 0112 68       		.byte	104
+ 303 0113 C0       		.byte	-64
+ 304 0114 6A       		.byte	106
+ 305 0115 C0       		.byte	-64
+ 306 0116 6C       		.byte	108
+ 307 0117 C0       		.byte	-64
+ 308 0118 6E       		.byte	110
+ 309 0119 C0       		.byte	-64
+ 310 011a 83       		.byte	-125
+ 311 011b 0C       		.byte	12
+ 312 011c 87       		.byte	-121
+ 313 011d 03       		.byte	3
+ 314 011e 8A       		.byte	-118
+ 315 011f 0E       		.byte	14
+ 316 0120 91       		.byte	-111
+ 317 0121 02       		.byte	2
+ 318 0122 96       		.byte	-106
+ 319 0123 02       		.byte	2
+ 320 0124 99       		.byte	-103
+ 321 0125 08       		.byte	8
+ 322 0126 9E       		.byte	-98
+ 323 0127 08       		.byte	8
+ 324 0128 AA       		.byte	-86
+ 325 0129 04       		.byte	4
+ 326 012a AE       		.byte	-82
+ 327 012b 01       		.byte	1
+ 328 012c B0       		.byte	-80
+ 329 012d 04       		.byte	4
+ 330 012e B1       		.byte	-79
+ 331 012f 02       		.byte	2
+ 332 0130 B2       		.byte	-78
+ 333 0131 01       		.byte	1
+ 334 0132 B3       		.byte	-77
+ 335 0133 08       		.byte	8
+ 336 0134 B4       		.byte	-76
+ 337 0135 02       		.byte	2
+ 338 0136 B5       		.byte	-75
+ 339 0137 04       		.byte	4
+ 340 0138 B6       		.byte	-74
+ 341 0139 08       		.byte	8
+ 342 013a B7       		.byte	-73
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 7
+
+
+ 343 013b 01       		.byte	1
+ 344 013c BE       		.byte	-66
+ 345 013d 10       		.byte	16
+ 346 013e C0       		.byte	-64
+ 347 013f 30       		.byte	48
+ 348 0140 C1       		.byte	-63
+ 349 0141 02       		.byte	2
+ 350 0142 C5       		.byte	-59
+ 351 0143 D0       		.byte	-48
+ 352 0144 C6       		.byte	-58
+ 353 0145 20       		.byte	32
+ 354 0146 C7       		.byte	-57
+ 355 0147 51       		.byte	81
+ 356 0148 C8       		.byte	-56
+ 357 0149 3A       		.byte	58
+ 358 014a C9       		.byte	-55
+ 359 014b FF       		.byte	-1
+ 360 014c CA       		.byte	-54
+ 361 014d FF       		.byte	-1
+ 362 014e CB       		.byte	-53
+ 363 014f FF       		.byte	-1
+ 364 0150 CD       		.byte	-51
+ 365 0151 AF       		.byte	-81
+ 366 0152 CE       		.byte	-50
+ 367 0153 0F       		.byte	15
+ 368 0154 CF       		.byte	-49
+ 369 0155 04       		.byte	4
+ 370 0156 D0       		.byte	-48
+ 371 0157 18       		.byte	24
+ 372 0158 D2       		.byte	-46
+ 373 0159 80       		.byte	-128
+ 374 015a D4       		.byte	-44
+ 375 015b 07       		.byte	7
+ 376 015c D8       		.byte	-40
+ 377 015d 04       		.byte	4
+ 378 015e D9       		.byte	-39
+ 379 015f 04       		.byte	4
+ 380 0160 DA       		.byte	-38
+ 381 0161 04       		.byte	4
+ 382 0162 DB       		.byte	-37
+ 383 0163 04       		.byte	4
+ 384 0164 DC       		.byte	-36
+ 385 0165 11       		.byte	17
+ 386 0166 DD       		.byte	-35
+ 387 0167 11       		.byte	17
+ 388 0168 DF       		.byte	-33
+ 389 0169 01       		.byte	1
+ 390 016a E0       		.byte	-32
+ 391 016b 40       		.byte	64
+ 392 016c E2       		.byte	-30
+ 393 016d C0       		.byte	-64
+ 394 016e E4       		.byte	-28
+ 395 016f 40       		.byte	64
+ 396 0170 E5       		.byte	-27
+ 397 0171 40       		.byte	64
+ 398 0172 E6       		.byte	-26
+ 399 0173 C0       		.byte	-64
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 8
+
+
+ 400 0174 E8       		.byte	-24
+ 401 0175 C0       		.byte	-64
+ 402 0176 EA       		.byte	-22
+ 403 0177 C0       		.byte	-64
+ 404 0178 EC       		.byte	-20
+ 405 0179 C0       		.byte	-64
+ 406 017a EE       		.byte	-18
+ 407 017b C0       		.byte	-64
+ 408 017c 04       		.byte	4
+ 409 017d 10       		.byte	16
+ 410 017e 0F       		.byte	15
+ 411 017f 22       		.byte	34
+ 412 0180 16       		.byte	22
+ 413 0181 08       		.byte	8
+ 414 0182 17       		.byte	23
+ 415 0183 40       		.byte	64
+ 416 0184 1C       		.byte	28
+ 417 0185 12       		.byte	18
+ 418 0186 1D       		.byte	29
+ 419 0187 08       		.byte	8
+ 420 0188 1E       		.byte	30
+ 421 0189 08       		.byte	8
+ 422 018a 1F       		.byte	31
+ 423 018b 01       		.byte	1
+ 424 018c 24       		.byte	36
+ 425 018d 40       		.byte	64
+ 426 018e 26       		.byte	38
+ 427 018f 20       		.byte	32
+ 428 0190 27       		.byte	39
+ 429 0191 22       		.byte	34
+ 430 0192 36       		.byte	54
+ 431 0193 20       		.byte	32
+ 432 0194 37       		.byte	55
+ 433 0195 02       		.byte	2
+ 434 0196 3E       		.byte	62
+ 435 0197 08       		.byte	8
+ 436 0198 3F       		.byte	63
+ 437 0199 02       		.byte	2
+ 438 019a 40       		.byte	64
+ 439 019b 10       		.byte	16
+ 440 019c 41       		.byte	65
+ 441 019d 20       		.byte	32
+ 442 019e 45       		.byte	69
+ 443 019f 28       		.byte	40
+ 444 01a0 4F       		.byte	79
+ 445 01a1 01       		.byte	1
+ 446 01a2 55       		.byte	85
+ 447 01a3 20       		.byte	32
+ 448 01a4 56       		.byte	86
+ 449 01a5 08       		.byte	8
+ 450 01a6 57       		.byte	87
+ 451 01a7 11       		.byte	17
+ 452 01a8 5C       		.byte	92
+ 453 01a9 40       		.byte	64
+ 454 01aa 5E       		.byte	94
+ 455 01ab 08       		.byte	8
+ 456 01ac 5F       		.byte	95
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 9
+
+
+ 457 01ad 21       		.byte	33
+ 458 01ae 77       		.byte	119
+ 459 01af 40       		.byte	64
+ 460 01b0 A4       		.byte	-92
+ 461 01b1 01       		.byte	1
+ 462 01b2 AF       		.byte	-81
+ 463 01b3 02       		.byte	2
+ 464 01b4 B0       		.byte	-80
+ 465 01b5 01       		.byte	1
+ 466 01b6 C0       		.byte	-64
+ 467 01b7 40       		.byte	64
+ 468 01b8 C2       		.byte	-62
+ 469 01b9 A0       		.byte	-96
+ 470 01ba C4       		.byte	-60
+ 471 01bb C0       		.byte	-64
+ 472 01bc CC       		.byte	-52
+ 473 01bd A0       		.byte	-96
+ 474 01be CE       		.byte	-50
+ 475 01bf C0       		.byte	-64
+ 476 01c0 D0       		.byte	-48
+ 477 01c1 66       		.byte	102
+ 478 01c2 D6       		.byte	-42
+ 479 01c3 F0       		.byte	-16
+ 480 01c4 EA       		.byte	-22
+ 481 01c5 80       		.byte	-128
+ 482 01c6 B7       		.byte	-73
+ 483 01c7 01       		.byte	1
+ 484 01c8 EA       		.byte	-22
+ 485 01c9 40       		.byte	64
+ 486 01ca 52       		.byte	82
+ 487 01cb 80       		.byte	-128
+ 488 01cc 56       		.byte	86
+ 489 01cd 02       		.byte	2
+ 490 01ce 5E       		.byte	94
+ 491 01cf 01       		.byte	1
+ 492 01d0 63       		.byte	99
+ 493 01d1 02       		.byte	2
+ 494 01d2 87       		.byte	-121
+ 495 01d3 01       		.byte	1
+ 496 01d4 D4       		.byte	-44
+ 497 01d5 20       		.byte	32
+ 498 01d6 D6       		.byte	-42
+ 499 01d7 E0       		.byte	-32
+ 500 01d8 E6       		.byte	-26
+ 501 01d9 10       		.byte	16
+ 502 01da 9E       		.byte	-98
+ 503 01db 02       		.byte	2
+ 504 01dc AE       		.byte	-82
+ 505 01dd 01       		.byte	1
+ 506 01de B2       		.byte	-78
+ 507 01df 80       		.byte	-128
+ 508 01e0 EA       		.byte	-22
+ 509 01e1 10       		.byte	16
+ 510 01e2 B6       		.byte	-74
+ 511 01e3 02       		.byte	2
+ 512 01e4 00       		.byte	0
+ 513 01e5 03       		.byte	3
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 10
+
+
+ 514 01e6 08       		.byte	8
+ 515 01e7 01       		.byte	1
+ 516 01e8 0A       		.byte	10
+ 517 01e9 02       		.byte	2
+ 518 01ea 00       		.byte	0
+ 519 01eb 00       		.byte	0
+ 520 01ec 00       		.byte	0
+ 521 01ed 55       		.byte	85
+ 522 01ee 55       		.byte	85
+ 523 01ef 00       		.byte	0
+ 524 01f0 55       		.byte	85
+ 525 01f1 00       		.byte	0
+ 526 01f2 00       		.byte	0
+ 527 01f3 00       		.byte	0
+ 528 01f4 00       		.byte	0
+ 529 01f5 0B       		.byte	11
+ 530 01f6 0B       		.byte	11
+ 531 01f7 00       		.byte	0
+ 532 01f8 00       		.byte	0
+ 533 01f9 00       		.byte	0
+ 534 01fa 00       		.byte	0
+ 535 01fb 00       		.byte	0
+ 536              		.section	.cywolatch,"a",%progbits
+ 537              		.type	cy_meta_wonvl, %object
+ 538              		.size	cy_meta_wonvl, 4
+ 539              	cy_meta_wonvl:
+ 540 0000 BC       		.byte	-68
+ 541 0001 90       		.byte	-112
+ 542 0002 AC       		.byte	-84
+ 543 0003 AF       		.byte	-81
+ 544              		.section	.cycustnvl,"a",%progbits
+ 545              		.type	cy_meta_custnvl, %object
+ 546              		.size	cy_meta_custnvl, 4
+ 547              	cy_meta_custnvl:
+ 548 0000 00       		.byte	0
+ 549 0001 00       		.byte	0
+ 550 0002 40       		.byte	64
+ 551 0003 05       		.byte	5
+ 552              		.section	.cymeta,"a",%progbits
+ 553              		.type	cy_metadata, %object
+ 554              		.size	cy_metadata, 12
+ 555              	cy_metadata:
+ 556 0000 00       		.byte	0
+ 557 0001 01       		.byte	1
+ 558 0002 2E       		.byte	46
+ 559 0003 16       		.byte	22
+ 560 0004 10       		.byte	16
+ 561 0005 69       		.byte	105
+ 562 0006 00       		.byte	0
+ 563 0007 01       		.byte	1
+ 564 0008 00       		.byte	0
+ 565 0009 00       		.byte	0
+ 566 000a 00       		.byte	0
+ 567 000b 00       		.byte	0
+ 568              		.section	.cyflashprotect,"a",%progbits
+ 569              		.type	cy_meta_flashprotect, %object
+ 570              		.size	cy_meta_flashprotect, 256
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 11
+
+
+ 571              	cy_meta_flashprotect:
+ 572 0000 00000000 		.space	256
+ 572      00000000 
+ 572      00000000 
+ 572      00000000 
+ 572      00000000 
+ 573              		.text
+ 574              	.Letext0:
+ 575              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 576              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 577              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 578              		.section	.debug_info,"",%progbits
+ 579              	.Ldebug_info0:
+ 580 0000 31010000 		.4byte	0x131
+ 581 0004 0400     		.2byte	0x4
+ 582 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 583 000a 04       		.byte	0x4
+ 584 000b 01       		.uleb128 0x1
+ 585 000c D0000000 		.4byte	.LASF17
+ 586 0010 0C       		.byte	0xc
+ 587 0011 BF010000 		.4byte	.LASF18
+ 588 0015 0A000000 		.4byte	.LASF19
+ 589 0019 00000000 		.4byte	.Ldebug_line0
+ 590 001d 02       		.uleb128 0x2
+ 591 001e 01       		.byte	0x1
+ 592 001f 06       		.byte	0x6
+ 593 0020 B3010000 		.4byte	.LASF0
+ 594 0024 03       		.uleb128 0x3
+ 595 0025 00000000 		.4byte	.LASF9
+ 596 0029 01       		.byte	0x1
+ 597 002a 1D       		.byte	0x1d
+ 598 002b 2F000000 		.4byte	0x2f
+ 599 002f 02       		.uleb128 0x2
+ 600 0030 01       		.byte	0x1
+ 601 0031 08       		.byte	0x8
+ 602 0032 6E000000 		.4byte	.LASF1
+ 603 0036 02       		.uleb128 0x2
+ 604 0037 02       		.byte	0x2
+ 605 0038 05       		.byte	0x5
+ 606 0039 A0010000 		.4byte	.LASF2
+ 607 003d 02       		.uleb128 0x2
+ 608 003e 02       		.byte	0x2
+ 609 003f 07       		.byte	0x7
+ 610 0040 8E000000 		.4byte	.LASF3
+ 611 0044 02       		.uleb128 0x2
+ 612 0045 04       		.byte	0x4
+ 613 0046 05       		.byte	0x5
+ 614 0047 AA010000 		.4byte	.LASF4
+ 615 004b 02       		.uleb128 0x2
+ 616 004c 04       		.byte	0x4
+ 617 004d 07       		.byte	0x7
+ 618 004e 7C000000 		.4byte	.LASF5
+ 619 0052 02       		.uleb128 0x2
+ 620 0053 08       		.byte	0x8
+ 621 0054 05       		.byte	0x5
+ 622 0055 92010000 		.4byte	.LASF6
+ 623 0059 02       		.uleb128 0x2
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 12
+
+
+ 624 005a 08       		.byte	0x8
+ 625 005b 07       		.byte	0x7
+ 626 005c 57000000 		.4byte	.LASF7
+ 627 0060 04       		.uleb128 0x4
+ 628 0061 04       		.byte	0x4
+ 629 0062 05       		.byte	0x5
+ 630 0063 696E7400 		.ascii	"int\000"
+ 631 0067 02       		.uleb128 0x2
+ 632 0068 04       		.byte	0x4
+ 633 0069 07       		.byte	0x7
+ 634 006a C3000000 		.4byte	.LASF8
+ 635 006e 03       		.uleb128 0x3
+ 636 006f 5E010000 		.4byte	.LASF10
+ 637 0073 02       		.byte	0x2
+ 638 0074 18       		.byte	0x18
+ 639 0075 24000000 		.4byte	0x24
+ 640 0079 05       		.uleb128 0x5
+ 641 007a 91000000 		.4byte	0x91
+ 642 007e 8A000000 		.4byte	0x8a
+ 643 0082 06       		.uleb128 0x6
+ 644 0083 8A000000 		.4byte	0x8a
+ 645 0087 FB01     		.2byte	0x1fb
+ 646 0089 00       		.byte	0
+ 647 008a 02       		.uleb128 0x2
+ 648 008b 04       		.byte	0x4
+ 649 008c 07       		.byte	0x7
+ 650 008d 89010000 		.4byte	.LASF11
+ 651 0091 07       		.uleb128 0x7
+ 652 0092 6E000000 		.4byte	0x6e
+ 653 0096 08       		.uleb128 0x8
+ 654 0097 B1000000 		.4byte	.LASF12
+ 655 009b 03       		.byte	0x3
+ 656 009c 1F       		.byte	0x1f
+ 657 009d A7000000 		.4byte	0xa7
+ 658 00a1 05       		.uleb128 0x5
+ 659 00a2 03       		.byte	0x3
+ 660 00a3 00000000 		.4byte	cy_meta_configecc
+ 661 00a7 07       		.uleb128 0x7
+ 662 00a8 79000000 		.4byte	0x79
+ 663 00ac 05       		.uleb128 0x5
+ 664 00ad 91000000 		.4byte	0x91
+ 665 00b1 BC000000 		.4byte	0xbc
+ 666 00b5 09       		.uleb128 0x9
+ 667 00b6 8A000000 		.4byte	0x8a
+ 668 00ba 03       		.byte	0x3
+ 669 00bb 00       		.byte	0
+ 670 00bc 08       		.uleb128 0x8
+ 671 00bd A1000000 		.4byte	.LASF13
+ 672 00c1 03       		.byte	0x3
+ 673 00c2 6C       		.byte	0x6c
+ 674 00c3 CD000000 		.4byte	0xcd
+ 675 00c7 05       		.uleb128 0x5
+ 676 00c8 03       		.byte	0x3
+ 677 00c9 00000000 		.4byte	cy_meta_custnvl
+ 678 00cd 07       		.uleb128 0x7
+ 679 00ce AC000000 		.4byte	0xac
+ 680 00d2 08       		.uleb128 0x8
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 13
+
+
+ 681 00d3 7B010000 		.4byte	.LASF14
+ 682 00d7 03       		.byte	0x3
+ 683 00d8 7A       		.byte	0x7a
+ 684 00d9 E3000000 		.4byte	0xe3
+ 685 00dd 05       		.uleb128 0x5
+ 686 00de 03       		.byte	0x3
+ 687 00df 00000000 		.4byte	cy_meta_wonvl
+ 688 00e3 07       		.uleb128 0x7
+ 689 00e4 AC000000 		.4byte	0xac
+ 690 00e8 05       		.uleb128 0x5
+ 691 00e9 91000000 		.4byte	0x91
+ 692 00ed F8000000 		.4byte	0xf8
+ 693 00f1 09       		.uleb128 0x9
+ 694 00f2 8A000000 		.4byte	0x8a
+ 695 00f6 FF       		.byte	0xff
+ 696 00f7 00       		.byte	0
+ 697 00f8 08       		.uleb128 0x8
+ 698 00f9 66010000 		.4byte	.LASF15
+ 699 00fd 03       		.byte	0x3
+ 700 00fe 88       		.byte	0x88
+ 701 00ff 09010000 		.4byte	0x109
+ 702 0103 05       		.uleb128 0x5
+ 703 0104 03       		.byte	0x3
+ 704 0105 00000000 		.4byte	cy_meta_flashprotect
+ 705 0109 07       		.uleb128 0x7
+ 706 010a E8000000 		.4byte	0xe8
+ 707 010e 05       		.uleb128 0x5
+ 708 010f 91000000 		.4byte	0x91
+ 709 0113 1E010000 		.4byte	0x11e
+ 710 0117 09       		.uleb128 0x9
+ 711 0118 8A000000 		.4byte	0x8a
+ 712 011c 0B       		.byte	0xb
+ 713 011d 00       		.byte	0
+ 714 011e 08       		.uleb128 0x8
+ 715 011f 4B000000 		.4byte	.LASF16
+ 716 0123 03       		.byte	0x3
+ 717 0124 B5       		.byte	0xb5
+ 718 0125 2F010000 		.4byte	0x12f
+ 719 0129 05       		.uleb128 0x5
+ 720 012a 03       		.byte	0x3
+ 721 012b 00000000 		.4byte	cy_metadata
+ 722 012f 07       		.uleb128 0x7
+ 723 0130 0E010000 		.4byte	0x10e
+ 724 0134 00       		.byte	0
+ 725              		.section	.debug_abbrev,"",%progbits
+ 726              	.Ldebug_abbrev0:
+ 727 0000 01       		.uleb128 0x1
+ 728 0001 11       		.uleb128 0x11
+ 729 0002 01       		.byte	0x1
+ 730 0003 25       		.uleb128 0x25
+ 731 0004 0E       		.uleb128 0xe
+ 732 0005 13       		.uleb128 0x13
+ 733 0006 0B       		.uleb128 0xb
+ 734 0007 03       		.uleb128 0x3
+ 735 0008 0E       		.uleb128 0xe
+ 736 0009 1B       		.uleb128 0x1b
+ 737 000a 0E       		.uleb128 0xe
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 14
+
+
+ 738 000b 10       		.uleb128 0x10
+ 739 000c 17       		.uleb128 0x17
+ 740 000d 00       		.byte	0
+ 741 000e 00       		.byte	0
+ 742 000f 02       		.uleb128 0x2
+ 743 0010 24       		.uleb128 0x24
+ 744 0011 00       		.byte	0
+ 745 0012 0B       		.uleb128 0xb
+ 746 0013 0B       		.uleb128 0xb
+ 747 0014 3E       		.uleb128 0x3e
+ 748 0015 0B       		.uleb128 0xb
+ 749 0016 03       		.uleb128 0x3
+ 750 0017 0E       		.uleb128 0xe
+ 751 0018 00       		.byte	0
+ 752 0019 00       		.byte	0
+ 753 001a 03       		.uleb128 0x3
+ 754 001b 16       		.uleb128 0x16
+ 755 001c 00       		.byte	0
+ 756 001d 03       		.uleb128 0x3
+ 757 001e 0E       		.uleb128 0xe
+ 758 001f 3A       		.uleb128 0x3a
+ 759 0020 0B       		.uleb128 0xb
+ 760 0021 3B       		.uleb128 0x3b
+ 761 0022 0B       		.uleb128 0xb
+ 762 0023 49       		.uleb128 0x49
+ 763 0024 13       		.uleb128 0x13
+ 764 0025 00       		.byte	0
+ 765 0026 00       		.byte	0
+ 766 0027 04       		.uleb128 0x4
+ 767 0028 24       		.uleb128 0x24
+ 768 0029 00       		.byte	0
+ 769 002a 0B       		.uleb128 0xb
+ 770 002b 0B       		.uleb128 0xb
+ 771 002c 3E       		.uleb128 0x3e
+ 772 002d 0B       		.uleb128 0xb
+ 773 002e 03       		.uleb128 0x3
+ 774 002f 08       		.uleb128 0x8
+ 775 0030 00       		.byte	0
+ 776 0031 00       		.byte	0
+ 777 0032 05       		.uleb128 0x5
+ 778 0033 01       		.uleb128 0x1
+ 779 0034 01       		.byte	0x1
+ 780 0035 49       		.uleb128 0x49
+ 781 0036 13       		.uleb128 0x13
+ 782 0037 01       		.uleb128 0x1
+ 783 0038 13       		.uleb128 0x13
+ 784 0039 00       		.byte	0
+ 785 003a 00       		.byte	0
+ 786 003b 06       		.uleb128 0x6
+ 787 003c 21       		.uleb128 0x21
+ 788 003d 00       		.byte	0
+ 789 003e 49       		.uleb128 0x49
+ 790 003f 13       		.uleb128 0x13
+ 791 0040 2F       		.uleb128 0x2f
+ 792 0041 05       		.uleb128 0x5
+ 793 0042 00       		.byte	0
+ 794 0043 00       		.byte	0
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 15
+
+
+ 795 0044 07       		.uleb128 0x7
+ 796 0045 26       		.uleb128 0x26
+ 797 0046 00       		.byte	0
+ 798 0047 49       		.uleb128 0x49
+ 799 0048 13       		.uleb128 0x13
+ 800 0049 00       		.byte	0
+ 801 004a 00       		.byte	0
+ 802 004b 08       		.uleb128 0x8
+ 803 004c 34       		.uleb128 0x34
+ 804 004d 00       		.byte	0
+ 805 004e 03       		.uleb128 0x3
+ 806 004f 0E       		.uleb128 0xe
+ 807 0050 3A       		.uleb128 0x3a
+ 808 0051 0B       		.uleb128 0xb
+ 809 0052 3B       		.uleb128 0x3b
+ 810 0053 0B       		.uleb128 0xb
+ 811 0054 49       		.uleb128 0x49
+ 812 0055 13       		.uleb128 0x13
+ 813 0056 3F       		.uleb128 0x3f
+ 814 0057 19       		.uleb128 0x19
+ 815 0058 02       		.uleb128 0x2
+ 816 0059 18       		.uleb128 0x18
+ 817 005a 00       		.byte	0
+ 818 005b 00       		.byte	0
+ 819 005c 09       		.uleb128 0x9
+ 820 005d 21       		.uleb128 0x21
+ 821 005e 00       		.byte	0
+ 822 005f 49       		.uleb128 0x49
+ 823 0060 13       		.uleb128 0x13
+ 824 0061 2F       		.uleb128 0x2f
+ 825 0062 0B       		.uleb128 0xb
+ 826 0063 00       		.byte	0
+ 827 0064 00       		.byte	0
+ 828 0065 00       		.byte	0
+ 829              		.section	.debug_aranges,"",%progbits
+ 830 0000 14000000 		.4byte	0x14
+ 831 0004 0200     		.2byte	0x2
+ 832 0006 00000000 		.4byte	.Ldebug_info0
+ 833 000a 04       		.byte	0x4
+ 834 000b 00       		.byte	0
+ 835 000c 0000     		.2byte	0
+ 836 000e 0000     		.2byte	0
+ 837 0010 00000000 		.4byte	0
+ 838 0014 00000000 		.4byte	0
+ 839              		.section	.debug_line,"",%progbits
+ 840              	.Ldebug_line0:
+ 841 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 841      02003701 
+ 841      00000201 
+ 841      FB0E0D00 
+ 841      01010101 
+ 842              	.LASF9:
+ 843 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 843      6E74385F 
+ 843      7400
+ 844              	.LASF19:
+ 845 000a 433A5C55 		.ascii	"C:\\Users\\vivek\\Documents\\PSoC Creator\\Workspac"
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 16
+
+
+ 845      73657273 
+ 845      5C766976 
+ 845      656B5C44 
+ 845      6F63756D 
+ 846 0038 6530335C 		.ascii	"e03\\Design01.cydsn\000"
+ 846      44657369 
+ 846      676E3031 
+ 846      2E637964 
+ 846      736E00
+ 847              	.LASF16:
+ 848 004b 63795F6D 		.ascii	"cy_metadata\000"
+ 848      65746164 
+ 848      61746100 
+ 849              	.LASF7:
+ 850 0057 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 850      206C6F6E 
+ 850      6720756E 
+ 850      7369676E 
+ 850      65642069 
+ 851              	.LASF1:
+ 852 006e 756E7369 		.ascii	"unsigned char\000"
+ 852      676E6564 
+ 852      20636861 
+ 852      7200
+ 853              	.LASF5:
+ 854 007c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 854      20756E73 
+ 854      69676E65 
+ 854      6420696E 
+ 854      7400
+ 855              	.LASF3:
+ 856 008e 73686F72 		.ascii	"short unsigned int\000"
+ 856      7420756E 
+ 856      7369676E 
+ 856      65642069 
+ 856      6E7400
+ 857              	.LASF13:
+ 858 00a1 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 858      6574615F 
+ 858      63757374 
+ 858      6E766C00 
+ 859              	.LASF12:
+ 860 00b1 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 860      6574615F 
+ 860      636F6E66 
+ 860      69676563 
+ 860      6300
+ 861              	.LASF8:
+ 862 00c3 756E7369 		.ascii	"unsigned int\000"
+ 862      676E6564 
+ 862      20696E74 
+ 862      00
+ 863              	.LASF17:
+ 864 00d0 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 864      43313120 
+ 864      352E342E 
+ 864      31203230 
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczmgGbO.s 			page 17
+
+
+ 864      31363036 
+ 865 0103 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 865      20726576 
+ 865      6973696F 
+ 865      6E203233 
+ 865      37373135 
+ 866 0136 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 866      66756E63 
+ 866      74696F6E 
+ 866      2D736563 
+ 866      74696F6E 
+ 867              	.LASF10:
+ 868 015e 75696E74 		.ascii	"uint8_t\000"
+ 868      385F7400 
+ 869              	.LASF15:
+ 870 0166 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 870      6574615F 
+ 870      666C6173 
+ 870      6870726F 
+ 870      74656374 
+ 871              	.LASF14:
+ 872 017b 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 872      6574615F 
+ 872      776F6E76 
+ 872      6C00
+ 873              	.LASF11:
+ 874 0189 73697A65 		.ascii	"sizetype\000"
+ 874      74797065 
+ 874      00
+ 875              	.LASF6:
+ 876 0192 6C6F6E67 		.ascii	"long long int\000"
+ 876      206C6F6E 
+ 876      6720696E 
+ 876      7400
+ 877              	.LASF2:
+ 878 01a0 73686F72 		.ascii	"short int\000"
+ 878      7420696E 
+ 878      7400
+ 879              	.LASF4:
+ 880 01aa 6C6F6E67 		.ascii	"long int\000"
+ 880      20696E74 
+ 880      00
+ 881              	.LASF0:
+ 882 01b3 7369676E 		.ascii	"signed char\000"
+ 882      65642063 
+ 882      68617200 
+ 883              	.LASF18:
+ 884 01bf 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 884      72617465 
+ 884      645F536F 
+ 884      75726365 
+ 884      5C50536F 
+ 885              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

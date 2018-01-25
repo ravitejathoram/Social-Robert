@@ -1,0 +1,812 @@
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccUCY5IB.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Right_Eyebrow_Pan.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Right_Eyebrow_Pan_Write,"ax",%progbits
+  20              		.align	1
+  21              		.global	Right_Eyebrow_Pan_Write
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	Right_Eyebrow_Pan_Write, %function
+  25              	Right_Eyebrow_Pan_Write:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC5\\Right_Eyebrow_Pan.c"
+   1:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * File Name: Right_Eyebrow_Pan.c  
+   3:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * Version 2.20
+   4:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+   5:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * Description:
+   6:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  This file contains API to enable firmware control of a Pins component.
+   7:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+   8:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * Note:
+   9:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+  10:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** ********************************************************************************
+  11:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  12:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *******************************************************************************/
+  16:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** 
+  17:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** #include "cytypes.h"
+  18:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** #include "Right_Eyebrow_Pan.h"
+  19:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** 
+  20:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
+  21:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** #if !(CY_PSOC5A &&\
+  22:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** 	 Right_Eyebrow_Pan__PORT == 15 && ((Right_Eyebrow_Pan__MASK & 0xC0) != 0))
+  23:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** 
+  24:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** 
+  25:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** /*******************************************************************************
+  26:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * Function Name: Right_Eyebrow_Pan_Write
+  27:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** ****************************************************************************//**
+  28:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+  29:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \brief Writes the value to the physical port (data output register), masking
+  30:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  and shifting the bits appropriately. 
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccUCY5IB.s 			page 2
+
+
+  31:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+  32:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * The data output register controls the signal applied to the physical pin in 
+  33:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * conjunction with the drive mode parameter. This function avoids changing 
+  34:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * other bits in the port by using the appropriate method (read-modify-write or
+  35:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * bit banding).
+  36:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+  37:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * <b>Note</b> This function should not be used on a hardware digital output pin 
+  38:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * as it is driven by the hardware signal attached to it.
+  39:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+  40:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \param value
+  41:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  Value to write to the component instance.
+  42:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+  43:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \return 
+  44:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  None 
+  45:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+  46:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \sideeffect
+  47:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  If you use read-modify-write operations that are not atomic; the Interrupt 
+  48:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  Service Routines (ISR) can cause corruption of this function. An ISR that 
+  49:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  interrupts this function and performs writes to the Pins component data 
+  50:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  register can cause corrupted port data. To avoid this issue, you should 
+  51:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  either use the Per-Pin APIs (primary method) or disable interrupts around 
+  52:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  this function.
+  53:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+  54:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \funcusage
+  55:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  \snippet Right_Eyebrow_Pan_SUT.c usage_Right_Eyebrow_Pan_Write
+  56:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *******************************************************************************/
+  57:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** void Right_Eyebrow_Pan_Write(uint8 value)
+  58:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** {
+  28              		.loc 1 58 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              	.LVL0:
+  59:Generated_Source\PSoC5/Right_Eyebrow_Pan.c ****     uint8 staticBits = (Right_Eyebrow_Pan_DR & (uint8)(~Right_Eyebrow_Pan_MASK));
+  34              		.loc 1 59 0
+  35 0000 044A     		ldr	r2, .L2
+  60:Generated_Source\PSoC5/Right_Eyebrow_Pan.c ****     Right_Eyebrow_Pan_DR = staticBits | ((uint8)(value << Right_Eyebrow_Pan_SHIFT) & Right_Eyebrow_
+  36              		.loc 1 60 0
+  37 0002 00F00100 		and	r0, r0, #1
+  38              	.LVL1:
+  59:Generated_Source\PSoC5/Right_Eyebrow_Pan.c ****     uint8 staticBits = (Right_Eyebrow_Pan_DR & (uint8)(~Right_Eyebrow_Pan_MASK));
+  39              		.loc 1 59 0
+  40 0006 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  41              	.LVL2:
+  42              		.loc 1 60 0
+  43 0008 03F0FE03 		and	r3, r3, #254
+  44              	.LVL3:
+  45 000c 1843     		orrs	r0, r0, r3
+  46 000e 1070     		strb	r0, [r2]
+  47 0010 7047     		bx	lr
+  48              	.L3:
+  49 0012 00BF     		.align	2
+  50              	.L2:
+  51 0014 00510040 		.word	1073762560
+  52              		.cfi_endproc
+  53              	.LFE0:
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccUCY5IB.s 			page 3
+
+
+  54              		.size	Right_Eyebrow_Pan_Write, .-Right_Eyebrow_Pan_Write
+  55              		.section	.text.Right_Eyebrow_Pan_SetDriveMode,"ax",%progbits
+  56              		.align	1
+  57              		.global	Right_Eyebrow_Pan_SetDriveMode
+  58              		.thumb
+  59              		.thumb_func
+  60              		.type	Right_Eyebrow_Pan_SetDriveMode, %function
+  61              	Right_Eyebrow_Pan_SetDriveMode:
+  62              	.LFB1:
+  61:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** }
+  62:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** 
+  63:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** 
+  64:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** /*******************************************************************************
+  65:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * Function Name: Right_Eyebrow_Pan_SetDriveMode
+  66:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** ****************************************************************************//**
+  67:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+  68:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \brief Sets the drive mode for each of the Pins component's pins.
+  69:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * 
+  70:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * <b>Note</b> This affects all pins in the Pins component instance. Use the
+  71:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * Per-Pin APIs if you wish to control individual pin's drive modes.
+  72:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+  73:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \param mode
+  74:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  Mode for the selected signals. Valid options are documented in 
+  75:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  \ref driveMode.
+  76:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+  77:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \return
+  78:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  None
+  79:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+  80:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \sideeffect
+  81:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  If you use read-modify-write operations that are not atomic, the ISR can
+  82:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  cause corruption of this function. An ISR that interrupts this function 
+  83:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  and performs writes to the Pins component Drive Mode registers can cause 
+  84:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  corrupted port data. To avoid this issue, you should either use the Per-Pin
+  85:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  APIs (primary method) or disable interrupts around this function.
+  86:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+  87:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \funcusage
+  88:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  \snippet Right_Eyebrow_Pan_SUT.c usage_Right_Eyebrow_Pan_SetDriveMode
+  89:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *******************************************************************************/
+  90:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** void Right_Eyebrow_Pan_SetDriveMode(uint8 mode)
+  91:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** {
+  63              		.loc 1 91 0
+  64              		.cfi_startproc
+  65              		@ args = 0, pretend = 0, frame = 0
+  66              		@ frame_needed = 0, uses_anonymous_args = 0
+  67              		@ link register save eliminated.
+  68              	.LVL4:
+  92:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** 	CyPins_SetPinDriveMode(Right_Eyebrow_Pan_0, mode);
+  69              		.loc 1 92 0
+  70 0000 044A     		ldr	r2, .L5
+  71 0002 00F00E00 		and	r0, r0, #14
+  72              	.LVL5:
+  73 0006 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  74 0008 03F0F103 		and	r3, r3, #241
+  75 000c 1843     		orrs	r0, r0, r3
+  76 000e 1070     		strb	r0, [r2]
+  77 0010 7047     		bx	lr
+  78              	.L6:
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccUCY5IB.s 			page 4
+
+
+  79 0012 00BF     		.align	2
+  80              	.L5:
+  81 0014 00500040 		.word	1073762304
+  82              		.cfi_endproc
+  83              	.LFE1:
+  84              		.size	Right_Eyebrow_Pan_SetDriveMode, .-Right_Eyebrow_Pan_SetDriveMode
+  85              		.section	.text.Right_Eyebrow_Pan_Read,"ax",%progbits
+  86              		.align	1
+  87              		.global	Right_Eyebrow_Pan_Read
+  88              		.thumb
+  89              		.thumb_func
+  90              		.type	Right_Eyebrow_Pan_Read, %function
+  91              	Right_Eyebrow_Pan_Read:
+  92              	.LFB2:
+  93:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** }
+  94:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** 
+  95:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** 
+  96:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** /*******************************************************************************
+  97:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * Function Name: Right_Eyebrow_Pan_Read
+  98:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** ****************************************************************************//**
+  99:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+ 100:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \brief Reads the associated physical port (pin status register) and masks 
+ 101:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  the required bits according to the width and bit position of the component
+ 102:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  instance. 
+ 103:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+ 104:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * The pin's status register returns the current logic level present on the 
+ 105:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * physical pin.
+ 106:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+ 107:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \return 
+ 108:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  The current value for the pins in the component as a right justified number.
+ 109:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+ 110:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \funcusage
+ 111:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  \snippet Right_Eyebrow_Pan_SUT.c usage_Right_Eyebrow_Pan_Read  
+ 112:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *******************************************************************************/
+ 113:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** uint8 Right_Eyebrow_Pan_Read(void)
+ 114:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** {
+  93              		.loc 1 114 0
+  94              		.cfi_startproc
+  95              		@ args = 0, pretend = 0, frame = 0
+  96              		@ frame_needed = 0, uses_anonymous_args = 0
+  97              		@ link register save eliminated.
+ 115:Generated_Source\PSoC5/Right_Eyebrow_Pan.c ****     return (Right_Eyebrow_Pan_PS & Right_Eyebrow_Pan_MASK) >> Right_Eyebrow_Pan_SHIFT;
+  98              		.loc 1 115 0
+  99 0000 024B     		ldr	r3, .L8
+ 100 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 116:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** }
+ 101              		.loc 1 116 0
+ 102 0004 00F00100 		and	r0, r0, #1
+ 103 0008 7047     		bx	lr
+ 104              	.L9:
+ 105 000a 00BF     		.align	2
+ 106              	.L8:
+ 107 000c 01510040 		.word	1073762561
+ 108              		.cfi_endproc
+ 109              	.LFE2:
+ 110              		.size	Right_Eyebrow_Pan_Read, .-Right_Eyebrow_Pan_Read
+ 111              		.section	.text.Right_Eyebrow_Pan_ReadDataReg,"ax",%progbits
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccUCY5IB.s 			page 5
+
+
+ 112              		.align	1
+ 113              		.global	Right_Eyebrow_Pan_ReadDataReg
+ 114              		.thumb
+ 115              		.thumb_func
+ 116              		.type	Right_Eyebrow_Pan_ReadDataReg, %function
+ 117              	Right_Eyebrow_Pan_ReadDataReg:
+ 118              	.LFB3:
+ 117:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** 
+ 118:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** 
+ 119:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** /*******************************************************************************
+ 120:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * Function Name: Right_Eyebrow_Pan_ReadDataReg
+ 121:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** ****************************************************************************//**
+ 122:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+ 123:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \brief Reads the associated physical port's data output register and masks 
+ 124:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  the correct bits according to the width and bit position of the component 
+ 125:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  instance. 
+ 126:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+ 127:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * The data output register controls the signal applied to the physical pin in 
+ 128:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * conjunction with the drive mode parameter. This is not the same as the 
+ 129:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * preferred Right_Eyebrow_Pan_Read() API because the 
+ 130:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * Right_Eyebrow_Pan_ReadDataReg() reads the data register instead of the status 
+ 131:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * register. For output pins this is a useful function to determine the value 
+ 132:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * just written to the pin.
+ 133:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+ 134:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \return 
+ 135:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  The current value of the data register masked and shifted into a right 
+ 136:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  justified number for the component instance.
+ 137:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *
+ 138:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** * \funcusage
+ 139:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *  \snippet Right_Eyebrow_Pan_SUT.c usage_Right_Eyebrow_Pan_ReadDataReg 
+ 140:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** *******************************************************************************/
+ 141:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** uint8 Right_Eyebrow_Pan_ReadDataReg(void)
+ 142:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** {
+ 119              		.loc 1 142 0
+ 120              		.cfi_startproc
+ 121              		@ args = 0, pretend = 0, frame = 0
+ 122              		@ frame_needed = 0, uses_anonymous_args = 0
+ 123              		@ link register save eliminated.
+ 143:Generated_Source\PSoC5/Right_Eyebrow_Pan.c ****     return (Right_Eyebrow_Pan_DR & Right_Eyebrow_Pan_MASK) >> Right_Eyebrow_Pan_SHIFT;
+ 124              		.loc 1 143 0
+ 125 0000 024B     		ldr	r3, .L11
+ 126 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 144:Generated_Source\PSoC5/Right_Eyebrow_Pan.c **** }
+ 127              		.loc 1 144 0
+ 128 0004 00F00100 		and	r0, r0, #1
+ 129 0008 7047     		bx	lr
+ 130              	.L12:
+ 131 000a 00BF     		.align	2
+ 132              	.L11:
+ 133 000c 00510040 		.word	1073762560
+ 134              		.cfi_endproc
+ 135              	.LFE3:
+ 136              		.size	Right_Eyebrow_Pan_ReadDataReg, .-Right_Eyebrow_Pan_ReadDataReg
+ 137              		.text
+ 138              	.Letext0:
+ 139              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 140              		.section	.debug_info,"",%progbits
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccUCY5IB.s 			page 6
+
+
+ 141              	.Ldebug_info0:
+ 142 0000 1D010000 		.4byte	0x11d
+ 143 0004 0400     		.2byte	0x4
+ 144 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 145 000a 04       		.byte	0x4
+ 146 000b 01       		.uleb128 0x1
+ 147 000c 23010000 		.4byte	.LASF20
+ 148 0010 0C       		.byte	0xc
+ 149 0011 A0000000 		.4byte	.LASF21
+ 150 0015 11000000 		.4byte	.LASF22
+ 151 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 152 001d 00000000 		.4byte	0
+ 153 0021 00000000 		.4byte	.Ldebug_line0
+ 154 0025 02       		.uleb128 0x2
+ 155 0026 01       		.byte	0x1
+ 156 0027 06       		.byte	0x6
+ 157 0028 11020000 		.4byte	.LASF0
+ 158 002c 02       		.uleb128 0x2
+ 159 002d 01       		.byte	0x1
+ 160 002e 08       		.byte	0x8
+ 161 002f 8D000000 		.4byte	.LASF1
+ 162 0033 02       		.uleb128 0x2
+ 163 0034 02       		.byte	0x2
+ 164 0035 05       		.byte	0x5
+ 165 0036 F8010000 		.4byte	.LASF2
+ 166 003a 02       		.uleb128 0x2
+ 167 003b 02       		.byte	0x2
+ 168 003c 07       		.byte	0x7
+ 169 003d DD000000 		.4byte	.LASF3
+ 170 0041 02       		.uleb128 0x2
+ 171 0042 04       		.byte	0x4
+ 172 0043 05       		.byte	0x5
+ 173 0044 08020000 		.4byte	.LASF4
+ 174 0048 02       		.uleb128 0x2
+ 175 0049 04       		.byte	0x4
+ 176 004a 07       		.byte	0x7
+ 177 004b CB000000 		.4byte	.LASF5
+ 178 004f 02       		.uleb128 0x2
+ 179 0050 08       		.byte	0x8
+ 180 0051 05       		.byte	0x5
+ 181 0052 CD010000 		.4byte	.LASF6
+ 182 0056 02       		.uleb128 0x2
+ 183 0057 08       		.byte	0x8
+ 184 0058 07       		.byte	0x7
+ 185 0059 58000000 		.4byte	.LASF7
+ 186 005d 03       		.uleb128 0x3
+ 187 005e 04       		.byte	0x4
+ 188 005f 05       		.byte	0x5
+ 189 0060 696E7400 		.ascii	"int\000"
+ 190 0064 02       		.uleb128 0x2
+ 191 0065 04       		.byte	0x4
+ 192 0066 07       		.byte	0x7
+ 193 0067 16010000 		.4byte	.LASF8
+ 194 006b 04       		.uleb128 0x4
+ 195 006c 02020000 		.4byte	.LASF12
+ 196 0070 02       		.byte	0x2
+ 197 0071 9201     		.2byte	0x192
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccUCY5IB.s 			page 7
+
+
+ 198 0073 2C000000 		.4byte	0x2c
+ 199 0077 02       		.uleb128 0x2
+ 200 0078 04       		.byte	0x4
+ 201 0079 04       		.byte	0x4
+ 202 007a 52000000 		.4byte	.LASF9
+ 203 007e 02       		.uleb128 0x2
+ 204 007f 08       		.byte	0x8
+ 205 0080 04       		.byte	0x4
+ 206 0081 0F010000 		.4byte	.LASF10
+ 207 0085 02       		.uleb128 0x2
+ 208 0086 01       		.byte	0x1
+ 209 0087 08       		.byte	0x8
+ 210 0088 F3010000 		.4byte	.LASF11
+ 211 008c 04       		.uleb128 0x4
+ 212 008d 9B000000 		.4byte	.LASF13
+ 213 0091 02       		.byte	0x2
+ 214 0092 3C02     		.2byte	0x23c
+ 215 0094 98000000 		.4byte	0x98
+ 216 0098 05       		.uleb128 0x5
+ 217 0099 6B000000 		.4byte	0x6b
+ 218 009d 06       		.uleb128 0x6
+ 219 009e DB010000 		.4byte	.LASF14
+ 220 00a2 01       		.byte	0x1
+ 221 00a3 39       		.byte	0x39
+ 222 00a4 00000000 		.4byte	.LFB0
+ 223 00a8 18000000 		.4byte	.LFE0-.LFB0
+ 224 00ac 01       		.uleb128 0x1
+ 225 00ad 9C       		.byte	0x9c
+ 226 00ae D1000000 		.4byte	0xd1
+ 227 00b2 07       		.uleb128 0x7
+ 228 00b3 00000000 		.4byte	.LASF16
+ 229 00b7 01       		.byte	0x1
+ 230 00b8 39       		.byte	0x39
+ 231 00b9 6B000000 		.4byte	0x6b
+ 232 00bd 00000000 		.4byte	.LLST0
+ 233 00c1 08       		.uleb128 0x8
+ 234 00c2 06000000 		.4byte	.LASF23
+ 235 00c6 01       		.byte	0x1
+ 236 00c7 3B       		.byte	0x3b
+ 237 00c8 6B000000 		.4byte	0x6b
+ 238 00cc 21000000 		.4byte	.LLST1
+ 239 00d0 00       		.byte	0
+ 240 00d1 06       		.uleb128 0x6
+ 241 00d2 F0000000 		.4byte	.LASF15
+ 242 00d6 01       		.byte	0x1
+ 243 00d7 5A       		.byte	0x5a
+ 244 00d8 00000000 		.4byte	.LFB1
+ 245 00dc 18000000 		.4byte	.LFE1-.LFB1
+ 246 00e0 01       		.uleb128 0x1
+ 247 00e1 9C       		.byte	0x9c
+ 248 00e2 F6000000 		.4byte	0xf6
+ 249 00e6 07       		.uleb128 0x7
+ 250 00e7 B1010000 		.4byte	.LASF17
+ 251 00eb 01       		.byte	0x1
+ 252 00ec 5A       		.byte	0x5a
+ 253 00ed 6B000000 		.4byte	0x6b
+ 254 00f1 39000000 		.4byte	.LLST2
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccUCY5IB.s 			page 8
+
+
+ 255 00f5 00       		.byte	0
+ 256 00f6 09       		.uleb128 0x9
+ 257 00f7 B6010000 		.4byte	.LASF18
+ 258 00fb 01       		.byte	0x1
+ 259 00fc 71       		.byte	0x71
+ 260 00fd 6B000000 		.4byte	0x6b
+ 261 0101 00000000 		.4byte	.LFB2
+ 262 0105 10000000 		.4byte	.LFE2-.LFB2
+ 263 0109 01       		.uleb128 0x1
+ 264 010a 9C       		.byte	0x9c
+ 265 010b 09       		.uleb128 0x9
+ 266 010c 6F000000 		.4byte	.LASF19
+ 267 0110 01       		.byte	0x1
+ 268 0111 8D       		.byte	0x8d
+ 269 0112 6B000000 		.4byte	0x6b
+ 270 0116 00000000 		.4byte	.LFB3
+ 271 011a 10000000 		.4byte	.LFE3-.LFB3
+ 272 011e 01       		.uleb128 0x1
+ 273 011f 9C       		.byte	0x9c
+ 274 0120 00       		.byte	0
+ 275              		.section	.debug_abbrev,"",%progbits
+ 276              	.Ldebug_abbrev0:
+ 277 0000 01       		.uleb128 0x1
+ 278 0001 11       		.uleb128 0x11
+ 279 0002 01       		.byte	0x1
+ 280 0003 25       		.uleb128 0x25
+ 281 0004 0E       		.uleb128 0xe
+ 282 0005 13       		.uleb128 0x13
+ 283 0006 0B       		.uleb128 0xb
+ 284 0007 03       		.uleb128 0x3
+ 285 0008 0E       		.uleb128 0xe
+ 286 0009 1B       		.uleb128 0x1b
+ 287 000a 0E       		.uleb128 0xe
+ 288 000b 55       		.uleb128 0x55
+ 289 000c 17       		.uleb128 0x17
+ 290 000d 11       		.uleb128 0x11
+ 291 000e 01       		.uleb128 0x1
+ 292 000f 10       		.uleb128 0x10
+ 293 0010 17       		.uleb128 0x17
+ 294 0011 00       		.byte	0
+ 295 0012 00       		.byte	0
+ 296 0013 02       		.uleb128 0x2
+ 297 0014 24       		.uleb128 0x24
+ 298 0015 00       		.byte	0
+ 299 0016 0B       		.uleb128 0xb
+ 300 0017 0B       		.uleb128 0xb
+ 301 0018 3E       		.uleb128 0x3e
+ 302 0019 0B       		.uleb128 0xb
+ 303 001a 03       		.uleb128 0x3
+ 304 001b 0E       		.uleb128 0xe
+ 305 001c 00       		.byte	0
+ 306 001d 00       		.byte	0
+ 307 001e 03       		.uleb128 0x3
+ 308 001f 24       		.uleb128 0x24
+ 309 0020 00       		.byte	0
+ 310 0021 0B       		.uleb128 0xb
+ 311 0022 0B       		.uleb128 0xb
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccUCY5IB.s 			page 9
+
+
+ 312 0023 3E       		.uleb128 0x3e
+ 313 0024 0B       		.uleb128 0xb
+ 314 0025 03       		.uleb128 0x3
+ 315 0026 08       		.uleb128 0x8
+ 316 0027 00       		.byte	0
+ 317 0028 00       		.byte	0
+ 318 0029 04       		.uleb128 0x4
+ 319 002a 16       		.uleb128 0x16
+ 320 002b 00       		.byte	0
+ 321 002c 03       		.uleb128 0x3
+ 322 002d 0E       		.uleb128 0xe
+ 323 002e 3A       		.uleb128 0x3a
+ 324 002f 0B       		.uleb128 0xb
+ 325 0030 3B       		.uleb128 0x3b
+ 326 0031 05       		.uleb128 0x5
+ 327 0032 49       		.uleb128 0x49
+ 328 0033 13       		.uleb128 0x13
+ 329 0034 00       		.byte	0
+ 330 0035 00       		.byte	0
+ 331 0036 05       		.uleb128 0x5
+ 332 0037 35       		.uleb128 0x35
+ 333 0038 00       		.byte	0
+ 334 0039 49       		.uleb128 0x49
+ 335 003a 13       		.uleb128 0x13
+ 336 003b 00       		.byte	0
+ 337 003c 00       		.byte	0
+ 338 003d 06       		.uleb128 0x6
+ 339 003e 2E       		.uleb128 0x2e
+ 340 003f 01       		.byte	0x1
+ 341 0040 3F       		.uleb128 0x3f
+ 342 0041 19       		.uleb128 0x19
+ 343 0042 03       		.uleb128 0x3
+ 344 0043 0E       		.uleb128 0xe
+ 345 0044 3A       		.uleb128 0x3a
+ 346 0045 0B       		.uleb128 0xb
+ 347 0046 3B       		.uleb128 0x3b
+ 348 0047 0B       		.uleb128 0xb
+ 349 0048 27       		.uleb128 0x27
+ 350 0049 19       		.uleb128 0x19
+ 351 004a 11       		.uleb128 0x11
+ 352 004b 01       		.uleb128 0x1
+ 353 004c 12       		.uleb128 0x12
+ 354 004d 06       		.uleb128 0x6
+ 355 004e 40       		.uleb128 0x40
+ 356 004f 18       		.uleb128 0x18
+ 357 0050 9742     		.uleb128 0x2117
+ 358 0052 19       		.uleb128 0x19
+ 359 0053 01       		.uleb128 0x1
+ 360 0054 13       		.uleb128 0x13
+ 361 0055 00       		.byte	0
+ 362 0056 00       		.byte	0
+ 363 0057 07       		.uleb128 0x7
+ 364 0058 05       		.uleb128 0x5
+ 365 0059 00       		.byte	0
+ 366 005a 03       		.uleb128 0x3
+ 367 005b 0E       		.uleb128 0xe
+ 368 005c 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccUCY5IB.s 			page 10
+
+
+ 369 005d 0B       		.uleb128 0xb
+ 370 005e 3B       		.uleb128 0x3b
+ 371 005f 0B       		.uleb128 0xb
+ 372 0060 49       		.uleb128 0x49
+ 373 0061 13       		.uleb128 0x13
+ 374 0062 02       		.uleb128 0x2
+ 375 0063 17       		.uleb128 0x17
+ 376 0064 00       		.byte	0
+ 377 0065 00       		.byte	0
+ 378 0066 08       		.uleb128 0x8
+ 379 0067 34       		.uleb128 0x34
+ 380 0068 00       		.byte	0
+ 381 0069 03       		.uleb128 0x3
+ 382 006a 0E       		.uleb128 0xe
+ 383 006b 3A       		.uleb128 0x3a
+ 384 006c 0B       		.uleb128 0xb
+ 385 006d 3B       		.uleb128 0x3b
+ 386 006e 0B       		.uleb128 0xb
+ 387 006f 49       		.uleb128 0x49
+ 388 0070 13       		.uleb128 0x13
+ 389 0071 02       		.uleb128 0x2
+ 390 0072 17       		.uleb128 0x17
+ 391 0073 00       		.byte	0
+ 392 0074 00       		.byte	0
+ 393 0075 09       		.uleb128 0x9
+ 394 0076 2E       		.uleb128 0x2e
+ 395 0077 00       		.byte	0
+ 396 0078 3F       		.uleb128 0x3f
+ 397 0079 19       		.uleb128 0x19
+ 398 007a 03       		.uleb128 0x3
+ 399 007b 0E       		.uleb128 0xe
+ 400 007c 3A       		.uleb128 0x3a
+ 401 007d 0B       		.uleb128 0xb
+ 402 007e 3B       		.uleb128 0x3b
+ 403 007f 0B       		.uleb128 0xb
+ 404 0080 27       		.uleb128 0x27
+ 405 0081 19       		.uleb128 0x19
+ 406 0082 49       		.uleb128 0x49
+ 407 0083 13       		.uleb128 0x13
+ 408 0084 11       		.uleb128 0x11
+ 409 0085 01       		.uleb128 0x1
+ 410 0086 12       		.uleb128 0x12
+ 411 0087 06       		.uleb128 0x6
+ 412 0088 40       		.uleb128 0x40
+ 413 0089 18       		.uleb128 0x18
+ 414 008a 9742     		.uleb128 0x2117
+ 415 008c 19       		.uleb128 0x19
+ 416 008d 00       		.byte	0
+ 417 008e 00       		.byte	0
+ 418 008f 00       		.byte	0
+ 419              		.section	.debug_loc,"",%progbits
+ 420              	.Ldebug_loc0:
+ 421              	.LLST0:
+ 422 0000 00000000 		.4byte	.LVL0
+ 423 0004 06000000 		.4byte	.LVL1
+ 424 0008 0100     		.2byte	0x1
+ 425 000a 50       		.byte	0x50
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccUCY5IB.s 			page 11
+
+
+ 426 000b 06000000 		.4byte	.LVL1
+ 427 000f 18000000 		.4byte	.LFE0
+ 428 0013 0400     		.2byte	0x4
+ 429 0015 F3       		.byte	0xf3
+ 430 0016 01       		.uleb128 0x1
+ 431 0017 50       		.byte	0x50
+ 432 0018 9F       		.byte	0x9f
+ 433 0019 00000000 		.4byte	0
+ 434 001d 00000000 		.4byte	0
+ 435              	.LLST1:
+ 436 0021 08000000 		.4byte	.LVL2
+ 437 0025 0C000000 		.4byte	.LVL3
+ 438 0029 0600     		.2byte	0x6
+ 439 002b 73       		.byte	0x73
+ 440 002c 00       		.sleb128 0
+ 441 002d 09       		.byte	0x9
+ 442 002e FE       		.byte	0xfe
+ 443 002f 1A       		.byte	0x1a
+ 444 0030 9F       		.byte	0x9f
+ 445 0031 00000000 		.4byte	0
+ 446 0035 00000000 		.4byte	0
+ 447              	.LLST2:
+ 448 0039 00000000 		.4byte	.LVL4
+ 449 003d 06000000 		.4byte	.LVL5
+ 450 0041 0100     		.2byte	0x1
+ 451 0043 50       		.byte	0x50
+ 452 0044 06000000 		.4byte	.LVL5
+ 453 0048 18000000 		.4byte	.LFE1
+ 454 004c 0400     		.2byte	0x4
+ 455 004e F3       		.byte	0xf3
+ 456 004f 01       		.uleb128 0x1
+ 457 0050 50       		.byte	0x50
+ 458 0051 9F       		.byte	0x9f
+ 459 0052 00000000 		.4byte	0
+ 460 0056 00000000 		.4byte	0
+ 461              		.section	.debug_aranges,"",%progbits
+ 462 0000 34000000 		.4byte	0x34
+ 463 0004 0200     		.2byte	0x2
+ 464 0006 00000000 		.4byte	.Ldebug_info0
+ 465 000a 04       		.byte	0x4
+ 466 000b 00       		.byte	0
+ 467 000c 0000     		.2byte	0
+ 468 000e 0000     		.2byte	0
+ 469 0010 00000000 		.4byte	.LFB0
+ 470 0014 18000000 		.4byte	.LFE0-.LFB0
+ 471 0018 00000000 		.4byte	.LFB1
+ 472 001c 18000000 		.4byte	.LFE1-.LFB1
+ 473 0020 00000000 		.4byte	.LFB2
+ 474 0024 10000000 		.4byte	.LFE2-.LFB2
+ 475 0028 00000000 		.4byte	.LFB3
+ 476 002c 10000000 		.4byte	.LFE3-.LFB3
+ 477 0030 00000000 		.4byte	0
+ 478 0034 00000000 		.4byte	0
+ 479              		.section	.debug_ranges,"",%progbits
+ 480              	.Ldebug_ranges0:
+ 481 0000 00000000 		.4byte	.LFB0
+ 482 0004 18000000 		.4byte	.LFE0
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccUCY5IB.s 			page 12
+
+
+ 483 0008 00000000 		.4byte	.LFB1
+ 484 000c 18000000 		.4byte	.LFE1
+ 485 0010 00000000 		.4byte	.LFB2
+ 486 0014 10000000 		.4byte	.LFE2
+ 487 0018 00000000 		.4byte	.LFB3
+ 488 001c 10000000 		.4byte	.LFE3
+ 489 0020 00000000 		.4byte	0
+ 490 0024 00000000 		.4byte	0
+ 491              		.section	.debug_line,"",%progbits
+ 492              	.Ldebug_line0:
+ 493 0000 9C000000 		.section	.debug_str,"MS",%progbits,1
+ 493      02004E00 
+ 493      00000201 
+ 493      FB0E0D00 
+ 493      01010101 
+ 494              	.LASF16:
+ 495 0000 76616C75 		.ascii	"value\000"
+ 495      6500
+ 496              	.LASF23:
+ 497 0006 73746174 		.ascii	"staticBits\000"
+ 497      69634269 
+ 497      747300
+ 498              	.LASF22:
+ 499 0011 433A5C55 		.ascii	"C:\\Users\\vivek\\Documents\\PSoC Creator\\Workspac"
+ 499      73657273 
+ 499      5C766976 
+ 499      656B5C44 
+ 499      6F63756D 
+ 500 003f 6530335C 		.ascii	"e03\\Design01.cydsn\000"
+ 500      44657369 
+ 500      676E3031 
+ 500      2E637964 
+ 500      736E00
+ 501              	.LASF9:
+ 502 0052 666C6F61 		.ascii	"float\000"
+ 502      7400
+ 503              	.LASF7:
+ 504 0058 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 504      206C6F6E 
+ 504      6720756E 
+ 504      7369676E 
+ 504      65642069 
+ 505              	.LASF19:
+ 506 006f 52696768 		.ascii	"Right_Eyebrow_Pan_ReadDataReg\000"
+ 506      745F4579 
+ 506      6562726F 
+ 506      775F5061 
+ 506      6E5F5265 
+ 507              	.LASF1:
+ 508 008d 756E7369 		.ascii	"unsigned char\000"
+ 508      676E6564 
+ 508      20636861 
+ 508      7200
+ 509              	.LASF13:
+ 510 009b 72656738 		.ascii	"reg8\000"
+ 510      00
+ 511              	.LASF21:
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccUCY5IB.s 			page 13
+
+
+ 512 00a0 47656E65 		.ascii	"Generated_Source\\PSoC5\\Right_Eyebrow_Pan.c\000"
+ 512      72617465 
+ 512      645F536F 
+ 512      75726365 
+ 512      5C50536F 
+ 513              	.LASF5:
+ 514 00cb 6C6F6E67 		.ascii	"long unsigned int\000"
+ 514      20756E73 
+ 514      69676E65 
+ 514      6420696E 
+ 514      7400
+ 515              	.LASF3:
+ 516 00dd 73686F72 		.ascii	"short unsigned int\000"
+ 516      7420756E 
+ 516      7369676E 
+ 516      65642069 
+ 516      6E7400
+ 517              	.LASF15:
+ 518 00f0 52696768 		.ascii	"Right_Eyebrow_Pan_SetDriveMode\000"
+ 518      745F4579 
+ 518      6562726F 
+ 518      775F5061 
+ 518      6E5F5365 
+ 519              	.LASF10:
+ 520 010f 646F7562 		.ascii	"double\000"
+ 520      6C6500
+ 521              	.LASF8:
+ 522 0116 756E7369 		.ascii	"unsigned int\000"
+ 522      676E6564 
+ 522      20696E74 
+ 522      00
+ 523              	.LASF20:
+ 524 0123 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 524      43313120 
+ 524      352E342E 
+ 524      31203230 
+ 524      31363036 
+ 525 0156 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 525      20726576 
+ 525      6973696F 
+ 525      6E203233 
+ 525      37373135 
+ 526 0189 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 526      66756E63 
+ 526      74696F6E 
+ 526      2D736563 
+ 526      74696F6E 
+ 527              	.LASF17:
+ 528 01b1 6D6F6465 		.ascii	"mode\000"
+ 528      00
+ 529              	.LASF18:
+ 530 01b6 52696768 		.ascii	"Right_Eyebrow_Pan_Read\000"
+ 530      745F4579 
+ 530      6562726F 
+ 530      775F5061 
+ 530      6E5F5265 
+ 531              	.LASF6:
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccUCY5IB.s 			page 14
+
+
+ 532 01cd 6C6F6E67 		.ascii	"long long int\000"
+ 532      206C6F6E 
+ 532      6720696E 
+ 532      7400
+ 533              	.LASF14:
+ 534 01db 52696768 		.ascii	"Right_Eyebrow_Pan_Write\000"
+ 534      745F4579 
+ 534      6562726F 
+ 534      775F5061 
+ 534      6E5F5772 
+ 535              	.LASF11:
+ 536 01f3 63686172 		.ascii	"char\000"
+ 536      00
+ 537              	.LASF2:
+ 538 01f8 73686F72 		.ascii	"short int\000"
+ 538      7420696E 
+ 538      7400
+ 539              	.LASF12:
+ 540 0202 75696E74 		.ascii	"uint8\000"
+ 540      3800
+ 541              	.LASF4:
+ 542 0208 6C6F6E67 		.ascii	"long int\000"
+ 542      20696E74 
+ 542      00
+ 543              	.LASF0:
+ 544 0211 7369676E 		.ascii	"signed char\000"
+ 544      65642063 
+ 544      68617200 
+ 545              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

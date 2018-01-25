@@ -1,0 +1,3053 @@
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Right_Eyeball.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Right_Eyeball_Enable,"ax",%progbits
+  20              		.align	1
+  21              		.global	Right_Eyeball_Enable
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	Right_Eyeball_Enable, %function
+  25              	Right_Eyeball_Enable:
+  26              	.LFB2:
+  27              		.file 1 "Generated_Source\\PSoC5\\Right_Eyeball.c"
+   1:Generated_Source\PSoC5/Right_Eyeball.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/Right_Eyeball.c **** * File Name: Right_Eyeball.c
+   3:Generated_Source\PSoC5/Right_Eyeball.c **** * Version 3.30
+   4:Generated_Source\PSoC5/Right_Eyeball.c **** *
+   5:Generated_Source\PSoC5/Right_Eyeball.c **** * Description:
+   6:Generated_Source\PSoC5/Right_Eyeball.c **** *  The PWM User Module consist of an 8 or 16-bit counter with two 8 or 16-bit
+   7:Generated_Source\PSoC5/Right_Eyeball.c **** *  comparitors. Each instance of this user module is capable of generating
+   8:Generated_Source\PSoC5/Right_Eyeball.c **** *  two PWM outputs with the same period. The pulse width is selectable between
+   9:Generated_Source\PSoC5/Right_Eyeball.c **** *  1 and 255/65535. The period is selectable between 2 and 255/65536 clocks.
+  10:Generated_Source\PSoC5/Right_Eyeball.c **** *  The compare value output may be configured to be active when the present
+  11:Generated_Source\PSoC5/Right_Eyeball.c **** *  counter is less than or less than/equal to the compare value.
+  12:Generated_Source\PSoC5/Right_Eyeball.c **** *  A terminal count output is also provided. It generates a pulse one clock
+  13:Generated_Source\PSoC5/Right_Eyeball.c **** *  width wide when the counter is equal to zero.
+  14:Generated_Source\PSoC5/Right_Eyeball.c **** *
+  15:Generated_Source\PSoC5/Right_Eyeball.c **** * Note:
+  16:Generated_Source\PSoC5/Right_Eyeball.c **** *
+  17:Generated_Source\PSoC5/Right_Eyeball.c **** *******************************************************************************
+  18:Generated_Source\PSoC5/Right_Eyeball.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  19:Generated_Source\PSoC5/Right_Eyeball.c **** * You may use this file only in accordance with the license, terms, conditions,
+  20:Generated_Source\PSoC5/Right_Eyeball.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  21:Generated_Source\PSoC5/Right_Eyeball.c **** * the software package with which this file was provided.
+  22:Generated_Source\PSoC5/Right_Eyeball.c **** ********************************************************************************/
+  23:Generated_Source\PSoC5/Right_Eyeball.c **** 
+  24:Generated_Source\PSoC5/Right_Eyeball.c **** #include "Right_Eyeball.h"
+  25:Generated_Source\PSoC5/Right_Eyeball.c **** 
+  26:Generated_Source\PSoC5/Right_Eyeball.c **** /* Error message for removed <resource> through optimization */
+  27:Generated_Source\PSoC5/Right_Eyeball.c **** #ifdef Right_Eyeball_PWMUDB_genblk1_ctrlreg__REMOVED
+  28:Generated_Source\PSoC5/Right_Eyeball.c ****     #error PWM_v3_30 detected with a constant 0 for the enable or \
+  29:Generated_Source\PSoC5/Right_Eyeball.c ****          constant 1 for reset. This will prevent the component from operating.
+  30:Generated_Source\PSoC5/Right_Eyeball.c **** #endif /* Right_Eyeball_PWMUDB_genblk1_ctrlreg__REMOVED */
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 2
+
+
+  31:Generated_Source\PSoC5/Right_Eyeball.c **** 
+  32:Generated_Source\PSoC5/Right_Eyeball.c **** uint8 Right_Eyeball_initVar = 0u;
+  33:Generated_Source\PSoC5/Right_Eyeball.c **** 
+  34:Generated_Source\PSoC5/Right_Eyeball.c **** 
+  35:Generated_Source\PSoC5/Right_Eyeball.c **** /*******************************************************************************
+  36:Generated_Source\PSoC5/Right_Eyeball.c **** * Function Name: Right_Eyeball_Start
+  37:Generated_Source\PSoC5/Right_Eyeball.c **** ********************************************************************************
+  38:Generated_Source\PSoC5/Right_Eyeball.c **** *
+  39:Generated_Source\PSoC5/Right_Eyeball.c **** * Summary:
+  40:Generated_Source\PSoC5/Right_Eyeball.c **** *  The start function initializes the pwm with the default values, the
+  41:Generated_Source\PSoC5/Right_Eyeball.c **** *  enables the counter to begin counting.  It does not enable interrupts,
+  42:Generated_Source\PSoC5/Right_Eyeball.c **** *  the EnableInt command should be called if interrupt generation is required.
+  43:Generated_Source\PSoC5/Right_Eyeball.c **** *
+  44:Generated_Source\PSoC5/Right_Eyeball.c **** * Parameters:
+  45:Generated_Source\PSoC5/Right_Eyeball.c **** *  None
+  46:Generated_Source\PSoC5/Right_Eyeball.c **** *
+  47:Generated_Source\PSoC5/Right_Eyeball.c **** * Return:
+  48:Generated_Source\PSoC5/Right_Eyeball.c **** *  None
+  49:Generated_Source\PSoC5/Right_Eyeball.c **** *
+  50:Generated_Source\PSoC5/Right_Eyeball.c **** * Global variables:
+  51:Generated_Source\PSoC5/Right_Eyeball.c **** *  Right_Eyeball_initVar: Is modified when this function is called for the
+  52:Generated_Source\PSoC5/Right_Eyeball.c **** *   first time. Is used to ensure that initialization happens only once.
+  53:Generated_Source\PSoC5/Right_Eyeball.c **** *
+  54:Generated_Source\PSoC5/Right_Eyeball.c **** *******************************************************************************/
+  55:Generated_Source\PSoC5/Right_Eyeball.c **** void Right_Eyeball_Start(void) 
+  56:Generated_Source\PSoC5/Right_Eyeball.c **** {
+  57:Generated_Source\PSoC5/Right_Eyeball.c ****     /* If not Initialized then initialize all required hardware and software */
+  58:Generated_Source\PSoC5/Right_Eyeball.c ****     if(Right_Eyeball_initVar == 0u)
+  59:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+  60:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_Init();
+  61:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_initVar = 1u;
+  62:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+  63:Generated_Source\PSoC5/Right_Eyeball.c ****     Right_Eyeball_Enable();
+  64:Generated_Source\PSoC5/Right_Eyeball.c **** 
+  65:Generated_Source\PSoC5/Right_Eyeball.c **** }
+  66:Generated_Source\PSoC5/Right_Eyeball.c **** 
+  67:Generated_Source\PSoC5/Right_Eyeball.c **** 
+  68:Generated_Source\PSoC5/Right_Eyeball.c **** /*******************************************************************************
+  69:Generated_Source\PSoC5/Right_Eyeball.c **** * Function Name: Right_Eyeball_Init
+  70:Generated_Source\PSoC5/Right_Eyeball.c **** ********************************************************************************
+  71:Generated_Source\PSoC5/Right_Eyeball.c **** *
+  72:Generated_Source\PSoC5/Right_Eyeball.c **** * Summary:
+  73:Generated_Source\PSoC5/Right_Eyeball.c **** *  Initialize component's parameters to the parameters set by user in the
+  74:Generated_Source\PSoC5/Right_Eyeball.c **** *  customizer of the component placed onto schematic. Usually called in
+  75:Generated_Source\PSoC5/Right_Eyeball.c **** *  Right_Eyeball_Start().
+  76:Generated_Source\PSoC5/Right_Eyeball.c **** *
+  77:Generated_Source\PSoC5/Right_Eyeball.c **** * Parameters:
+  78:Generated_Source\PSoC5/Right_Eyeball.c **** *  None
+  79:Generated_Source\PSoC5/Right_Eyeball.c **** *
+  80:Generated_Source\PSoC5/Right_Eyeball.c **** * Return:
+  81:Generated_Source\PSoC5/Right_Eyeball.c **** *  None
+  82:Generated_Source\PSoC5/Right_Eyeball.c **** *
+  83:Generated_Source\PSoC5/Right_Eyeball.c **** *******************************************************************************/
+  84:Generated_Source\PSoC5/Right_Eyeball.c **** void Right_Eyeball_Init(void) 
+  85:Generated_Source\PSoC5/Right_Eyeball.c **** {
+  86:Generated_Source\PSoC5/Right_Eyeball.c ****     #if (Right_Eyeball_UsingFixedFunction || Right_Eyeball_UseControl)
+  87:Generated_Source\PSoC5/Right_Eyeball.c ****         uint8 ctrl;
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 3
+
+
+  88:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* (Right_Eyeball_UsingFixedFunction || Right_Eyeball_UseControl) */
+  89:Generated_Source\PSoC5/Right_Eyeball.c **** 
+  90:Generated_Source\PSoC5/Right_Eyeball.c ****     #if(!Right_Eyeball_UsingFixedFunction)
+  91:Generated_Source\PSoC5/Right_Eyeball.c ****         #if(Right_Eyeball_UseStatus)
+  92:Generated_Source\PSoC5/Right_Eyeball.c ****             /* Interrupt State Backup for Critical Region*/
+  93:Generated_Source\PSoC5/Right_Eyeball.c ****             uint8 Right_Eyeball_interruptState;
+  94:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_UseStatus) */
+  95:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* (!Right_Eyeball_UsingFixedFunction) */
+  96:Generated_Source\PSoC5/Right_Eyeball.c **** 
+  97:Generated_Source\PSoC5/Right_Eyeball.c ****     #if (Right_Eyeball_UsingFixedFunction)
+  98:Generated_Source\PSoC5/Right_Eyeball.c ****         /* You are allowed to write the compare value (FF only) */
+  99:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_CONTROL |= Right_Eyeball_CFG0_MODE;
+ 100:Generated_Source\PSoC5/Right_Eyeball.c ****         #if (Right_Eyeball_DeadBand2_4)
+ 101:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_CONTROL |= Right_Eyeball_CFG0_DB;
+ 102:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_DeadBand2_4) */
+ 103:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 104:Generated_Source\PSoC5/Right_Eyeball.c ****         ctrl = Right_Eyeball_CONTROL3 & ((uint8 )(~Right_Eyeball_CTRL_CMPMODE1_MASK));
+ 105:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_CONTROL3 = ctrl | Right_Eyeball_DEFAULT_COMPARE1_MODE;
+ 106:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 107:Generated_Source\PSoC5/Right_Eyeball.c ****          /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
+ 108:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_RT1 &= ((uint8)(~Right_Eyeball_RT1_MASK));
+ 109:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_RT1 |= Right_Eyeball_SYNC;
+ 110:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 111:Generated_Source\PSoC5/Right_Eyeball.c ****         /*Enable DSI Sync all all inputs of the PWM*/
+ 112:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_RT1 &= ((uint8)(~Right_Eyeball_SYNCDSI_MASK));
+ 113:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_RT1 |= Right_Eyeball_SYNCDSI_EN;
+ 114:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 115:Generated_Source\PSoC5/Right_Eyeball.c ****     #elif (Right_Eyeball_UseControl)
+ 116:Generated_Source\PSoC5/Right_Eyeball.c ****         /* Set the default compare mode defined in the parameter */
+ 117:Generated_Source\PSoC5/Right_Eyeball.c ****         ctrl = Right_Eyeball_CONTROL & ((uint8)(~Right_Eyeball_CTRL_CMPMODE2_MASK)) &
+ 118:Generated_Source\PSoC5/Right_Eyeball.c ****                 ((uint8)(~Right_Eyeball_CTRL_CMPMODE1_MASK));
+ 119:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_CONTROL = ctrl | Right_Eyeball_DEFAULT_COMPARE2_MODE |
+ 120:Generated_Source\PSoC5/Right_Eyeball.c ****                                    Right_Eyeball_DEFAULT_COMPARE1_MODE;
+ 121:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 122:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 123:Generated_Source\PSoC5/Right_Eyeball.c ****     #if (!Right_Eyeball_UsingFixedFunction)
+ 124:Generated_Source\PSoC5/Right_Eyeball.c ****         #if (Right_Eyeball_Resolution == 8)
+ 125:Generated_Source\PSoC5/Right_Eyeball.c ****             /* Set FIFO 0 to 1 byte register for period*/
+ 126:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_AUX_CONTROLDP0 |= (Right_Eyeball_AUX_CTRL_FIFO0_CLR);
+ 127:Generated_Source\PSoC5/Right_Eyeball.c ****         #else /* (Right_Eyeball_Resolution == 16)*/
+ 128:Generated_Source\PSoC5/Right_Eyeball.c ****             /* Set FIFO 0 to 1 byte register for period */
+ 129:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_AUX_CONTROLDP0 |= (Right_Eyeball_AUX_CTRL_FIFO0_CLR);
+ 130:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_AUX_CONTROLDP1 |= (Right_Eyeball_AUX_CTRL_FIFO0_CLR);
+ 131:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_Resolution == 8) */
+ 132:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 133:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_WriteCounter(Right_Eyeball_INIT_PERIOD_VALUE);
+ 134:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* (!Right_Eyeball_UsingFixedFunction) */
+ 135:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 136:Generated_Source\PSoC5/Right_Eyeball.c ****     Right_Eyeball_WritePeriod(Right_Eyeball_INIT_PERIOD_VALUE);
+ 137:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 138:Generated_Source\PSoC5/Right_Eyeball.c ****         #if (Right_Eyeball_UseOneCompareMode)
+ 139:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_WriteCompare(Right_Eyeball_INIT_COMPARE_VALUE1);
+ 140:Generated_Source\PSoC5/Right_Eyeball.c ****         #else
+ 141:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_WriteCompare1(Right_Eyeball_INIT_COMPARE_VALUE1);
+ 142:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_WriteCompare2(Right_Eyeball_INIT_COMPARE_VALUE2);
+ 143:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_UseOneCompareMode) */
+ 144:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 4
+
+
+ 145:Generated_Source\PSoC5/Right_Eyeball.c ****         #if (Right_Eyeball_KillModeMinTime)
+ 146:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_WriteKillTime(Right_Eyeball_MinimumKillTime);
+ 147:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_KillModeMinTime) */
+ 148:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 149:Generated_Source\PSoC5/Right_Eyeball.c ****         #if (Right_Eyeball_DeadBandUsed)
+ 150:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_WriteDeadTime(Right_Eyeball_INIT_DEAD_TIME);
+ 151:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_DeadBandUsed) */
+ 152:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 153:Generated_Source\PSoC5/Right_Eyeball.c ****     #if (Right_Eyeball_UseStatus || Right_Eyeball_UsingFixedFunction)
+ 154:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_SetInterruptMode(Right_Eyeball_INIT_INTERRUPTS_MODE);
+ 155:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* (Right_Eyeball_UseStatus || Right_Eyeball_UsingFixedFunction) */
+ 156:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 157:Generated_Source\PSoC5/Right_Eyeball.c ****     #if (Right_Eyeball_UsingFixedFunction)
+ 158:Generated_Source\PSoC5/Right_Eyeball.c ****         /* Globally Enable the Fixed Function Block chosen */
+ 159:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_GLOBAL_ENABLE |= Right_Eyeball_BLOCK_EN_MASK;
+ 160:Generated_Source\PSoC5/Right_Eyeball.c ****         /* Set the Interrupt source to come from the status register */
+ 161:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_CONTROL2 |= Right_Eyeball_CTRL2_IRQ_SEL;
+ 162:Generated_Source\PSoC5/Right_Eyeball.c ****     #else
+ 163:Generated_Source\PSoC5/Right_Eyeball.c ****         #if(Right_Eyeball_UseStatus)
+ 164:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 165:Generated_Source\PSoC5/Right_Eyeball.c ****             /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region cri
+ 166:Generated_Source\PSoC5/Right_Eyeball.c ****             /* Enter Critical Region*/
+ 167:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_interruptState = CyEnterCriticalSection();
+ 168:Generated_Source\PSoC5/Right_Eyeball.c ****             /* Use the interrupt output of the status register for IRQ output */
+ 169:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_STATUS_AUX_CTRL |= Right_Eyeball_STATUS_ACTL_INT_EN_MASK;
+ 170:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 171:Generated_Source\PSoC5/Right_Eyeball.c ****              /* Exit Critical Region*/
+ 172:Generated_Source\PSoC5/Right_Eyeball.c ****             CyExitCriticalSection(Right_Eyeball_interruptState);
+ 173:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 174:Generated_Source\PSoC5/Right_Eyeball.c ****             /* Clear the FIFO to enable the Right_Eyeball_STATUS_FIFOFULL
+ 175:Generated_Source\PSoC5/Right_Eyeball.c ****                    bit to be set on FIFO full. */
+ 176:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_ClearFIFO();
+ 177:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_UseStatus) */
+ 178:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 179:Generated_Source\PSoC5/Right_Eyeball.c **** }
+ 180:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 181:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 182:Generated_Source\PSoC5/Right_Eyeball.c **** /*******************************************************************************
+ 183:Generated_Source\PSoC5/Right_Eyeball.c **** * Function Name: Right_Eyeball_Enable
+ 184:Generated_Source\PSoC5/Right_Eyeball.c **** ********************************************************************************
+ 185:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 186:Generated_Source\PSoC5/Right_Eyeball.c **** * Summary:
+ 187:Generated_Source\PSoC5/Right_Eyeball.c **** *  Enables the PWM block operation
+ 188:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 189:Generated_Source\PSoC5/Right_Eyeball.c **** * Parameters:
+ 190:Generated_Source\PSoC5/Right_Eyeball.c **** *  None
+ 191:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 192:Generated_Source\PSoC5/Right_Eyeball.c **** * Return:
+ 193:Generated_Source\PSoC5/Right_Eyeball.c **** *  None
+ 194:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 195:Generated_Source\PSoC5/Right_Eyeball.c **** * Side Effects:
+ 196:Generated_Source\PSoC5/Right_Eyeball.c **** *  This works only if software enable mode is chosen
+ 197:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 198:Generated_Source\PSoC5/Right_Eyeball.c **** *******************************************************************************/
+ 199:Generated_Source\PSoC5/Right_Eyeball.c **** void Right_Eyeball_Enable(void) 
+ 200:Generated_Source\PSoC5/Right_Eyeball.c **** {
+  28              		.loc 1 200 0
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 5
+
+
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+ 201:Generated_Source\PSoC5/Right_Eyeball.c ****     /* Globally Enable the Fixed Function Block chosen */
+ 202:Generated_Source\PSoC5/Right_Eyeball.c ****     #if (Right_Eyeball_UsingFixedFunction)
+ 203:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_GLOBAL_ENABLE |= Right_Eyeball_BLOCK_EN_MASK;
+ 204:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_GLOBAL_STBY_ENABLE |= Right_Eyeball_BLOCK_STBY_EN_MASK;
+ 205:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 206:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 207:Generated_Source\PSoC5/Right_Eyeball.c ****     /* Enable the PWM from the control register  */
+ 208:Generated_Source\PSoC5/Right_Eyeball.c ****     #if (Right_Eyeball_UseControl || Right_Eyeball_UsingFixedFunction)
+ 209:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_CONTROL |= Right_Eyeball_CTRL_ENABLE;
+  33              		.loc 1 209 0
+  34 0000 024A     		ldr	r2, .L2
+  35 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  36 0004 43F08003 		orr	r3, r3, #128
+  37 0008 1370     		strb	r3, [r2]
+  38 000a 7047     		bx	lr
+  39              	.L3:
+  40              		.align	2
+  41              	.L2:
+  42 000c 75640040 		.word	1073767541
+  43              		.cfi_endproc
+  44              	.LFE2:
+  45              		.size	Right_Eyeball_Enable, .-Right_Eyeball_Enable
+  46              		.section	.text.Right_Eyeball_Stop,"ax",%progbits
+  47              		.align	1
+  48              		.global	Right_Eyeball_Stop
+  49              		.thumb
+  50              		.thumb_func
+  51              		.type	Right_Eyeball_Stop, %function
+  52              	Right_Eyeball_Stop:
+  53              	.LFB3:
+ 210:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* (Right_Eyeball_UseControl || Right_Eyeball_UsingFixedFunction) */
+ 211:Generated_Source\PSoC5/Right_Eyeball.c **** }
+ 212:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 213:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 214:Generated_Source\PSoC5/Right_Eyeball.c **** /*******************************************************************************
+ 215:Generated_Source\PSoC5/Right_Eyeball.c **** * Function Name: Right_Eyeball_Stop
+ 216:Generated_Source\PSoC5/Right_Eyeball.c **** ********************************************************************************
+ 217:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 218:Generated_Source\PSoC5/Right_Eyeball.c **** * Summary:
+ 219:Generated_Source\PSoC5/Right_Eyeball.c **** *  The stop function halts the PWM, but does not change any modes or disable
+ 220:Generated_Source\PSoC5/Right_Eyeball.c **** *  interrupts.
+ 221:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 222:Generated_Source\PSoC5/Right_Eyeball.c **** * Parameters:
+ 223:Generated_Source\PSoC5/Right_Eyeball.c **** *  None
+ 224:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 225:Generated_Source\PSoC5/Right_Eyeball.c **** * Return:
+ 226:Generated_Source\PSoC5/Right_Eyeball.c **** *  None
+ 227:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 228:Generated_Source\PSoC5/Right_Eyeball.c **** * Side Effects:
+ 229:Generated_Source\PSoC5/Right_Eyeball.c **** *  If the Enable mode is set to Hardware only then this function
+ 230:Generated_Source\PSoC5/Right_Eyeball.c **** *  has no effect on the operation of the PWM
+ 231:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 232:Generated_Source\PSoC5/Right_Eyeball.c **** *******************************************************************************/
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 6
+
+
+ 233:Generated_Source\PSoC5/Right_Eyeball.c **** void Right_Eyeball_Stop(void) 
+ 234:Generated_Source\PSoC5/Right_Eyeball.c **** {
+  54              		.loc 1 234 0
+  55              		.cfi_startproc
+  56              		@ args = 0, pretend = 0, frame = 0
+  57              		@ frame_needed = 0, uses_anonymous_args = 0
+  58              		@ link register save eliminated.
+ 235:Generated_Source\PSoC5/Right_Eyeball.c ****     #if (Right_Eyeball_UseControl || Right_Eyeball_UsingFixedFunction)
+ 236:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_CONTROL &= ((uint8)(~Right_Eyeball_CTRL_ENABLE));
+  59              		.loc 1 236 0
+  60 0000 024A     		ldr	r2, .L5
+  61 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  62 0004 03F07F03 		and	r3, r3, #127
+  63 0008 1370     		strb	r3, [r2]
+  64 000a 7047     		bx	lr
+  65              	.L6:
+  66              		.align	2
+  67              	.L5:
+  68 000c 75640040 		.word	1073767541
+  69              		.cfi_endproc
+  70              	.LFE3:
+  71              		.size	Right_Eyeball_Stop, .-Right_Eyeball_Stop
+  72              		.section	.text.Right_Eyeball_WriteCounter,"ax",%progbits
+  73              		.align	1
+  74              		.global	Right_Eyeball_WriteCounter
+  75              		.thumb
+  76              		.thumb_func
+  77              		.type	Right_Eyeball_WriteCounter, %function
+  78              	Right_Eyeball_WriteCounter:
+  79              	.LFB4:
+ 237:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* (Right_Eyeball_UseControl || Right_Eyeball_UsingFixedFunction) */
+ 238:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 239:Generated_Source\PSoC5/Right_Eyeball.c ****     /* Globally disable the Fixed Function Block chosen */
+ 240:Generated_Source\PSoC5/Right_Eyeball.c ****     #if (Right_Eyeball_UsingFixedFunction)
+ 241:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_GLOBAL_ENABLE &= ((uint8)(~Right_Eyeball_BLOCK_EN_MASK));
+ 242:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_GLOBAL_STBY_ENABLE &= ((uint8)(~Right_Eyeball_BLOCK_STBY_EN_MASK));
+ 243:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 244:Generated_Source\PSoC5/Right_Eyeball.c **** }
+ 245:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 246:Generated_Source\PSoC5/Right_Eyeball.c **** #if (Right_Eyeball_UseOneCompareMode)
+ 247:Generated_Source\PSoC5/Right_Eyeball.c ****     #if (Right_Eyeball_CompareMode1SW)
+ 248:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 249:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 250:Generated_Source\PSoC5/Right_Eyeball.c ****         /*******************************************************************************
+ 251:Generated_Source\PSoC5/Right_Eyeball.c ****         * Function Name: Right_Eyeball_SetCompareMode
+ 252:Generated_Source\PSoC5/Right_Eyeball.c ****         ********************************************************************************
+ 253:Generated_Source\PSoC5/Right_Eyeball.c ****         *
+ 254:Generated_Source\PSoC5/Right_Eyeball.c ****         * Summary:
+ 255:Generated_Source\PSoC5/Right_Eyeball.c ****         *  This function writes the Compare Mode for the pwm output when in Dither mode,
+ 256:Generated_Source\PSoC5/Right_Eyeball.c ****         *  Center Align Mode or One Output Mode.
+ 257:Generated_Source\PSoC5/Right_Eyeball.c ****         *
+ 258:Generated_Source\PSoC5/Right_Eyeball.c ****         * Parameters:
+ 259:Generated_Source\PSoC5/Right_Eyeball.c ****         *  comparemode:  The new compare mode for the PWM output. Use the compare types
+ 260:Generated_Source\PSoC5/Right_Eyeball.c ****         *                defined in the H file as input arguments.
+ 261:Generated_Source\PSoC5/Right_Eyeball.c ****         *
+ 262:Generated_Source\PSoC5/Right_Eyeball.c ****         * Return:
+ 263:Generated_Source\PSoC5/Right_Eyeball.c ****         *  None
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 7
+
+
+ 264:Generated_Source\PSoC5/Right_Eyeball.c ****         *
+ 265:Generated_Source\PSoC5/Right_Eyeball.c ****         *******************************************************************************/
+ 266:Generated_Source\PSoC5/Right_Eyeball.c ****         void Right_Eyeball_SetCompareMode(uint8 comparemode) 
+ 267:Generated_Source\PSoC5/Right_Eyeball.c ****         {
+ 268:Generated_Source\PSoC5/Right_Eyeball.c ****             #if(Right_Eyeball_UsingFixedFunction)
+ 269:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 270:Generated_Source\PSoC5/Right_Eyeball.c ****                 #if(0 != Right_Eyeball_CTRL_CMPMODE1_SHIFT)
+ 271:Generated_Source\PSoC5/Right_Eyeball.c ****                     uint8 comparemodemasked = ((uint8)((uint8)comparemode << Right_Eyeball_CTRL_CMP
+ 272:Generated_Source\PSoC5/Right_Eyeball.c ****                 #else
+ 273:Generated_Source\PSoC5/Right_Eyeball.c ****                     uint8 comparemodemasked = comparemode;
+ 274:Generated_Source\PSoC5/Right_Eyeball.c ****                 #endif /* (0 != Right_Eyeball_CTRL_CMPMODE1_SHIFT) */
+ 275:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 276:Generated_Source\PSoC5/Right_Eyeball.c ****                 Right_Eyeball_CONTROL3 &= ((uint8)(~Right_Eyeball_CTRL_CMPMODE1_MASK)); /*Clear Exi
+ 277:Generated_Source\PSoC5/Right_Eyeball.c ****                 Right_Eyeball_CONTROL3 |= comparemodemasked;
+ 278:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 279:Generated_Source\PSoC5/Right_Eyeball.c ****             #elif (Right_Eyeball_UseControl)
+ 280:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 281:Generated_Source\PSoC5/Right_Eyeball.c ****                 #if(0 != Right_Eyeball_CTRL_CMPMODE1_SHIFT)
+ 282:Generated_Source\PSoC5/Right_Eyeball.c ****                     uint8 comparemode1masked = ((uint8)((uint8)comparemode << Right_Eyeball_CTRL_CM
+ 283:Generated_Source\PSoC5/Right_Eyeball.c ****                                                 Right_Eyeball_CTRL_CMPMODE1_MASK;
+ 284:Generated_Source\PSoC5/Right_Eyeball.c ****                 #else
+ 285:Generated_Source\PSoC5/Right_Eyeball.c ****                     uint8 comparemode1masked = comparemode & Right_Eyeball_CTRL_CMPMODE1_MASK;
+ 286:Generated_Source\PSoC5/Right_Eyeball.c ****                 #endif /* (0 != Right_Eyeball_CTRL_CMPMODE1_SHIFT) */
+ 287:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 288:Generated_Source\PSoC5/Right_Eyeball.c ****                 #if(0 != Right_Eyeball_CTRL_CMPMODE2_SHIFT)
+ 289:Generated_Source\PSoC5/Right_Eyeball.c ****                     uint8 comparemode2masked = ((uint8)((uint8)comparemode << Right_Eyeball_CTRL_CM
+ 290:Generated_Source\PSoC5/Right_Eyeball.c ****                                                Right_Eyeball_CTRL_CMPMODE2_MASK;
+ 291:Generated_Source\PSoC5/Right_Eyeball.c ****                 #else
+ 292:Generated_Source\PSoC5/Right_Eyeball.c ****                     uint8 comparemode2masked = comparemode & Right_Eyeball_CTRL_CMPMODE2_MASK;
+ 293:Generated_Source\PSoC5/Right_Eyeball.c ****                 #endif /* (0 != Right_Eyeball_CTRL_CMPMODE2_SHIFT) */
+ 294:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 295:Generated_Source\PSoC5/Right_Eyeball.c ****                 /*Clear existing mode */
+ 296:Generated_Source\PSoC5/Right_Eyeball.c ****                 Right_Eyeball_CONTROL &= ((uint8)(~(Right_Eyeball_CTRL_CMPMODE1_MASK |
+ 297:Generated_Source\PSoC5/Right_Eyeball.c ****                                             Right_Eyeball_CTRL_CMPMODE2_MASK)));
+ 298:Generated_Source\PSoC5/Right_Eyeball.c ****                 Right_Eyeball_CONTROL |= (comparemode1masked | comparemode2masked);
+ 299:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 300:Generated_Source\PSoC5/Right_Eyeball.c ****             #else
+ 301:Generated_Source\PSoC5/Right_Eyeball.c ****                 uint8 temp = comparemode;
+ 302:Generated_Source\PSoC5/Right_Eyeball.c ****             #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 303:Generated_Source\PSoC5/Right_Eyeball.c ****         }
+ 304:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* Right_Eyeball_CompareMode1SW */
+ 305:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 306:Generated_Source\PSoC5/Right_Eyeball.c **** #else /* UseOneCompareMode */
+ 307:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 308:Generated_Source\PSoC5/Right_Eyeball.c ****     #if (Right_Eyeball_CompareMode1SW)
+ 309:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 310:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 311:Generated_Source\PSoC5/Right_Eyeball.c ****         /*******************************************************************************
+ 312:Generated_Source\PSoC5/Right_Eyeball.c ****         * Function Name: Right_Eyeball_SetCompareMode1
+ 313:Generated_Source\PSoC5/Right_Eyeball.c ****         ********************************************************************************
+ 314:Generated_Source\PSoC5/Right_Eyeball.c ****         *
+ 315:Generated_Source\PSoC5/Right_Eyeball.c ****         * Summary:
+ 316:Generated_Source\PSoC5/Right_Eyeball.c ****         *  This function writes the Compare Mode for the pwm or pwm1 output
+ 317:Generated_Source\PSoC5/Right_Eyeball.c ****         *
+ 318:Generated_Source\PSoC5/Right_Eyeball.c ****         * Parameters:
+ 319:Generated_Source\PSoC5/Right_Eyeball.c ****         *  comparemode:  The new compare mode for the PWM output. Use the compare types
+ 320:Generated_Source\PSoC5/Right_Eyeball.c ****         *                defined in the H file as input arguments.
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 8
+
+
+ 321:Generated_Source\PSoC5/Right_Eyeball.c ****         *
+ 322:Generated_Source\PSoC5/Right_Eyeball.c ****         * Return:
+ 323:Generated_Source\PSoC5/Right_Eyeball.c ****         *  None
+ 324:Generated_Source\PSoC5/Right_Eyeball.c ****         *
+ 325:Generated_Source\PSoC5/Right_Eyeball.c ****         *******************************************************************************/
+ 326:Generated_Source\PSoC5/Right_Eyeball.c ****         void Right_Eyeball_SetCompareMode1(uint8 comparemode) 
+ 327:Generated_Source\PSoC5/Right_Eyeball.c ****         {
+ 328:Generated_Source\PSoC5/Right_Eyeball.c ****             #if(0 != Right_Eyeball_CTRL_CMPMODE1_SHIFT)
+ 329:Generated_Source\PSoC5/Right_Eyeball.c ****                 uint8 comparemodemasked = ((uint8)((uint8)comparemode << Right_Eyeball_CTRL_CMPMODE
+ 330:Generated_Source\PSoC5/Right_Eyeball.c ****                                            Right_Eyeball_CTRL_CMPMODE1_MASK;
+ 331:Generated_Source\PSoC5/Right_Eyeball.c ****             #else
+ 332:Generated_Source\PSoC5/Right_Eyeball.c ****                 uint8 comparemodemasked = comparemode & Right_Eyeball_CTRL_CMPMODE1_MASK;
+ 333:Generated_Source\PSoC5/Right_Eyeball.c ****             #endif /* (0 != Right_Eyeball_CTRL_CMPMODE1_SHIFT) */
+ 334:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 335:Generated_Source\PSoC5/Right_Eyeball.c ****             #if (Right_Eyeball_UseControl)
+ 336:Generated_Source\PSoC5/Right_Eyeball.c ****                 Right_Eyeball_CONTROL &= ((uint8)(~Right_Eyeball_CTRL_CMPMODE1_MASK)); /*Clear exis
+ 337:Generated_Source\PSoC5/Right_Eyeball.c ****                 Right_Eyeball_CONTROL |= comparemodemasked;
+ 338:Generated_Source\PSoC5/Right_Eyeball.c ****             #endif /* (Right_Eyeball_UseControl) */
+ 339:Generated_Source\PSoC5/Right_Eyeball.c ****         }
+ 340:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* Right_Eyeball_CompareMode1SW */
+ 341:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 342:Generated_Source\PSoC5/Right_Eyeball.c **** #if (Right_Eyeball_CompareMode2SW)
+ 343:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 344:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 345:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 346:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_SetCompareMode2
+ 347:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 348:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 349:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 350:Generated_Source\PSoC5/Right_Eyeball.c ****     *  This function writes the Compare Mode for the pwm or pwm2 output
+ 351:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 352:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 353:Generated_Source\PSoC5/Right_Eyeball.c ****     *  comparemode:  The new compare mode for the PWM output. Use the compare types
+ 354:Generated_Source\PSoC5/Right_Eyeball.c ****     *                defined in the H file as input arguments.
+ 355:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 356:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 357:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 358:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 359:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 360:Generated_Source\PSoC5/Right_Eyeball.c ****     void Right_Eyeball_SetCompareMode2(uint8 comparemode) 
+ 361:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 362:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 363:Generated_Source\PSoC5/Right_Eyeball.c ****         #if(0 != Right_Eyeball_CTRL_CMPMODE2_SHIFT)
+ 364:Generated_Source\PSoC5/Right_Eyeball.c ****             uint8 comparemodemasked = ((uint8)((uint8)comparemode << Right_Eyeball_CTRL_CMPMODE2_SH
+ 365:Generated_Source\PSoC5/Right_Eyeball.c ****                                                  Right_Eyeball_CTRL_CMPMODE2_MASK;
+ 366:Generated_Source\PSoC5/Right_Eyeball.c ****         #else
+ 367:Generated_Source\PSoC5/Right_Eyeball.c ****             uint8 comparemodemasked = comparemode & Right_Eyeball_CTRL_CMPMODE2_MASK;
+ 368:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (0 != Right_Eyeball_CTRL_CMPMODE2_SHIFT) */
+ 369:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 370:Generated_Source\PSoC5/Right_Eyeball.c ****         #if (Right_Eyeball_UseControl)
+ 371:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_CONTROL &= ((uint8)(~Right_Eyeball_CTRL_CMPMODE2_MASK)); /*Clear existing
+ 372:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_CONTROL |= comparemodemasked;
+ 373:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_UseControl) */
+ 374:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 375:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /*Right_Eyeball_CompareMode2SW */
+ 376:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 377:Generated_Source\PSoC5/Right_Eyeball.c **** #endif /* UseOneCompareMode */
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 9
+
+
+ 378:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 379:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 380:Generated_Source\PSoC5/Right_Eyeball.c **** #if (!Right_Eyeball_UsingFixedFunction)
+ 381:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 382:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 383:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 384:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_WriteCounter
+ 385:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 386:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 387:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 388:Generated_Source\PSoC5/Right_Eyeball.c ****     *  Writes a new counter value directly to the counter register. This will be
+ 389:Generated_Source\PSoC5/Right_Eyeball.c ****     *  implemented for that currently running period and only that period. This API
+ 390:Generated_Source\PSoC5/Right_Eyeball.c ****     *  is valid only for UDB implementation and not available for fixed function
+ 391:Generated_Source\PSoC5/Right_Eyeball.c ****     *  PWM implementation.
+ 392:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 393:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 394:Generated_Source\PSoC5/Right_Eyeball.c ****     *  counter:  The period new period counter value.
+ 395:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 396:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 397:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 398:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 399:Generated_Source\PSoC5/Right_Eyeball.c ****     * Side Effects:
+ 400:Generated_Source\PSoC5/Right_Eyeball.c ****     *  The PWM Period will be reloaded when a counter value will be a zero
+ 401:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 402:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 403:Generated_Source\PSoC5/Right_Eyeball.c ****     void Right_Eyeball_WriteCounter(uint16 counter) \
+ 404:Generated_Source\PSoC5/Right_Eyeball.c ****                                        
+ 405:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+  80              		.loc 1 405 0
+  81              		.cfi_startproc
+  82              		@ args = 0, pretend = 0, frame = 0
+  83              		@ frame_needed = 0, uses_anonymous_args = 0
+  84              		@ link register save eliminated.
+  85              	.LVL0:
+ 406:Generated_Source\PSoC5/Right_Eyeball.c ****         CY_SET_REG16(Right_Eyeball_COUNTER_LSB_PTR, counter);
+  86              		.loc 1 406 0
+  87 0000 014B     		ldr	r3, .L8
+  88 0002 1880     		strh	r0, [r3]	@ movhi
+  89 0004 7047     		bx	lr
+  90              	.L9:
+  91 0006 00BF     		.align	2
+  92              	.L8:
+  93 0008 08680040 		.word	1073768456
+  94              		.cfi_endproc
+  95              	.LFE4:
+  96              		.size	Right_Eyeball_WriteCounter, .-Right_Eyeball_WriteCounter
+  97              		.section	.text.Right_Eyeball_ReadCounter,"ax",%progbits
+  98              		.align	1
+  99              		.global	Right_Eyeball_ReadCounter
+ 100              		.thumb
+ 101              		.thumb_func
+ 102              		.type	Right_Eyeball_ReadCounter, %function
+ 103              	Right_Eyeball_ReadCounter:
+ 104              	.LFB5:
+ 407:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 408:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 409:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 10
+
+
+ 410:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 411:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_ReadCounter
+ 412:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 413:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 414:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 415:Generated_Source\PSoC5/Right_Eyeball.c ****     *  This function returns the current value of the counter.  It doesn't matter
+ 416:Generated_Source\PSoC5/Right_Eyeball.c ****     *  if the counter is enabled or running.
+ 417:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 418:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 419:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 420:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 421:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 422:Generated_Source\PSoC5/Right_Eyeball.c ****     *  The current value of the counter.
+ 423:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 424:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 425:Generated_Source\PSoC5/Right_Eyeball.c ****     uint16 Right_Eyeball_ReadCounter(void) 
+ 426:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 105              		.loc 1 426 0
+ 106              		.cfi_startproc
+ 107              		@ args = 0, pretend = 0, frame = 0
+ 108              		@ frame_needed = 0, uses_anonymous_args = 0
+ 109              		@ link register save eliminated.
+ 427:Generated_Source\PSoC5/Right_Eyeball.c ****         /* Force capture by reading Accumulator */
+ 428:Generated_Source\PSoC5/Right_Eyeball.c ****         /* Must first do a software capture to be able to read the counter */
+ 429:Generated_Source\PSoC5/Right_Eyeball.c ****         /* It is up to the user code to make sure there isn't already captured data in the FIFO */
+ 430:Generated_Source\PSoC5/Right_Eyeball.c ****           (void)CY_GET_REG8(Right_Eyeball_COUNTERCAP_LSB_PTR_8BIT);
+ 110              		.loc 1 430 0
+ 111 0000 024B     		ldr	r3, .L11
+ 112 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 431:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 432:Generated_Source\PSoC5/Right_Eyeball.c ****         /* Read the data from the FIFO */
+ 433:Generated_Source\PSoC5/Right_Eyeball.c ****         return (CY_GET_REG16(Right_Eyeball_CAPTURE_LSB_PTR));
+ 113              		.loc 1 433 0
+ 114 0004 024B     		ldr	r3, .L11+4
+ 115 0006 1888     		ldrh	r0, [r3]
+ 434:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 116              		.loc 1 434 0
+ 117 0008 80B2     		uxth	r0, r0
+ 118 000a 7047     		bx	lr
+ 119              	.L12:
+ 120              		.align	2
+ 121              	.L11:
+ 122 000c 14640040 		.word	1073767444
+ 123 0010 A8680040 		.word	1073768616
+ 124              		.cfi_endproc
+ 125              	.LFE5:
+ 126              		.size	Right_Eyeball_ReadCounter, .-Right_Eyeball_ReadCounter
+ 127              		.section	.text.Right_Eyeball_ClearFIFO,"ax",%progbits
+ 128              		.align	1
+ 129              		.global	Right_Eyeball_ClearFIFO
+ 130              		.thumb
+ 131              		.thumb_func
+ 132              		.type	Right_Eyeball_ClearFIFO, %function
+ 133              	Right_Eyeball_ClearFIFO:
+ 134              	.LFB6:
+ 435:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 436:Generated_Source\PSoC5/Right_Eyeball.c ****     #if (Right_Eyeball_UseStatus)
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 11
+
+
+ 437:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 438:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 439:Generated_Source\PSoC5/Right_Eyeball.c ****         /*******************************************************************************
+ 440:Generated_Source\PSoC5/Right_Eyeball.c ****         * Function Name: Right_Eyeball_ClearFIFO
+ 441:Generated_Source\PSoC5/Right_Eyeball.c ****         ********************************************************************************
+ 442:Generated_Source\PSoC5/Right_Eyeball.c ****         *
+ 443:Generated_Source\PSoC5/Right_Eyeball.c ****         * Summary:
+ 444:Generated_Source\PSoC5/Right_Eyeball.c ****         *  This function clears all capture data from the capture FIFO
+ 445:Generated_Source\PSoC5/Right_Eyeball.c ****         *
+ 446:Generated_Source\PSoC5/Right_Eyeball.c ****         * Parameters:
+ 447:Generated_Source\PSoC5/Right_Eyeball.c ****         *  None
+ 448:Generated_Source\PSoC5/Right_Eyeball.c ****         *
+ 449:Generated_Source\PSoC5/Right_Eyeball.c ****         * Return:
+ 450:Generated_Source\PSoC5/Right_Eyeball.c ****         *  None
+ 451:Generated_Source\PSoC5/Right_Eyeball.c ****         *
+ 452:Generated_Source\PSoC5/Right_Eyeball.c ****         *******************************************************************************/
+ 453:Generated_Source\PSoC5/Right_Eyeball.c ****         void Right_Eyeball_ClearFIFO(void) 
+ 454:Generated_Source\PSoC5/Right_Eyeball.c ****         {
+ 135              		.loc 1 454 0
+ 136              		.cfi_startproc
+ 137              		@ args = 0, pretend = 0, frame = 0
+ 138              		@ frame_needed = 0, uses_anonymous_args = 0
+ 139              		@ link register save eliminated.
+ 140              	.LBB16:
+ 141              	.LBB17:
+ 455:Generated_Source\PSoC5/Right_Eyeball.c ****             while(0u != (Right_Eyeball_ReadStatusRegister() & Right_Eyeball_STATUS_FIFONEMPTY))
+ 456:Generated_Source\PSoC5/Right_Eyeball.c ****             {
+ 457:Generated_Source\PSoC5/Right_Eyeball.c ****                 (void)Right_Eyeball_ReadCapture();
+ 458:Generated_Source\PSoC5/Right_Eyeball.c ****             }
+ 459:Generated_Source\PSoC5/Right_Eyeball.c ****         }
+ 460:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 461:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* Right_Eyeball_UseStatus */
+ 462:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 463:Generated_Source\PSoC5/Right_Eyeball.c **** #endif /* !Right_Eyeball_UsingFixedFunction */
+ 464:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 465:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 466:Generated_Source\PSoC5/Right_Eyeball.c **** /*******************************************************************************
+ 467:Generated_Source\PSoC5/Right_Eyeball.c **** * Function Name: Right_Eyeball_WritePeriod
+ 468:Generated_Source\PSoC5/Right_Eyeball.c **** ********************************************************************************
+ 469:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 470:Generated_Source\PSoC5/Right_Eyeball.c **** * Summary:
+ 471:Generated_Source\PSoC5/Right_Eyeball.c **** *  This function is used to change the period of the counter.  The new period
+ 472:Generated_Source\PSoC5/Right_Eyeball.c **** *  will be loaded the next time terminal count is detected.
+ 473:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 474:Generated_Source\PSoC5/Right_Eyeball.c **** * Parameters:
+ 475:Generated_Source\PSoC5/Right_Eyeball.c **** *  period:  Period value. May be between 1 and (2^Resolution)-1.  A value of 0
+ 476:Generated_Source\PSoC5/Right_Eyeball.c **** *           will result in the counter remaining at zero.
+ 477:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 478:Generated_Source\PSoC5/Right_Eyeball.c **** * Return:
+ 479:Generated_Source\PSoC5/Right_Eyeball.c **** *  None
+ 480:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 481:Generated_Source\PSoC5/Right_Eyeball.c **** *******************************************************************************/
+ 482:Generated_Source\PSoC5/Right_Eyeball.c **** void Right_Eyeball_WritePeriod(uint16 period) 
+ 483:Generated_Source\PSoC5/Right_Eyeball.c **** {
+ 484:Generated_Source\PSoC5/Right_Eyeball.c ****     #if(Right_Eyeball_UsingFixedFunction)
+ 485:Generated_Source\PSoC5/Right_Eyeball.c ****         CY_SET_REG16(Right_Eyeball_PERIOD_LSB_PTR, (uint16)period);
+ 486:Generated_Source\PSoC5/Right_Eyeball.c ****     #else
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 12
+
+
+ 487:Generated_Source\PSoC5/Right_Eyeball.c ****         CY_SET_REG16(Right_Eyeball_PERIOD_LSB_PTR, period);
+ 488:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 489:Generated_Source\PSoC5/Right_Eyeball.c **** }
+ 490:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 491:Generated_Source\PSoC5/Right_Eyeball.c **** #if (Right_Eyeball_UseOneCompareMode)
+ 492:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 493:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 494:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 495:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_WriteCompare
+ 496:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 497:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 498:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 499:Generated_Source\PSoC5/Right_Eyeball.c ****     *  This funtion is used to change the compare1 value when the PWM is in Dither
+ 500:Generated_Source\PSoC5/Right_Eyeball.c ****     *  mode. The compare output will reflect the new value on the next UDB clock.
+ 501:Generated_Source\PSoC5/Right_Eyeball.c ****     *  The compare output will be driven high when the present counter value is
+ 502:Generated_Source\PSoC5/Right_Eyeball.c ****     *  compared to the compare value based on the compare mode defined in
+ 503:Generated_Source\PSoC5/Right_Eyeball.c ****     *  Dither Mode.
+ 504:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 505:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 506:Generated_Source\PSoC5/Right_Eyeball.c ****     *  compare:  New compare value.
+ 507:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 508:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 509:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 510:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 511:Generated_Source\PSoC5/Right_Eyeball.c ****     * Side Effects:
+ 512:Generated_Source\PSoC5/Right_Eyeball.c ****     *  This function is only available if the PWM mode parameter is set to
+ 513:Generated_Source\PSoC5/Right_Eyeball.c ****     *  Dither Mode, Center Aligned Mode or One Output Mode
+ 514:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 515:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 516:Generated_Source\PSoC5/Right_Eyeball.c ****     void Right_Eyeball_WriteCompare(uint16 compare) \
+ 517:Generated_Source\PSoC5/Right_Eyeball.c ****                                        
+ 518:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 519:Generated_Source\PSoC5/Right_Eyeball.c ****         #if(Right_Eyeball_UsingFixedFunction)
+ 520:Generated_Source\PSoC5/Right_Eyeball.c ****             CY_SET_REG16(Right_Eyeball_COMPARE1_LSB_PTR, (uint16)compare);
+ 521:Generated_Source\PSoC5/Right_Eyeball.c ****         #else
+ 522:Generated_Source\PSoC5/Right_Eyeball.c ****             CY_SET_REG16(Right_Eyeball_COMPARE1_LSB_PTR, compare);
+ 523:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 524:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 525:Generated_Source\PSoC5/Right_Eyeball.c ****         #if (Right_Eyeball_PWMMode == Right_Eyeball__B_PWM__DITHER)
+ 526:Generated_Source\PSoC5/Right_Eyeball.c ****             #if(Right_Eyeball_UsingFixedFunction)
+ 527:Generated_Source\PSoC5/Right_Eyeball.c ****                 CY_SET_REG16(Right_Eyeball_COMPARE2_LSB_PTR, (uint16)(compare + 1u));
+ 528:Generated_Source\PSoC5/Right_Eyeball.c ****             #else
+ 529:Generated_Source\PSoC5/Right_Eyeball.c ****                 CY_SET_REG16(Right_Eyeball_COMPARE2_LSB_PTR, (compare + 1u));
+ 530:Generated_Source\PSoC5/Right_Eyeball.c ****             #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 531:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_PWMMode == Right_Eyeball__B_PWM__DITHER) */
+ 532:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 533:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 534:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 535:Generated_Source\PSoC5/Right_Eyeball.c **** #else
+ 536:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 537:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 538:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 539:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_WriteCompare1
+ 540:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 541:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 542:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 543:Generated_Source\PSoC5/Right_Eyeball.c ****     *  This funtion is used to change the compare1 value.  The compare output will
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 13
+
+
+ 544:Generated_Source\PSoC5/Right_Eyeball.c ****     *  reflect the new value on the next UDB clock.  The compare output will be
+ 545:Generated_Source\PSoC5/Right_Eyeball.c ****     *  driven high when the present counter value is less than or less than or
+ 546:Generated_Source\PSoC5/Right_Eyeball.c ****     *  equal to the compare register, depending on the mode.
+ 547:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 548:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 549:Generated_Source\PSoC5/Right_Eyeball.c ****     *  compare:  New compare value.
+ 550:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 551:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 552:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 553:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 554:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 555:Generated_Source\PSoC5/Right_Eyeball.c ****     void Right_Eyeball_WriteCompare1(uint16 compare) \
+ 556:Generated_Source\PSoC5/Right_Eyeball.c ****                                         
+ 557:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 558:Generated_Source\PSoC5/Right_Eyeball.c ****         #if(Right_Eyeball_UsingFixedFunction)
+ 559:Generated_Source\PSoC5/Right_Eyeball.c ****             CY_SET_REG16(Right_Eyeball_COMPARE1_LSB_PTR, (uint16)compare);
+ 560:Generated_Source\PSoC5/Right_Eyeball.c ****         #else
+ 561:Generated_Source\PSoC5/Right_Eyeball.c ****             CY_SET_REG16(Right_Eyeball_COMPARE1_LSB_PTR, compare);
+ 562:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 563:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 564:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 565:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 566:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 567:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_WriteCompare2
+ 568:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 569:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 570:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 571:Generated_Source\PSoC5/Right_Eyeball.c ****     *  This funtion is used to change the compare value, for compare1 output.
+ 572:Generated_Source\PSoC5/Right_Eyeball.c ****     *  The compare output will reflect the new value on the next UDB clock.
+ 573:Generated_Source\PSoC5/Right_Eyeball.c ****     *  The compare output will be driven high when the present counter value is
+ 574:Generated_Source\PSoC5/Right_Eyeball.c ****     *  less than or less than or equal to the compare register, depending on the
+ 575:Generated_Source\PSoC5/Right_Eyeball.c ****     *  mode.
+ 576:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 577:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 578:Generated_Source\PSoC5/Right_Eyeball.c ****     *  compare:  New compare value.
+ 579:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 580:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 581:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 582:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 583:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 584:Generated_Source\PSoC5/Right_Eyeball.c ****     void Right_Eyeball_WriteCompare2(uint16 compare) \
+ 585:Generated_Source\PSoC5/Right_Eyeball.c ****                                         
+ 586:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 587:Generated_Source\PSoC5/Right_Eyeball.c ****         #if(Right_Eyeball_UsingFixedFunction)
+ 588:Generated_Source\PSoC5/Right_Eyeball.c ****             CY_SET_REG16(Right_Eyeball_COMPARE2_LSB_PTR, compare);
+ 589:Generated_Source\PSoC5/Right_Eyeball.c ****         #else
+ 590:Generated_Source\PSoC5/Right_Eyeball.c ****             CY_SET_REG16(Right_Eyeball_COMPARE2_LSB_PTR, compare);
+ 591:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 592:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 593:Generated_Source\PSoC5/Right_Eyeball.c **** #endif /* UseOneCompareMode */
+ 594:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 595:Generated_Source\PSoC5/Right_Eyeball.c **** #if (Right_Eyeball_DeadBandUsed)
+ 596:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 597:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 598:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 599:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_WriteDeadTime
+ 600:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 14
+
+
+ 601:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 602:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 603:Generated_Source\PSoC5/Right_Eyeball.c ****     *  This function writes the dead-band counts to the corresponding register
+ 604:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 605:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 606:Generated_Source\PSoC5/Right_Eyeball.c ****     *  deadtime:  Number of counts for dead time
+ 607:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 608:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 609:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 610:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 611:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 612:Generated_Source\PSoC5/Right_Eyeball.c ****     void Right_Eyeball_WriteDeadTime(uint8 deadtime) 
+ 613:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 614:Generated_Source\PSoC5/Right_Eyeball.c ****         /* If using the Dead Band 1-255 mode then just write the register */
+ 615:Generated_Source\PSoC5/Right_Eyeball.c ****         #if(!Right_Eyeball_DeadBand2_4)
+ 616:Generated_Source\PSoC5/Right_Eyeball.c ****             CY_SET_REG8(Right_Eyeball_DEADBAND_COUNT_PTR, deadtime);
+ 617:Generated_Source\PSoC5/Right_Eyeball.c ****         #else
+ 618:Generated_Source\PSoC5/Right_Eyeball.c ****             /* Otherwise the data has to be masked and offset */
+ 619:Generated_Source\PSoC5/Right_Eyeball.c ****             /* Clear existing data */
+ 620:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_DEADBAND_COUNT &= ((uint8)(~Right_Eyeball_DEADBAND_COUNT_MASK));
+ 621:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 622:Generated_Source\PSoC5/Right_Eyeball.c ****             /* Set new dead time */
+ 623:Generated_Source\PSoC5/Right_Eyeball.c ****             #if(Right_Eyeball_DEADBAND_COUNT_SHIFT)
+ 624:Generated_Source\PSoC5/Right_Eyeball.c ****                 Right_Eyeball_DEADBAND_COUNT |= ((uint8)((uint8)deadtime << Right_Eyeball_DEADBAND_
+ 625:Generated_Source\PSoC5/Right_Eyeball.c ****                                                     Right_Eyeball_DEADBAND_COUNT_MASK;
+ 626:Generated_Source\PSoC5/Right_Eyeball.c ****             #else
+ 627:Generated_Source\PSoC5/Right_Eyeball.c ****                 Right_Eyeball_DEADBAND_COUNT |= deadtime & Right_Eyeball_DEADBAND_COUNT_MASK;
+ 628:Generated_Source\PSoC5/Right_Eyeball.c ****             #endif /* (Right_Eyeball_DEADBAND_COUNT_SHIFT) */
+ 629:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 630:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (!Right_Eyeball_DeadBand2_4) */
+ 631:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 632:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 633:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 634:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 635:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_ReadDeadTime
+ 636:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 637:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 638:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 639:Generated_Source\PSoC5/Right_Eyeball.c ****     *  This function reads the dead-band counts from the corresponding register
+ 640:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 641:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 642:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 643:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 644:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 645:Generated_Source\PSoC5/Right_Eyeball.c ****     *  Dead Band Counts
+ 646:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 647:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 648:Generated_Source\PSoC5/Right_Eyeball.c ****     uint8 Right_Eyeball_ReadDeadTime(void) 
+ 649:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 650:Generated_Source\PSoC5/Right_Eyeball.c ****         /* If using the Dead Band 1-255 mode then just read the register */
+ 651:Generated_Source\PSoC5/Right_Eyeball.c ****         #if(!Right_Eyeball_DeadBand2_4)
+ 652:Generated_Source\PSoC5/Right_Eyeball.c ****             return (CY_GET_REG8(Right_Eyeball_DEADBAND_COUNT_PTR));
+ 653:Generated_Source\PSoC5/Right_Eyeball.c ****         #else
+ 654:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 655:Generated_Source\PSoC5/Right_Eyeball.c ****             /* Otherwise the data has to be masked and offset */
+ 656:Generated_Source\PSoC5/Right_Eyeball.c ****             #if(Right_Eyeball_DEADBAND_COUNT_SHIFT)
+ 657:Generated_Source\PSoC5/Right_Eyeball.c ****                 return ((uint8)(((uint8)(Right_Eyeball_DEADBAND_COUNT & Right_Eyeball_DEADBAND_COUN
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 15
+
+
+ 658:Generated_Source\PSoC5/Right_Eyeball.c ****                                                                            Right_Eyeball_DEADBAND_C
+ 659:Generated_Source\PSoC5/Right_Eyeball.c ****             #else
+ 660:Generated_Source\PSoC5/Right_Eyeball.c ****                 return (Right_Eyeball_DEADBAND_COUNT & Right_Eyeball_DEADBAND_COUNT_MASK);
+ 661:Generated_Source\PSoC5/Right_Eyeball.c ****             #endif /* (Right_Eyeball_DEADBAND_COUNT_SHIFT) */
+ 662:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (!Right_Eyeball_DeadBand2_4) */
+ 663:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 664:Generated_Source\PSoC5/Right_Eyeball.c **** #endif /* DeadBandUsed */
+ 665:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 666:Generated_Source\PSoC5/Right_Eyeball.c **** #if (Right_Eyeball_UseStatus || Right_Eyeball_UsingFixedFunction)
+ 667:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 668:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 669:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 670:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_SetInterruptMode
+ 671:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 672:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 673:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 674:Generated_Source\PSoC5/Right_Eyeball.c ****     *  This function configures the interrupts mask control of theinterrupt
+ 675:Generated_Source\PSoC5/Right_Eyeball.c ****     *  source status register.
+ 676:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 677:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 678:Generated_Source\PSoC5/Right_Eyeball.c ****     *  uint8 interruptMode: Bit field containing the interrupt sources enabled
+ 679:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 680:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 681:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 682:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 683:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 684:Generated_Source\PSoC5/Right_Eyeball.c ****     void Right_Eyeball_SetInterruptMode(uint8 interruptMode) 
+ 685:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 686:Generated_Source\PSoC5/Right_Eyeball.c ****         CY_SET_REG8(Right_Eyeball_STATUS_MASK_PTR, interruptMode);
+ 687:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 688:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 689:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 690:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 691:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_ReadStatusRegister
+ 692:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 693:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 694:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 695:Generated_Source\PSoC5/Right_Eyeball.c ****     *  This function returns the current state of the status register.
+ 696:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 697:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 698:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 699:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 700:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 701:Generated_Source\PSoC5/Right_Eyeball.c ****     *  uint8 : Current status register value. The status register bits are:
+ 702:Generated_Source\PSoC5/Right_Eyeball.c ****     *  [7:6] : Unused(0)
+ 703:Generated_Source\PSoC5/Right_Eyeball.c ****     *  [5]   : Kill event output
+ 704:Generated_Source\PSoC5/Right_Eyeball.c ****     *  [4]   : FIFO not empty
+ 705:Generated_Source\PSoC5/Right_Eyeball.c ****     *  [3]   : FIFO full
+ 706:Generated_Source\PSoC5/Right_Eyeball.c ****     *  [2]   : Terminal count
+ 707:Generated_Source\PSoC5/Right_Eyeball.c ****     *  [1]   : Compare output 2
+ 708:Generated_Source\PSoC5/Right_Eyeball.c ****     *  [0]   : Compare output 1
+ 709:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 710:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 711:Generated_Source\PSoC5/Right_Eyeball.c ****     uint8 Right_Eyeball_ReadStatusRegister(void) 
+ 712:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 713:Generated_Source\PSoC5/Right_Eyeball.c ****         return (CY_GET_REG8(Right_Eyeball_STATUS_PTR));
+ 142              		.loc 1 713 0
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 16
+
+
+ 143 0000 034A     		ldr	r2, .L18
+ 144              	.LBE17:
+ 145              	.LBE16:
+ 146              	.LBB19:
+ 147              	.LBB20:
+ 714:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 715:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 716:Generated_Source\PSoC5/Right_Eyeball.c **** #endif /* (Right_Eyeball_UseStatus || Right_Eyeball_UsingFixedFunction) */
+ 717:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 718:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 719:Generated_Source\PSoC5/Right_Eyeball.c **** #if (Right_Eyeball_UseControl)
+ 720:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 721:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 722:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 723:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_ReadControlRegister
+ 724:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 725:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 726:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 727:Generated_Source\PSoC5/Right_Eyeball.c ****     *  Returns the current state of the control register. This API is available
+ 728:Generated_Source\PSoC5/Right_Eyeball.c ****     *  only if the control register is not removed.
+ 729:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 730:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 731:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 732:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 733:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 734:Generated_Source\PSoC5/Right_Eyeball.c ****     *  uint8 : Current control register value
+ 735:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 736:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 737:Generated_Source\PSoC5/Right_Eyeball.c ****     uint8 Right_Eyeball_ReadControlRegister(void) 
+ 738:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 739:Generated_Source\PSoC5/Right_Eyeball.c ****         uint8 result;
+ 740:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 741:Generated_Source\PSoC5/Right_Eyeball.c ****         result = CY_GET_REG8(Right_Eyeball_CONTROL_PTR);
+ 742:Generated_Source\PSoC5/Right_Eyeball.c ****         return (result);
+ 743:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 744:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 745:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 746:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 747:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_WriteControlRegister
+ 748:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 749:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 750:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 751:Generated_Source\PSoC5/Right_Eyeball.c ****     *  Sets the bit field of the control register. This API is available only if
+ 752:Generated_Source\PSoC5/Right_Eyeball.c ****     *  the control register is not removed.
+ 753:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 754:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 755:Generated_Source\PSoC5/Right_Eyeball.c ****     *  uint8 control: Control register bit field, The status register bits are:
+ 756:Generated_Source\PSoC5/Right_Eyeball.c ****     *  [7]   : PWM Enable
+ 757:Generated_Source\PSoC5/Right_Eyeball.c ****     *  [6]   : Reset
+ 758:Generated_Source\PSoC5/Right_Eyeball.c ****     *  [5:3] : Compare Mode2
+ 759:Generated_Source\PSoC5/Right_Eyeball.c ****     *  [2:0] : Compare Mode2
+ 760:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 761:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 762:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 763:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 764:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 765:Generated_Source\PSoC5/Right_Eyeball.c ****     void Right_Eyeball_WriteControlRegister(uint8 control) 
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 17
+
+
+ 766:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 767:Generated_Source\PSoC5/Right_Eyeball.c ****         CY_SET_REG8(Right_Eyeball_CONTROL_PTR, control);
+ 768:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 769:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 770:Generated_Source\PSoC5/Right_Eyeball.c **** #endif /* (Right_Eyeball_UseControl) */
+ 771:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 772:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 773:Generated_Source\PSoC5/Right_Eyeball.c **** #if (!Right_Eyeball_UsingFixedFunction)
+ 774:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 775:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 776:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 777:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_ReadCapture
+ 778:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 779:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 780:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 781:Generated_Source\PSoC5/Right_Eyeball.c ****     *  Reads the capture value from the capture FIFO.
+ 782:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 783:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 784:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 785:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 786:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 787:Generated_Source\PSoC5/Right_Eyeball.c ****     *  uint8/uint16: The current capture value
+ 788:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 789:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 790:Generated_Source\PSoC5/Right_Eyeball.c ****     uint16 Right_Eyeball_ReadCapture(void) 
+ 791:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 792:Generated_Source\PSoC5/Right_Eyeball.c ****         return (CY_GET_REG16(Right_Eyeball_CAPTURE_LSB_PTR));
+ 148              		.loc 1 792 0
+ 149 0002 0449     		ldr	r1, .L18+4
+ 150              	.L14:
+ 151              	.LBE20:
+ 152              	.LBE19:
+ 153              	.LBB22:
+ 154              	.LBB18:
+ 713:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 155              		.loc 1 713 0
+ 156 0004 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 157              	.LBE18:
+ 158              	.LBE22:
+ 455:Generated_Source\PSoC5/Right_Eyeball.c ****             while(0u != (Right_Eyeball_ReadStatusRegister() & Right_Eyeball_STATUS_FIFONEMPTY))
+ 159              		.loc 1 455 0
+ 160 0006 DB06     		lsls	r3, r3, #27
+ 161 0008 01D5     		bpl	.L17
+ 162              	.LBB23:
+ 163              	.LBB21:
+ 164              		.loc 1 792 0
+ 165 000a 0B88     		ldrh	r3, [r1]
+ 166 000c FAE7     		b	.L14
+ 167              	.L17:
+ 168              	.LBE21:
+ 169              	.LBE23:
+ 459:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 170              		.loc 1 459 0
+ 171 000e 7047     		bx	lr
+ 172              	.L19:
+ 173              		.align	2
+ 174              	.L18:
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 18
+
+
+ 175 0010 65640040 		.word	1073767525
+ 176 0014 A8680040 		.word	1073768616
+ 177              		.cfi_endproc
+ 178              	.LFE6:
+ 179              		.size	Right_Eyeball_ClearFIFO, .-Right_Eyeball_ClearFIFO
+ 180              		.section	.text.Right_Eyeball_Init,"ax",%progbits
+ 181              		.align	1
+ 182              		.global	Right_Eyeball_Init
+ 183              		.thumb
+ 184              		.thumb_func
+ 185              		.type	Right_Eyeball_Init, %function
+ 186              	Right_Eyeball_Init:
+ 187              	.LFB1:
+  85:Generated_Source\PSoC5/Right_Eyeball.c ****     #if (Right_Eyeball_UsingFixedFunction || Right_Eyeball_UseControl)
+ 188              		.loc 1 85 0
+ 189              		.cfi_startproc
+ 190              		@ args = 0, pretend = 0, frame = 0
+ 191              		@ frame_needed = 0, uses_anonymous_args = 0
+ 192 0000 10B5     		push	{r4, lr}
+ 193              		.cfi_def_cfa_offset 8
+ 194              		.cfi_offset 4, -8
+ 195              		.cfi_offset 14, -4
+ 117:Generated_Source\PSoC5/Right_Eyeball.c ****                 ((uint8)(~Right_Eyeball_CTRL_CMPMODE1_MASK));
+ 196              		.loc 1 117 0
+ 197 0002 154A     		ldr	r2, .L21
+ 130:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_Resolution == 8) */
+ 198              		.loc 1 130 0
+ 199 0004 154C     		ldr	r4, .L21+4
+ 117:Generated_Source\PSoC5/Right_Eyeball.c ****                 ((uint8)(~Right_Eyeball_CTRL_CMPMODE1_MASK));
+ 200              		.loc 1 117 0
+ 201 0006 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 202              	.LVL1:
+ 203              	.LBB24:
+ 204              	.LBB25:
+ 686:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 205              		.loc 1 686 0
+ 206 0008 1032     		adds	r2, r2, #16
+ 207              	.LBE25:
+ 208              	.LBE24:
+ 119:Generated_Source\PSoC5/Right_Eyeball.c ****                                    Right_Eyeball_DEFAULT_COMPARE1_MODE;
+ 209              		.loc 1 119 0
+ 210 000a 03F0C003 		and	r3, r3, #192
+ 211              	.LVL2:
+ 212 000e 43F00903 		orr	r3, r3, #9
+ 213 0012 02F8103C 		strb	r3, [r2, #-16]
+ 129:Generated_Source\PSoC5/Right_Eyeball.c ****             Right_Eyeball_AUX_CONTROLDP1 |= (Right_Eyeball_AUX_CTRL_FIFO0_CLR);
+ 214              		.loc 1 129 0
+ 215 0016 D37B     		ldrb	r3, [r2, #15]	@ zero_extendqisi2
+ 216 0018 43F00103 		orr	r3, r3, #1
+ 217 001c D373     		strb	r3, [r2, #15]
+ 130:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_Resolution == 8) */
+ 218              		.loc 1 130 0
+ 219 001e 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 220 0020 43F00103 		orr	r3, r3, #1
+ 221 0024 2370     		strb	r3, [r4]
+ 222              	.LVL3:
+ 223              	.LBB27:
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 19
+
+
+ 224              	.LBB28:
+ 406:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 225              		.loc 1 406 0
+ 226 0026 4EF66023 		movw	r3, #60000
+ 227 002a A2F88333 		strh	r3, [r2, #899]	@ movhi
+ 228              	.LVL4:
+ 229              	.LBE28:
+ 230              	.LBE27:
+ 231              	.LBB29:
+ 232              	.LBB30:
+ 487:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 233              		.loc 1 487 0
+ 234 002e A2F80334 		strh	r3, [r2, #1027]	@ movhi
+ 235              	.LVL5:
+ 236              	.LBE30:
+ 237              	.LBE29:
+ 238              	.LBB31:
+ 239              	.LBB32:
+ 561:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 240              		.loc 1 561 0
+ 241 0032 0023     		movs	r3, #0
+ 242 0034 A2F8C333 		strh	r3, [r2, #963]	@ movhi
+ 243              	.LVL6:
+ 244              	.LBE32:
+ 245              	.LBE31:
+ 246              	.LBB33:
+ 247              	.LBB34:
+ 590:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 248              		.loc 1 590 0
+ 249 0038 A2F8E333 		strh	r3, [r2, #995]	@ movhi
+ 250              	.LVL7:
+ 251              	.LBE34:
+ 252              	.LBE33:
+ 253              	.LBB35:
+ 254              	.LBB26:
+ 686:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 255              		.loc 1 686 0
+ 256 003c 1370     		strb	r3, [r2]
+ 257              	.LVL8:
+ 258              	.LBE26:
+ 259              	.LBE35:
+ 167:Generated_Source\PSoC5/Right_Eyeball.c ****             /* Use the interrupt output of the status register for IRQ output */
+ 260              		.loc 1 167 0
+ 261 003e FFF7FEFF 		bl	CyEnterCriticalSection
+ 262              	.LVL9:
+ 169:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 263              		.loc 1 169 0
+ 264 0042 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 265 0044 43F01003 		orr	r3, r3, #16
+ 266 0048 2370     		strb	r3, [r4]
+ 172:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 267              		.loc 1 172 0
+ 268 004a FFF7FEFF 		bl	CyExitCriticalSection
+ 269              	.LVL10:
+ 179:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 270              		.loc 1 179 0
+ 271 004e BDE81040 		pop	{r4, lr}
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 20
+
+
+ 272              		.cfi_restore 14
+ 273              		.cfi_restore 4
+ 274              		.cfi_def_cfa_offset 0
+ 176:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_UseStatus) */
+ 275              		.loc 1 176 0
+ 276 0052 FFF7FEBF 		b	Right_Eyeball_ClearFIFO
+ 277              	.LVL11:
+ 278              	.L22:
+ 279 0056 00BF     		.align	2
+ 280              	.L21:
+ 281 0058 75640040 		.word	1073767541
+ 282 005c 95640040 		.word	1073767573
+ 283              		.cfi_endproc
+ 284              	.LFE1:
+ 285              		.size	Right_Eyeball_Init, .-Right_Eyeball_Init
+ 286              		.section	.text.Right_Eyeball_Start,"ax",%progbits
+ 287              		.align	1
+ 288              		.global	Right_Eyeball_Start
+ 289              		.thumb
+ 290              		.thumb_func
+ 291              		.type	Right_Eyeball_Start, %function
+ 292              	Right_Eyeball_Start:
+ 293              	.LFB0:
+  56:Generated_Source\PSoC5/Right_Eyeball.c ****     /* If not Initialized then initialize all required hardware and software */
+ 294              		.loc 1 56 0
+ 295              		.cfi_startproc
+ 296              		@ args = 0, pretend = 0, frame = 0
+ 297              		@ frame_needed = 0, uses_anonymous_args = 0
+ 298 0000 10B5     		push	{r4, lr}
+ 299              		.cfi_def_cfa_offset 8
+ 300              		.cfi_offset 4, -8
+ 301              		.cfi_offset 14, -4
+  58:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 302              		.loc 1 58 0
+ 303 0002 054C     		ldr	r4, .L25
+ 304 0004 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 305 0006 1BB9     		cbnz	r3, .L24
+  60:Generated_Source\PSoC5/Right_Eyeball.c ****         Right_Eyeball_initVar = 1u;
+ 306              		.loc 1 60 0
+ 307 0008 FFF7FEFF 		bl	Right_Eyeball_Init
+ 308              	.LVL12:
+  61:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 309              		.loc 1 61 0
+ 310 000c 0123     		movs	r3, #1
+ 311 000e 2370     		strb	r3, [r4]
+ 312              	.L24:
+  65:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 313              		.loc 1 65 0
+ 314 0010 BDE81040 		pop	{r4, lr}
+ 315              		.cfi_restore 14
+ 316              		.cfi_restore 4
+ 317              		.cfi_def_cfa_offset 0
+  63:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 318              		.loc 1 63 0
+ 319 0014 FFF7FEBF 		b	Right_Eyeball_Enable
+ 320              	.LVL13:
+ 321              	.L26:
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 21
+
+
+ 322              		.align	2
+ 323              	.L25:
+ 324 0018 00000000 		.word	.LANCHOR0
+ 325              		.cfi_endproc
+ 326              	.LFE0:
+ 327              		.size	Right_Eyeball_Start, .-Right_Eyeball_Start
+ 328              		.section	.text.Right_Eyeball_WritePeriod,"ax",%progbits
+ 329              		.align	1
+ 330              		.global	Right_Eyeball_WritePeriod
+ 331              		.thumb
+ 332              		.thumb_func
+ 333              		.type	Right_Eyeball_WritePeriod, %function
+ 334              	Right_Eyeball_WritePeriod:
+ 335              	.LFB7:
+ 483:Generated_Source\PSoC5/Right_Eyeball.c ****     #if(Right_Eyeball_UsingFixedFunction)
+ 336              		.loc 1 483 0
+ 337              		.cfi_startproc
+ 338              		@ args = 0, pretend = 0, frame = 0
+ 339              		@ frame_needed = 0, uses_anonymous_args = 0
+ 340              		@ link register save eliminated.
+ 341              	.LVL14:
+ 487:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 342              		.loc 1 487 0
+ 343 0000 014B     		ldr	r3, .L28
+ 344 0002 1880     		strh	r0, [r3]	@ movhi
+ 345 0004 7047     		bx	lr
+ 346              	.L29:
+ 347 0006 00BF     		.align	2
+ 348              	.L28:
+ 349 0008 88680040 		.word	1073768584
+ 350              		.cfi_endproc
+ 351              	.LFE7:
+ 352              		.size	Right_Eyeball_WritePeriod, .-Right_Eyeball_WritePeriod
+ 353              		.section	.text.Right_Eyeball_WriteCompare1,"ax",%progbits
+ 354              		.align	1
+ 355              		.global	Right_Eyeball_WriteCompare1
+ 356              		.thumb
+ 357              		.thumb_func
+ 358              		.type	Right_Eyeball_WriteCompare1, %function
+ 359              	Right_Eyeball_WriteCompare1:
+ 360              	.LFB8:
+ 557:Generated_Source\PSoC5/Right_Eyeball.c ****         #if(Right_Eyeball_UsingFixedFunction)
+ 361              		.loc 1 557 0
+ 362              		.cfi_startproc
+ 363              		@ args = 0, pretend = 0, frame = 0
+ 364              		@ frame_needed = 0, uses_anonymous_args = 0
+ 365              		@ link register save eliminated.
+ 366              	.LVL15:
+ 561:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 367              		.loc 1 561 0
+ 368 0000 014B     		ldr	r3, .L31
+ 369 0002 1880     		strh	r0, [r3]	@ movhi
+ 370 0004 7047     		bx	lr
+ 371              	.L32:
+ 372 0006 00BF     		.align	2
+ 373              	.L31:
+ 374 0008 48680040 		.word	1073768520
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 22
+
+
+ 375              		.cfi_endproc
+ 376              	.LFE8:
+ 377              		.size	Right_Eyeball_WriteCompare1, .-Right_Eyeball_WriteCompare1
+ 378              		.section	.text.Right_Eyeball_WriteCompare2,"ax",%progbits
+ 379              		.align	1
+ 380              		.global	Right_Eyeball_WriteCompare2
+ 381              		.thumb
+ 382              		.thumb_func
+ 383              		.type	Right_Eyeball_WriteCompare2, %function
+ 384              	Right_Eyeball_WriteCompare2:
+ 385              	.LFB9:
+ 586:Generated_Source\PSoC5/Right_Eyeball.c ****         #if(Right_Eyeball_UsingFixedFunction)
+ 386              		.loc 1 586 0
+ 387              		.cfi_startproc
+ 388              		@ args = 0, pretend = 0, frame = 0
+ 389              		@ frame_needed = 0, uses_anonymous_args = 0
+ 390              		@ link register save eliminated.
+ 391              	.LVL16:
+ 590:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 392              		.loc 1 590 0
+ 393 0000 014B     		ldr	r3, .L34
+ 394 0002 1880     		strh	r0, [r3]	@ movhi
+ 395 0004 7047     		bx	lr
+ 396              	.L35:
+ 397 0006 00BF     		.align	2
+ 398              	.L34:
+ 399 0008 68680040 		.word	1073768552
+ 400              		.cfi_endproc
+ 401              	.LFE9:
+ 402              		.size	Right_Eyeball_WriteCompare2, .-Right_Eyeball_WriteCompare2
+ 403              		.section	.text.Right_Eyeball_SetInterruptMode,"ax",%progbits
+ 404              		.align	1
+ 405              		.global	Right_Eyeball_SetInterruptMode
+ 406              		.thumb
+ 407              		.thumb_func
+ 408              		.type	Right_Eyeball_SetInterruptMode, %function
+ 409              	Right_Eyeball_SetInterruptMode:
+ 410              	.LFB10:
+ 685:Generated_Source\PSoC5/Right_Eyeball.c ****         CY_SET_REG8(Right_Eyeball_STATUS_MASK_PTR, interruptMode);
+ 411              		.loc 1 685 0
+ 412              		.cfi_startproc
+ 413              		@ args = 0, pretend = 0, frame = 0
+ 414              		@ frame_needed = 0, uses_anonymous_args = 0
+ 415              		@ link register save eliminated.
+ 416              	.LVL17:
+ 686:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 417              		.loc 1 686 0
+ 418 0000 014B     		ldr	r3, .L37
+ 419 0002 1870     		strb	r0, [r3]
+ 420 0004 7047     		bx	lr
+ 421              	.L38:
+ 422 0006 00BF     		.align	2
+ 423              	.L37:
+ 424 0008 85640040 		.word	1073767557
+ 425              		.cfi_endproc
+ 426              	.LFE10:
+ 427              		.size	Right_Eyeball_SetInterruptMode, .-Right_Eyeball_SetInterruptMode
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 23
+
+
+ 428              		.section	.text.Right_Eyeball_ReadStatusRegister,"ax",%progbits
+ 429              		.align	1
+ 430              		.global	Right_Eyeball_ReadStatusRegister
+ 431              		.thumb
+ 432              		.thumb_func
+ 433              		.type	Right_Eyeball_ReadStatusRegister, %function
+ 434              	Right_Eyeball_ReadStatusRegister:
+ 435              	.LFB11:
+ 712:Generated_Source\PSoC5/Right_Eyeball.c ****         return (CY_GET_REG8(Right_Eyeball_STATUS_PTR));
+ 436              		.loc 1 712 0
+ 437              		.cfi_startproc
+ 438              		@ args = 0, pretend = 0, frame = 0
+ 439              		@ frame_needed = 0, uses_anonymous_args = 0
+ 440              		@ link register save eliminated.
+ 713:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 441              		.loc 1 713 0
+ 442 0000 014B     		ldr	r3, .L40
+ 443 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 714:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 444              		.loc 1 714 0
+ 445 0004 7047     		bx	lr
+ 446              	.L41:
+ 447 0006 00BF     		.align	2
+ 448              	.L40:
+ 449 0008 65640040 		.word	1073767525
+ 450              		.cfi_endproc
+ 451              	.LFE11:
+ 452              		.size	Right_Eyeball_ReadStatusRegister, .-Right_Eyeball_ReadStatusRegister
+ 453              		.section	.text.Right_Eyeball_ReadControlRegister,"ax",%progbits
+ 454              		.align	1
+ 455              		.global	Right_Eyeball_ReadControlRegister
+ 456              		.thumb
+ 457              		.thumb_func
+ 458              		.type	Right_Eyeball_ReadControlRegister, %function
+ 459              	Right_Eyeball_ReadControlRegister:
+ 460              	.LFB12:
+ 738:Generated_Source\PSoC5/Right_Eyeball.c ****         uint8 result;
+ 461              		.loc 1 738 0
+ 462              		.cfi_startproc
+ 463              		@ args = 0, pretend = 0, frame = 0
+ 464              		@ frame_needed = 0, uses_anonymous_args = 0
+ 465              		@ link register save eliminated.
+ 741:Generated_Source\PSoC5/Right_Eyeball.c ****         return (result);
+ 466              		.loc 1 741 0
+ 467 0000 014B     		ldr	r3, .L43
+ 468 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 469              	.LVL18:
+ 743:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 470              		.loc 1 743 0
+ 471 0004 7047     		bx	lr
+ 472              	.L44:
+ 473 0006 00BF     		.align	2
+ 474              	.L43:
+ 475 0008 75640040 		.word	1073767541
+ 476              		.cfi_endproc
+ 477              	.LFE12:
+ 478              		.size	Right_Eyeball_ReadControlRegister, .-Right_Eyeball_ReadControlRegister
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 24
+
+
+ 479              		.section	.text.Right_Eyeball_WriteControlRegister,"ax",%progbits
+ 480              		.align	1
+ 481              		.global	Right_Eyeball_WriteControlRegister
+ 482              		.thumb
+ 483              		.thumb_func
+ 484              		.type	Right_Eyeball_WriteControlRegister, %function
+ 485              	Right_Eyeball_WriteControlRegister:
+ 486              	.LFB13:
+ 766:Generated_Source\PSoC5/Right_Eyeball.c ****         CY_SET_REG8(Right_Eyeball_CONTROL_PTR, control);
+ 487              		.loc 1 766 0
+ 488              		.cfi_startproc
+ 489              		@ args = 0, pretend = 0, frame = 0
+ 490              		@ frame_needed = 0, uses_anonymous_args = 0
+ 491              		@ link register save eliminated.
+ 492              	.LVL19:
+ 767:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 493              		.loc 1 767 0
+ 494 0000 014B     		ldr	r3, .L46
+ 495 0002 1870     		strb	r0, [r3]
+ 496 0004 7047     		bx	lr
+ 497              	.L47:
+ 498 0006 00BF     		.align	2
+ 499              	.L46:
+ 500 0008 75640040 		.word	1073767541
+ 501              		.cfi_endproc
+ 502              	.LFE13:
+ 503              		.size	Right_Eyeball_WriteControlRegister, .-Right_Eyeball_WriteControlRegister
+ 504              		.section	.text.Right_Eyeball_ReadCapture,"ax",%progbits
+ 505              		.align	1
+ 506              		.global	Right_Eyeball_ReadCapture
+ 507              		.thumb
+ 508              		.thumb_func
+ 509              		.type	Right_Eyeball_ReadCapture, %function
+ 510              	Right_Eyeball_ReadCapture:
+ 511              	.LFB14:
+ 791:Generated_Source\PSoC5/Right_Eyeball.c ****         return (CY_GET_REG16(Right_Eyeball_CAPTURE_LSB_PTR));
+ 512              		.loc 1 791 0
+ 513              		.cfi_startproc
+ 514              		@ args = 0, pretend = 0, frame = 0
+ 515              		@ frame_needed = 0, uses_anonymous_args = 0
+ 516              		@ link register save eliminated.
+ 517              		.loc 1 792 0
+ 518 0000 014B     		ldr	r3, .L49
+ 519 0002 1888     		ldrh	r0, [r3]
+ 793:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 520              		.loc 1 793 0
+ 521 0004 80B2     		uxth	r0, r0
+ 522 0006 7047     		bx	lr
+ 523              	.L50:
+ 524              		.align	2
+ 525              	.L49:
+ 526 0008 A8680040 		.word	1073768616
+ 527              		.cfi_endproc
+ 528              	.LFE14:
+ 529              		.size	Right_Eyeball_ReadCapture, .-Right_Eyeball_ReadCapture
+ 530              		.section	.text.Right_Eyeball_ReadCompare1,"ax",%progbits
+ 531              		.align	1
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 25
+
+
+ 532              		.global	Right_Eyeball_ReadCompare1
+ 533              		.thumb
+ 534              		.thumb_func
+ 535              		.type	Right_Eyeball_ReadCompare1, %function
+ 536              	Right_Eyeball_ReadCompare1:
+ 537              	.LFB15:
+ 794:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 795:Generated_Source\PSoC5/Right_Eyeball.c **** #endif /* (!Right_Eyeball_UsingFixedFunction) */
+ 796:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 797:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 798:Generated_Source\PSoC5/Right_Eyeball.c **** #if (Right_Eyeball_UseOneCompareMode)
+ 799:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 800:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 801:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 802:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_ReadCompare
+ 803:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 804:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 805:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 806:Generated_Source\PSoC5/Right_Eyeball.c ****     *  Reads the compare value for the compare output when the PWM Mode parameter is
+ 807:Generated_Source\PSoC5/Right_Eyeball.c ****     *  set to Dither mode, Center Aligned mode, or One Output mode.
+ 808:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 809:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 810:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 811:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 812:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 813:Generated_Source\PSoC5/Right_Eyeball.c ****     *  uint8/uint16: Current compare value
+ 814:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 815:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 816:Generated_Source\PSoC5/Right_Eyeball.c ****     uint16 Right_Eyeball_ReadCompare(void) 
+ 817:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 818:Generated_Source\PSoC5/Right_Eyeball.c ****         #if(Right_Eyeball_UsingFixedFunction)
+ 819:Generated_Source\PSoC5/Right_Eyeball.c ****             return ((uint16)CY_GET_REG16(Right_Eyeball_COMPARE1_LSB_PTR));
+ 820:Generated_Source\PSoC5/Right_Eyeball.c ****         #else
+ 821:Generated_Source\PSoC5/Right_Eyeball.c ****             return (CY_GET_REG16(Right_Eyeball_COMPARE1_LSB_PTR));
+ 822:Generated_Source\PSoC5/Right_Eyeball.c ****         #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 823:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 824:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 825:Generated_Source\PSoC5/Right_Eyeball.c **** #else
+ 826:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 827:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 828:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 829:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_ReadCompare1
+ 830:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 831:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 832:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 833:Generated_Source\PSoC5/Right_Eyeball.c ****     *  Reads the compare value for the compare1 output.
+ 834:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 835:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 836:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 837:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 838:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 839:Generated_Source\PSoC5/Right_Eyeball.c ****     *  uint8/uint16: Current compare value.
+ 840:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 841:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 842:Generated_Source\PSoC5/Right_Eyeball.c ****     uint16 Right_Eyeball_ReadCompare1(void) 
+ 843:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 538              		.loc 1 843 0
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 26
+
+
+ 539              		.cfi_startproc
+ 540              		@ args = 0, pretend = 0, frame = 0
+ 541              		@ frame_needed = 0, uses_anonymous_args = 0
+ 542              		@ link register save eliminated.
+ 844:Generated_Source\PSoC5/Right_Eyeball.c ****         return (CY_GET_REG16(Right_Eyeball_COMPARE1_LSB_PTR));
+ 543              		.loc 1 844 0
+ 544 0000 014B     		ldr	r3, .L52
+ 545 0002 1888     		ldrh	r0, [r3]
+ 845:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 546              		.loc 1 845 0
+ 547 0004 80B2     		uxth	r0, r0
+ 548 0006 7047     		bx	lr
+ 549              	.L53:
+ 550              		.align	2
+ 551              	.L52:
+ 552 0008 48680040 		.word	1073768520
+ 553              		.cfi_endproc
+ 554              	.LFE15:
+ 555              		.size	Right_Eyeball_ReadCompare1, .-Right_Eyeball_ReadCompare1
+ 556              		.section	.text.Right_Eyeball_ReadCompare2,"ax",%progbits
+ 557              		.align	1
+ 558              		.global	Right_Eyeball_ReadCompare2
+ 559              		.thumb
+ 560              		.thumb_func
+ 561              		.type	Right_Eyeball_ReadCompare2, %function
+ 562              	Right_Eyeball_ReadCompare2:
+ 563              	.LFB16:
+ 846:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 847:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 848:Generated_Source\PSoC5/Right_Eyeball.c ****     /*******************************************************************************
+ 849:Generated_Source\PSoC5/Right_Eyeball.c ****     * Function Name: Right_Eyeball_ReadCompare2
+ 850:Generated_Source\PSoC5/Right_Eyeball.c ****     ********************************************************************************
+ 851:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 852:Generated_Source\PSoC5/Right_Eyeball.c ****     * Summary:
+ 853:Generated_Source\PSoC5/Right_Eyeball.c ****     *  Reads the compare value for the compare2 output.
+ 854:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 855:Generated_Source\PSoC5/Right_Eyeball.c ****     * Parameters:
+ 856:Generated_Source\PSoC5/Right_Eyeball.c ****     *  None
+ 857:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 858:Generated_Source\PSoC5/Right_Eyeball.c ****     * Return:
+ 859:Generated_Source\PSoC5/Right_Eyeball.c ****     *  uint8/uint16: Current compare value.
+ 860:Generated_Source\PSoC5/Right_Eyeball.c ****     *
+ 861:Generated_Source\PSoC5/Right_Eyeball.c ****     *******************************************************************************/
+ 862:Generated_Source\PSoC5/Right_Eyeball.c ****     uint16 Right_Eyeball_ReadCompare2(void) 
+ 863:Generated_Source\PSoC5/Right_Eyeball.c ****     {
+ 564              		.loc 1 863 0
+ 565              		.cfi_startproc
+ 566              		@ args = 0, pretend = 0, frame = 0
+ 567              		@ frame_needed = 0, uses_anonymous_args = 0
+ 568              		@ link register save eliminated.
+ 864:Generated_Source\PSoC5/Right_Eyeball.c ****         return (CY_GET_REG16(Right_Eyeball_COMPARE2_LSB_PTR));
+ 569              		.loc 1 864 0
+ 570 0000 014B     		ldr	r3, .L55
+ 571 0002 1888     		ldrh	r0, [r3]
+ 865:Generated_Source\PSoC5/Right_Eyeball.c ****     }
+ 572              		.loc 1 865 0
+ 573 0004 80B2     		uxth	r0, r0
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 27
+
+
+ 574 0006 7047     		bx	lr
+ 575              	.L56:
+ 576              		.align	2
+ 577              	.L55:
+ 578 0008 68680040 		.word	1073768552
+ 579              		.cfi_endproc
+ 580              	.LFE16:
+ 581              		.size	Right_Eyeball_ReadCompare2, .-Right_Eyeball_ReadCompare2
+ 582              		.section	.text.Right_Eyeball_ReadPeriod,"ax",%progbits
+ 583              		.align	1
+ 584              		.global	Right_Eyeball_ReadPeriod
+ 585              		.thumb
+ 586              		.thumb_func
+ 587              		.type	Right_Eyeball_ReadPeriod, %function
+ 588              	Right_Eyeball_ReadPeriod:
+ 589              	.LFB17:
+ 866:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 867:Generated_Source\PSoC5/Right_Eyeball.c **** #endif /* (Right_Eyeball_UseOneCompareMode) */
+ 868:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 869:Generated_Source\PSoC5/Right_Eyeball.c **** 
+ 870:Generated_Source\PSoC5/Right_Eyeball.c **** /*******************************************************************************
+ 871:Generated_Source\PSoC5/Right_Eyeball.c **** * Function Name: Right_Eyeball_ReadPeriod
+ 872:Generated_Source\PSoC5/Right_Eyeball.c **** ********************************************************************************
+ 873:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 874:Generated_Source\PSoC5/Right_Eyeball.c **** * Summary:
+ 875:Generated_Source\PSoC5/Right_Eyeball.c **** *  Reads the period value used by the PWM hardware.
+ 876:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 877:Generated_Source\PSoC5/Right_Eyeball.c **** * Parameters:
+ 878:Generated_Source\PSoC5/Right_Eyeball.c **** *  None
+ 879:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 880:Generated_Source\PSoC5/Right_Eyeball.c **** * Return:
+ 881:Generated_Source\PSoC5/Right_Eyeball.c **** *  uint8/16: Period value
+ 882:Generated_Source\PSoC5/Right_Eyeball.c **** *
+ 883:Generated_Source\PSoC5/Right_Eyeball.c **** *******************************************************************************/
+ 884:Generated_Source\PSoC5/Right_Eyeball.c **** uint16 Right_Eyeball_ReadPeriod(void) 
+ 885:Generated_Source\PSoC5/Right_Eyeball.c **** {
+ 590              		.loc 1 885 0
+ 591              		.cfi_startproc
+ 592              		@ args = 0, pretend = 0, frame = 0
+ 593              		@ frame_needed = 0, uses_anonymous_args = 0
+ 594              		@ link register save eliminated.
+ 886:Generated_Source\PSoC5/Right_Eyeball.c ****     #if(Right_Eyeball_UsingFixedFunction)
+ 887:Generated_Source\PSoC5/Right_Eyeball.c ****         return ((uint16)CY_GET_REG16(Right_Eyeball_PERIOD_LSB_PTR));
+ 888:Generated_Source\PSoC5/Right_Eyeball.c ****     #else
+ 889:Generated_Source\PSoC5/Right_Eyeball.c ****         return (CY_GET_REG16(Right_Eyeball_PERIOD_LSB_PTR));
+ 595              		.loc 1 889 0
+ 596 0000 014B     		ldr	r3, .L58
+ 597 0002 1888     		ldrh	r0, [r3]
+ 890:Generated_Source\PSoC5/Right_Eyeball.c ****     #endif /* (Right_Eyeball_UsingFixedFunction) */
+ 891:Generated_Source\PSoC5/Right_Eyeball.c **** }
+ 598              		.loc 1 891 0
+ 599 0004 80B2     		uxth	r0, r0
+ 600 0006 7047     		bx	lr
+ 601              	.L59:
+ 602              		.align	2
+ 603              	.L58:
+ 604 0008 88680040 		.word	1073768584
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 28
+
+
+ 605              		.cfi_endproc
+ 606              	.LFE17:
+ 607              		.size	Right_Eyeball_ReadPeriod, .-Right_Eyeball_ReadPeriod
+ 608              		.global	Right_Eyeball_initVar
+ 609              		.bss
+ 610              		.set	.LANCHOR0,. + 0
+ 611              		.type	Right_Eyeball_initVar, %object
+ 612              		.size	Right_Eyeball_initVar, 1
+ 613              	Right_Eyeball_initVar:
+ 614 0000 00       		.space	1
+ 615              		.text
+ 616              	.Letext0:
+ 617              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 618              		.file 3 "Generated_Source\\PSoC5\\CyLib.h"
+ 619              		.section	.debug_info,"",%progbits
+ 620              	.Ldebug_info0:
+ 621 0000 34040000 		.4byte	0x434
+ 622 0004 0400     		.2byte	0x4
+ 623 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 624 000a 04       		.byte	0x4
+ 625 000b 01       		.uleb128 0x1
+ 626 000c 47010000 		.4byte	.LASF44
+ 627 0010 0C       		.byte	0xc
+ 628 0011 21000000 		.4byte	.LASF45
+ 629 0015 7C000000 		.4byte	.LASF46
+ 630 0019 48000000 		.4byte	.Ldebug_ranges0+0x48
+ 631 001d 00000000 		.4byte	0
+ 632 0021 00000000 		.4byte	.Ldebug_line0
+ 633 0025 02       		.uleb128 0x2
+ 634 0026 01       		.byte	0x1
+ 635 0027 06       		.byte	0x6
+ 636 0028 1A040000 		.4byte	.LASF0
+ 637 002c 02       		.uleb128 0x2
+ 638 002d 01       		.byte	0x1
+ 639 002e 08       		.byte	0x8
+ 640 002f 18010000 		.4byte	.LASF1
+ 641 0033 02       		.uleb128 0x2
+ 642 0034 02       		.byte	0x2
+ 643 0035 05       		.byte	0x5
+ 644 0036 AF030000 		.4byte	.LASF2
+ 645 003a 02       		.uleb128 0x2
+ 646 003b 02       		.byte	0x2
+ 647 003c 07       		.byte	0x7
+ 648 003d 4F000000 		.4byte	.LASF3
+ 649 0041 02       		.uleb128 0x2
+ 650 0042 04       		.byte	0x4
+ 651 0043 05       		.byte	0x5
+ 652 0044 00040000 		.4byte	.LASF4
+ 653 0048 02       		.uleb128 0x2
+ 654 0049 04       		.byte	0x4
+ 655 004a 07       		.byte	0x7
+ 656 004b A0020000 		.4byte	.LASF5
+ 657 004f 02       		.uleb128 0x2
+ 658 0050 08       		.byte	0x8
+ 659 0051 05       		.byte	0x5
+ 660 0052 68030000 		.4byte	.LASF6
+ 661 0056 02       		.uleb128 0x2
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 29
+
+
+ 662 0057 08       		.byte	0x8
+ 663 0058 07       		.byte	0x7
+ 664 0059 01010000 		.4byte	.LASF7
+ 665 005d 03       		.uleb128 0x3
+ 666 005e 04       		.byte	0x4
+ 667 005f 05       		.byte	0x5
+ 668 0060 696E7400 		.ascii	"int\000"
+ 669 0064 02       		.uleb128 0x2
+ 670 0065 04       		.byte	0x4
+ 671 0066 07       		.byte	0x7
+ 672 0067 B2020000 		.4byte	.LASF8
+ 673 006b 04       		.uleb128 0x4
+ 674 006c D5010000 		.4byte	.LASF9
+ 675 0070 02       		.byte	0x2
+ 676 0071 9201     		.2byte	0x192
+ 677 0073 2C000000 		.4byte	0x2c
+ 678 0077 04       		.uleb128 0x4
+ 679 0078 82020000 		.4byte	.LASF10
+ 680 007c 02       		.byte	0x2
+ 681 007d 9301     		.2byte	0x193
+ 682 007f 3A000000 		.4byte	0x3a
+ 683 0083 02       		.uleb128 0x2
+ 684 0084 04       		.byte	0x4
+ 685 0085 04       		.byte	0x4
+ 686 0086 F3000000 		.4byte	.LASF11
+ 687 008a 02       		.uleb128 0x2
+ 688 008b 08       		.byte	0x8
+ 689 008c 04       		.byte	0x4
+ 690 008d 5A020000 		.4byte	.LASF12
+ 691 0091 02       		.uleb128 0x2
+ 692 0092 01       		.byte	0x1
+ 693 0093 08       		.byte	0x8
+ 694 0094 09040000 		.4byte	.LASF13
+ 695 0098 04       		.uleb128 0x4
+ 696 0099 42010000 		.4byte	.LASF14
+ 697 009d 02       		.byte	0x2
+ 698 009e 3C02     		.2byte	0x23c
+ 699 00a0 A4000000 		.4byte	0xa4
+ 700 00a4 05       		.uleb128 0x5
+ 701 00a5 6B000000 		.4byte	0x6b
+ 702 00a9 04       		.uleb128 0x4
+ 703 00aa 00000000 		.4byte	.LASF15
+ 704 00ae 02       		.byte	0x2
+ 705 00af 3D02     		.2byte	0x23d
+ 706 00b1 B5000000 		.4byte	0xb5
+ 707 00b5 05       		.uleb128 0x5
+ 708 00b6 77000000 		.4byte	0x77
+ 709 00ba 02       		.uleb128 0x2
+ 710 00bb 08       		.byte	0x8
+ 711 00bc 04       		.byte	0x4
+ 712 00bd 0E040000 		.4byte	.LASF16
+ 713 00c1 02       		.uleb128 0x2
+ 714 00c2 04       		.byte	0x4
+ 715 00c3 07       		.byte	0x7
+ 716 00c4 42030000 		.4byte	.LASF17
+ 717 00c8 06       		.uleb128 0x6
+ 718 00c9 62000000 		.4byte	.LASF18
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 30
+
+
+ 719 00cd 01       		.byte	0x1
+ 720 00ce 1603     		.2byte	0x316
+ 721 00d0 77000000 		.4byte	0x77
+ 722 00d4 01       		.byte	0x1
+ 723 00d5 06       		.uleb128 0x6
+ 724 00d6 61020000 		.4byte	.LASF19
+ 725 00da 01       		.byte	0x1
+ 726 00db C702     		.2byte	0x2c7
+ 727 00dd 6B000000 		.4byte	0x6b
+ 728 00e1 01       		.byte	0x1
+ 729 00e2 07       		.uleb128 0x7
+ 730 00e3 BE030000 		.4byte	.LASF20
+ 731 00e7 01       		.byte	0x1
+ 732 00e8 AC02     		.2byte	0x2ac
+ 733 00ea 01       		.byte	0x1
+ 734 00eb FC000000 		.4byte	0xfc
+ 735 00ef 08       		.uleb128 0x8
+ 736 00f0 76030000 		.4byte	.LASF22
+ 737 00f4 01       		.byte	0x1
+ 738 00f5 AC02     		.2byte	0x2ac
+ 739 00f7 6B000000 		.4byte	0x6b
+ 740 00fb 00       		.byte	0
+ 741 00fc 07       		.uleb128 0x7
+ 742 00fd 26010000 		.4byte	.LASF21
+ 743 0101 01       		.byte	0x1
+ 744 0102 4802     		.2byte	0x248
+ 745 0104 01       		.byte	0x1
+ 746 0105 16010000 		.4byte	0x116
+ 747 0109 08       		.uleb128 0x8
+ 748 010a 26040000 		.4byte	.LASF23
+ 749 010e 01       		.byte	0x1
+ 750 010f 4802     		.2byte	0x248
+ 751 0111 77000000 		.4byte	0x77
+ 752 0115 00       		.byte	0
+ 753 0116 07       		.uleb128 0x7
+ 754 0117 BD000000 		.4byte	.LASF24
+ 755 011b 01       		.byte	0x1
+ 756 011c 2B02     		.2byte	0x22b
+ 757 011e 01       		.byte	0x1
+ 758 011f 30010000 		.4byte	0x130
+ 759 0123 08       		.uleb128 0x8
+ 760 0124 26040000 		.4byte	.LASF23
+ 761 0128 01       		.byte	0x1
+ 762 0129 2B02     		.2byte	0x22b
+ 763 012b 77000000 		.4byte	0x77
+ 764 012f 00       		.byte	0
+ 765 0130 07       		.uleb128 0x7
+ 766 0131 06030000 		.4byte	.LASF25
+ 767 0135 01       		.byte	0x1
+ 768 0136 E201     		.2byte	0x1e2
+ 769 0138 01       		.byte	0x1
+ 770 0139 4A010000 		.4byte	0x14a
+ 771 013d 08       		.uleb128 0x8
+ 772 013e 48000000 		.4byte	.LASF26
+ 773 0142 01       		.byte	0x1
+ 774 0143 E201     		.2byte	0x1e2
+ 775 0145 77000000 		.4byte	0x77
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 31
+
+
+ 776 0149 00       		.byte	0
+ 777 014a 07       		.uleb128 0x7
+ 778 014b 06000000 		.4byte	.LASF27
+ 779 014f 01       		.byte	0x1
+ 780 0150 9301     		.2byte	0x193
+ 781 0152 01       		.byte	0x1
+ 782 0153 64010000 		.4byte	0x164
+ 783 0157 08       		.uleb128 0x8
+ 784 0158 F9000000 		.4byte	.LASF28
+ 785 015c 01       		.byte	0x1
+ 786 015d 9301     		.2byte	0x193
+ 787 015f 77000000 		.4byte	0x77
+ 788 0163 00       		.byte	0
+ 789 0164 09       		.uleb128 0x9
+ 790 0165 0F020000 		.4byte	.LASF29
+ 791 0169 01       		.byte	0x1
+ 792 016a C7       		.byte	0xc7
+ 793 016b 00000000 		.4byte	.LFB2
+ 794 016f 10000000 		.4byte	.LFE2-.LFB2
+ 795 0173 01       		.uleb128 0x1
+ 796 0174 9C       		.byte	0x9c
+ 797 0175 09       		.uleb128 0x9
+ 798 0176 84030000 		.4byte	.LASF30
+ 799 017a 01       		.byte	0x1
+ 800 017b E9       		.byte	0xe9
+ 801 017c 00000000 		.4byte	.LFB3
+ 802 0180 10000000 		.4byte	.LFE3-.LFB3
+ 803 0184 01       		.uleb128 0x1
+ 804 0185 9C       		.byte	0x9c
+ 805 0186 0A       		.uleb128 0xa
+ 806 0187 4A010000 		.4byte	0x14a
+ 807 018b 00000000 		.4byte	.LFB4
+ 808 018f 0C000000 		.4byte	.LFE4-.LFB4
+ 809 0193 01       		.uleb128 0x1
+ 810 0194 9C       		.byte	0x9c
+ 811 0195 A1010000 		.4byte	0x1a1
+ 812 0199 0B       		.uleb128 0xb
+ 813 019a 57010000 		.4byte	0x157
+ 814 019e 01       		.uleb128 0x1
+ 815 019f 50       		.byte	0x50
+ 816 01a0 00       		.byte	0
+ 817 01a1 0C       		.uleb128 0xc
+ 818 01a2 D9000000 		.4byte	.LASF38
+ 819 01a6 01       		.byte	0x1
+ 820 01a7 A901     		.2byte	0x1a9
+ 821 01a9 77000000 		.4byte	0x77
+ 822 01ad 00000000 		.4byte	.LFB5
+ 823 01b1 14000000 		.4byte	.LFE5-.LFB5
+ 824 01b5 01       		.uleb128 0x1
+ 825 01b6 9C       		.byte	0x9c
+ 826 01b7 0D       		.uleb128 0xd
+ 827 01b8 97030000 		.4byte	.LASF31
+ 828 01bc 01       		.byte	0x1
+ 829 01bd C501     		.2byte	0x1c5
+ 830 01bf 00000000 		.4byte	.LFB6
+ 831 01c3 18000000 		.4byte	.LFE6-.LFB6
+ 832 01c7 01       		.uleb128 0x1
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 32
+
+
+ 833 01c8 9C       		.byte	0x9c
+ 834 01c9 EE010000 		.4byte	0x1ee
+ 835 01cd 0E       		.uleb128 0xe
+ 836 01ce D5000000 		.4byte	0xd5
+ 837 01d2 00000000 		.4byte	.LBB16
+ 838 01d6 00000000 		.4byte	.Ldebug_ranges0+0
+ 839 01da 01       		.byte	0x1
+ 840 01db C701     		.2byte	0x1c7
+ 841 01dd 0E       		.uleb128 0xe
+ 842 01de C8000000 		.4byte	0xc8
+ 843 01e2 02000000 		.4byte	.LBB19
+ 844 01e6 18000000 		.4byte	.Ldebug_ranges0+0x18
+ 845 01ea 01       		.byte	0x1
+ 846 01eb C901     		.2byte	0x1c9
+ 847 01ed 00       		.byte	0
+ 848 01ee 0F       		.uleb128 0xf
+ 849 01ef FC010000 		.4byte	.LASF32
+ 850 01f3 01       		.byte	0x1
+ 851 01f4 54       		.byte	0x54
+ 852 01f5 00000000 		.4byte	.LFB1
+ 853 01f9 60000000 		.4byte	.LFE1-.LFB1
+ 854 01fd 01       		.uleb128 0x1
+ 855 01fe 9C       		.byte	0x9c
+ 856 01ff CE020000 		.4byte	0x2ce
+ 857 0203 10       		.uleb128 0x10
+ 858 0204 B9030000 		.4byte	.LASF33
+ 859 0208 01       		.byte	0x1
+ 860 0209 57       		.byte	0x57
+ 861 020a 6B000000 		.4byte	0x6b
+ 862 020e 00000000 		.4byte	.LLST0
+ 863 0212 10       		.uleb128 0x10
+ 864 0213 4B030000 		.4byte	.LASF34
+ 865 0217 01       		.byte	0x1
+ 866 0218 5D       		.byte	0x5d
+ 867 0219 6B000000 		.4byte	0x6b
+ 868 021d 18000000 		.4byte	.LLST1
+ 869 0221 11       		.uleb128 0x11
+ 870 0222 E2000000 		.4byte	0xe2
+ 871 0226 08000000 		.4byte	.LBB24
+ 872 022a 30000000 		.4byte	.Ldebug_ranges0+0x30
+ 873 022e 01       		.byte	0x1
+ 874 022f 9A       		.byte	0x9a
+ 875 0230 3E020000 		.4byte	0x23e
+ 876 0234 12       		.uleb128 0x12
+ 877 0235 EF000000 		.4byte	0xef
+ 878 0239 2B000000 		.4byte	.LLST2
+ 879 023d 00       		.byte	0
+ 880 023e 13       		.uleb128 0x13
+ 881 023f 4A010000 		.4byte	0x14a
+ 882 0243 26000000 		.4byte	.LBB27
+ 883 0247 08000000 		.4byte	.LBE27-.LBB27
+ 884 024b 01       		.byte	0x1
+ 885 024c 85       		.byte	0x85
+ 886 024d 5B020000 		.4byte	0x25b
+ 887 0251 12       		.uleb128 0x12
+ 888 0252 57010000 		.4byte	0x157
+ 889 0256 3F000000 		.4byte	.LLST3
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 33
+
+
+ 890 025a 00       		.byte	0
+ 891 025b 13       		.uleb128 0x13
+ 892 025c 30010000 		.4byte	0x130
+ 893 0260 2E000000 		.4byte	.LBB29
+ 894 0264 04000000 		.4byte	.LBE29-.LBB29
+ 895 0268 01       		.byte	0x1
+ 896 0269 88       		.byte	0x88
+ 897 026a 78020000 		.4byte	0x278
+ 898 026e 12       		.uleb128 0x12
+ 899 026f 3D010000 		.4byte	0x13d
+ 900 0273 55000000 		.4byte	.LLST4
+ 901 0277 00       		.byte	0
+ 902 0278 13       		.uleb128 0x13
+ 903 0279 16010000 		.4byte	0x116
+ 904 027d 32000000 		.4byte	.LBB31
+ 905 0281 06000000 		.4byte	.LBE31-.LBB31
+ 906 0285 01       		.byte	0x1
+ 907 0286 8D       		.byte	0x8d
+ 908 0287 95020000 		.4byte	0x295
+ 909 028b 12       		.uleb128 0x12
+ 910 028c 23010000 		.4byte	0x123
+ 911 0290 6B000000 		.4byte	.LLST5
+ 912 0294 00       		.byte	0
+ 913 0295 13       		.uleb128 0x13
+ 914 0296 FC000000 		.4byte	0xfc
+ 915 029a 38000000 		.4byte	.LBB33
+ 916 029e 04000000 		.4byte	.LBE33-.LBB33
+ 917 02a2 01       		.byte	0x1
+ 918 02a3 8E       		.byte	0x8e
+ 919 02a4 B2020000 		.4byte	0x2b2
+ 920 02a8 12       		.uleb128 0x12
+ 921 02a9 09010000 		.4byte	0x109
+ 922 02ad 7F000000 		.4byte	.LLST6
+ 923 02b1 00       		.byte	0
+ 924 02b2 14       		.uleb128 0x14
+ 925 02b3 42000000 		.4byte	.LVL9
+ 926 02b7 21040000 		.4byte	0x421
+ 927 02bb 14       		.uleb128 0x14
+ 928 02bc 4E000000 		.4byte	.LVL10
+ 929 02c0 2C040000 		.4byte	0x42c
+ 930 02c4 15       		.uleb128 0x15
+ 931 02c5 56000000 		.4byte	.LVL11
+ 932 02c9 B7010000 		.4byte	0x1b7
+ 933 02cd 00       		.byte	0
+ 934 02ce 0F       		.uleb128 0xf
+ 935 02cf BF020000 		.4byte	.LASF35
+ 936 02d3 01       		.byte	0x1
+ 937 02d4 37       		.byte	0x37
+ 938 02d5 00000000 		.4byte	.LFB0
+ 939 02d9 1C000000 		.4byte	.LFE0-.LFB0
+ 940 02dd 01       		.uleb128 0x1
+ 941 02de 9C       		.byte	0x9c
+ 942 02df F6020000 		.4byte	0x2f6
+ 943 02e3 14       		.uleb128 0x14
+ 944 02e4 0C000000 		.4byte	.LVL12
+ 945 02e8 EE010000 		.4byte	0x1ee
+ 946 02ec 15       		.uleb128 0x15
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 34
+
+
+ 947 02ed 18000000 		.4byte	.LVL13
+ 948 02f1 64010000 		.4byte	0x164
+ 949 02f5 00       		.byte	0
+ 950 02f6 0A       		.uleb128 0xa
+ 951 02f7 30010000 		.4byte	0x130
+ 952 02fb 00000000 		.4byte	.LFB7
+ 953 02ff 0C000000 		.4byte	.LFE7-.LFB7
+ 954 0303 01       		.uleb128 0x1
+ 955 0304 9C       		.byte	0x9c
+ 956 0305 11030000 		.4byte	0x311
+ 957 0309 0B       		.uleb128 0xb
+ 958 030a 3D010000 		.4byte	0x13d
+ 959 030e 01       		.uleb128 0x1
+ 960 030f 50       		.byte	0x50
+ 961 0310 00       		.byte	0
+ 962 0311 0A       		.uleb128 0xa
+ 963 0312 16010000 		.4byte	0x116
+ 964 0316 00000000 		.4byte	.LFB8
+ 965 031a 0C000000 		.4byte	.LFE8-.LFB8
+ 966 031e 01       		.uleb128 0x1
+ 967 031f 9C       		.byte	0x9c
+ 968 0320 2C030000 		.4byte	0x32c
+ 969 0324 0B       		.uleb128 0xb
+ 970 0325 23010000 		.4byte	0x123
+ 971 0329 01       		.uleb128 0x1
+ 972 032a 50       		.byte	0x50
+ 973 032b 00       		.byte	0
+ 974 032c 0A       		.uleb128 0xa
+ 975 032d FC000000 		.4byte	0xfc
+ 976 0331 00000000 		.4byte	.LFB9
+ 977 0335 0C000000 		.4byte	.LFE9-.LFB9
+ 978 0339 01       		.uleb128 0x1
+ 979 033a 9C       		.byte	0x9c
+ 980 033b 47030000 		.4byte	0x347
+ 981 033f 0B       		.uleb128 0xb
+ 982 0340 09010000 		.4byte	0x109
+ 983 0344 01       		.uleb128 0x1
+ 984 0345 50       		.byte	0x50
+ 985 0346 00       		.byte	0
+ 986 0347 0A       		.uleb128 0xa
+ 987 0348 E2000000 		.4byte	0xe2
+ 988 034c 00000000 		.4byte	.LFB10
+ 989 0350 0C000000 		.4byte	.LFE10-.LFB10
+ 990 0354 01       		.uleb128 0x1
+ 991 0355 9C       		.byte	0x9c
+ 992 0356 62030000 		.4byte	0x362
+ 993 035a 0B       		.uleb128 0xb
+ 994 035b EF000000 		.4byte	0xef
+ 995 035f 01       		.uleb128 0x1
+ 996 0360 50       		.byte	0x50
+ 997 0361 00       		.byte	0
+ 998 0362 16       		.uleb128 0x16
+ 999 0363 D5000000 		.4byte	0xd5
+ 1000 0367 00000000 		.4byte	.LFB11
+ 1001 036b 0C000000 		.4byte	.LFE11-.LFB11
+ 1002 036f 01       		.uleb128 0x1
+ 1003 0370 9C       		.byte	0x9c
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 35
+
+
+ 1004 0371 17       		.uleb128 0x17
+ 1005 0372 20030000 		.4byte	.LASF47
+ 1006 0376 01       		.byte	0x1
+ 1007 0377 E102     		.2byte	0x2e1
+ 1008 0379 6B000000 		.4byte	0x6b
+ 1009 037d 00000000 		.4byte	.LFB12
+ 1010 0381 0C000000 		.4byte	.LFE12-.LFB12
+ 1011 0385 01       		.uleb128 0x1
+ 1012 0386 9C       		.byte	0x9c
+ 1013 0387 9A030000 		.4byte	0x39a
+ 1014 038b 18       		.uleb128 0x18
+ 1015 038c E9020000 		.4byte	.LASF36
+ 1016 0390 01       		.byte	0x1
+ 1017 0391 E302     		.2byte	0x2e3
+ 1018 0393 6B000000 		.4byte	0x6b
+ 1019 0397 01       		.uleb128 0x1
+ 1020 0398 50       		.byte	0x50
+ 1021 0399 00       		.byte	0
+ 1022 039a 0D       		.uleb128 0xd
+ 1023 039b DD030000 		.4byte	.LASF37
+ 1024 039f 01       		.byte	0x1
+ 1025 03a0 FD02     		.2byte	0x2fd
+ 1026 03a2 00000000 		.4byte	.LFB13
+ 1027 03a6 0C000000 		.4byte	.LFE13-.LFB13
+ 1028 03aa 01       		.uleb128 0x1
+ 1029 03ab 9C       		.byte	0x9c
+ 1030 03ac BF030000 		.4byte	0x3bf
+ 1031 03b0 19       		.uleb128 0x19
+ 1032 03b1 DB010000 		.4byte	.LASF48
+ 1033 03b5 01       		.byte	0x1
+ 1034 03b6 FD02     		.2byte	0x2fd
+ 1035 03b8 6B000000 		.4byte	0x6b
+ 1036 03bc 01       		.uleb128 0x1
+ 1037 03bd 50       		.byte	0x50
+ 1038 03be 00       		.byte	0
+ 1039 03bf 16       		.uleb128 0x16
+ 1040 03c0 C8000000 		.4byte	0xc8
+ 1041 03c4 00000000 		.4byte	.LFB14
+ 1042 03c8 0C000000 		.4byte	.LFE14-.LFB14
+ 1043 03cc 01       		.uleb128 0x1
+ 1044 03cd 9C       		.byte	0x9c
+ 1045 03ce 0C       		.uleb128 0xc
+ 1046 03cf 24020000 		.4byte	.LASF39
+ 1047 03d3 01       		.byte	0x1
+ 1048 03d4 4A03     		.2byte	0x34a
+ 1049 03d6 77000000 		.4byte	0x77
+ 1050 03da 00000000 		.4byte	.LFB15
+ 1051 03de 0C000000 		.4byte	.LFE15-.LFB15
+ 1052 03e2 01       		.uleb128 0x1
+ 1053 03e3 9C       		.byte	0x9c
+ 1054 03e4 0C       		.uleb128 0xc
+ 1055 03e5 3F020000 		.4byte	.LASF40
+ 1056 03e9 01       		.byte	0x1
+ 1057 03ea 5E03     		.2byte	0x35e
+ 1058 03ec 77000000 		.4byte	0x77
+ 1059 03f0 00000000 		.4byte	.LFB16
+ 1060 03f4 0C000000 		.4byte	.LFE16-.LFB16
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 36
+
+
+ 1061 03f8 01       		.uleb128 0x1
+ 1062 03f9 9C       		.byte	0x9c
+ 1063 03fa 0C       		.uleb128 0xc
+ 1064 03fb E3010000 		.4byte	.LASF41
+ 1065 03ff 01       		.byte	0x1
+ 1066 0400 7403     		.2byte	0x374
+ 1067 0402 77000000 		.4byte	0x77
+ 1068 0406 00000000 		.4byte	.LFB17
+ 1069 040a 0C000000 		.4byte	.LFE17-.LFB17
+ 1070 040e 01       		.uleb128 0x1
+ 1071 040f 9C       		.byte	0x9c
+ 1072 0410 1A       		.uleb128 0x1a
+ 1073 0411 F0020000 		.4byte	.LASF49
+ 1074 0415 01       		.byte	0x1
+ 1075 0416 20       		.byte	0x20
+ 1076 0417 6B000000 		.4byte	0x6b
+ 1077 041b 05       		.uleb128 0x5
+ 1078 041c 03       		.byte	0x3
+ 1079 041d 00000000 		.4byte	Right_Eyeball_initVar
+ 1080 0421 1B       		.uleb128 0x1b
+ 1081 0422 89020000 		.4byte	.LASF42
+ 1082 0426 89020000 		.4byte	.LASF42
+ 1083 042a 03       		.byte	0x3
+ 1084 042b 7D       		.byte	0x7d
+ 1085 042c 1B       		.uleb128 0x1b
+ 1086 042d D3020000 		.4byte	.LASF43
+ 1087 0431 D3020000 		.4byte	.LASF43
+ 1088 0435 03       		.byte	0x3
+ 1089 0436 7E       		.byte	0x7e
+ 1090 0437 00       		.byte	0
+ 1091              		.section	.debug_abbrev,"",%progbits
+ 1092              	.Ldebug_abbrev0:
+ 1093 0000 01       		.uleb128 0x1
+ 1094 0001 11       		.uleb128 0x11
+ 1095 0002 01       		.byte	0x1
+ 1096 0003 25       		.uleb128 0x25
+ 1097 0004 0E       		.uleb128 0xe
+ 1098 0005 13       		.uleb128 0x13
+ 1099 0006 0B       		.uleb128 0xb
+ 1100 0007 03       		.uleb128 0x3
+ 1101 0008 0E       		.uleb128 0xe
+ 1102 0009 1B       		.uleb128 0x1b
+ 1103 000a 0E       		.uleb128 0xe
+ 1104 000b 55       		.uleb128 0x55
+ 1105 000c 17       		.uleb128 0x17
+ 1106 000d 11       		.uleb128 0x11
+ 1107 000e 01       		.uleb128 0x1
+ 1108 000f 10       		.uleb128 0x10
+ 1109 0010 17       		.uleb128 0x17
+ 1110 0011 00       		.byte	0
+ 1111 0012 00       		.byte	0
+ 1112 0013 02       		.uleb128 0x2
+ 1113 0014 24       		.uleb128 0x24
+ 1114 0015 00       		.byte	0
+ 1115 0016 0B       		.uleb128 0xb
+ 1116 0017 0B       		.uleb128 0xb
+ 1117 0018 3E       		.uleb128 0x3e
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 37
+
+
+ 1118 0019 0B       		.uleb128 0xb
+ 1119 001a 03       		.uleb128 0x3
+ 1120 001b 0E       		.uleb128 0xe
+ 1121 001c 00       		.byte	0
+ 1122 001d 00       		.byte	0
+ 1123 001e 03       		.uleb128 0x3
+ 1124 001f 24       		.uleb128 0x24
+ 1125 0020 00       		.byte	0
+ 1126 0021 0B       		.uleb128 0xb
+ 1127 0022 0B       		.uleb128 0xb
+ 1128 0023 3E       		.uleb128 0x3e
+ 1129 0024 0B       		.uleb128 0xb
+ 1130 0025 03       		.uleb128 0x3
+ 1131 0026 08       		.uleb128 0x8
+ 1132 0027 00       		.byte	0
+ 1133 0028 00       		.byte	0
+ 1134 0029 04       		.uleb128 0x4
+ 1135 002a 16       		.uleb128 0x16
+ 1136 002b 00       		.byte	0
+ 1137 002c 03       		.uleb128 0x3
+ 1138 002d 0E       		.uleb128 0xe
+ 1139 002e 3A       		.uleb128 0x3a
+ 1140 002f 0B       		.uleb128 0xb
+ 1141 0030 3B       		.uleb128 0x3b
+ 1142 0031 05       		.uleb128 0x5
+ 1143 0032 49       		.uleb128 0x49
+ 1144 0033 13       		.uleb128 0x13
+ 1145 0034 00       		.byte	0
+ 1146 0035 00       		.byte	0
+ 1147 0036 05       		.uleb128 0x5
+ 1148 0037 35       		.uleb128 0x35
+ 1149 0038 00       		.byte	0
+ 1150 0039 49       		.uleb128 0x49
+ 1151 003a 13       		.uleb128 0x13
+ 1152 003b 00       		.byte	0
+ 1153 003c 00       		.byte	0
+ 1154 003d 06       		.uleb128 0x6
+ 1155 003e 2E       		.uleb128 0x2e
+ 1156 003f 00       		.byte	0
+ 1157 0040 3F       		.uleb128 0x3f
+ 1158 0041 19       		.uleb128 0x19
+ 1159 0042 03       		.uleb128 0x3
+ 1160 0043 0E       		.uleb128 0xe
+ 1161 0044 3A       		.uleb128 0x3a
+ 1162 0045 0B       		.uleb128 0xb
+ 1163 0046 3B       		.uleb128 0x3b
+ 1164 0047 05       		.uleb128 0x5
+ 1165 0048 27       		.uleb128 0x27
+ 1166 0049 19       		.uleb128 0x19
+ 1167 004a 49       		.uleb128 0x49
+ 1168 004b 13       		.uleb128 0x13
+ 1169 004c 20       		.uleb128 0x20
+ 1170 004d 0B       		.uleb128 0xb
+ 1171 004e 00       		.byte	0
+ 1172 004f 00       		.byte	0
+ 1173 0050 07       		.uleb128 0x7
+ 1174 0051 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 38
+
+
+ 1175 0052 01       		.byte	0x1
+ 1176 0053 3F       		.uleb128 0x3f
+ 1177 0054 19       		.uleb128 0x19
+ 1178 0055 03       		.uleb128 0x3
+ 1179 0056 0E       		.uleb128 0xe
+ 1180 0057 3A       		.uleb128 0x3a
+ 1181 0058 0B       		.uleb128 0xb
+ 1182 0059 3B       		.uleb128 0x3b
+ 1183 005a 05       		.uleb128 0x5
+ 1184 005b 27       		.uleb128 0x27
+ 1185 005c 19       		.uleb128 0x19
+ 1186 005d 20       		.uleb128 0x20
+ 1187 005e 0B       		.uleb128 0xb
+ 1188 005f 01       		.uleb128 0x1
+ 1189 0060 13       		.uleb128 0x13
+ 1190 0061 00       		.byte	0
+ 1191 0062 00       		.byte	0
+ 1192 0063 08       		.uleb128 0x8
+ 1193 0064 05       		.uleb128 0x5
+ 1194 0065 00       		.byte	0
+ 1195 0066 03       		.uleb128 0x3
+ 1196 0067 0E       		.uleb128 0xe
+ 1197 0068 3A       		.uleb128 0x3a
+ 1198 0069 0B       		.uleb128 0xb
+ 1199 006a 3B       		.uleb128 0x3b
+ 1200 006b 05       		.uleb128 0x5
+ 1201 006c 49       		.uleb128 0x49
+ 1202 006d 13       		.uleb128 0x13
+ 1203 006e 00       		.byte	0
+ 1204 006f 00       		.byte	0
+ 1205 0070 09       		.uleb128 0x9
+ 1206 0071 2E       		.uleb128 0x2e
+ 1207 0072 00       		.byte	0
+ 1208 0073 3F       		.uleb128 0x3f
+ 1209 0074 19       		.uleb128 0x19
+ 1210 0075 03       		.uleb128 0x3
+ 1211 0076 0E       		.uleb128 0xe
+ 1212 0077 3A       		.uleb128 0x3a
+ 1213 0078 0B       		.uleb128 0xb
+ 1214 0079 3B       		.uleb128 0x3b
+ 1215 007a 0B       		.uleb128 0xb
+ 1216 007b 27       		.uleb128 0x27
+ 1217 007c 19       		.uleb128 0x19
+ 1218 007d 11       		.uleb128 0x11
+ 1219 007e 01       		.uleb128 0x1
+ 1220 007f 12       		.uleb128 0x12
+ 1221 0080 06       		.uleb128 0x6
+ 1222 0081 40       		.uleb128 0x40
+ 1223 0082 18       		.uleb128 0x18
+ 1224 0083 9742     		.uleb128 0x2117
+ 1225 0085 19       		.uleb128 0x19
+ 1226 0086 00       		.byte	0
+ 1227 0087 00       		.byte	0
+ 1228 0088 0A       		.uleb128 0xa
+ 1229 0089 2E       		.uleb128 0x2e
+ 1230 008a 01       		.byte	0x1
+ 1231 008b 31       		.uleb128 0x31
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 39
+
+
+ 1232 008c 13       		.uleb128 0x13
+ 1233 008d 11       		.uleb128 0x11
+ 1234 008e 01       		.uleb128 0x1
+ 1235 008f 12       		.uleb128 0x12
+ 1236 0090 06       		.uleb128 0x6
+ 1237 0091 40       		.uleb128 0x40
+ 1238 0092 18       		.uleb128 0x18
+ 1239 0093 9742     		.uleb128 0x2117
+ 1240 0095 19       		.uleb128 0x19
+ 1241 0096 01       		.uleb128 0x1
+ 1242 0097 13       		.uleb128 0x13
+ 1243 0098 00       		.byte	0
+ 1244 0099 00       		.byte	0
+ 1245 009a 0B       		.uleb128 0xb
+ 1246 009b 05       		.uleb128 0x5
+ 1247 009c 00       		.byte	0
+ 1248 009d 31       		.uleb128 0x31
+ 1249 009e 13       		.uleb128 0x13
+ 1250 009f 02       		.uleb128 0x2
+ 1251 00a0 18       		.uleb128 0x18
+ 1252 00a1 00       		.byte	0
+ 1253 00a2 00       		.byte	0
+ 1254 00a3 0C       		.uleb128 0xc
+ 1255 00a4 2E       		.uleb128 0x2e
+ 1256 00a5 00       		.byte	0
+ 1257 00a6 3F       		.uleb128 0x3f
+ 1258 00a7 19       		.uleb128 0x19
+ 1259 00a8 03       		.uleb128 0x3
+ 1260 00a9 0E       		.uleb128 0xe
+ 1261 00aa 3A       		.uleb128 0x3a
+ 1262 00ab 0B       		.uleb128 0xb
+ 1263 00ac 3B       		.uleb128 0x3b
+ 1264 00ad 05       		.uleb128 0x5
+ 1265 00ae 27       		.uleb128 0x27
+ 1266 00af 19       		.uleb128 0x19
+ 1267 00b0 49       		.uleb128 0x49
+ 1268 00b1 13       		.uleb128 0x13
+ 1269 00b2 11       		.uleb128 0x11
+ 1270 00b3 01       		.uleb128 0x1
+ 1271 00b4 12       		.uleb128 0x12
+ 1272 00b5 06       		.uleb128 0x6
+ 1273 00b6 40       		.uleb128 0x40
+ 1274 00b7 18       		.uleb128 0x18
+ 1275 00b8 9742     		.uleb128 0x2117
+ 1276 00ba 19       		.uleb128 0x19
+ 1277 00bb 00       		.byte	0
+ 1278 00bc 00       		.byte	0
+ 1279 00bd 0D       		.uleb128 0xd
+ 1280 00be 2E       		.uleb128 0x2e
+ 1281 00bf 01       		.byte	0x1
+ 1282 00c0 3F       		.uleb128 0x3f
+ 1283 00c1 19       		.uleb128 0x19
+ 1284 00c2 03       		.uleb128 0x3
+ 1285 00c3 0E       		.uleb128 0xe
+ 1286 00c4 3A       		.uleb128 0x3a
+ 1287 00c5 0B       		.uleb128 0xb
+ 1288 00c6 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 40
+
+
+ 1289 00c7 05       		.uleb128 0x5
+ 1290 00c8 27       		.uleb128 0x27
+ 1291 00c9 19       		.uleb128 0x19
+ 1292 00ca 11       		.uleb128 0x11
+ 1293 00cb 01       		.uleb128 0x1
+ 1294 00cc 12       		.uleb128 0x12
+ 1295 00cd 06       		.uleb128 0x6
+ 1296 00ce 40       		.uleb128 0x40
+ 1297 00cf 18       		.uleb128 0x18
+ 1298 00d0 9742     		.uleb128 0x2117
+ 1299 00d2 19       		.uleb128 0x19
+ 1300 00d3 01       		.uleb128 0x1
+ 1301 00d4 13       		.uleb128 0x13
+ 1302 00d5 00       		.byte	0
+ 1303 00d6 00       		.byte	0
+ 1304 00d7 0E       		.uleb128 0xe
+ 1305 00d8 1D       		.uleb128 0x1d
+ 1306 00d9 00       		.byte	0
+ 1307 00da 31       		.uleb128 0x31
+ 1308 00db 13       		.uleb128 0x13
+ 1309 00dc 52       		.uleb128 0x52
+ 1310 00dd 01       		.uleb128 0x1
+ 1311 00de 55       		.uleb128 0x55
+ 1312 00df 17       		.uleb128 0x17
+ 1313 00e0 58       		.uleb128 0x58
+ 1314 00e1 0B       		.uleb128 0xb
+ 1315 00e2 59       		.uleb128 0x59
+ 1316 00e3 05       		.uleb128 0x5
+ 1317 00e4 00       		.byte	0
+ 1318 00e5 00       		.byte	0
+ 1319 00e6 0F       		.uleb128 0xf
+ 1320 00e7 2E       		.uleb128 0x2e
+ 1321 00e8 01       		.byte	0x1
+ 1322 00e9 3F       		.uleb128 0x3f
+ 1323 00ea 19       		.uleb128 0x19
+ 1324 00eb 03       		.uleb128 0x3
+ 1325 00ec 0E       		.uleb128 0xe
+ 1326 00ed 3A       		.uleb128 0x3a
+ 1327 00ee 0B       		.uleb128 0xb
+ 1328 00ef 3B       		.uleb128 0x3b
+ 1329 00f0 0B       		.uleb128 0xb
+ 1330 00f1 27       		.uleb128 0x27
+ 1331 00f2 19       		.uleb128 0x19
+ 1332 00f3 11       		.uleb128 0x11
+ 1333 00f4 01       		.uleb128 0x1
+ 1334 00f5 12       		.uleb128 0x12
+ 1335 00f6 06       		.uleb128 0x6
+ 1336 00f7 40       		.uleb128 0x40
+ 1337 00f8 18       		.uleb128 0x18
+ 1338 00f9 9742     		.uleb128 0x2117
+ 1339 00fb 19       		.uleb128 0x19
+ 1340 00fc 01       		.uleb128 0x1
+ 1341 00fd 13       		.uleb128 0x13
+ 1342 00fe 00       		.byte	0
+ 1343 00ff 00       		.byte	0
+ 1344 0100 10       		.uleb128 0x10
+ 1345 0101 34       		.uleb128 0x34
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 41
+
+
+ 1346 0102 00       		.byte	0
+ 1347 0103 03       		.uleb128 0x3
+ 1348 0104 0E       		.uleb128 0xe
+ 1349 0105 3A       		.uleb128 0x3a
+ 1350 0106 0B       		.uleb128 0xb
+ 1351 0107 3B       		.uleb128 0x3b
+ 1352 0108 0B       		.uleb128 0xb
+ 1353 0109 49       		.uleb128 0x49
+ 1354 010a 13       		.uleb128 0x13
+ 1355 010b 02       		.uleb128 0x2
+ 1356 010c 17       		.uleb128 0x17
+ 1357 010d 00       		.byte	0
+ 1358 010e 00       		.byte	0
+ 1359 010f 11       		.uleb128 0x11
+ 1360 0110 1D       		.uleb128 0x1d
+ 1361 0111 01       		.byte	0x1
+ 1362 0112 31       		.uleb128 0x31
+ 1363 0113 13       		.uleb128 0x13
+ 1364 0114 52       		.uleb128 0x52
+ 1365 0115 01       		.uleb128 0x1
+ 1366 0116 55       		.uleb128 0x55
+ 1367 0117 17       		.uleb128 0x17
+ 1368 0118 58       		.uleb128 0x58
+ 1369 0119 0B       		.uleb128 0xb
+ 1370 011a 59       		.uleb128 0x59
+ 1371 011b 0B       		.uleb128 0xb
+ 1372 011c 01       		.uleb128 0x1
+ 1373 011d 13       		.uleb128 0x13
+ 1374 011e 00       		.byte	0
+ 1375 011f 00       		.byte	0
+ 1376 0120 12       		.uleb128 0x12
+ 1377 0121 05       		.uleb128 0x5
+ 1378 0122 00       		.byte	0
+ 1379 0123 31       		.uleb128 0x31
+ 1380 0124 13       		.uleb128 0x13
+ 1381 0125 02       		.uleb128 0x2
+ 1382 0126 17       		.uleb128 0x17
+ 1383 0127 00       		.byte	0
+ 1384 0128 00       		.byte	0
+ 1385 0129 13       		.uleb128 0x13
+ 1386 012a 1D       		.uleb128 0x1d
+ 1387 012b 01       		.byte	0x1
+ 1388 012c 31       		.uleb128 0x31
+ 1389 012d 13       		.uleb128 0x13
+ 1390 012e 11       		.uleb128 0x11
+ 1391 012f 01       		.uleb128 0x1
+ 1392 0130 12       		.uleb128 0x12
+ 1393 0131 06       		.uleb128 0x6
+ 1394 0132 58       		.uleb128 0x58
+ 1395 0133 0B       		.uleb128 0xb
+ 1396 0134 59       		.uleb128 0x59
+ 1397 0135 0B       		.uleb128 0xb
+ 1398 0136 01       		.uleb128 0x1
+ 1399 0137 13       		.uleb128 0x13
+ 1400 0138 00       		.byte	0
+ 1401 0139 00       		.byte	0
+ 1402 013a 14       		.uleb128 0x14
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 42
+
+
+ 1403 013b 898201   		.uleb128 0x4109
+ 1404 013e 00       		.byte	0
+ 1405 013f 11       		.uleb128 0x11
+ 1406 0140 01       		.uleb128 0x1
+ 1407 0141 31       		.uleb128 0x31
+ 1408 0142 13       		.uleb128 0x13
+ 1409 0143 00       		.byte	0
+ 1410 0144 00       		.byte	0
+ 1411 0145 15       		.uleb128 0x15
+ 1412 0146 898201   		.uleb128 0x4109
+ 1413 0149 00       		.byte	0
+ 1414 014a 11       		.uleb128 0x11
+ 1415 014b 01       		.uleb128 0x1
+ 1416 014c 9542     		.uleb128 0x2115
+ 1417 014e 19       		.uleb128 0x19
+ 1418 014f 31       		.uleb128 0x31
+ 1419 0150 13       		.uleb128 0x13
+ 1420 0151 00       		.byte	0
+ 1421 0152 00       		.byte	0
+ 1422 0153 16       		.uleb128 0x16
+ 1423 0154 2E       		.uleb128 0x2e
+ 1424 0155 00       		.byte	0
+ 1425 0156 31       		.uleb128 0x31
+ 1426 0157 13       		.uleb128 0x13
+ 1427 0158 11       		.uleb128 0x11
+ 1428 0159 01       		.uleb128 0x1
+ 1429 015a 12       		.uleb128 0x12
+ 1430 015b 06       		.uleb128 0x6
+ 1431 015c 40       		.uleb128 0x40
+ 1432 015d 18       		.uleb128 0x18
+ 1433 015e 9742     		.uleb128 0x2117
+ 1434 0160 19       		.uleb128 0x19
+ 1435 0161 00       		.byte	0
+ 1436 0162 00       		.byte	0
+ 1437 0163 17       		.uleb128 0x17
+ 1438 0164 2E       		.uleb128 0x2e
+ 1439 0165 01       		.byte	0x1
+ 1440 0166 3F       		.uleb128 0x3f
+ 1441 0167 19       		.uleb128 0x19
+ 1442 0168 03       		.uleb128 0x3
+ 1443 0169 0E       		.uleb128 0xe
+ 1444 016a 3A       		.uleb128 0x3a
+ 1445 016b 0B       		.uleb128 0xb
+ 1446 016c 3B       		.uleb128 0x3b
+ 1447 016d 05       		.uleb128 0x5
+ 1448 016e 27       		.uleb128 0x27
+ 1449 016f 19       		.uleb128 0x19
+ 1450 0170 49       		.uleb128 0x49
+ 1451 0171 13       		.uleb128 0x13
+ 1452 0172 11       		.uleb128 0x11
+ 1453 0173 01       		.uleb128 0x1
+ 1454 0174 12       		.uleb128 0x12
+ 1455 0175 06       		.uleb128 0x6
+ 1456 0176 40       		.uleb128 0x40
+ 1457 0177 18       		.uleb128 0x18
+ 1458 0178 9742     		.uleb128 0x2117
+ 1459 017a 19       		.uleb128 0x19
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 43
+
+
+ 1460 017b 01       		.uleb128 0x1
+ 1461 017c 13       		.uleb128 0x13
+ 1462 017d 00       		.byte	0
+ 1463 017e 00       		.byte	0
+ 1464 017f 18       		.uleb128 0x18
+ 1465 0180 34       		.uleb128 0x34
+ 1466 0181 00       		.byte	0
+ 1467 0182 03       		.uleb128 0x3
+ 1468 0183 0E       		.uleb128 0xe
+ 1469 0184 3A       		.uleb128 0x3a
+ 1470 0185 0B       		.uleb128 0xb
+ 1471 0186 3B       		.uleb128 0x3b
+ 1472 0187 05       		.uleb128 0x5
+ 1473 0188 49       		.uleb128 0x49
+ 1474 0189 13       		.uleb128 0x13
+ 1475 018a 02       		.uleb128 0x2
+ 1476 018b 18       		.uleb128 0x18
+ 1477 018c 00       		.byte	0
+ 1478 018d 00       		.byte	0
+ 1479 018e 19       		.uleb128 0x19
+ 1480 018f 05       		.uleb128 0x5
+ 1481 0190 00       		.byte	0
+ 1482 0191 03       		.uleb128 0x3
+ 1483 0192 0E       		.uleb128 0xe
+ 1484 0193 3A       		.uleb128 0x3a
+ 1485 0194 0B       		.uleb128 0xb
+ 1486 0195 3B       		.uleb128 0x3b
+ 1487 0196 05       		.uleb128 0x5
+ 1488 0197 49       		.uleb128 0x49
+ 1489 0198 13       		.uleb128 0x13
+ 1490 0199 02       		.uleb128 0x2
+ 1491 019a 18       		.uleb128 0x18
+ 1492 019b 00       		.byte	0
+ 1493 019c 00       		.byte	0
+ 1494 019d 1A       		.uleb128 0x1a
+ 1495 019e 34       		.uleb128 0x34
+ 1496 019f 00       		.byte	0
+ 1497 01a0 03       		.uleb128 0x3
+ 1498 01a1 0E       		.uleb128 0xe
+ 1499 01a2 3A       		.uleb128 0x3a
+ 1500 01a3 0B       		.uleb128 0xb
+ 1501 01a4 3B       		.uleb128 0x3b
+ 1502 01a5 0B       		.uleb128 0xb
+ 1503 01a6 49       		.uleb128 0x49
+ 1504 01a7 13       		.uleb128 0x13
+ 1505 01a8 3F       		.uleb128 0x3f
+ 1506 01a9 19       		.uleb128 0x19
+ 1507 01aa 02       		.uleb128 0x2
+ 1508 01ab 18       		.uleb128 0x18
+ 1509 01ac 00       		.byte	0
+ 1510 01ad 00       		.byte	0
+ 1511 01ae 1B       		.uleb128 0x1b
+ 1512 01af 2E       		.uleb128 0x2e
+ 1513 01b0 00       		.byte	0
+ 1514 01b1 3F       		.uleb128 0x3f
+ 1515 01b2 19       		.uleb128 0x19
+ 1516 01b3 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 44
+
+
+ 1517 01b4 19       		.uleb128 0x19
+ 1518 01b5 6E       		.uleb128 0x6e
+ 1519 01b6 0E       		.uleb128 0xe
+ 1520 01b7 03       		.uleb128 0x3
+ 1521 01b8 0E       		.uleb128 0xe
+ 1522 01b9 3A       		.uleb128 0x3a
+ 1523 01ba 0B       		.uleb128 0xb
+ 1524 01bb 3B       		.uleb128 0x3b
+ 1525 01bc 0B       		.uleb128 0xb
+ 1526 01bd 00       		.byte	0
+ 1527 01be 00       		.byte	0
+ 1528 01bf 00       		.byte	0
+ 1529              		.section	.debug_loc,"",%progbits
+ 1530              	.Ldebug_loc0:
+ 1531              	.LLST0:
+ 1532 0000 08000000 		.4byte	.LVL1
+ 1533 0004 0E000000 		.4byte	.LVL2
+ 1534 0008 0600     		.2byte	0x6
+ 1535 000a 73       		.byte	0x73
+ 1536 000b 00       		.sleb128 0
+ 1537 000c 09       		.byte	0x9
+ 1538 000d C0       		.byte	0xc0
+ 1539 000e 1A       		.byte	0x1a
+ 1540 000f 9F       		.byte	0x9f
+ 1541 0010 00000000 		.4byte	0
+ 1542 0014 00000000 		.4byte	0
+ 1543              	.LLST1:
+ 1544 0018 42000000 		.4byte	.LVL9
+ 1545 001c 4D000000 		.4byte	.LVL10-1
+ 1546 0020 0100     		.2byte	0x1
+ 1547 0022 50       		.byte	0x50
+ 1548 0023 00000000 		.4byte	0
+ 1549 0027 00000000 		.4byte	0
+ 1550              	.LLST2:
+ 1551 002b 3C000000 		.4byte	.LVL7
+ 1552 002f 3E000000 		.4byte	.LVL8
+ 1553 0033 0200     		.2byte	0x2
+ 1554 0035 30       		.byte	0x30
+ 1555 0036 9F       		.byte	0x9f
+ 1556 0037 00000000 		.4byte	0
+ 1557 003b 00000000 		.4byte	0
+ 1558              	.LLST3:
+ 1559 003f 26000000 		.4byte	.LVL3
+ 1560 0043 2E000000 		.4byte	.LVL4
+ 1561 0047 0400     		.2byte	0x4
+ 1562 0049 0B       		.byte	0xb
+ 1563 004a 60EA     		.2byte	0xea60
+ 1564 004c 9F       		.byte	0x9f
+ 1565 004d 00000000 		.4byte	0
+ 1566 0051 00000000 		.4byte	0
+ 1567              	.LLST4:
+ 1568 0055 2E000000 		.4byte	.LVL4
+ 1569 0059 32000000 		.4byte	.LVL5
+ 1570 005d 0400     		.2byte	0x4
+ 1571 005f 0B       		.byte	0xb
+ 1572 0060 60EA     		.2byte	0xea60
+ 1573 0062 9F       		.byte	0x9f
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 45
+
+
+ 1574 0063 00000000 		.4byte	0
+ 1575 0067 00000000 		.4byte	0
+ 1576              	.LLST5:
+ 1577 006b 32000000 		.4byte	.LVL5
+ 1578 006f 38000000 		.4byte	.LVL6
+ 1579 0073 0200     		.2byte	0x2
+ 1580 0075 30       		.byte	0x30
+ 1581 0076 9F       		.byte	0x9f
+ 1582 0077 00000000 		.4byte	0
+ 1583 007b 00000000 		.4byte	0
+ 1584              	.LLST6:
+ 1585 007f 38000000 		.4byte	.LVL6
+ 1586 0083 3C000000 		.4byte	.LVL7
+ 1587 0087 0200     		.2byte	0x2
+ 1588 0089 30       		.byte	0x30
+ 1589 008a 9F       		.byte	0x9f
+ 1590 008b 00000000 		.4byte	0
+ 1591 008f 00000000 		.4byte	0
+ 1592              		.section	.debug_aranges,"",%progbits
+ 1593 0000 A4000000 		.4byte	0xa4
+ 1594 0004 0200     		.2byte	0x2
+ 1595 0006 00000000 		.4byte	.Ldebug_info0
+ 1596 000a 04       		.byte	0x4
+ 1597 000b 00       		.byte	0
+ 1598 000c 0000     		.2byte	0
+ 1599 000e 0000     		.2byte	0
+ 1600 0010 00000000 		.4byte	.LFB2
+ 1601 0014 10000000 		.4byte	.LFE2-.LFB2
+ 1602 0018 00000000 		.4byte	.LFB3
+ 1603 001c 10000000 		.4byte	.LFE3-.LFB3
+ 1604 0020 00000000 		.4byte	.LFB4
+ 1605 0024 0C000000 		.4byte	.LFE4-.LFB4
+ 1606 0028 00000000 		.4byte	.LFB5
+ 1607 002c 14000000 		.4byte	.LFE5-.LFB5
+ 1608 0030 00000000 		.4byte	.LFB6
+ 1609 0034 18000000 		.4byte	.LFE6-.LFB6
+ 1610 0038 00000000 		.4byte	.LFB1
+ 1611 003c 60000000 		.4byte	.LFE1-.LFB1
+ 1612 0040 00000000 		.4byte	.LFB0
+ 1613 0044 1C000000 		.4byte	.LFE0-.LFB0
+ 1614 0048 00000000 		.4byte	.LFB7
+ 1615 004c 0C000000 		.4byte	.LFE7-.LFB7
+ 1616 0050 00000000 		.4byte	.LFB8
+ 1617 0054 0C000000 		.4byte	.LFE8-.LFB8
+ 1618 0058 00000000 		.4byte	.LFB9
+ 1619 005c 0C000000 		.4byte	.LFE9-.LFB9
+ 1620 0060 00000000 		.4byte	.LFB10
+ 1621 0064 0C000000 		.4byte	.LFE10-.LFB10
+ 1622 0068 00000000 		.4byte	.LFB11
+ 1623 006c 0C000000 		.4byte	.LFE11-.LFB11
+ 1624 0070 00000000 		.4byte	.LFB12
+ 1625 0074 0C000000 		.4byte	.LFE12-.LFB12
+ 1626 0078 00000000 		.4byte	.LFB13
+ 1627 007c 0C000000 		.4byte	.LFE13-.LFB13
+ 1628 0080 00000000 		.4byte	.LFB14
+ 1629 0084 0C000000 		.4byte	.LFE14-.LFB14
+ 1630 0088 00000000 		.4byte	.LFB15
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 46
+
+
+ 1631 008c 0C000000 		.4byte	.LFE15-.LFB15
+ 1632 0090 00000000 		.4byte	.LFB16
+ 1633 0094 0C000000 		.4byte	.LFE16-.LFB16
+ 1634 0098 00000000 		.4byte	.LFB17
+ 1635 009c 0C000000 		.4byte	.LFE17-.LFB17
+ 1636 00a0 00000000 		.4byte	0
+ 1637 00a4 00000000 		.4byte	0
+ 1638              		.section	.debug_ranges,"",%progbits
+ 1639              	.Ldebug_ranges0:
+ 1640 0000 00000000 		.4byte	.LBB16
+ 1641 0004 02000000 		.4byte	.LBE16
+ 1642 0008 04000000 		.4byte	.LBB22
+ 1643 000c 06000000 		.4byte	.LBE22
+ 1644 0010 00000000 		.4byte	0
+ 1645 0014 00000000 		.4byte	0
+ 1646 0018 02000000 		.4byte	.LBB19
+ 1647 001c 04000000 		.4byte	.LBE19
+ 1648 0020 0A000000 		.4byte	.LBB23
+ 1649 0024 0E000000 		.4byte	.LBE23
+ 1650 0028 00000000 		.4byte	0
+ 1651 002c 00000000 		.4byte	0
+ 1652 0030 08000000 		.4byte	.LBB24
+ 1653 0034 0A000000 		.4byte	.LBE24
+ 1654 0038 3C000000 		.4byte	.LBB35
+ 1655 003c 3E000000 		.4byte	.LBE35
+ 1656 0040 00000000 		.4byte	0
+ 1657 0044 00000000 		.4byte	0
+ 1658 0048 00000000 		.4byte	.LFB2
+ 1659 004c 10000000 		.4byte	.LFE2
+ 1660 0050 00000000 		.4byte	.LFB3
+ 1661 0054 10000000 		.4byte	.LFE3
+ 1662 0058 00000000 		.4byte	.LFB4
+ 1663 005c 0C000000 		.4byte	.LFE4
+ 1664 0060 00000000 		.4byte	.LFB5
+ 1665 0064 14000000 		.4byte	.LFE5
+ 1666 0068 00000000 		.4byte	.LFB6
+ 1667 006c 18000000 		.4byte	.LFE6
+ 1668 0070 00000000 		.4byte	.LFB1
+ 1669 0074 60000000 		.4byte	.LFE1
+ 1670 0078 00000000 		.4byte	.LFB0
+ 1671 007c 1C000000 		.4byte	.LFE0
+ 1672 0080 00000000 		.4byte	.LFB7
+ 1673 0084 0C000000 		.4byte	.LFE7
+ 1674 0088 00000000 		.4byte	.LFB8
+ 1675 008c 0C000000 		.4byte	.LFE8
+ 1676 0090 00000000 		.4byte	.LFB9
+ 1677 0094 0C000000 		.4byte	.LFE9
+ 1678 0098 00000000 		.4byte	.LFB10
+ 1679 009c 0C000000 		.4byte	.LFE10
+ 1680 00a0 00000000 		.4byte	.LFB11
+ 1681 00a4 0C000000 		.4byte	.LFE11
+ 1682 00a8 00000000 		.4byte	.LFB12
+ 1683 00ac 0C000000 		.4byte	.LFE12
+ 1684 00b0 00000000 		.4byte	.LFB13
+ 1685 00b4 0C000000 		.4byte	.LFE13
+ 1686 00b8 00000000 		.4byte	.LFB14
+ 1687 00bc 0C000000 		.4byte	.LFE14
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 47
+
+
+ 1688 00c0 00000000 		.4byte	.LFB15
+ 1689 00c4 0C000000 		.4byte	.LFE15
+ 1690 00c8 00000000 		.4byte	.LFB16
+ 1691 00cc 0C000000 		.4byte	.LFE16
+ 1692 00d0 00000000 		.4byte	.LFB17
+ 1693 00d4 0C000000 		.4byte	.LFE17
+ 1694 00d8 00000000 		.4byte	0
+ 1695 00dc 00000000 		.4byte	0
+ 1696              		.section	.debug_line,"",%progbits
+ 1697              	.Ldebug_line0:
+ 1698 0000 E0010000 		.section	.debug_str,"MS",%progbits,1
+ 1698      02005500 
+ 1698      00000201 
+ 1698      FB0E0D00 
+ 1698      01010101 
+ 1699              	.LASF15:
+ 1700 0000 72656731 		.ascii	"reg16\000"
+ 1700      3600
+ 1701              	.LASF27:
+ 1702 0006 52696768 		.ascii	"Right_Eyeball_WriteCounter\000"
+ 1702      745F4579 
+ 1702      6562616C 
+ 1702      6C5F5772 
+ 1702      69746543 
+ 1703              	.LASF45:
+ 1704 0021 47656E65 		.ascii	"Generated_Source\\PSoC5\\Right_Eyeball.c\000"
+ 1704      72617465 
+ 1704      645F536F 
+ 1704      75726365 
+ 1704      5C50536F 
+ 1705              	.LASF26:
+ 1706 0048 70657269 		.ascii	"period\000"
+ 1706      6F6400
+ 1707              	.LASF3:
+ 1708 004f 73686F72 		.ascii	"short unsigned int\000"
+ 1708      7420756E 
+ 1708      7369676E 
+ 1708      65642069 
+ 1708      6E7400
+ 1709              	.LASF18:
+ 1710 0062 52696768 		.ascii	"Right_Eyeball_ReadCapture\000"
+ 1710      745F4579 
+ 1710      6562616C 
+ 1710      6C5F5265 
+ 1710      61644361 
+ 1711              	.LASF46:
+ 1712 007c 433A5C55 		.ascii	"C:\\Users\\vivek\\Documents\\PSoC Creator\\Workspac"
+ 1712      73657273 
+ 1712      5C766976 
+ 1712      656B5C44 
+ 1712      6F63756D 
+ 1713 00aa 6530335C 		.ascii	"e03\\Design01.cydsn\000"
+ 1713      44657369 
+ 1713      676E3031 
+ 1713      2E637964 
+ 1713      736E00
+ 1714              	.LASF24:
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 48
+
+
+ 1715 00bd 52696768 		.ascii	"Right_Eyeball_WriteCompare1\000"
+ 1715      745F4579 
+ 1715      6562616C 
+ 1715      6C5F5772 
+ 1715      69746543 
+ 1716              	.LASF38:
+ 1717 00d9 52696768 		.ascii	"Right_Eyeball_ReadCounter\000"
+ 1717      745F4579 
+ 1717      6562616C 
+ 1717      6C5F5265 
+ 1717      6164436F 
+ 1718              	.LASF11:
+ 1719 00f3 666C6F61 		.ascii	"float\000"
+ 1719      7400
+ 1720              	.LASF28:
+ 1721 00f9 636F756E 		.ascii	"counter\000"
+ 1721      74657200 
+ 1722              	.LASF7:
+ 1723 0101 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1723      206C6F6E 
+ 1723      6720756E 
+ 1723      7369676E 
+ 1723      65642069 
+ 1724              	.LASF1:
+ 1725 0118 756E7369 		.ascii	"unsigned char\000"
+ 1725      676E6564 
+ 1725      20636861 
+ 1725      7200
+ 1726              	.LASF21:
+ 1727 0126 52696768 		.ascii	"Right_Eyeball_WriteCompare2\000"
+ 1727      745F4579 
+ 1727      6562616C 
+ 1727      6C5F5772 
+ 1727      69746543 
+ 1728              	.LASF14:
+ 1729 0142 72656738 		.ascii	"reg8\000"
+ 1729      00
+ 1730              	.LASF44:
+ 1731 0147 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1731      43313120 
+ 1731      352E342E 
+ 1731      31203230 
+ 1731      31363036 
+ 1732 017a 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1732      20726576 
+ 1732      6973696F 
+ 1732      6E203233 
+ 1732      37373135 
+ 1733 01ad 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 1733      66756E63 
+ 1733      74696F6E 
+ 1733      2D736563 
+ 1733      74696F6E 
+ 1734              	.LASF9:
+ 1735 01d5 75696E74 		.ascii	"uint8\000"
+ 1735      3800
+ 1736              	.LASF48:
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 49
+
+
+ 1737 01db 636F6E74 		.ascii	"control\000"
+ 1737      726F6C00 
+ 1738              	.LASF41:
+ 1739 01e3 52696768 		.ascii	"Right_Eyeball_ReadPeriod\000"
+ 1739      745F4579 
+ 1739      6562616C 
+ 1739      6C5F5265 
+ 1739      61645065 
+ 1740              	.LASF32:
+ 1741 01fc 52696768 		.ascii	"Right_Eyeball_Init\000"
+ 1741      745F4579 
+ 1741      6562616C 
+ 1741      6C5F496E 
+ 1741      697400
+ 1742              	.LASF29:
+ 1743 020f 52696768 		.ascii	"Right_Eyeball_Enable\000"
+ 1743      745F4579 
+ 1743      6562616C 
+ 1743      6C5F456E 
+ 1743      61626C65 
+ 1744              	.LASF39:
+ 1745 0224 52696768 		.ascii	"Right_Eyeball_ReadCompare1\000"
+ 1745      745F4579 
+ 1745      6562616C 
+ 1745      6C5F5265 
+ 1745      6164436F 
+ 1746              	.LASF40:
+ 1747 023f 52696768 		.ascii	"Right_Eyeball_ReadCompare2\000"
+ 1747      745F4579 
+ 1747      6562616C 
+ 1747      6C5F5265 
+ 1747      6164436F 
+ 1748              	.LASF12:
+ 1749 025a 646F7562 		.ascii	"double\000"
+ 1749      6C6500
+ 1750              	.LASF19:
+ 1751 0261 52696768 		.ascii	"Right_Eyeball_ReadStatusRegister\000"
+ 1751      745F4579 
+ 1751      6562616C 
+ 1751      6C5F5265 
+ 1751      61645374 
+ 1752              	.LASF10:
+ 1753 0282 75696E74 		.ascii	"uint16\000"
+ 1753      313600
+ 1754              	.LASF42:
+ 1755 0289 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1755      74657243 
+ 1755      72697469 
+ 1755      63616C53 
+ 1755      65637469 
+ 1756              	.LASF5:
+ 1757 02a0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1757      20756E73 
+ 1757      69676E65 
+ 1757      6420696E 
+ 1757      7400
+ 1758              	.LASF8:
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 50
+
+
+ 1759 02b2 756E7369 		.ascii	"unsigned int\000"
+ 1759      676E6564 
+ 1759      20696E74 
+ 1759      00
+ 1760              	.LASF35:
+ 1761 02bf 52696768 		.ascii	"Right_Eyeball_Start\000"
+ 1761      745F4579 
+ 1761      6562616C 
+ 1761      6C5F5374 
+ 1761      61727400 
+ 1762              	.LASF43:
+ 1763 02d3 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1763      69744372 
+ 1763      69746963 
+ 1763      616C5365 
+ 1763      6374696F 
+ 1764              	.LASF36:
+ 1765 02e9 72657375 		.ascii	"result\000"
+ 1765      6C7400
+ 1766              	.LASF49:
+ 1767 02f0 52696768 		.ascii	"Right_Eyeball_initVar\000"
+ 1767      745F4579 
+ 1767      6562616C 
+ 1767      6C5F696E 
+ 1767      69745661 
+ 1768              	.LASF25:
+ 1769 0306 52696768 		.ascii	"Right_Eyeball_WritePeriod\000"
+ 1769      745F4579 
+ 1769      6562616C 
+ 1769      6C5F5772 
+ 1769      69746550 
+ 1770              	.LASF47:
+ 1771 0320 52696768 		.ascii	"Right_Eyeball_ReadControlRegister\000"
+ 1771      745F4579 
+ 1771      6562616C 
+ 1771      6C5F5265 
+ 1771      6164436F 
+ 1772              	.LASF17:
+ 1773 0342 73697A65 		.ascii	"sizetype\000"
+ 1773      74797065 
+ 1773      00
+ 1774              	.LASF34:
+ 1775 034b 52696768 		.ascii	"Right_Eyeball_interruptState\000"
+ 1775      745F4579 
+ 1775      6562616C 
+ 1775      6C5F696E 
+ 1775      74657272 
+ 1776              	.LASF6:
+ 1777 0368 6C6F6E67 		.ascii	"long long int\000"
+ 1777      206C6F6E 
+ 1777      6720696E 
+ 1777      7400
+ 1778              	.LASF22:
+ 1779 0376 696E7465 		.ascii	"interruptMode\000"
+ 1779      72727570 
+ 1779      744D6F64 
+ 1779      6500
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\ccnErzYY.s 			page 51
+
+
+ 1780              	.LASF30:
+ 1781 0384 52696768 		.ascii	"Right_Eyeball_Stop\000"
+ 1781      745F4579 
+ 1781      6562616C 
+ 1781      6C5F5374 
+ 1781      6F7000
+ 1782              	.LASF31:
+ 1783 0397 52696768 		.ascii	"Right_Eyeball_ClearFIFO\000"
+ 1783      745F4579 
+ 1783      6562616C 
+ 1783      6C5F436C 
+ 1783      65617246 
+ 1784              	.LASF2:
+ 1785 03af 73686F72 		.ascii	"short int\000"
+ 1785      7420696E 
+ 1785      7400
+ 1786              	.LASF33:
+ 1787 03b9 6374726C 		.ascii	"ctrl\000"
+ 1787      00
+ 1788              	.LASF20:
+ 1789 03be 52696768 		.ascii	"Right_Eyeball_SetInterruptMode\000"
+ 1789      745F4579 
+ 1789      6562616C 
+ 1789      6C5F5365 
+ 1789      74496E74 
+ 1790              	.LASF37:
+ 1791 03dd 52696768 		.ascii	"Right_Eyeball_WriteControlRegister\000"
+ 1791      745F4579 
+ 1791      6562616C 
+ 1791      6C5F5772 
+ 1791      69746543 
+ 1792              	.LASF4:
+ 1793 0400 6C6F6E67 		.ascii	"long int\000"
+ 1793      20696E74 
+ 1793      00
+ 1794              	.LASF13:
+ 1795 0409 63686172 		.ascii	"char\000"
+ 1795      00
+ 1796              	.LASF16:
+ 1797 040e 6C6F6E67 		.ascii	"long double\000"
+ 1797      20646F75 
+ 1797      626C6500 
+ 1798              	.LASF0:
+ 1799 041a 7369676E 		.ascii	"signed char\000"
+ 1799      65642063 
+ 1799      68617200 
+ 1800              	.LASF23:
+ 1801 0426 636F6D70 		.ascii	"compare\000"
+ 1801      61726500 
+ 1802              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

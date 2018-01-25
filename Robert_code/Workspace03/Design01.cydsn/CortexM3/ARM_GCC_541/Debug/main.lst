@@ -1,0 +1,2720 @@
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.left_eyebrow_lift,"ax",%progbits
+  20              		.align	2
+  21              		.global	left_eyebrow_lift
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	left_eyebrow_lift, %function
+  25              	left_eyebrow_lift:
+  26              	.LFB64:
+  27              		.file 1 "main.c"
+   1:main.c        **** #include<stdio.h>
+   2:main.c        **** /* ========================================
+   3:main.c        ****  *
+   4:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   5:main.c        ****  * All Rights Reserved
+   6:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   7:main.c        ****  *
+   8:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   9:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+  10:main.c        ****  *
+  11:main.c        **** **********************************************************
+  12:main.c        **** Mapping Relationship
+  13:main.c        **** 
+  14:main.c        **** Right Eyebrow Inner ---- S1 ---- Right_Eyebrow_WriteCompare1
+  15:main.c        **** Right Eyebrow Outer ---- S3 ---- Right_Eyebrow_WriteCompare2
+  16:main.c        **** Left Eyebrow Inner ----- S2 ---- Left_Eyebrow_WriteCompare1
+  17:main.c        **** Left Eyebrow Outer ----- S4 ---- Left_Eyebrow_WriteCompare2
+  18:main.c        **** Right Eyeball H(inner)-- S5 ---- EyeballVertical_WriteCompare1
+  19:main.c        **** Right Eyeball V(outer)-- S7 ---- EyeballVertical_WriteCompare1
+  20:main.c        **** Left Eyeball H(inner) -- S6 ---- EyeballVertical_WriteCompare2
+  21:main.c        **** Left Eyeball V(outer) -- S8 ---- EyeballVertical_WriteCompare2
+  22:main.c        **** Eyelid V    ------------ S9 ---- Eyelid_WriteCompare1
+  23:main.c        **** Eyelid Open/Close ------ S10 --- Eyelid_WriteCompare2 
+  24:main.c        **** Jaw -------------------- S11 --- BaseAndJaw_WriteCompare1
+  25:main.c        **** Right Lip -------------- S12 --- Lips_WriteCompare1
+  26:main.c        **** Left Lip --------------- S13 --- Lips_WriteCompare2
+  27:main.c        **** Right Neck ------------- S14 --- Neck_WriteCompare1
+  28:main.c        **** Left Neck -------------- S15 --- Neck_WriteCompare2
+  29:main.c        **** Base ------------------- S16 --- BaseAndJaw_WriteCompare2
+  30:main.c        **** 
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 2
+
+
+  31:main.c        **** **********************************************************/
+  32:main.c        **** 
+  33:main.c        **** #include "project.h"
+  34:main.c        **** void left_eyebrow_lift(){
+  28              		.loc 1 34 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  35:main.c        ****      Left_Eyebrow_WriteCompare1(5000); // Inner 
+  36              		.loc 1 35 0
+  37 0002 41F28830 		movw	r0, #5000
+  38 0006 FFF7FEFF 		bl	Left_Eyebrow_WriteCompare1
+  39              	.LVL0:
+  36:main.c        ****      Left_Eyebrow_WriteCompare2(3000);  // Outer
+  40              		.loc 1 36 0
+  41 000a 40F6B830 		movw	r0, #3000
+  42 000e FFF7FEFF 		bl	Left_Eyebrow_WriteCompare2
+  43              	.LVL1:
+  44 0012 08BD     		pop	{r3, pc}
+  45              		.cfi_endproc
+  46              	.LFE64:
+  47              		.size	left_eyebrow_lift, .-left_eyebrow_lift
+  48              		.section	.text.right_eyebrow_lift,"ax",%progbits
+  49              		.align	2
+  50              		.global	right_eyebrow_lift
+  51              		.thumb
+  52              		.thumb_func
+  53              		.type	right_eyebrow_lift, %function
+  54              	right_eyebrow_lift:
+  55              	.LFB65:
+  37:main.c        **** }
+  38:main.c        **** void right_eyebrow_lift(){
+  56              		.loc 1 38 0
+  57              		.cfi_startproc
+  58              		@ args = 0, pretend = 0, frame = 0
+  59              		@ frame_needed = 0, uses_anonymous_args = 0
+  60 0000 08B5     		push	{r3, lr}
+  61              		.cfi_def_cfa_offset 8
+  62              		.cfi_offset 3, -8
+  63              		.cfi_offset 14, -4
+  39:main.c        ****      Right_Eyebrow_WriteCompare1(3000);  // Inner 
+  64              		.loc 1 39 0
+  65 0002 40F6B830 		movw	r0, #3000
+  66 0006 FFF7FEFF 		bl	Right_Eyebrow_WriteCompare1
+  67              	.LVL2:
+  40:main.c        ****      Right_Eyebrow_WriteCompare2(5000);   // Outer
+  68              		.loc 1 40 0
+  69 000a 41F28830 		movw	r0, #5000
+  70 000e FFF7FEFF 		bl	Right_Eyebrow_WriteCompare2
+  71              	.LVL3:
+  72 0012 08BD     		pop	{r3, pc}
+  73              		.cfi_endproc
+  74              	.LFE65:
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 3
+
+
+  75              		.size	right_eyebrow_lift, .-right_eyebrow_lift
+  76              		.section	.text.left_eyebrow_down,"ax",%progbits
+  77              		.align	2
+  78              		.global	left_eyebrow_down
+  79              		.thumb
+  80              		.thumb_func
+  81              		.type	left_eyebrow_down, %function
+  82              	left_eyebrow_down:
+  83              	.LFB66:
+  41:main.c        **** }
+  42:main.c        **** void left_eyebrow_down(){
+  84              		.loc 1 42 0
+  85              		.cfi_startproc
+  86              		@ args = 0, pretend = 0, frame = 0
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88 0000 08B5     		push	{r3, lr}
+  89              		.cfi_def_cfa_offset 8
+  90              		.cfi_offset 3, -8
+  91              		.cfi_offset 14, -4
+  43:main.c        ****      Left_Eyebrow_WriteCompare1(3000);
+  92              		.loc 1 43 0
+  93 0002 40F6B830 		movw	r0, #3000
+  94 0006 FFF7FEFF 		bl	Left_Eyebrow_WriteCompare1
+  95              	.LVL4:
+  44:main.c        ****      Left_Eyebrow_WriteCompare2(5000);
+  96              		.loc 1 44 0
+  97 000a 41F28830 		movw	r0, #5000
+  98 000e FFF7FEFF 		bl	Left_Eyebrow_WriteCompare2
+  99              	.LVL5:
+ 100 0012 08BD     		pop	{r3, pc}
+ 101              		.cfi_endproc
+ 102              	.LFE66:
+ 103              		.size	left_eyebrow_down, .-left_eyebrow_down
+ 104              		.section	.text.right_eyebrow_down,"ax",%progbits
+ 105              		.align	2
+ 106              		.global	right_eyebrow_down
+ 107              		.thumb
+ 108              		.thumb_func
+ 109              		.type	right_eyebrow_down, %function
+ 110              	right_eyebrow_down:
+ 111              	.LFB67:
+  45:main.c        **** }
+  46:main.c        **** void right_eyebrow_down(){
+ 112              		.loc 1 46 0
+ 113              		.cfi_startproc
+ 114              		@ args = 0, pretend = 0, frame = 0
+ 115              		@ frame_needed = 0, uses_anonymous_args = 0
+ 116 0000 08B5     		push	{r3, lr}
+ 117              		.cfi_def_cfa_offset 8
+ 118              		.cfi_offset 3, -8
+ 119              		.cfi_offset 14, -4
+  47:main.c        ****      Right_Eyebrow_WriteCompare1(5000);
+ 120              		.loc 1 47 0
+ 121 0002 41F28830 		movw	r0, #5000
+ 122 0006 FFF7FEFF 		bl	Right_Eyebrow_WriteCompare1
+ 123              	.LVL6:
+  48:main.c        ****      Right_Eyebrow_WriteCompare2(3000);
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 4
+
+
+ 124              		.loc 1 48 0
+ 125 000a 40F6B830 		movw	r0, #3000
+ 126 000e FFF7FEFF 		bl	Right_Eyebrow_WriteCompare2
+ 127              	.LVL7:
+ 128 0012 08BD     		pop	{r3, pc}
+ 129              		.cfi_endproc
+ 130              	.LFE67:
+ 131              		.size	right_eyebrow_down, .-right_eyebrow_down
+ 132              		.section	.text.reset_left,"ax",%progbits
+ 133              		.align	2
+ 134              		.global	reset_left
+ 135              		.thumb
+ 136              		.thumb_func
+ 137              		.type	reset_left, %function
+ 138              	reset_left:
+ 139              	.LFB68:
+  49:main.c        **** }
+  50:main.c        **** void reset_left(){
+ 140              		.loc 1 50 0
+ 141              		.cfi_startproc
+ 142              		@ args = 0, pretend = 0, frame = 0
+ 143              		@ frame_needed = 0, uses_anonymous_args = 0
+ 144 0000 08B5     		push	{r3, lr}
+ 145              		.cfi_def_cfa_offset 8
+ 146              		.cfi_offset 3, -8
+ 147              		.cfi_offset 14, -4
+  51:main.c        ****      Left_Eyebrow_WriteCompare1(2000);
+ 148              		.loc 1 51 0
+ 149 0002 4FF4FA60 		mov	r0, #2000
+ 150 0006 FFF7FEFF 		bl	Left_Eyebrow_WriteCompare1
+ 151              	.LVL8:
+  52:main.c        ****      Left_Eyebrow_WriteCompare2(2000);
+ 152              		.loc 1 52 0
+ 153 000a 4FF4FA60 		mov	r0, #2000
+ 154 000e FFF7FEFF 		bl	Left_Eyebrow_WriteCompare2
+ 155              	.LVL9:
+ 156 0012 08BD     		pop	{r3, pc}
+ 157              		.cfi_endproc
+ 158              	.LFE68:
+ 159              		.size	reset_left, .-reset_left
+ 160              		.section	.text.reset_right,"ax",%progbits
+ 161              		.align	2
+ 162              		.global	reset_right
+ 163              		.thumb
+ 164              		.thumb_func
+ 165              		.type	reset_right, %function
+ 166              	reset_right:
+ 167              	.LFB69:
+  53:main.c        **** }
+  54:main.c        **** void reset_right(){
+ 168              		.loc 1 54 0
+ 169              		.cfi_startproc
+ 170              		@ args = 0, pretend = 0, frame = 0
+ 171              		@ frame_needed = 0, uses_anonymous_args = 0
+ 172 0000 08B5     		push	{r3, lr}
+ 173              		.cfi_def_cfa_offset 8
+ 174              		.cfi_offset 3, -8
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 5
+
+
+ 175              		.cfi_offset 14, -4
+  55:main.c        ****      Right_Eyebrow_WriteCompare1(2000);
+ 176              		.loc 1 55 0
+ 177 0002 4FF4FA60 		mov	r0, #2000
+ 178 0006 FFF7FEFF 		bl	Right_Eyebrow_WriteCompare1
+ 179              	.LVL10:
+  56:main.c        ****      Right_Eyebrow_WriteCompare2(2000);
+ 180              		.loc 1 56 0
+ 181 000a 4FF4FA60 		mov	r0, #2000
+ 182 000e FFF7FEFF 		bl	Right_Eyebrow_WriteCompare2
+ 183              	.LVL11:
+ 184 0012 08BD     		pop	{r3, pc}
+ 185              		.cfi_endproc
+ 186              	.LFE69:
+ 187              		.size	reset_right, .-reset_right
+ 188              		.section	.text.eyebrow_init,"ax",%progbits
+ 189              		.align	2
+ 190              		.global	eyebrow_init
+ 191              		.thumb
+ 192              		.thumb_func
+ 193              		.type	eyebrow_init, %function
+ 194              	eyebrow_init:
+ 195              	.LFB70:
+  57:main.c        **** }
+  58:main.c        **** 
+  59:main.c        **** void eyebrow_init(){
+ 196              		.loc 1 59 0
+ 197              		.cfi_startproc
+ 198              		@ args = 0, pretend = 0, frame = 0
+ 199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 200 0000 08B5     		push	{r3, lr}
+ 201              		.cfi_def_cfa_offset 8
+ 202              		.cfi_offset 3, -8
+ 203              		.cfi_offset 14, -4
+  60:main.c        ****     
+  61:main.c        ****        /* Right_Eyebrow_WriteCompare1(4000);
+  62:main.c        ****         Right_Eyebrow_WriteCompare2(4000);
+  63:main.c        ****         
+  64:main.c        ****         Left_Eyebrow_WriteCompare1(4000);
+  65:main.c        ****         Left_Eyebrow_WriteCompare2(4000);
+  66:main.c        ****         
+  67:main.c        ****         BaseAndJaw_WriteCompare2(4000);
+  68:main.c        ****         
+  69:main.c        ****         Eyelid_WriteCompare2(4000);
+  70:main.c        ****         
+  71:main.c        ****         Lips_WriteCompare1(4000);
+  72:main.c        ****         Lips_WriteCompare2(4000);*/
+  73:main.c        ****         
+  74:main.c        ****        // Neck_WriteCompare1(4000);
+  75:main.c        ****         //Neck_WriteCompare2(4000);
+  76:main.c        ****         BaseAndJaw_WriteCompare1(4000);
+ 204              		.loc 1 76 0
+ 205 0002 4FF47A60 		mov	r0, #4000
+ 206 0006 FFF7FEFF 		bl	BaseAndJaw_WriteCompare1
+ 207              	.LVL12:
+ 208 000a 08BD     		pop	{r3, pc}
+ 209              		.cfi_endproc
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 6
+
+
+ 210              	.LFE70:
+ 211              		.size	eyebrow_init, .-eyebrow_init
+ 212              		.section	.text.jawopen,"ax",%progbits
+ 213              		.align	2
+ 214              		.global	jawopen
+ 215              		.thumb
+ 216              		.thumb_func
+ 217              		.type	jawopen, %function
+ 218              	jawopen:
+ 219              	.LFB71:
+  77:main.c        **** }
+  78:main.c        **** void jawopen(){
+ 220              		.loc 1 78 0
+ 221              		.cfi_startproc
+ 222              		@ args = 0, pretend = 0, frame = 0
+ 223              		@ frame_needed = 0, uses_anonymous_args = 0
+ 224 0000 10B5     		push	{r4, lr}
+ 225              		.cfi_def_cfa_offset 8
+ 226              		.cfi_offset 4, -8
+ 227              		.cfi_offset 14, -4
+  79:main.c        ****     BaseAndJaw_Start();
+ 228              		.loc 1 79 0
+ 229 0002 FFF7FEFF 		bl	BaseAndJaw_Start
+ 230              	.LVL13:
+ 231              	.LBB2:
+  80:main.c        ****     for(int i=0;i<2;i++)
+ 232              		.loc 1 80 0
+ 233 0006 0024     		movs	r4, #0
+ 234 0008 10E0     		b	.L16
+ 235              	.LVL14:
+ 236              	.L17:
+  81:main.c        ****     {
+  82:main.c        ****         
+  83:main.c        ****         BaseAndJaw_WriteCompare2(1500);
+ 237              		.loc 1 83 0 discriminator 3
+ 238 000a 40F2DC50 		movw	r0, #1500
+ 239 000e FFF7FEFF 		bl	BaseAndJaw_WriteCompare2
+ 240              	.LVL15:
+  84:main.c        ****         CyDelay(2000);
+ 241              		.loc 1 84 0 discriminator 3
+ 242 0012 4FF4FA60 		mov	r0, #2000
+ 243 0016 FFF7FEFF 		bl	CyDelay
+ 244              	.LVL16:
+  85:main.c        ****         BaseAndJaw_WriteCompare2(2200);
+ 245              		.loc 1 85 0 discriminator 3
+ 246 001a 40F69800 		movw	r0, #2200
+ 247 001e FFF7FEFF 		bl	BaseAndJaw_WriteCompare2
+ 248              	.LVL17:
+  86:main.c        ****         CyDelay(2000);
+ 249              		.loc 1 86 0 discriminator 3
+ 250 0022 4FF4FA60 		mov	r0, #2000
+ 251 0026 FFF7FEFF 		bl	CyDelay
+ 252              	.LVL18:
+  80:main.c        ****     {
+ 253              		.loc 1 80 0 discriminator 3
+ 254 002a 0134     		adds	r4, r4, #1
+ 255              	.LVL19:
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 7
+
+
+ 256              	.L16:
+  80:main.c        ****     {
+ 257              		.loc 1 80 0 is_stmt 0 discriminator 1
+ 258 002c 012C     		cmp	r4, #1
+ 259 002e ECDD     		ble	.L17
+ 260              	.LBE2:
+  87:main.c        ****     }
+  88:main.c        ****     
+  89:main.c        ****     eyebrow_init();
+ 261              		.loc 1 89 0 is_stmt 1
+ 262 0030 FFF7FEFF 		bl	eyebrow_init
+ 263              	.LVL20:
+ 264 0034 10BD     		pop	{r4, pc}
+ 265              		.cfi_endproc
+ 266              	.LFE71:
+ 267              		.size	jawopen, .-jawopen
+ 268 0036 00BF     		.section	.text.baseturn,"ax",%progbits
+ 269              		.align	2
+ 270              		.global	baseturn
+ 271              		.thumb
+ 272              		.thumb_func
+ 273              		.type	baseturn, %function
+ 274              	baseturn:
+ 275              	.LFB72:
+  90:main.c        **** }
+  91:main.c        **** void baseturn(){
+ 276              		.loc 1 91 0
+ 277              		.cfi_startproc
+ 278              		@ args = 0, pretend = 0, frame = 0
+ 279              		@ frame_needed = 0, uses_anonymous_args = 0
+ 280 0000 10B5     		push	{r4, lr}
+ 281              		.cfi_def_cfa_offset 8
+ 282              		.cfi_offset 4, -8
+ 283              		.cfi_offset 14, -4
+  92:main.c        ****     BaseAndJaw_Start();
+ 284              		.loc 1 92 0
+ 285 0002 FFF7FEFF 		bl	BaseAndJaw_Start
+ 286              	.LVL21:
+ 287              	.LBB3:
+  93:main.c        ****     for(int i=0;i<5;i++)
+ 288              		.loc 1 93 0
+ 289 0006 0024     		movs	r4, #0
+ 290 0008 10E0     		b	.L20
+ 291              	.LVL22:
+ 292              	.L21:
+  94:main.c        ****     {
+  95:main.c        ****         BaseAndJaw_WriteCompare1(1500);
+ 293              		.loc 1 95 0 discriminator 3
+ 294 000a 40F2DC50 		movw	r0, #1500
+ 295 000e FFF7FEFF 		bl	BaseAndJaw_WriteCompare1
+ 296              	.LVL23:
+  96:main.c        ****         
+  97:main.c        ****         CyDelay(1000);
+ 297              		.loc 1 97 0 discriminator 3
+ 298 0012 4FF47A70 		mov	r0, #1000
+ 299 0016 FFF7FEFF 		bl	CyDelay
+ 300              	.LVL24:
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 8
+
+
+  98:main.c        ****         BaseAndJaw_WriteCompare1(3000);
+ 301              		.loc 1 98 0 discriminator 3
+ 302 001a 40F6B830 		movw	r0, #3000
+ 303 001e FFF7FEFF 		bl	BaseAndJaw_WriteCompare1
+ 304              	.LVL25:
+  99:main.c        ****         CyDelay(1000);
+ 305              		.loc 1 99 0 discriminator 3
+ 306 0022 4FF47A70 		mov	r0, #1000
+ 307 0026 FFF7FEFF 		bl	CyDelay
+ 308              	.LVL26:
+  93:main.c        ****     {
+ 309              		.loc 1 93 0 discriminator 3
+ 310 002a 0134     		adds	r4, r4, #1
+ 311              	.LVL27:
+ 312              	.L20:
+  93:main.c        ****     {
+ 313              		.loc 1 93 0 is_stmt 0 discriminator 1
+ 314 002c 042C     		cmp	r4, #4
+ 315 002e ECDD     		ble	.L21
+ 316              	.LBE3:
+ 100:main.c        ****     }
+ 101:main.c        ****     
+ 102:main.c        ****     eyebrow_init();
+ 317              		.loc 1 102 0 is_stmt 1
+ 318 0030 FFF7FEFF 		bl	eyebrow_init
+ 319              	.LVL28:
+ 320 0034 10BD     		pop	{r4, pc}
+ 321              		.cfi_endproc
+ 322              	.LFE72:
+ 323              		.size	baseturn, .-baseturn
+ 324 0036 00BF     		.section	.text.nod,"ax",%progbits
+ 325              		.align	2
+ 326              		.global	nod
+ 327              		.thumb
+ 328              		.thumb_func
+ 329              		.type	nod, %function
+ 330              	nod:
+ 331              	.LFB73:
+ 103:main.c        **** }
+ 104:main.c        **** void nod(){
+ 332              		.loc 1 104 0
+ 333              		.cfi_startproc
+ 334              		@ args = 0, pretend = 0, frame = 0
+ 335              		@ frame_needed = 0, uses_anonymous_args = 0
+ 336 0000 10B5     		push	{r4, lr}
+ 337              		.cfi_def_cfa_offset 8
+ 338              		.cfi_offset 4, -8
+ 339              		.cfi_offset 14, -4
+ 105:main.c        ****     Neck_Start();
+ 340              		.loc 1 105 0
+ 341 0002 FFF7FEFF 		bl	Neck_Start
+ 342              	.LVL29:
+ 343              	.LBB4:
+ 106:main.c        ****     for(int i=0;i<1;i++)
+ 344              		.loc 1 106 0
+ 345 0006 0024     		movs	r4, #0
+ 346 0008 18E0     		b	.L24
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 9
+
+
+ 347              	.LVL30:
+ 348              	.L25:
+ 107:main.c        ****     {
+ 108:main.c        ****         
+ 109:main.c        ****         
+ 110:main.c        ****         Neck_WriteCompare1(2500);
+ 349              		.loc 1 110 0 discriminator 3
+ 350 000a 40F6C410 		movw	r0, #2500
+ 351 000e FFF7FEFF 		bl	Neck_WriteCompare1
+ 352              	.LVL31:
+ 111:main.c        ****         Neck_WriteCompare2(2500);
+ 353              		.loc 1 111 0 discriminator 3
+ 354 0012 40F6C410 		movw	r0, #2500
+ 355 0016 FFF7FEFF 		bl	Neck_WriteCompare2
+ 356              	.LVL32:
+ 112:main.c        ****         CyDelay(1000);
+ 357              		.loc 1 112 0 discriminator 3
+ 358 001a 4FF47A70 		mov	r0, #1000
+ 359 001e FFF7FEFF 		bl	CyDelay
+ 360              	.LVL33:
+ 113:main.c        ****         Neck_WriteCompare1(2550);
+ 361              		.loc 1 113 0 discriminator 3
+ 362 0022 40F6F610 		movw	r0, #2550
+ 363 0026 FFF7FEFF 		bl	Neck_WriteCompare1
+ 364              	.LVL34:
+ 114:main.c        ****         Neck_WriteCompare2(2550);
+ 365              		.loc 1 114 0 discriminator 3
+ 366 002a 40F6F610 		movw	r0, #2550
+ 367 002e FFF7FEFF 		bl	Neck_WriteCompare2
+ 368              	.LVL35:
+ 115:main.c        ****         CyDelay(1000);
+ 369              		.loc 1 115 0 discriminator 3
+ 370 0032 4FF47A70 		mov	r0, #1000
+ 371 0036 FFF7FEFF 		bl	CyDelay
+ 372              	.LVL36:
+ 106:main.c        ****     {
+ 373              		.loc 1 106 0 discriminator 3
+ 374 003a 0134     		adds	r4, r4, #1
+ 375              	.LVL37:
+ 376              	.L24:
+ 106:main.c        ****     {
+ 377              		.loc 1 106 0 is_stmt 0 discriminator 1
+ 378 003c 002C     		cmp	r4, #0
+ 379 003e E4DD     		ble	.L25
+ 380              	.LBE4:
+ 116:main.c        ****     }
+ 117:main.c        ****     
+ 118:main.c        ****     eyebrow_init();
+ 381              		.loc 1 118 0 is_stmt 1
+ 382 0040 FFF7FEFF 		bl	eyebrow_init
+ 383              	.LVL38:
+ 384 0044 10BD     		pop	{r4, pc}
+ 385              		.cfi_endproc
+ 386              	.LFE73:
+ 387              		.size	nod, .-nod
+ 388 0046 00BF     		.section	.text.lipmovement,"ax",%progbits
+ 389              		.align	2
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 10
+
+
+ 390              		.global	lipmovement
+ 391              		.thumb
+ 392              		.thumb_func
+ 393              		.type	lipmovement, %function
+ 394              	lipmovement:
+ 395              	.LFB74:
+ 119:main.c        **** }
+ 120:main.c        **** void lipmovement(){
+ 396              		.loc 1 120 0
+ 397              		.cfi_startproc
+ 398              		@ args = 0, pretend = 0, frame = 0
+ 399              		@ frame_needed = 0, uses_anonymous_args = 0
+ 400 0000 10B5     		push	{r4, lr}
+ 401              		.cfi_def_cfa_offset 8
+ 402              		.cfi_offset 4, -8
+ 403              		.cfi_offset 14, -4
+ 121:main.c        ****     Lips_Start();
+ 404              		.loc 1 121 0
+ 405 0002 FFF7FEFF 		bl	Lips_Start
+ 406              	.LVL39:
+ 122:main.c        ****     eyebrow_init();
+ 407              		.loc 1 122 0
+ 408 0006 FFF7FEFF 		bl	eyebrow_init
+ 409              	.LVL40:
+ 410              	.LBB5:
+ 123:main.c        ****     for(int i=0;i<5;i++)
+ 411              		.loc 1 123 0
+ 412 000a 0024     		movs	r4, #0
+ 413 000c 18E0     		b	.L28
+ 414              	.LVL41:
+ 415              	.L29:
+ 124:main.c        ****     {
+ 125:main.c        ****         Lips_WriteCompare1(3500);
+ 416              		.loc 1 125 0 discriminator 3
+ 417 000e 40F6AC50 		movw	r0, #3500
+ 418 0012 FFF7FEFF 		bl	Lips_WriteCompare1
+ 419              	.LVL42:
+ 126:main.c        ****         Lips_WriteCompare2(5500);
+ 420              		.loc 1 126 0 discriminator 3
+ 421 0016 41F27C50 		movw	r0, #5500
+ 422 001a FFF7FEFF 		bl	Lips_WriteCompare2
+ 423              	.LVL43:
+ 127:main.c        ****         CyDelay(1000);
+ 424              		.loc 1 127 0 discriminator 3
+ 425 001e 4FF47A70 		mov	r0, #1000
+ 426 0022 FFF7FEFF 		bl	CyDelay
+ 427              	.LVL44:
+ 128:main.c        ****         Lips_WriteCompare1(5500);
+ 428              		.loc 1 128 0 discriminator 3
+ 429 0026 41F27C50 		movw	r0, #5500
+ 430 002a FFF7FEFF 		bl	Lips_WriteCompare1
+ 431              	.LVL45:
+ 129:main.c        ****         Lips_WriteCompare2(3500);
+ 432              		.loc 1 129 0 discriminator 3
+ 433 002e 40F6AC50 		movw	r0, #3500
+ 434 0032 FFF7FEFF 		bl	Lips_WriteCompare2
+ 435              	.LVL46:
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 11
+
+
+ 130:main.c        ****         CyDelay(1000);
+ 436              		.loc 1 130 0 discriminator 3
+ 437 0036 4FF47A70 		mov	r0, #1000
+ 438 003a FFF7FEFF 		bl	CyDelay
+ 439              	.LVL47:
+ 123:main.c        ****     {
+ 440              		.loc 1 123 0 discriminator 3
+ 441 003e 0134     		adds	r4, r4, #1
+ 442              	.LVL48:
+ 443              	.L28:
+ 123:main.c        ****     {
+ 444              		.loc 1 123 0 is_stmt 0 discriminator 1
+ 445 0040 042C     		cmp	r4, #4
+ 446 0042 E4DD     		ble	.L29
+ 447              	.LBE5:
+ 131:main.c        ****     }
+ 132:main.c        **** }
+ 448              		.loc 1 132 0 is_stmt 1
+ 449 0044 10BD     		pop	{r4, pc}
+ 450              		.cfi_endproc
+ 451              	.LFE74:
+ 452              		.size	lipmovement, .-lipmovement
+ 453 0046 00BF     		.section	.text.eyelid_openclose,"ax",%progbits
+ 454              		.align	2
+ 455              		.global	eyelid_openclose
+ 456              		.thumb
+ 457              		.thumb_func
+ 458              		.type	eyelid_openclose, %function
+ 459              	eyelid_openclose:
+ 460              	.LFB75:
+ 133:main.c        **** void eyelid_openclose(){
+ 461              		.loc 1 133 0
+ 462              		.cfi_startproc
+ 463              		@ args = 0, pretend = 0, frame = 0
+ 464              		@ frame_needed = 0, uses_anonymous_args = 0
+ 465 0000 10B5     		push	{r4, lr}
+ 466              		.cfi_def_cfa_offset 8
+ 467              		.cfi_offset 4, -8
+ 468              		.cfi_offset 14, -4
+ 134:main.c        ****     eyebrow_init();
+ 469              		.loc 1 134 0
+ 470 0002 FFF7FEFF 		bl	eyebrow_init
+ 471              	.LVL49:
+ 472              	.LBB6:
+ 135:main.c        **** for(int i=0;i<10;i++)
+ 473              		.loc 1 135 0
+ 474 0006 0024     		movs	r4, #0
+ 475 0008 14E0     		b	.L32
+ 476              	.LVL50:
+ 477              	.L33:
+ 136:main.c        ****     {
+ 137:main.c        ****         BaseAndJaw_WriteCompare1(1500);
+ 478              		.loc 1 137 0 discriminator 3
+ 479 000a 40F2DC50 		movw	r0, #1500
+ 480 000e FFF7FEFF 		bl	BaseAndJaw_WriteCompare1
+ 481              	.LVL51:
+ 138:main.c        ****         Eyelid_WriteCompare2(3700);
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 12
+
+
+ 482              		.loc 1 138 0 discriminator 3
+ 483 0012 40F67460 		movw	r0, #3700
+ 484 0016 FFF7FEFF 		bl	Eyelid_WriteCompare2
+ 485              	.LVL52:
+ 139:main.c        ****         CyDelay(1000);
+ 486              		.loc 1 139 0 discriminator 3
+ 487 001a 4FF47A70 		mov	r0, #1000
+ 488 001e FFF7FEFF 		bl	CyDelay
+ 489              	.LVL53:
+ 140:main.c        ****         Eyelid_WriteCompare2(4300);
+ 490              		.loc 1 140 0 discriminator 3
+ 491 0022 41F2CC00 		movw	r0, #4300
+ 492 0026 FFF7FEFF 		bl	Eyelid_WriteCompare2
+ 493              	.LVL54:
+ 141:main.c        ****         CyDelay(1000);
+ 494              		.loc 1 141 0 discriminator 3
+ 495 002a 4FF47A70 		mov	r0, #1000
+ 496 002e FFF7FEFF 		bl	CyDelay
+ 497              	.LVL55:
+ 135:main.c        ****     {
+ 498              		.loc 1 135 0 discriminator 3
+ 499 0032 0134     		adds	r4, r4, #1
+ 500              	.LVL56:
+ 501              	.L32:
+ 135:main.c        ****     {
+ 502              		.loc 1 135 0 is_stmt 0 discriminator 1
+ 503 0034 092C     		cmp	r4, #9
+ 504 0036 E8DD     		ble	.L33
+ 505              	.LBE6:
+ 142:main.c        ****     }
+ 143:main.c        ****     eyebrow_init();
+ 506              		.loc 1 143 0 is_stmt 1
+ 507 0038 FFF7FEFF 		bl	eyebrow_init
+ 508              	.LVL57:
+ 509 003c 10BD     		pop	{r4, pc}
+ 510              		.cfi_endproc
+ 511              	.LFE75:
+ 512              		.size	eyelid_openclose, .-eyelid_openclose
+ 513 003e 00BF     		.section	.text.eyemovement,"ax",%progbits
+ 514              		.align	2
+ 515              		.global	eyemovement
+ 516              		.thumb
+ 517              		.thumb_func
+ 518              		.type	eyemovement, %function
+ 519              	eyemovement:
+ 520              	.LFB76:
+ 144:main.c        **** }
+ 145:main.c        **** 
+ 146:main.c        **** void eyemovement(){
+ 521              		.loc 1 146 0
+ 522              		.cfi_startproc
+ 523              		@ args = 0, pretend = 0, frame = 0
+ 524              		@ frame_needed = 0, uses_anonymous_args = 0
+ 525 0000 10B5     		push	{r4, lr}
+ 526              		.cfi_def_cfa_offset 8
+ 527              		.cfi_offset 4, -8
+ 528              		.cfi_offset 14, -4
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 13
+
+
+ 147:main.c        ****     
+ 148:main.c        ****     Left_Eyeball_Start();
+ 529              		.loc 1 148 0
+ 530 0002 FFF7FEFF 		bl	Left_Eyeball_Start
+ 531              	.LVL58:
+ 149:main.c        ****     Right_Eyeball_Start();
+ 532              		.loc 1 149 0
+ 533 0006 FFF7FEFF 		bl	Right_Eyeball_Start
+ 534              	.LVL59:
+ 150:main.c        ****     
+ 151:main.c        ****     Left_Eyeball_WriteCompare1(4000);
+ 535              		.loc 1 151 0
+ 536 000a 4FF47A60 		mov	r0, #4000
+ 537 000e FFF7FEFF 		bl	Left_Eyeball_WriteCompare1
+ 538              	.LVL60:
+ 152:main.c        ****     Right_Eyeball_WriteCompare1(4000);
+ 539              		.loc 1 152 0
+ 540 0012 4FF47A60 		mov	r0, #4000
+ 541 0016 FFF7FEFF 		bl	Right_Eyeball_WriteCompare1
+ 542              	.LVL61:
+ 153:main.c        ****     
+ 154:main.c        ****     Left_Eyeball_WriteCompare2(4000);
+ 543              		.loc 1 154 0
+ 544 001a 4FF47A60 		mov	r0, #4000
+ 545 001e FFF7FEFF 		bl	Left_Eyeball_WriteCompare2
+ 546              	.LVL62:
+ 155:main.c        ****     Right_Eyeball_WriteCompare2(4000);
+ 547              		.loc 1 155 0
+ 548 0022 4FF47A60 		mov	r0, #4000
+ 549 0026 FFF7FEFF 		bl	Right_Eyeball_WriteCompare2
+ 550              	.LVL63:
+ 551              	.LBB7:
+ 156:main.c        ****     
+ 157:main.c        ****     for(int i=0;i<3;i++)
+ 552              		.loc 1 157 0
+ 553 002a 0024     		movs	r4, #0
+ 554 002c 18E0     		b	.L36
+ 555              	.LVL64:
+ 556              	.L37:
+ 158:main.c        ****     {
+ 159:main.c        ****        // BaseAndJaw_WriteCompare1(1500);
+ 160:main.c        ****         Left_Eyeball_WriteCompare1(3000); // Inner 
+ 557              		.loc 1 160 0 discriminator 3
+ 558 002e 40F6B830 		movw	r0, #3000
+ 559 0032 FFF7FEFF 		bl	Left_Eyeball_WriteCompare1
+ 560              	.LVL65:
+ 161:main.c        ****         Left_Eyeball_WriteCompare2(5000);  // Outer
+ 561              		.loc 1 161 0 discriminator 3
+ 562 0036 41F28830 		movw	r0, #5000
+ 563 003a FFF7FEFF 		bl	Left_Eyeball_WriteCompare2
+ 564              	.LVL66:
+ 162:main.c        ****         CyDelay(1000);
+ 565              		.loc 1 162 0 discriminator 3
+ 566 003e 4FF47A70 		mov	r0, #1000
+ 567 0042 FFF7FEFF 		bl	CyDelay
+ 568              	.LVL67:
+ 163:main.c        ****         
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 14
+
+
+ 164:main.c        ****         Left_Eyeball_WriteCompare1(5000); // Inner 
+ 569              		.loc 1 164 0 discriminator 3
+ 570 0046 41F28830 		movw	r0, #5000
+ 571 004a FFF7FEFF 		bl	Left_Eyeball_WriteCompare1
+ 572              	.LVL68:
+ 165:main.c        ****         Left_Eyeball_WriteCompare2(3000);
+ 573              		.loc 1 165 0 discriminator 3
+ 574 004e 40F6B830 		movw	r0, #3000
+ 575 0052 FFF7FEFF 		bl	Left_Eyeball_WriteCompare2
+ 576              	.LVL69:
+ 166:main.c        ****        // Right_Eyeball_WriteCompare1(5000); // Inner 
+ 167:main.c        ****        // Right_Eyeball_WriteCompare2(3000);  // Outer
+ 168:main.c        ****         CyDelay(1000);
+ 577              		.loc 1 168 0 discriminator 3
+ 578 0056 4FF47A70 		mov	r0, #1000
+ 579 005a FFF7FEFF 		bl	CyDelay
+ 580              	.LVL70:
+ 157:main.c        ****     {
+ 581              		.loc 1 157 0 discriminator 3
+ 582 005e 0134     		adds	r4, r4, #1
+ 583              	.LVL71:
+ 584              	.L36:
+ 157:main.c        ****     {
+ 585              		.loc 1 157 0 is_stmt 0 discriminator 1
+ 586 0060 022C     		cmp	r4, #2
+ 587 0062 E4DD     		ble	.L37
+ 588              	.LBE7:
+ 169:main.c        ****     }
+ 170:main.c        ****     Left_Eyeball_WriteCompare1(4000);
+ 589              		.loc 1 170 0 is_stmt 1
+ 590 0064 4FF47A60 		mov	r0, #4000
+ 591 0068 FFF7FEFF 		bl	Left_Eyeball_WriteCompare1
+ 592              	.LVL72:
+ 171:main.c        ****     Right_Eyeball_WriteCompare1(4000);
+ 593              		.loc 1 171 0
+ 594 006c 4FF47A60 		mov	r0, #4000
+ 595 0070 FFF7FEFF 		bl	Right_Eyeball_WriteCompare1
+ 596              	.LVL73:
+ 172:main.c        ****     Left_Eyeball_WriteCompare2(4000);
+ 597              		.loc 1 172 0
+ 598 0074 4FF47A60 		mov	r0, #4000
+ 599 0078 FFF7FEFF 		bl	Left_Eyeball_WriteCompare2
+ 600              	.LVL74:
+ 173:main.c        ****     Right_Eyeball_WriteCompare2(4000);
+ 601              		.loc 1 173 0
+ 602 007c 4FF47A60 		mov	r0, #4000
+ 603 0080 FFF7FEFF 		bl	Right_Eyeball_WriteCompare2
+ 604              	.LVL75:
+ 605 0084 10BD     		pop	{r4, pc}
+ 606              		.cfi_endproc
+ 607              	.LFE76:
+ 608              		.size	eyemovement, .-eyemovement
+ 609 0086 00BF     		.section	.text.main,"ax",%progbits
+ 610              		.align	2
+ 611              		.global	main
+ 612              		.thumb
+ 613              		.thumb_func
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 15
+
+
+ 614              		.type	main, %function
+ 615              	main:
+ 616              	.LFB77:
+ 174:main.c        **** }
+ 175:main.c        **** int main(void)
+ 176:main.c        **** {
+ 617              		.loc 1 176 0
+ 618              		.cfi_startproc
+ 619              		@ args = 0, pretend = 0, frame = 0
+ 620              		@ frame_needed = 0, uses_anonymous_args = 0
+ 621 0000 08B5     		push	{r3, lr}
+ 622              		.cfi_def_cfa_offset 8
+ 623              		.cfi_offset 3, -8
+ 624              		.cfi_offset 14, -4
+ 177:main.c        ****     
+ 178:main.c        **** 
+ 179:main.c        ****     
+ 180:main.c        ****      Right_Eyebrow_Start();
+ 625              		.loc 1 180 0
+ 626 0002 FFF7FEFF 		bl	Right_Eyebrow_Start
+ 627              	.LVL76:
+ 181:main.c        ****     eyebrow_init();
+ 628              		.loc 1 181 0
+ 629 0006 FFF7FEFF 		bl	eyebrow_init
+ 630              	.LVL77:
+ 182:main.c        ****    /* Left_Eyebrow_Start();
+ 183:main.c        ****     eyebrow_init();
+ 184:main.c        ****       CyDelay(1000);
+ 185:main.c        ****     for(int i=0;i<3;i++)
+ 186:main.c        ****     {  
+ 187:main.c        ****         
+ 188:main.c        ****       right_eyebrow_lift();
+ 189:main.c        ****       left_eyebrow_lift();
+ 190:main.c        ****       CyDelay(1000);
+ 191:main.c        ****       //  reset_right();
+ 192:main.c        ****       //  reset_left();
+ 193:main.c        ****        // CyDelay(1000);
+ 194:main.c        ****        right_eyebrow_down();
+ 195:main.c        ****         left_eyebrow_down();
+ 196:main.c        ****          CyDelay(2000);
+ 197:main.c        ****     }*/
+ 198:main.c        ****    // CyDelay(15000);
+ 199:main.c        ****     
+ 200:main.c        ****     eyebrow_init();
+ 631              		.loc 1 200 0
+ 632 000a FFF7FEFF 		bl	eyebrow_init
+ 633              	.LVL78:
+ 201:main.c        ****     //Eyelid_Start();
+ 202:main.c        ****     //eyemovement();
+ 203:main.c        ****     //lipmovement();
+ 204:main.c        ****     
+ 205:main.c        ****    /* for(int i=0;i<5;i++)
+ 206:main.c        ****     {
+ 207:main.c        ****        // BaseAndJaw_WriteCompare1(1500);
+ 208:main.c        ****         Eyelid_WriteCompare2(3950);
+ 209:main.c        ****         CyDelay(1000);
+ 210:main.c        ****         Eyelid_WriteCompare2(4050);
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 16
+
+
+ 211:main.c        ****         CyDelay(1000);
+ 212:main.c        ****     }*/
+ 213:main.c        ****    // nod();
+ 214:main.c        ****     //eyelid_openclose();
+ 215:main.c        ****      //jawopen();
+ 216:main.c        ****     baseturn();
+ 634              		.loc 1 216 0
+ 635 000e FFF7FEFF 		bl	baseturn
+ 636              	.LVL79:
+ 217:main.c        ****     eyebrow_init();
+ 637              		.loc 1 217 0
+ 638 0012 FFF7FEFF 		bl	eyebrow_init
+ 639              	.LVL80:
+ 218:main.c        **** }
+ 640              		.loc 1 218 0
+ 641 0016 0020     		movs	r0, #0
+ 642 0018 08BD     		pop	{r3, pc}
+ 643              		.cfi_endproc
+ 644              	.LFE77:
+ 645              		.size	main, .-main
+ 646 001a 00BF     		.text
+ 647              	.Letext0:
+ 648              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 649              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 650              		.file 4 "Generated_Source\\PSoC5/Left_Eyebrow.h"
+ 651              		.file 5 "Generated_Source\\PSoC5/Right_Eyebrow.h"
+ 652              		.file 6 "Generated_Source\\PSoC5/BaseAndJaw.h"
+ 653              		.file 7 "Generated_Source\\PSoC5/CyLib.h"
+ 654              		.file 8 "Generated_Source\\PSoC5/Neck.h"
+ 655              		.file 9 "Generated_Source\\PSoC5/Lips.h"
+ 656              		.file 10 "Generated_Source\\PSoC5/Eyelid.h"
+ 657              		.file 11 "Generated_Source\\PSoC5/Left_Eyeball.h"
+ 658              		.file 12 "Generated_Source\\PSoC5/Right_Eyeball.h"
+ 659              		.file 13 "Generated_Source\\PSoC5/core_cm3.h"
+ 660              		.section	.debug_info,"",%progbits
+ 661              	.Ldebug_info0:
+ 662 0000 23080000 		.4byte	0x823
+ 663 0004 0400     		.2byte	0x4
+ 664 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 665 000a 04       		.byte	0x4
+ 666 000b 01       		.uleb128 0x1
+ 667 000c 10010000 		.4byte	.LASF50
+ 668 0010 0C       		.byte	0xc
+ 669 0011 6E030000 		.4byte	.LASF51
+ 670 0015 F1010000 		.4byte	.LASF52
+ 671 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 672 001d 00000000 		.4byte	0
+ 673 0021 00000000 		.4byte	.Ldebug_line0
+ 674 0025 02       		.uleb128 0x2
+ 675 0026 01       		.byte	0x1
+ 676 0027 06       		.byte	0x6
+ 677 0028 EB030000 		.4byte	.LASF0
+ 678 002c 02       		.uleb128 0x2
+ 679 002d 01       		.byte	0x1
+ 680 002e 08       		.byte	0x8
+ 681 002f E3010000 		.4byte	.LASF1
+ 682 0033 02       		.uleb128 0x2
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 17
+
+
+ 683 0034 02       		.byte	0x2
+ 684 0035 05       		.byte	0x5
+ 685 0036 9E030000 		.4byte	.LASF2
+ 686 003a 02       		.uleb128 0x2
+ 687 003b 02       		.byte	0x2
+ 688 003c 07       		.byte	0x7
+ 689 003d B0010000 		.4byte	.LASF3
+ 690 0041 03       		.uleb128 0x3
+ 691 0042 31000000 		.4byte	.LASF12
+ 692 0046 02       		.byte	0x2
+ 693 0047 3F       		.byte	0x3f
+ 694 0048 4C000000 		.4byte	0x4c
+ 695 004c 02       		.uleb128 0x2
+ 696 004d 04       		.byte	0x4
+ 697 004e 05       		.byte	0x5
+ 698 004f D6030000 		.4byte	.LASF4
+ 699 0053 02       		.uleb128 0x2
+ 700 0054 04       		.byte	0x4
+ 701 0055 07       		.byte	0x7
+ 702 0056 9E010000 		.4byte	.LASF5
+ 703 005a 02       		.uleb128 0x2
+ 704 005b 08       		.byte	0x8
+ 705 005c 05       		.byte	0x5
+ 706 005d 4D030000 		.4byte	.LASF6
+ 707 0061 02       		.uleb128 0x2
+ 708 0062 08       		.byte	0x8
+ 709 0063 07       		.byte	0x7
+ 710 0064 BE020000 		.4byte	.LASF7
+ 711 0068 04       		.uleb128 0x4
+ 712 0069 04       		.byte	0x4
+ 713 006a 05       		.byte	0x5
+ 714 006b 696E7400 		.ascii	"int\000"
+ 715 006f 02       		.uleb128 0x2
+ 716 0070 04       		.byte	0x4
+ 717 0071 07       		.byte	0x7
+ 718 0072 B1020000 		.4byte	.LASF8
+ 719 0076 02       		.uleb128 0x2
+ 720 0077 08       		.byte	0x8
+ 721 0078 04       		.byte	0x4
+ 722 0079 DF030000 		.4byte	.LASF9
+ 723 007d 02       		.uleb128 0x2
+ 724 007e 04       		.byte	0x4
+ 725 007f 07       		.byte	0x7
+ 726 0080 44030000 		.4byte	.LASF10
+ 727 0084 02       		.uleb128 0x2
+ 728 0085 01       		.byte	0x1
+ 729 0086 08       		.byte	0x8
+ 730 0087 75030000 		.4byte	.LASF11
+ 731 008b 03       		.uleb128 0x3
+ 732 008c 3C030000 		.4byte	.LASF13
+ 733 0090 03       		.byte	0x3
+ 734 0091 2C       		.byte	0x2c
+ 735 0092 41000000 		.4byte	0x41
+ 736 0096 02       		.uleb128 0x2
+ 737 0097 04       		.byte	0x4
+ 738 0098 04       		.byte	0x4
+ 739 0099 D2000000 		.4byte	.LASF14
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 18
+
+
+ 740 009d 02       		.uleb128 0x2
+ 741 009e 08       		.byte	0x8
+ 742 009f 04       		.byte	0x4
+ 743 00a0 6C000000 		.4byte	.LASF15
+ 744 00a4 05       		.uleb128 0x5
+ 745 00a5 03040000 		.4byte	.LASF16
+ 746 00a9 01       		.byte	0x1
+ 747 00aa 22       		.byte	0x22
+ 748 00ab 00000000 		.4byte	.LFB64
+ 749 00af 14000000 		.4byte	.LFE64-.LFB64
+ 750 00b3 01       		.uleb128 0x1
+ 751 00b4 9C       		.byte	0x9c
+ 752 00b5 E0000000 		.4byte	0xe0
+ 753 00b9 06       		.uleb128 0x6
+ 754 00ba 0A000000 		.4byte	.LVL0
+ 755 00be 34070000 		.4byte	0x734
+ 756 00c2 CE000000 		.4byte	0xce
+ 757 00c6 07       		.uleb128 0x7
+ 758 00c7 01       		.uleb128 0x1
+ 759 00c8 50       		.byte	0x50
+ 760 00c9 03       		.uleb128 0x3
+ 761 00ca 0A       		.byte	0xa
+ 762 00cb 8813     		.2byte	0x1388
+ 763 00cd 00       		.byte	0
+ 764 00ce 08       		.uleb128 0x8
+ 765 00cf 12000000 		.4byte	.LVL1
+ 766 00d3 3F070000 		.4byte	0x73f
+ 767 00d7 07       		.uleb128 0x7
+ 768 00d8 01       		.uleb128 0x1
+ 769 00d9 50       		.byte	0x50
+ 770 00da 03       		.uleb128 0x3
+ 771 00db 0A       		.byte	0xa
+ 772 00dc B80B     		.2byte	0xbb8
+ 773 00de 00       		.byte	0
+ 774 00df 00       		.byte	0
+ 775 00e0 05       		.uleb128 0x5
+ 776 00e1 1D030000 		.4byte	.LASF17
+ 777 00e5 01       		.byte	0x1
+ 778 00e6 26       		.byte	0x26
+ 779 00e7 00000000 		.4byte	.LFB65
+ 780 00eb 14000000 		.4byte	.LFE65-.LFB65
+ 781 00ef 01       		.uleb128 0x1
+ 782 00f0 9C       		.byte	0x9c
+ 783 00f1 1C010000 		.4byte	0x11c
+ 784 00f5 06       		.uleb128 0x6
+ 785 00f6 0A000000 		.4byte	.LVL2
+ 786 00fa 4A070000 		.4byte	0x74a
+ 787 00fe 0A010000 		.4byte	0x10a
+ 788 0102 07       		.uleb128 0x7
+ 789 0103 01       		.uleb128 0x1
+ 790 0104 50       		.byte	0x50
+ 791 0105 03       		.uleb128 0x3
+ 792 0106 0A       		.byte	0xa
+ 793 0107 B80B     		.2byte	0xbb8
+ 794 0109 00       		.byte	0
+ 795 010a 08       		.uleb128 0x8
+ 796 010b 12000000 		.4byte	.LVL3
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 19
+
+
+ 797 010f 55070000 		.4byte	0x755
+ 798 0113 07       		.uleb128 0x7
+ 799 0114 01       		.uleb128 0x1
+ 800 0115 50       		.byte	0x50
+ 801 0116 03       		.uleb128 0x3
+ 802 0117 0A       		.byte	0xa
+ 803 0118 8813     		.2byte	0x1388
+ 804 011a 00       		.byte	0
+ 805 011b 00       		.byte	0
+ 806 011c 05       		.uleb128 0x5
+ 807 011d 88000000 		.4byte	.LASF18
+ 808 0121 01       		.byte	0x1
+ 809 0122 2A       		.byte	0x2a
+ 810 0123 00000000 		.4byte	.LFB66
+ 811 0127 14000000 		.4byte	.LFE66-.LFB66
+ 812 012b 01       		.uleb128 0x1
+ 813 012c 9C       		.byte	0x9c
+ 814 012d 58010000 		.4byte	0x158
+ 815 0131 06       		.uleb128 0x6
+ 816 0132 0A000000 		.4byte	.LVL4
+ 817 0136 34070000 		.4byte	0x734
+ 818 013a 46010000 		.4byte	0x146
+ 819 013e 07       		.uleb128 0x7
+ 820 013f 01       		.uleb128 0x1
+ 821 0140 50       		.byte	0x50
+ 822 0141 03       		.uleb128 0x3
+ 823 0142 0A       		.byte	0xa
+ 824 0143 B80B     		.2byte	0xbb8
+ 825 0145 00       		.byte	0
+ 826 0146 08       		.uleb128 0x8
+ 827 0147 12000000 		.4byte	.LVL5
+ 828 014b 3F070000 		.4byte	0x73f
+ 829 014f 07       		.uleb128 0x7
+ 830 0150 01       		.uleb128 0x1
+ 831 0151 50       		.byte	0x50
+ 832 0152 03       		.uleb128 0x3
+ 833 0153 0A       		.byte	0xa
+ 834 0154 8813     		.2byte	0x1388
+ 835 0156 00       		.byte	0
+ 836 0157 00       		.byte	0
+ 837 0158 05       		.uleb128 0x5
+ 838 0159 00000000 		.4byte	.LASF19
+ 839 015d 01       		.byte	0x1
+ 840 015e 2E       		.byte	0x2e
+ 841 015f 00000000 		.4byte	.LFB67
+ 842 0163 14000000 		.4byte	.LFE67-.LFB67
+ 843 0167 01       		.uleb128 0x1
+ 844 0168 9C       		.byte	0x9c
+ 845 0169 94010000 		.4byte	0x194
+ 846 016d 06       		.uleb128 0x6
+ 847 016e 0A000000 		.4byte	.LVL6
+ 848 0172 4A070000 		.4byte	0x74a
+ 849 0176 82010000 		.4byte	0x182
+ 850 017a 07       		.uleb128 0x7
+ 851 017b 01       		.uleb128 0x1
+ 852 017c 50       		.byte	0x50
+ 853 017d 03       		.uleb128 0x3
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 20
+
+
+ 854 017e 0A       		.byte	0xa
+ 855 017f 8813     		.2byte	0x1388
+ 856 0181 00       		.byte	0
+ 857 0182 08       		.uleb128 0x8
+ 858 0183 12000000 		.4byte	.LVL7
+ 859 0187 55070000 		.4byte	0x755
+ 860 018b 07       		.uleb128 0x7
+ 861 018c 01       		.uleb128 0x1
+ 862 018d 50       		.byte	0x50
+ 863 018e 03       		.uleb128 0x3
+ 864 018f 0A       		.byte	0xa
+ 865 0190 B80B     		.2byte	0xbb8
+ 866 0192 00       		.byte	0
+ 867 0193 00       		.byte	0
+ 868 0194 05       		.uleb128 0x5
+ 869 0195 12030000 		.4byte	.LASF20
+ 870 0199 01       		.byte	0x1
+ 871 019a 32       		.byte	0x32
+ 872 019b 00000000 		.4byte	.LFB68
+ 873 019f 14000000 		.4byte	.LFE68-.LFB68
+ 874 01a3 01       		.uleb128 0x1
+ 875 01a4 9C       		.byte	0x9c
+ 876 01a5 D0010000 		.4byte	0x1d0
+ 877 01a9 06       		.uleb128 0x6
+ 878 01aa 0A000000 		.4byte	.LVL8
+ 879 01ae 34070000 		.4byte	0x734
+ 880 01b2 BE010000 		.4byte	0x1be
+ 881 01b6 07       		.uleb128 0x7
+ 882 01b7 01       		.uleb128 0x1
+ 883 01b8 50       		.byte	0x50
+ 884 01b9 03       		.uleb128 0x3
+ 885 01ba 0A       		.byte	0xa
+ 886 01bb D007     		.2byte	0x7d0
+ 887 01bd 00       		.byte	0
+ 888 01be 08       		.uleb128 0x8
+ 889 01bf 12000000 		.4byte	.LVL9
+ 890 01c3 3F070000 		.4byte	0x73f
+ 891 01c7 07       		.uleb128 0x7
+ 892 01c8 01       		.uleb128 0x1
+ 893 01c9 50       		.byte	0x50
+ 894 01ca 03       		.uleb128 0x3
+ 895 01cb 0A       		.byte	0xa
+ 896 01cc D007     		.2byte	0x7d0
+ 897 01ce 00       		.byte	0
+ 898 01cf 00       		.byte	0
+ 899 01d0 05       		.uleb128 0x5
+ 900 01d1 C3010000 		.4byte	.LASF21
+ 901 01d5 01       		.byte	0x1
+ 902 01d6 36       		.byte	0x36
+ 903 01d7 00000000 		.4byte	.LFB69
+ 904 01db 14000000 		.4byte	.LFE69-.LFB69
+ 905 01df 01       		.uleb128 0x1
+ 906 01e0 9C       		.byte	0x9c
+ 907 01e1 0C020000 		.4byte	0x20c
+ 908 01e5 06       		.uleb128 0x6
+ 909 01e6 0A000000 		.4byte	.LVL10
+ 910 01ea 4A070000 		.4byte	0x74a
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 21
+
+
+ 911 01ee FA010000 		.4byte	0x1fa
+ 912 01f2 07       		.uleb128 0x7
+ 913 01f3 01       		.uleb128 0x1
+ 914 01f4 50       		.byte	0x50
+ 915 01f5 03       		.uleb128 0x3
+ 916 01f6 0A       		.byte	0xa
+ 917 01f7 D007     		.2byte	0x7d0
+ 918 01f9 00       		.byte	0
+ 919 01fa 08       		.uleb128 0x8
+ 920 01fb 12000000 		.4byte	.LVL11
+ 921 01ff 55070000 		.4byte	0x755
+ 922 0203 07       		.uleb128 0x7
+ 923 0204 01       		.uleb128 0x1
+ 924 0205 50       		.byte	0x50
+ 925 0206 03       		.uleb128 0x3
+ 926 0207 0A       		.byte	0xa
+ 927 0208 D007     		.2byte	0x7d0
+ 928 020a 00       		.byte	0
+ 929 020b 00       		.byte	0
+ 930 020c 05       		.uleb128 0x5
+ 931 020d 5F000000 		.4byte	.LASF22
+ 932 0211 01       		.byte	0x1
+ 933 0212 3B       		.byte	0x3b
+ 934 0213 00000000 		.4byte	.LFB70
+ 935 0217 0C000000 		.4byte	.LFE70-.LFB70
+ 936 021b 01       		.uleb128 0x1
+ 937 021c 9C       		.byte	0x9c
+ 938 021d 33020000 		.4byte	0x233
+ 939 0221 08       		.uleb128 0x8
+ 940 0222 0A000000 		.4byte	.LVL12
+ 941 0226 60070000 		.4byte	0x760
+ 942 022a 07       		.uleb128 0x7
+ 943 022b 01       		.uleb128 0x1
+ 944 022c 50       		.byte	0x50
+ 945 022d 03       		.uleb128 0x3
+ 946 022e 0A       		.byte	0xa
+ 947 022f A00F     		.2byte	0xfa0
+ 948 0231 00       		.byte	0
+ 949 0232 00       		.byte	0
+ 950 0233 05       		.uleb128 0x5
+ 951 0234 7A030000 		.4byte	.LASF23
+ 952 0238 01       		.byte	0x1
+ 953 0239 4E       		.byte	0x4e
+ 954 023a 00000000 		.4byte	.LFB71
+ 955 023e 36000000 		.4byte	.LFE71-.LFB71
+ 956 0242 01       		.uleb128 0x1
+ 957 0243 9C       		.byte	0x9c
+ 958 0244 C6020000 		.4byte	0x2c6
+ 959 0248 09       		.uleb128 0x9
+ 960 0249 06000000 		.4byte	.LBB2
+ 961 024d 2A000000 		.4byte	.LBE2-.LBB2
+ 962 0251 B3020000 		.4byte	0x2b3
+ 963 0255 0A       		.uleb128 0xa
+ 964 0256 6900     		.ascii	"i\000"
+ 965 0258 01       		.byte	0x1
+ 966 0259 50       		.byte	0x50
+ 967 025a 68000000 		.4byte	0x68
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 22
+
+
+ 968 025e 00000000 		.4byte	.LLST0
+ 969 0262 06       		.uleb128 0x6
+ 970 0263 12000000 		.4byte	.LVL15
+ 971 0267 6B070000 		.4byte	0x76b
+ 972 026b 77020000 		.4byte	0x277
+ 973 026f 07       		.uleb128 0x7
+ 974 0270 01       		.uleb128 0x1
+ 975 0271 50       		.byte	0x50
+ 976 0272 03       		.uleb128 0x3
+ 977 0273 0A       		.byte	0xa
+ 978 0274 DC05     		.2byte	0x5dc
+ 979 0276 00       		.byte	0
+ 980 0277 06       		.uleb128 0x6
+ 981 0278 1A000000 		.4byte	.LVL16
+ 982 027c 76070000 		.4byte	0x776
+ 983 0280 8C020000 		.4byte	0x28c
+ 984 0284 07       		.uleb128 0x7
+ 985 0285 01       		.uleb128 0x1
+ 986 0286 50       		.byte	0x50
+ 987 0287 03       		.uleb128 0x3
+ 988 0288 0A       		.byte	0xa
+ 989 0289 D007     		.2byte	0x7d0
+ 990 028b 00       		.byte	0
+ 991 028c 06       		.uleb128 0x6
+ 992 028d 22000000 		.4byte	.LVL17
+ 993 0291 6B070000 		.4byte	0x76b
+ 994 0295 A1020000 		.4byte	0x2a1
+ 995 0299 07       		.uleb128 0x7
+ 996 029a 01       		.uleb128 0x1
+ 997 029b 50       		.byte	0x50
+ 998 029c 03       		.uleb128 0x3
+ 999 029d 0A       		.byte	0xa
+ 1000 029e 9808     		.2byte	0x898
+ 1001 02a0 00       		.byte	0
+ 1002 02a1 08       		.uleb128 0x8
+ 1003 02a2 2A000000 		.4byte	.LVL18
+ 1004 02a6 76070000 		.4byte	0x776
+ 1005 02aa 07       		.uleb128 0x7
+ 1006 02ab 01       		.uleb128 0x1
+ 1007 02ac 50       		.byte	0x50
+ 1008 02ad 03       		.uleb128 0x3
+ 1009 02ae 0A       		.byte	0xa
+ 1010 02af D007     		.2byte	0x7d0
+ 1011 02b1 00       		.byte	0
+ 1012 02b2 00       		.byte	0
+ 1013 02b3 0B       		.uleb128 0xb
+ 1014 02b4 06000000 		.4byte	.LVL13
+ 1015 02b8 81070000 		.4byte	0x781
+ 1016 02bc 0B       		.uleb128 0xb
+ 1017 02bd 34000000 		.4byte	.LVL20
+ 1018 02c1 0C020000 		.4byte	0x20c
+ 1019 02c5 00       		.byte	0
+ 1020 02c6 05       		.uleb128 0x5
+ 1021 02c7 82030000 		.4byte	.LASF24
+ 1022 02cb 01       		.byte	0x1
+ 1023 02cc 5B       		.byte	0x5b
+ 1024 02cd 00000000 		.4byte	.LFB72
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 23
+
+
+ 1025 02d1 36000000 		.4byte	.LFE72-.LFB72
+ 1026 02d5 01       		.uleb128 0x1
+ 1027 02d6 9C       		.byte	0x9c
+ 1028 02d7 59030000 		.4byte	0x359
+ 1029 02db 09       		.uleb128 0x9
+ 1030 02dc 06000000 		.4byte	.LBB3
+ 1031 02e0 2A000000 		.4byte	.LBE3-.LBB3
+ 1032 02e4 46030000 		.4byte	0x346
+ 1033 02e8 0A       		.uleb128 0xa
+ 1034 02e9 6900     		.ascii	"i\000"
+ 1035 02eb 01       		.byte	0x1
+ 1036 02ec 5D       		.byte	0x5d
+ 1037 02ed 68000000 		.4byte	0x68
+ 1038 02f1 1F000000 		.4byte	.LLST1
+ 1039 02f5 06       		.uleb128 0x6
+ 1040 02f6 12000000 		.4byte	.LVL23
+ 1041 02fa 60070000 		.4byte	0x760
+ 1042 02fe 0A030000 		.4byte	0x30a
+ 1043 0302 07       		.uleb128 0x7
+ 1044 0303 01       		.uleb128 0x1
+ 1045 0304 50       		.byte	0x50
+ 1046 0305 03       		.uleb128 0x3
+ 1047 0306 0A       		.byte	0xa
+ 1048 0307 DC05     		.2byte	0x5dc
+ 1049 0309 00       		.byte	0
+ 1050 030a 06       		.uleb128 0x6
+ 1051 030b 1A000000 		.4byte	.LVL24
+ 1052 030f 76070000 		.4byte	0x776
+ 1053 0313 1F030000 		.4byte	0x31f
+ 1054 0317 07       		.uleb128 0x7
+ 1055 0318 01       		.uleb128 0x1
+ 1056 0319 50       		.byte	0x50
+ 1057 031a 03       		.uleb128 0x3
+ 1058 031b 0A       		.byte	0xa
+ 1059 031c E803     		.2byte	0x3e8
+ 1060 031e 00       		.byte	0
+ 1061 031f 06       		.uleb128 0x6
+ 1062 0320 22000000 		.4byte	.LVL25
+ 1063 0324 60070000 		.4byte	0x760
+ 1064 0328 34030000 		.4byte	0x334
+ 1065 032c 07       		.uleb128 0x7
+ 1066 032d 01       		.uleb128 0x1
+ 1067 032e 50       		.byte	0x50
+ 1068 032f 03       		.uleb128 0x3
+ 1069 0330 0A       		.byte	0xa
+ 1070 0331 B80B     		.2byte	0xbb8
+ 1071 0333 00       		.byte	0
+ 1072 0334 08       		.uleb128 0x8
+ 1073 0335 2A000000 		.4byte	.LVL26
+ 1074 0339 76070000 		.4byte	0x776
+ 1075 033d 07       		.uleb128 0x7
+ 1076 033e 01       		.uleb128 0x1
+ 1077 033f 50       		.byte	0x50
+ 1078 0340 03       		.uleb128 0x3
+ 1079 0341 0A       		.byte	0xa
+ 1080 0342 E803     		.2byte	0x3e8
+ 1081 0344 00       		.byte	0
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 24
+
+
+ 1082 0345 00       		.byte	0
+ 1083 0346 0B       		.uleb128 0xb
+ 1084 0347 06000000 		.4byte	.LVL21
+ 1085 034b 81070000 		.4byte	0x781
+ 1086 034f 0B       		.uleb128 0xb
+ 1087 0350 34000000 		.4byte	.LVL28
+ 1088 0354 0C020000 		.4byte	0x20c
+ 1089 0358 00       		.byte	0
+ 1090 0359 0C       		.uleb128 0xc
+ 1091 035a 6E6F6400 		.ascii	"nod\000"
+ 1092 035e 01       		.byte	0x1
+ 1093 035f 68       		.byte	0x68
+ 1094 0360 00000000 		.4byte	.LFB73
+ 1095 0364 46000000 		.4byte	.LFE73-.LFB73
+ 1096 0368 01       		.uleb128 0x1
+ 1097 0369 9C       		.byte	0x9c
+ 1098 036a 16040000 		.4byte	0x416
+ 1099 036e 09       		.uleb128 0x9
+ 1100 036f 06000000 		.4byte	.LBB4
+ 1101 0373 3A000000 		.4byte	.LBE4-.LBB4
+ 1102 0377 03040000 		.4byte	0x403
+ 1103 037b 0A       		.uleb128 0xa
+ 1104 037c 6900     		.ascii	"i\000"
+ 1105 037e 01       		.byte	0x1
+ 1106 037f 6A       		.byte	0x6a
+ 1107 0380 68000000 		.4byte	0x68
+ 1108 0384 3E000000 		.4byte	.LLST2
+ 1109 0388 06       		.uleb128 0x6
+ 1110 0389 12000000 		.4byte	.LVL31
+ 1111 038d 8C070000 		.4byte	0x78c
+ 1112 0391 9D030000 		.4byte	0x39d
+ 1113 0395 07       		.uleb128 0x7
+ 1114 0396 01       		.uleb128 0x1
+ 1115 0397 50       		.byte	0x50
+ 1116 0398 03       		.uleb128 0x3
+ 1117 0399 0A       		.byte	0xa
+ 1118 039a C409     		.2byte	0x9c4
+ 1119 039c 00       		.byte	0
+ 1120 039d 06       		.uleb128 0x6
+ 1121 039e 1A000000 		.4byte	.LVL32
+ 1122 03a2 97070000 		.4byte	0x797
+ 1123 03a6 B2030000 		.4byte	0x3b2
+ 1124 03aa 07       		.uleb128 0x7
+ 1125 03ab 01       		.uleb128 0x1
+ 1126 03ac 50       		.byte	0x50
+ 1127 03ad 03       		.uleb128 0x3
+ 1128 03ae 0A       		.byte	0xa
+ 1129 03af C409     		.2byte	0x9c4
+ 1130 03b1 00       		.byte	0
+ 1131 03b2 06       		.uleb128 0x6
+ 1132 03b3 22000000 		.4byte	.LVL33
+ 1133 03b7 76070000 		.4byte	0x776
+ 1134 03bb C7030000 		.4byte	0x3c7
+ 1135 03bf 07       		.uleb128 0x7
+ 1136 03c0 01       		.uleb128 0x1
+ 1137 03c1 50       		.byte	0x50
+ 1138 03c2 03       		.uleb128 0x3
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 25
+
+
+ 1139 03c3 0A       		.byte	0xa
+ 1140 03c4 E803     		.2byte	0x3e8
+ 1141 03c6 00       		.byte	0
+ 1142 03c7 06       		.uleb128 0x6
+ 1143 03c8 2A000000 		.4byte	.LVL34
+ 1144 03cc 8C070000 		.4byte	0x78c
+ 1145 03d0 DC030000 		.4byte	0x3dc
+ 1146 03d4 07       		.uleb128 0x7
+ 1147 03d5 01       		.uleb128 0x1
+ 1148 03d6 50       		.byte	0x50
+ 1149 03d7 03       		.uleb128 0x3
+ 1150 03d8 0A       		.byte	0xa
+ 1151 03d9 F609     		.2byte	0x9f6
+ 1152 03db 00       		.byte	0
+ 1153 03dc 06       		.uleb128 0x6
+ 1154 03dd 32000000 		.4byte	.LVL35
+ 1155 03e1 97070000 		.4byte	0x797
+ 1156 03e5 F1030000 		.4byte	0x3f1
+ 1157 03e9 07       		.uleb128 0x7
+ 1158 03ea 01       		.uleb128 0x1
+ 1159 03eb 50       		.byte	0x50
+ 1160 03ec 03       		.uleb128 0x3
+ 1161 03ed 0A       		.byte	0xa
+ 1162 03ee F609     		.2byte	0x9f6
+ 1163 03f0 00       		.byte	0
+ 1164 03f1 08       		.uleb128 0x8
+ 1165 03f2 3A000000 		.4byte	.LVL36
+ 1166 03f6 76070000 		.4byte	0x776
+ 1167 03fa 07       		.uleb128 0x7
+ 1168 03fb 01       		.uleb128 0x1
+ 1169 03fc 50       		.byte	0x50
+ 1170 03fd 03       		.uleb128 0x3
+ 1171 03fe 0A       		.byte	0xa
+ 1172 03ff E803     		.2byte	0x3e8
+ 1173 0401 00       		.byte	0
+ 1174 0402 00       		.byte	0
+ 1175 0403 0B       		.uleb128 0xb
+ 1176 0404 06000000 		.4byte	.LVL29
+ 1177 0408 A2070000 		.4byte	0x7a2
+ 1178 040c 0B       		.uleb128 0xb
+ 1179 040d 44000000 		.4byte	.LVL38
+ 1180 0411 0C020000 		.4byte	0x20c
+ 1181 0415 00       		.byte	0
+ 1182 0416 05       		.uleb128 0x5
+ 1183 0417 F7030000 		.4byte	.LASF25
+ 1184 041b 01       		.byte	0x1
+ 1185 041c 78       		.byte	0x78
+ 1186 041d 00000000 		.4byte	.LFB74
+ 1187 0421 46000000 		.4byte	.LFE74-.LFB74
+ 1188 0425 01       		.uleb128 0x1
+ 1189 0426 9C       		.byte	0x9c
+ 1190 0427 D3040000 		.4byte	0x4d3
+ 1191 042b 09       		.uleb128 0x9
+ 1192 042c 0A000000 		.4byte	.LBB5
+ 1193 0430 3A000000 		.4byte	.LBE5-.LBB5
+ 1194 0434 C0040000 		.4byte	0x4c0
+ 1195 0438 0A       		.uleb128 0xa
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 26
+
+
+ 1196 0439 6900     		.ascii	"i\000"
+ 1197 043b 01       		.byte	0x1
+ 1198 043c 7B       		.byte	0x7b
+ 1199 043d 68000000 		.4byte	0x68
+ 1200 0441 5D000000 		.4byte	.LLST3
+ 1201 0445 06       		.uleb128 0x6
+ 1202 0446 16000000 		.4byte	.LVL42
+ 1203 044a AD070000 		.4byte	0x7ad
+ 1204 044e 5A040000 		.4byte	0x45a
+ 1205 0452 07       		.uleb128 0x7
+ 1206 0453 01       		.uleb128 0x1
+ 1207 0454 50       		.byte	0x50
+ 1208 0455 03       		.uleb128 0x3
+ 1209 0456 0A       		.byte	0xa
+ 1210 0457 AC0D     		.2byte	0xdac
+ 1211 0459 00       		.byte	0
+ 1212 045a 06       		.uleb128 0x6
+ 1213 045b 1E000000 		.4byte	.LVL43
+ 1214 045f B8070000 		.4byte	0x7b8
+ 1215 0463 6F040000 		.4byte	0x46f
+ 1216 0467 07       		.uleb128 0x7
+ 1217 0468 01       		.uleb128 0x1
+ 1218 0469 50       		.byte	0x50
+ 1219 046a 03       		.uleb128 0x3
+ 1220 046b 0A       		.byte	0xa
+ 1221 046c 7C15     		.2byte	0x157c
+ 1222 046e 00       		.byte	0
+ 1223 046f 06       		.uleb128 0x6
+ 1224 0470 26000000 		.4byte	.LVL44
+ 1225 0474 76070000 		.4byte	0x776
+ 1226 0478 84040000 		.4byte	0x484
+ 1227 047c 07       		.uleb128 0x7
+ 1228 047d 01       		.uleb128 0x1
+ 1229 047e 50       		.byte	0x50
+ 1230 047f 03       		.uleb128 0x3
+ 1231 0480 0A       		.byte	0xa
+ 1232 0481 E803     		.2byte	0x3e8
+ 1233 0483 00       		.byte	0
+ 1234 0484 06       		.uleb128 0x6
+ 1235 0485 2E000000 		.4byte	.LVL45
+ 1236 0489 AD070000 		.4byte	0x7ad
+ 1237 048d 99040000 		.4byte	0x499
+ 1238 0491 07       		.uleb128 0x7
+ 1239 0492 01       		.uleb128 0x1
+ 1240 0493 50       		.byte	0x50
+ 1241 0494 03       		.uleb128 0x3
+ 1242 0495 0A       		.byte	0xa
+ 1243 0496 7C15     		.2byte	0x157c
+ 1244 0498 00       		.byte	0
+ 1245 0499 06       		.uleb128 0x6
+ 1246 049a 36000000 		.4byte	.LVL46
+ 1247 049e B8070000 		.4byte	0x7b8
+ 1248 04a2 AE040000 		.4byte	0x4ae
+ 1249 04a6 07       		.uleb128 0x7
+ 1250 04a7 01       		.uleb128 0x1
+ 1251 04a8 50       		.byte	0x50
+ 1252 04a9 03       		.uleb128 0x3
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 27
+
+
+ 1253 04aa 0A       		.byte	0xa
+ 1254 04ab AC0D     		.2byte	0xdac
+ 1255 04ad 00       		.byte	0
+ 1256 04ae 08       		.uleb128 0x8
+ 1257 04af 3E000000 		.4byte	.LVL47
+ 1258 04b3 76070000 		.4byte	0x776
+ 1259 04b7 07       		.uleb128 0x7
+ 1260 04b8 01       		.uleb128 0x1
+ 1261 04b9 50       		.byte	0x50
+ 1262 04ba 03       		.uleb128 0x3
+ 1263 04bb 0A       		.byte	0xa
+ 1264 04bc E803     		.2byte	0x3e8
+ 1265 04be 00       		.byte	0
+ 1266 04bf 00       		.byte	0
+ 1267 04c0 0B       		.uleb128 0xb
+ 1268 04c1 06000000 		.4byte	.LVL39
+ 1269 04c5 C3070000 		.4byte	0x7c3
+ 1270 04c9 0B       		.uleb128 0xb
+ 1271 04ca 0A000000 		.4byte	.LVL40
+ 1272 04ce 0C020000 		.4byte	0x20c
+ 1273 04d2 00       		.byte	0
+ 1274 04d3 05       		.uleb128 0x5
+ 1275 04d4 01030000 		.4byte	.LASF26
+ 1276 04d8 01       		.byte	0x1
+ 1277 04d9 85       		.byte	0x85
+ 1278 04da 00000000 		.4byte	.LFB75
+ 1279 04de 3E000000 		.4byte	.LFE75-.LFB75
+ 1280 04e2 01       		.uleb128 0x1
+ 1281 04e3 9C       		.byte	0x9c
+ 1282 04e4 7B050000 		.4byte	0x57b
+ 1283 04e8 09       		.uleb128 0x9
+ 1284 04e9 06000000 		.4byte	.LBB6
+ 1285 04ed 32000000 		.4byte	.LBE6-.LBB6
+ 1286 04f1 68050000 		.4byte	0x568
+ 1287 04f5 0A       		.uleb128 0xa
+ 1288 04f6 6900     		.ascii	"i\000"
+ 1289 04f8 01       		.byte	0x1
+ 1290 04f9 87       		.byte	0x87
+ 1291 04fa 68000000 		.4byte	0x68
+ 1292 04fe 7C000000 		.4byte	.LLST4
+ 1293 0502 06       		.uleb128 0x6
+ 1294 0503 12000000 		.4byte	.LVL51
+ 1295 0507 60070000 		.4byte	0x760
+ 1296 050b 17050000 		.4byte	0x517
+ 1297 050f 07       		.uleb128 0x7
+ 1298 0510 01       		.uleb128 0x1
+ 1299 0511 50       		.byte	0x50
+ 1300 0512 03       		.uleb128 0x3
+ 1301 0513 0A       		.byte	0xa
+ 1302 0514 DC05     		.2byte	0x5dc
+ 1303 0516 00       		.byte	0
+ 1304 0517 06       		.uleb128 0x6
+ 1305 0518 1A000000 		.4byte	.LVL52
+ 1306 051c CE070000 		.4byte	0x7ce
+ 1307 0520 2C050000 		.4byte	0x52c
+ 1308 0524 07       		.uleb128 0x7
+ 1309 0525 01       		.uleb128 0x1
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 28
+
+
+ 1310 0526 50       		.byte	0x50
+ 1311 0527 03       		.uleb128 0x3
+ 1312 0528 0A       		.byte	0xa
+ 1313 0529 740E     		.2byte	0xe74
+ 1314 052b 00       		.byte	0
+ 1315 052c 06       		.uleb128 0x6
+ 1316 052d 22000000 		.4byte	.LVL53
+ 1317 0531 76070000 		.4byte	0x776
+ 1318 0535 41050000 		.4byte	0x541
+ 1319 0539 07       		.uleb128 0x7
+ 1320 053a 01       		.uleb128 0x1
+ 1321 053b 50       		.byte	0x50
+ 1322 053c 03       		.uleb128 0x3
+ 1323 053d 0A       		.byte	0xa
+ 1324 053e E803     		.2byte	0x3e8
+ 1325 0540 00       		.byte	0
+ 1326 0541 06       		.uleb128 0x6
+ 1327 0542 2A000000 		.4byte	.LVL54
+ 1328 0546 CE070000 		.4byte	0x7ce
+ 1329 054a 56050000 		.4byte	0x556
+ 1330 054e 07       		.uleb128 0x7
+ 1331 054f 01       		.uleb128 0x1
+ 1332 0550 50       		.byte	0x50
+ 1333 0551 03       		.uleb128 0x3
+ 1334 0552 0A       		.byte	0xa
+ 1335 0553 CC10     		.2byte	0x10cc
+ 1336 0555 00       		.byte	0
+ 1337 0556 08       		.uleb128 0x8
+ 1338 0557 32000000 		.4byte	.LVL55
+ 1339 055b 76070000 		.4byte	0x776
+ 1340 055f 07       		.uleb128 0x7
+ 1341 0560 01       		.uleb128 0x1
+ 1342 0561 50       		.byte	0x50
+ 1343 0562 03       		.uleb128 0x3
+ 1344 0563 0A       		.byte	0xa
+ 1345 0564 E803     		.2byte	0x3e8
+ 1346 0566 00       		.byte	0
+ 1347 0567 00       		.byte	0
+ 1348 0568 0B       		.uleb128 0xb
+ 1349 0569 06000000 		.4byte	.LVL49
+ 1350 056d 0C020000 		.4byte	0x20c
+ 1351 0571 0B       		.uleb128 0xb
+ 1352 0572 3C000000 		.4byte	.LVL57
+ 1353 0576 0C020000 		.4byte	0x20c
+ 1354 057a 00       		.byte	0
+ 1355 057b 05       		.uleb128 0x5
+ 1356 057c 30030000 		.4byte	.LASF27
+ 1357 0580 01       		.byte	0x1
+ 1358 0581 92       		.byte	0x92
+ 1359 0582 00000000 		.4byte	.LFB76
+ 1360 0586 86000000 		.4byte	.LFE76-.LFB76
+ 1361 058a 01       		.uleb128 0x1
+ 1362 058b 9C       		.byte	0x9c
+ 1363 058c DC060000 		.4byte	0x6dc
+ 1364 0590 09       		.uleb128 0x9
+ 1365 0591 2A000000 		.4byte	.LBB7
+ 1366 0595 3A000000 		.4byte	.LBE7-.LBB7
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 29
+
+
+ 1367 0599 25060000 		.4byte	0x625
+ 1368 059d 0A       		.uleb128 0xa
+ 1369 059e 6900     		.ascii	"i\000"
+ 1370 05a0 01       		.byte	0x1
+ 1371 05a1 9D       		.byte	0x9d
+ 1372 05a2 68000000 		.4byte	0x68
+ 1373 05a6 9B000000 		.4byte	.LLST5
+ 1374 05aa 06       		.uleb128 0x6
+ 1375 05ab 36000000 		.4byte	.LVL65
+ 1376 05af D9070000 		.4byte	0x7d9
+ 1377 05b3 BF050000 		.4byte	0x5bf
+ 1378 05b7 07       		.uleb128 0x7
+ 1379 05b8 01       		.uleb128 0x1
+ 1380 05b9 50       		.byte	0x50
+ 1381 05ba 03       		.uleb128 0x3
+ 1382 05bb 0A       		.byte	0xa
+ 1383 05bc B80B     		.2byte	0xbb8
+ 1384 05be 00       		.byte	0
+ 1385 05bf 06       		.uleb128 0x6
+ 1386 05c0 3E000000 		.4byte	.LVL66
+ 1387 05c4 E4070000 		.4byte	0x7e4
+ 1388 05c8 D4050000 		.4byte	0x5d4
+ 1389 05cc 07       		.uleb128 0x7
+ 1390 05cd 01       		.uleb128 0x1
+ 1391 05ce 50       		.byte	0x50
+ 1392 05cf 03       		.uleb128 0x3
+ 1393 05d0 0A       		.byte	0xa
+ 1394 05d1 8813     		.2byte	0x1388
+ 1395 05d3 00       		.byte	0
+ 1396 05d4 06       		.uleb128 0x6
+ 1397 05d5 46000000 		.4byte	.LVL67
+ 1398 05d9 76070000 		.4byte	0x776
+ 1399 05dd E9050000 		.4byte	0x5e9
+ 1400 05e1 07       		.uleb128 0x7
+ 1401 05e2 01       		.uleb128 0x1
+ 1402 05e3 50       		.byte	0x50
+ 1403 05e4 03       		.uleb128 0x3
+ 1404 05e5 0A       		.byte	0xa
+ 1405 05e6 E803     		.2byte	0x3e8
+ 1406 05e8 00       		.byte	0
+ 1407 05e9 06       		.uleb128 0x6
+ 1408 05ea 4E000000 		.4byte	.LVL68
+ 1409 05ee D9070000 		.4byte	0x7d9
+ 1410 05f2 FE050000 		.4byte	0x5fe
+ 1411 05f6 07       		.uleb128 0x7
+ 1412 05f7 01       		.uleb128 0x1
+ 1413 05f8 50       		.byte	0x50
+ 1414 05f9 03       		.uleb128 0x3
+ 1415 05fa 0A       		.byte	0xa
+ 1416 05fb 8813     		.2byte	0x1388
+ 1417 05fd 00       		.byte	0
+ 1418 05fe 06       		.uleb128 0x6
+ 1419 05ff 56000000 		.4byte	.LVL69
+ 1420 0603 E4070000 		.4byte	0x7e4
+ 1421 0607 13060000 		.4byte	0x613
+ 1422 060b 07       		.uleb128 0x7
+ 1423 060c 01       		.uleb128 0x1
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 30
+
+
+ 1424 060d 50       		.byte	0x50
+ 1425 060e 03       		.uleb128 0x3
+ 1426 060f 0A       		.byte	0xa
+ 1427 0610 B80B     		.2byte	0xbb8
+ 1428 0612 00       		.byte	0
+ 1429 0613 08       		.uleb128 0x8
+ 1430 0614 5E000000 		.4byte	.LVL70
+ 1431 0618 76070000 		.4byte	0x776
+ 1432 061c 07       		.uleb128 0x7
+ 1433 061d 01       		.uleb128 0x1
+ 1434 061e 50       		.byte	0x50
+ 1435 061f 03       		.uleb128 0x3
+ 1436 0620 0A       		.byte	0xa
+ 1437 0621 E803     		.2byte	0x3e8
+ 1438 0623 00       		.byte	0
+ 1439 0624 00       		.byte	0
+ 1440 0625 0B       		.uleb128 0xb
+ 1441 0626 06000000 		.4byte	.LVL58
+ 1442 062a EF070000 		.4byte	0x7ef
+ 1443 062e 0B       		.uleb128 0xb
+ 1444 062f 0A000000 		.4byte	.LVL59
+ 1445 0633 FA070000 		.4byte	0x7fa
+ 1446 0637 06       		.uleb128 0x6
+ 1447 0638 12000000 		.4byte	.LVL60
+ 1448 063c D9070000 		.4byte	0x7d9
+ 1449 0640 4C060000 		.4byte	0x64c
+ 1450 0644 07       		.uleb128 0x7
+ 1451 0645 01       		.uleb128 0x1
+ 1452 0646 50       		.byte	0x50
+ 1453 0647 03       		.uleb128 0x3
+ 1454 0648 0A       		.byte	0xa
+ 1455 0649 A00F     		.2byte	0xfa0
+ 1456 064b 00       		.byte	0
+ 1457 064c 06       		.uleb128 0x6
+ 1458 064d 1A000000 		.4byte	.LVL61
+ 1459 0651 05080000 		.4byte	0x805
+ 1460 0655 61060000 		.4byte	0x661
+ 1461 0659 07       		.uleb128 0x7
+ 1462 065a 01       		.uleb128 0x1
+ 1463 065b 50       		.byte	0x50
+ 1464 065c 03       		.uleb128 0x3
+ 1465 065d 0A       		.byte	0xa
+ 1466 065e A00F     		.2byte	0xfa0
+ 1467 0660 00       		.byte	0
+ 1468 0661 06       		.uleb128 0x6
+ 1469 0662 22000000 		.4byte	.LVL62
+ 1470 0666 E4070000 		.4byte	0x7e4
+ 1471 066a 76060000 		.4byte	0x676
+ 1472 066e 07       		.uleb128 0x7
+ 1473 066f 01       		.uleb128 0x1
+ 1474 0670 50       		.byte	0x50
+ 1475 0671 03       		.uleb128 0x3
+ 1476 0672 0A       		.byte	0xa
+ 1477 0673 A00F     		.2byte	0xfa0
+ 1478 0675 00       		.byte	0
+ 1479 0676 06       		.uleb128 0x6
+ 1480 0677 2A000000 		.4byte	.LVL63
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 31
+
+
+ 1481 067b 10080000 		.4byte	0x810
+ 1482 067f 8B060000 		.4byte	0x68b
+ 1483 0683 07       		.uleb128 0x7
+ 1484 0684 01       		.uleb128 0x1
+ 1485 0685 50       		.byte	0x50
+ 1486 0686 03       		.uleb128 0x3
+ 1487 0687 0A       		.byte	0xa
+ 1488 0688 A00F     		.2byte	0xfa0
+ 1489 068a 00       		.byte	0
+ 1490 068b 06       		.uleb128 0x6
+ 1491 068c 6C000000 		.4byte	.LVL72
+ 1492 0690 D9070000 		.4byte	0x7d9
+ 1493 0694 A0060000 		.4byte	0x6a0
+ 1494 0698 07       		.uleb128 0x7
+ 1495 0699 01       		.uleb128 0x1
+ 1496 069a 50       		.byte	0x50
+ 1497 069b 03       		.uleb128 0x3
+ 1498 069c 0A       		.byte	0xa
+ 1499 069d A00F     		.2byte	0xfa0
+ 1500 069f 00       		.byte	0
+ 1501 06a0 06       		.uleb128 0x6
+ 1502 06a1 74000000 		.4byte	.LVL73
+ 1503 06a5 05080000 		.4byte	0x805
+ 1504 06a9 B5060000 		.4byte	0x6b5
+ 1505 06ad 07       		.uleb128 0x7
+ 1506 06ae 01       		.uleb128 0x1
+ 1507 06af 50       		.byte	0x50
+ 1508 06b0 03       		.uleb128 0x3
+ 1509 06b1 0A       		.byte	0xa
+ 1510 06b2 A00F     		.2byte	0xfa0
+ 1511 06b4 00       		.byte	0
+ 1512 06b5 06       		.uleb128 0x6
+ 1513 06b6 7C000000 		.4byte	.LVL74
+ 1514 06ba E4070000 		.4byte	0x7e4
+ 1515 06be CA060000 		.4byte	0x6ca
+ 1516 06c2 07       		.uleb128 0x7
+ 1517 06c3 01       		.uleb128 0x1
+ 1518 06c4 50       		.byte	0x50
+ 1519 06c5 03       		.uleb128 0x3
+ 1520 06c6 0A       		.byte	0xa
+ 1521 06c7 A00F     		.2byte	0xfa0
+ 1522 06c9 00       		.byte	0
+ 1523 06ca 08       		.uleb128 0x8
+ 1524 06cb 84000000 		.4byte	.LVL75
+ 1525 06cf 10080000 		.4byte	0x810
+ 1526 06d3 07       		.uleb128 0x7
+ 1527 06d4 01       		.uleb128 0x1
+ 1528 06d5 50       		.byte	0x50
+ 1529 06d6 03       		.uleb128 0x3
+ 1530 06d7 0A       		.byte	0xa
+ 1531 06d8 A00F     		.2byte	0xfa0
+ 1532 06da 00       		.byte	0
+ 1533 06db 00       		.byte	0
+ 1534 06dc 0D       		.uleb128 0xd
+ 1535 06dd 50020000 		.4byte	.LASF53
+ 1536 06e1 01       		.byte	0x1
+ 1537 06e2 AF       		.byte	0xaf
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 32
+
+
+ 1538 06e3 68000000 		.4byte	0x68
+ 1539 06e7 00000000 		.4byte	.LFB77
+ 1540 06eb 1A000000 		.4byte	.LFE77-.LFB77
+ 1541 06ef 01       		.uleb128 0x1
+ 1542 06f0 9C       		.byte	0x9c
+ 1543 06f1 23070000 		.4byte	0x723
+ 1544 06f5 0B       		.uleb128 0xb
+ 1545 06f6 06000000 		.4byte	.LVL76
+ 1546 06fa 1B080000 		.4byte	0x81b
+ 1547 06fe 0B       		.uleb128 0xb
+ 1548 06ff 0A000000 		.4byte	.LVL77
+ 1549 0703 0C020000 		.4byte	0x20c
+ 1550 0707 0B       		.uleb128 0xb
+ 1551 0708 0E000000 		.4byte	.LVL78
+ 1552 070c 0C020000 		.4byte	0x20c
+ 1553 0710 0B       		.uleb128 0xb
+ 1554 0711 12000000 		.4byte	.LVL79
+ 1555 0715 C6020000 		.4byte	0x2c6
+ 1556 0719 0B       		.uleb128 0xb
+ 1557 071a 16000000 		.4byte	.LVL80
+ 1558 071e 0C020000 		.4byte	0x20c
+ 1559 0722 00       		.byte	0
+ 1560 0723 0E       		.uleb128 0xe
+ 1561 0724 A4020000 		.4byte	.LASF54
+ 1562 0728 0D       		.byte	0xd
+ 1563 0729 1207     		.2byte	0x712
+ 1564 072b 2F070000 		.4byte	0x72f
+ 1565 072f 0F       		.uleb128 0xf
+ 1566 0730 8B000000 		.4byte	0x8b
+ 1567 0734 10       		.uleb128 0x10
+ 1568 0735 6E020000 		.4byte	.LASF28
+ 1569 0739 6E020000 		.4byte	.LASF28
+ 1570 073d 04       		.byte	0x4
+ 1571 073e C7       		.byte	0xc7
+ 1572 073f 10       		.uleb128 0x10
+ 1573 0740 89020000 		.4byte	.LASF29
+ 1574 0744 89020000 		.4byte	.LASF29
+ 1575 0748 04       		.byte	0x4
+ 1576 0749 CA       		.byte	0xca
+ 1577 074a 10       		.uleb128 0x10
+ 1578 074b D8000000 		.4byte	.LASF30
+ 1579 074f D8000000 		.4byte	.LASF30
+ 1580 0753 05       		.byte	0x5
+ 1581 0754 C7       		.byte	0xc7
+ 1582 0755 10       		.uleb128 0x10
+ 1583 0756 F4000000 		.4byte	.LASF31
+ 1584 075a F4000000 		.4byte	.LASF31
+ 1585 075e 05       		.byte	0x5
+ 1586 075f CA       		.byte	0xca
+ 1587 0760 10       		.uleb128 0x10
+ 1588 0761 55020000 		.4byte	.LASF32
+ 1589 0765 55020000 		.4byte	.LASF32
+ 1590 0769 06       		.byte	0x6
+ 1591 076a C7       		.byte	0xc7
+ 1592 076b 10       		.uleb128 0x10
+ 1593 076c 3B000000 		.4byte	.LASF33
+ 1594 0770 3B000000 		.4byte	.LASF33
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 33
+
+
+ 1595 0774 06       		.byte	0x6
+ 1596 0775 CA       		.byte	0xca
+ 1597 0776 10       		.uleb128 0x10
+ 1598 0777 15040000 		.4byte	.LASF34
+ 1599 077b 15040000 		.4byte	.LASF34
+ 1600 077f 07       		.byte	0x7
+ 1601 0780 76       		.byte	0x76
+ 1602 0781 10       		.uleb128 0x10
+ 1603 0782 F0020000 		.4byte	.LASF35
+ 1604 0786 F0020000 		.4byte	.LASF35
+ 1605 078a 06       		.byte	0x6
+ 1606 078b 92       		.byte	0x92
+ 1607 078c 10       		.uleb128 0x10
+ 1608 078d 8B030000 		.4byte	.LASF36
+ 1609 0791 8B030000 		.4byte	.LASF36
+ 1610 0795 08       		.byte	0x8
+ 1611 0796 C7       		.byte	0xc7
+ 1612 0797 10       		.uleb128 0x10
+ 1613 0798 3D020000 		.4byte	.LASF37
+ 1614 079c 3D020000 		.4byte	.LASF37
+ 1615 07a0 08       		.byte	0x8
+ 1616 07a1 CA       		.byte	0xca
+ 1617 07a2 10       		.uleb128 0x10
+ 1618 07a3 26000000 		.4byte	.LASF38
+ 1619 07a7 26000000 		.4byte	.LASF38
+ 1620 07ab 08       		.byte	0x8
+ 1621 07ac 92       		.byte	0x92
+ 1622 07ad 10       		.uleb128 0x10
+ 1623 07ae C3030000 		.4byte	.LASF39
+ 1624 07b2 C3030000 		.4byte	.LASF39
+ 1625 07b6 09       		.byte	0x9
+ 1626 07b7 C7       		.byte	0xc7
+ 1627 07b8 10       		.uleb128 0x10
+ 1628 07b9 5B030000 		.4byte	.LASF40
+ 1629 07bd 5B030000 		.4byte	.LASF40
+ 1630 07c1 09       		.byte	0x9
+ 1631 07c2 CA       		.byte	0xca
+ 1632 07c3 10       		.uleb128 0x10
+ 1633 07c4 54000000 		.4byte	.LASF41
+ 1634 07c8 54000000 		.4byte	.LASF41
+ 1635 07cc 09       		.byte	0x9
+ 1636 07cd 92       		.byte	0x92
+ 1637 07ce 10       		.uleb128 0x10
+ 1638 07cf 73000000 		.4byte	.LASF42
+ 1639 07d3 73000000 		.4byte	.LASF42
+ 1640 07d7 0A       		.byte	0xa
+ 1641 07d8 CA       		.byte	0xca
+ 1642 07d9 10       		.uleb128 0x10
+ 1643 07da A8030000 		.4byte	.LASF43
+ 1644 07de A8030000 		.4byte	.LASF43
+ 1645 07e2 0B       		.byte	0xb
+ 1646 07e3 C7       		.byte	0xc7
+ 1647 07e4 10       		.uleb128 0x10
+ 1648 07e5 D5020000 		.4byte	.LASF44
+ 1649 07e9 D5020000 		.4byte	.LASF44
+ 1650 07ed 0B       		.byte	0xb
+ 1651 07ee CA       		.byte	0xca
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 34
+
+
+ 1652 07ef 10       		.uleb128 0x10
+ 1653 07f0 13000000 		.4byte	.LASF45
+ 1654 07f4 13000000 		.4byte	.LASF45
+ 1655 07f8 0B       		.byte	0xb
+ 1656 07f9 92       		.byte	0x92
+ 1657 07fa 10       		.uleb128 0x10
+ 1658 07fb 29020000 		.4byte	.LASF46
+ 1659 07ff 29020000 		.4byte	.LASF46
+ 1660 0803 0C       		.byte	0xc
+ 1661 0804 92       		.byte	0x92
+ 1662 0805 10       		.uleb128 0x10
+ 1663 0806 9A000000 		.4byte	.LASF47
+ 1664 080a 9A000000 		.4byte	.LASF47
+ 1665 080e 0C       		.byte	0xc
+ 1666 080f C7       		.byte	0xc7
+ 1667 0810 10       		.uleb128 0x10
+ 1668 0811 B6000000 		.4byte	.LASF48
+ 1669 0815 B6000000 		.4byte	.LASF48
+ 1670 0819 0C       		.byte	0xc
+ 1671 081a CA       		.byte	0xca
+ 1672 081b 10       		.uleb128 0x10
+ 1673 081c CF010000 		.4byte	.LASF49
+ 1674 0820 CF010000 		.4byte	.LASF49
+ 1675 0824 05       		.byte	0x5
+ 1676 0825 92       		.byte	0x92
+ 1677 0826 00       		.byte	0
+ 1678              		.section	.debug_abbrev,"",%progbits
+ 1679              	.Ldebug_abbrev0:
+ 1680 0000 01       		.uleb128 0x1
+ 1681 0001 11       		.uleb128 0x11
+ 1682 0002 01       		.byte	0x1
+ 1683 0003 25       		.uleb128 0x25
+ 1684 0004 0E       		.uleb128 0xe
+ 1685 0005 13       		.uleb128 0x13
+ 1686 0006 0B       		.uleb128 0xb
+ 1687 0007 03       		.uleb128 0x3
+ 1688 0008 0E       		.uleb128 0xe
+ 1689 0009 1B       		.uleb128 0x1b
+ 1690 000a 0E       		.uleb128 0xe
+ 1691 000b 55       		.uleb128 0x55
+ 1692 000c 17       		.uleb128 0x17
+ 1693 000d 11       		.uleb128 0x11
+ 1694 000e 01       		.uleb128 0x1
+ 1695 000f 10       		.uleb128 0x10
+ 1696 0010 17       		.uleb128 0x17
+ 1697 0011 00       		.byte	0
+ 1698 0012 00       		.byte	0
+ 1699 0013 02       		.uleb128 0x2
+ 1700 0014 24       		.uleb128 0x24
+ 1701 0015 00       		.byte	0
+ 1702 0016 0B       		.uleb128 0xb
+ 1703 0017 0B       		.uleb128 0xb
+ 1704 0018 3E       		.uleb128 0x3e
+ 1705 0019 0B       		.uleb128 0xb
+ 1706 001a 03       		.uleb128 0x3
+ 1707 001b 0E       		.uleb128 0xe
+ 1708 001c 00       		.byte	0
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 35
+
+
+ 1709 001d 00       		.byte	0
+ 1710 001e 03       		.uleb128 0x3
+ 1711 001f 16       		.uleb128 0x16
+ 1712 0020 00       		.byte	0
+ 1713 0021 03       		.uleb128 0x3
+ 1714 0022 0E       		.uleb128 0xe
+ 1715 0023 3A       		.uleb128 0x3a
+ 1716 0024 0B       		.uleb128 0xb
+ 1717 0025 3B       		.uleb128 0x3b
+ 1718 0026 0B       		.uleb128 0xb
+ 1719 0027 49       		.uleb128 0x49
+ 1720 0028 13       		.uleb128 0x13
+ 1721 0029 00       		.byte	0
+ 1722 002a 00       		.byte	0
+ 1723 002b 04       		.uleb128 0x4
+ 1724 002c 24       		.uleb128 0x24
+ 1725 002d 00       		.byte	0
+ 1726 002e 0B       		.uleb128 0xb
+ 1727 002f 0B       		.uleb128 0xb
+ 1728 0030 3E       		.uleb128 0x3e
+ 1729 0031 0B       		.uleb128 0xb
+ 1730 0032 03       		.uleb128 0x3
+ 1731 0033 08       		.uleb128 0x8
+ 1732 0034 00       		.byte	0
+ 1733 0035 00       		.byte	0
+ 1734 0036 05       		.uleb128 0x5
+ 1735 0037 2E       		.uleb128 0x2e
+ 1736 0038 01       		.byte	0x1
+ 1737 0039 3F       		.uleb128 0x3f
+ 1738 003a 19       		.uleb128 0x19
+ 1739 003b 03       		.uleb128 0x3
+ 1740 003c 0E       		.uleb128 0xe
+ 1741 003d 3A       		.uleb128 0x3a
+ 1742 003e 0B       		.uleb128 0xb
+ 1743 003f 3B       		.uleb128 0x3b
+ 1744 0040 0B       		.uleb128 0xb
+ 1745 0041 11       		.uleb128 0x11
+ 1746 0042 01       		.uleb128 0x1
+ 1747 0043 12       		.uleb128 0x12
+ 1748 0044 06       		.uleb128 0x6
+ 1749 0045 40       		.uleb128 0x40
+ 1750 0046 18       		.uleb128 0x18
+ 1751 0047 9742     		.uleb128 0x2117
+ 1752 0049 19       		.uleb128 0x19
+ 1753 004a 01       		.uleb128 0x1
+ 1754 004b 13       		.uleb128 0x13
+ 1755 004c 00       		.byte	0
+ 1756 004d 00       		.byte	0
+ 1757 004e 06       		.uleb128 0x6
+ 1758 004f 898201   		.uleb128 0x4109
+ 1759 0052 01       		.byte	0x1
+ 1760 0053 11       		.uleb128 0x11
+ 1761 0054 01       		.uleb128 0x1
+ 1762 0055 31       		.uleb128 0x31
+ 1763 0056 13       		.uleb128 0x13
+ 1764 0057 01       		.uleb128 0x1
+ 1765 0058 13       		.uleb128 0x13
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 36
+
+
+ 1766 0059 00       		.byte	0
+ 1767 005a 00       		.byte	0
+ 1768 005b 07       		.uleb128 0x7
+ 1769 005c 8A8201   		.uleb128 0x410a
+ 1770 005f 00       		.byte	0
+ 1771 0060 02       		.uleb128 0x2
+ 1772 0061 18       		.uleb128 0x18
+ 1773 0062 9142     		.uleb128 0x2111
+ 1774 0064 18       		.uleb128 0x18
+ 1775 0065 00       		.byte	0
+ 1776 0066 00       		.byte	0
+ 1777 0067 08       		.uleb128 0x8
+ 1778 0068 898201   		.uleb128 0x4109
+ 1779 006b 01       		.byte	0x1
+ 1780 006c 11       		.uleb128 0x11
+ 1781 006d 01       		.uleb128 0x1
+ 1782 006e 31       		.uleb128 0x31
+ 1783 006f 13       		.uleb128 0x13
+ 1784 0070 00       		.byte	0
+ 1785 0071 00       		.byte	0
+ 1786 0072 09       		.uleb128 0x9
+ 1787 0073 0B       		.uleb128 0xb
+ 1788 0074 01       		.byte	0x1
+ 1789 0075 11       		.uleb128 0x11
+ 1790 0076 01       		.uleb128 0x1
+ 1791 0077 12       		.uleb128 0x12
+ 1792 0078 06       		.uleb128 0x6
+ 1793 0079 01       		.uleb128 0x1
+ 1794 007a 13       		.uleb128 0x13
+ 1795 007b 00       		.byte	0
+ 1796 007c 00       		.byte	0
+ 1797 007d 0A       		.uleb128 0xa
+ 1798 007e 34       		.uleb128 0x34
+ 1799 007f 00       		.byte	0
+ 1800 0080 03       		.uleb128 0x3
+ 1801 0081 08       		.uleb128 0x8
+ 1802 0082 3A       		.uleb128 0x3a
+ 1803 0083 0B       		.uleb128 0xb
+ 1804 0084 3B       		.uleb128 0x3b
+ 1805 0085 0B       		.uleb128 0xb
+ 1806 0086 49       		.uleb128 0x49
+ 1807 0087 13       		.uleb128 0x13
+ 1808 0088 02       		.uleb128 0x2
+ 1809 0089 17       		.uleb128 0x17
+ 1810 008a 00       		.byte	0
+ 1811 008b 00       		.byte	0
+ 1812 008c 0B       		.uleb128 0xb
+ 1813 008d 898201   		.uleb128 0x4109
+ 1814 0090 00       		.byte	0
+ 1815 0091 11       		.uleb128 0x11
+ 1816 0092 01       		.uleb128 0x1
+ 1817 0093 31       		.uleb128 0x31
+ 1818 0094 13       		.uleb128 0x13
+ 1819 0095 00       		.byte	0
+ 1820 0096 00       		.byte	0
+ 1821 0097 0C       		.uleb128 0xc
+ 1822 0098 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 37
+
+
+ 1823 0099 01       		.byte	0x1
+ 1824 009a 3F       		.uleb128 0x3f
+ 1825 009b 19       		.uleb128 0x19
+ 1826 009c 03       		.uleb128 0x3
+ 1827 009d 08       		.uleb128 0x8
+ 1828 009e 3A       		.uleb128 0x3a
+ 1829 009f 0B       		.uleb128 0xb
+ 1830 00a0 3B       		.uleb128 0x3b
+ 1831 00a1 0B       		.uleb128 0xb
+ 1832 00a2 11       		.uleb128 0x11
+ 1833 00a3 01       		.uleb128 0x1
+ 1834 00a4 12       		.uleb128 0x12
+ 1835 00a5 06       		.uleb128 0x6
+ 1836 00a6 40       		.uleb128 0x40
+ 1837 00a7 18       		.uleb128 0x18
+ 1838 00a8 9742     		.uleb128 0x2117
+ 1839 00aa 19       		.uleb128 0x19
+ 1840 00ab 01       		.uleb128 0x1
+ 1841 00ac 13       		.uleb128 0x13
+ 1842 00ad 00       		.byte	0
+ 1843 00ae 00       		.byte	0
+ 1844 00af 0D       		.uleb128 0xd
+ 1845 00b0 2E       		.uleb128 0x2e
+ 1846 00b1 01       		.byte	0x1
+ 1847 00b2 3F       		.uleb128 0x3f
+ 1848 00b3 19       		.uleb128 0x19
+ 1849 00b4 03       		.uleb128 0x3
+ 1850 00b5 0E       		.uleb128 0xe
+ 1851 00b6 3A       		.uleb128 0x3a
+ 1852 00b7 0B       		.uleb128 0xb
+ 1853 00b8 3B       		.uleb128 0x3b
+ 1854 00b9 0B       		.uleb128 0xb
+ 1855 00ba 27       		.uleb128 0x27
+ 1856 00bb 19       		.uleb128 0x19
+ 1857 00bc 49       		.uleb128 0x49
+ 1858 00bd 13       		.uleb128 0x13
+ 1859 00be 11       		.uleb128 0x11
+ 1860 00bf 01       		.uleb128 0x1
+ 1861 00c0 12       		.uleb128 0x12
+ 1862 00c1 06       		.uleb128 0x6
+ 1863 00c2 40       		.uleb128 0x40
+ 1864 00c3 18       		.uleb128 0x18
+ 1865 00c4 9742     		.uleb128 0x2117
+ 1866 00c6 19       		.uleb128 0x19
+ 1867 00c7 01       		.uleb128 0x1
+ 1868 00c8 13       		.uleb128 0x13
+ 1869 00c9 00       		.byte	0
+ 1870 00ca 00       		.byte	0
+ 1871 00cb 0E       		.uleb128 0xe
+ 1872 00cc 34       		.uleb128 0x34
+ 1873 00cd 00       		.byte	0
+ 1874 00ce 03       		.uleb128 0x3
+ 1875 00cf 0E       		.uleb128 0xe
+ 1876 00d0 3A       		.uleb128 0x3a
+ 1877 00d1 0B       		.uleb128 0xb
+ 1878 00d2 3B       		.uleb128 0x3b
+ 1879 00d3 05       		.uleb128 0x5
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 38
+
+
+ 1880 00d4 49       		.uleb128 0x49
+ 1881 00d5 13       		.uleb128 0x13
+ 1882 00d6 3F       		.uleb128 0x3f
+ 1883 00d7 19       		.uleb128 0x19
+ 1884 00d8 3C       		.uleb128 0x3c
+ 1885 00d9 19       		.uleb128 0x19
+ 1886 00da 00       		.byte	0
+ 1887 00db 00       		.byte	0
+ 1888 00dc 0F       		.uleb128 0xf
+ 1889 00dd 35       		.uleb128 0x35
+ 1890 00de 00       		.byte	0
+ 1891 00df 49       		.uleb128 0x49
+ 1892 00e0 13       		.uleb128 0x13
+ 1893 00e1 00       		.byte	0
+ 1894 00e2 00       		.byte	0
+ 1895 00e3 10       		.uleb128 0x10
+ 1896 00e4 2E       		.uleb128 0x2e
+ 1897 00e5 00       		.byte	0
+ 1898 00e6 3F       		.uleb128 0x3f
+ 1899 00e7 19       		.uleb128 0x19
+ 1900 00e8 3C       		.uleb128 0x3c
+ 1901 00e9 19       		.uleb128 0x19
+ 1902 00ea 6E       		.uleb128 0x6e
+ 1903 00eb 0E       		.uleb128 0xe
+ 1904 00ec 03       		.uleb128 0x3
+ 1905 00ed 0E       		.uleb128 0xe
+ 1906 00ee 3A       		.uleb128 0x3a
+ 1907 00ef 0B       		.uleb128 0xb
+ 1908 00f0 3B       		.uleb128 0x3b
+ 1909 00f1 0B       		.uleb128 0xb
+ 1910 00f2 00       		.byte	0
+ 1911 00f3 00       		.byte	0
+ 1912 00f4 00       		.byte	0
+ 1913              		.section	.debug_loc,"",%progbits
+ 1914              	.Ldebug_loc0:
+ 1915              	.LLST0:
+ 1916 0000 06000000 		.4byte	.LVL13
+ 1917 0004 0A000000 		.4byte	.LVL14
+ 1918 0008 0200     		.2byte	0x2
+ 1919 000a 30       		.byte	0x30
+ 1920 000b 9F       		.byte	0x9f
+ 1921 000c 0A000000 		.4byte	.LVL14
+ 1922 0010 36000000 		.4byte	.LFE71
+ 1923 0014 0100     		.2byte	0x1
+ 1924 0016 54       		.byte	0x54
+ 1925 0017 00000000 		.4byte	0
+ 1926 001b 00000000 		.4byte	0
+ 1927              	.LLST1:
+ 1928 001f 06000000 		.4byte	.LVL21
+ 1929 0023 0A000000 		.4byte	.LVL22
+ 1930 0027 0200     		.2byte	0x2
+ 1931 0029 30       		.byte	0x30
+ 1932 002a 9F       		.byte	0x9f
+ 1933 002b 0A000000 		.4byte	.LVL22
+ 1934 002f 36000000 		.4byte	.LFE72
+ 1935 0033 0100     		.2byte	0x1
+ 1936 0035 54       		.byte	0x54
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 39
+
+
+ 1937 0036 00000000 		.4byte	0
+ 1938 003a 00000000 		.4byte	0
+ 1939              	.LLST2:
+ 1940 003e 06000000 		.4byte	.LVL29
+ 1941 0042 0A000000 		.4byte	.LVL30
+ 1942 0046 0200     		.2byte	0x2
+ 1943 0048 30       		.byte	0x30
+ 1944 0049 9F       		.byte	0x9f
+ 1945 004a 0A000000 		.4byte	.LVL30
+ 1946 004e 46000000 		.4byte	.LFE73
+ 1947 0052 0100     		.2byte	0x1
+ 1948 0054 54       		.byte	0x54
+ 1949 0055 00000000 		.4byte	0
+ 1950 0059 00000000 		.4byte	0
+ 1951              	.LLST3:
+ 1952 005d 0A000000 		.4byte	.LVL40
+ 1953 0061 0E000000 		.4byte	.LVL41
+ 1954 0065 0200     		.2byte	0x2
+ 1955 0067 30       		.byte	0x30
+ 1956 0068 9F       		.byte	0x9f
+ 1957 0069 0E000000 		.4byte	.LVL41
+ 1958 006d 46000000 		.4byte	.LFE74
+ 1959 0071 0100     		.2byte	0x1
+ 1960 0073 54       		.byte	0x54
+ 1961 0074 00000000 		.4byte	0
+ 1962 0078 00000000 		.4byte	0
+ 1963              	.LLST4:
+ 1964 007c 06000000 		.4byte	.LVL49
+ 1965 0080 0A000000 		.4byte	.LVL50
+ 1966 0084 0200     		.2byte	0x2
+ 1967 0086 30       		.byte	0x30
+ 1968 0087 9F       		.byte	0x9f
+ 1969 0088 0A000000 		.4byte	.LVL50
+ 1970 008c 3E000000 		.4byte	.LFE75
+ 1971 0090 0100     		.2byte	0x1
+ 1972 0092 54       		.byte	0x54
+ 1973 0093 00000000 		.4byte	0
+ 1974 0097 00000000 		.4byte	0
+ 1975              	.LLST5:
+ 1976 009b 2A000000 		.4byte	.LVL63
+ 1977 009f 2E000000 		.4byte	.LVL64
+ 1978 00a3 0200     		.2byte	0x2
+ 1979 00a5 30       		.byte	0x30
+ 1980 00a6 9F       		.byte	0x9f
+ 1981 00a7 2E000000 		.4byte	.LVL64
+ 1982 00ab 86000000 		.4byte	.LFE76
+ 1983 00af 0100     		.2byte	0x1
+ 1984 00b1 54       		.byte	0x54
+ 1985 00b2 00000000 		.4byte	0
+ 1986 00b6 00000000 		.4byte	0
+ 1987              		.section	.debug_aranges,"",%progbits
+ 1988 0000 84000000 		.4byte	0x84
+ 1989 0004 0200     		.2byte	0x2
+ 1990 0006 00000000 		.4byte	.Ldebug_info0
+ 1991 000a 04       		.byte	0x4
+ 1992 000b 00       		.byte	0
+ 1993 000c 0000     		.2byte	0
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 40
+
+
+ 1994 000e 0000     		.2byte	0
+ 1995 0010 00000000 		.4byte	.LFB64
+ 1996 0014 14000000 		.4byte	.LFE64-.LFB64
+ 1997 0018 00000000 		.4byte	.LFB65
+ 1998 001c 14000000 		.4byte	.LFE65-.LFB65
+ 1999 0020 00000000 		.4byte	.LFB66
+ 2000 0024 14000000 		.4byte	.LFE66-.LFB66
+ 2001 0028 00000000 		.4byte	.LFB67
+ 2002 002c 14000000 		.4byte	.LFE67-.LFB67
+ 2003 0030 00000000 		.4byte	.LFB68
+ 2004 0034 14000000 		.4byte	.LFE68-.LFB68
+ 2005 0038 00000000 		.4byte	.LFB69
+ 2006 003c 14000000 		.4byte	.LFE69-.LFB69
+ 2007 0040 00000000 		.4byte	.LFB70
+ 2008 0044 0C000000 		.4byte	.LFE70-.LFB70
+ 2009 0048 00000000 		.4byte	.LFB71
+ 2010 004c 36000000 		.4byte	.LFE71-.LFB71
+ 2011 0050 00000000 		.4byte	.LFB72
+ 2012 0054 36000000 		.4byte	.LFE72-.LFB72
+ 2013 0058 00000000 		.4byte	.LFB73
+ 2014 005c 46000000 		.4byte	.LFE73-.LFB73
+ 2015 0060 00000000 		.4byte	.LFB74
+ 2016 0064 46000000 		.4byte	.LFE74-.LFB74
+ 2017 0068 00000000 		.4byte	.LFB75
+ 2018 006c 3E000000 		.4byte	.LFE75-.LFB75
+ 2019 0070 00000000 		.4byte	.LFB76
+ 2020 0074 86000000 		.4byte	.LFE76-.LFB76
+ 2021 0078 00000000 		.4byte	.LFB77
+ 2022 007c 1A000000 		.4byte	.LFE77-.LFB77
+ 2023 0080 00000000 		.4byte	0
+ 2024 0084 00000000 		.4byte	0
+ 2025              		.section	.debug_ranges,"",%progbits
+ 2026              	.Ldebug_ranges0:
+ 2027 0000 00000000 		.4byte	.LFB64
+ 2028 0004 14000000 		.4byte	.LFE64
+ 2029 0008 00000000 		.4byte	.LFB65
+ 2030 000c 14000000 		.4byte	.LFE65
+ 2031 0010 00000000 		.4byte	.LFB66
+ 2032 0014 14000000 		.4byte	.LFE66
+ 2033 0018 00000000 		.4byte	.LFB67
+ 2034 001c 14000000 		.4byte	.LFE67
+ 2035 0020 00000000 		.4byte	.LFB68
+ 2036 0024 14000000 		.4byte	.LFE68
+ 2037 0028 00000000 		.4byte	.LFB69
+ 2038 002c 14000000 		.4byte	.LFE69
+ 2039 0030 00000000 		.4byte	.LFB70
+ 2040 0034 0C000000 		.4byte	.LFE70
+ 2041 0038 00000000 		.4byte	.LFB71
+ 2042 003c 36000000 		.4byte	.LFE71
+ 2043 0040 00000000 		.4byte	.LFB72
+ 2044 0044 36000000 		.4byte	.LFE72
+ 2045 0048 00000000 		.4byte	.LFB73
+ 2046 004c 46000000 		.4byte	.LFE73
+ 2047 0050 00000000 		.4byte	.LFB74
+ 2048 0054 46000000 		.4byte	.LFE74
+ 2049 0058 00000000 		.4byte	.LFB75
+ 2050 005c 3E000000 		.4byte	.LFE75
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 41
+
+
+ 2051 0060 00000000 		.4byte	.LFB76
+ 2052 0064 86000000 		.4byte	.LFE76
+ 2053 0068 00000000 		.4byte	.LFB77
+ 2054 006c 1A000000 		.4byte	.LFE77
+ 2055 0070 00000000 		.4byte	0
+ 2056 0074 00000000 		.4byte	0
+ 2057              		.section	.debug_line,"",%progbits
+ 2058              	.Ldebug_line0:
+ 2059 0000 D0030000 		.section	.debug_str,"MS",%progbits,1
+ 2059      0200C401 
+ 2059      00000201 
+ 2059      FB0E0D00 
+ 2059      01010101 
+ 2060              	.LASF19:
+ 2061 0000 72696768 		.ascii	"right_eyebrow_down\000"
+ 2061      745F6579 
+ 2061      6562726F 
+ 2061      775F646F 
+ 2061      776E00
+ 2062              	.LASF45:
+ 2063 0013 4C656674 		.ascii	"Left_Eyeball_Start\000"
+ 2063      5F457965 
+ 2063      62616C6C 
+ 2063      5F537461 
+ 2063      727400
+ 2064              	.LASF38:
+ 2065 0026 4E65636B 		.ascii	"Neck_Start\000"
+ 2065      5F537461 
+ 2065      727400
+ 2066              	.LASF12:
+ 2067 0031 5F5F696E 		.ascii	"__int32_t\000"
+ 2067      7433325F 
+ 2067      7400
+ 2068              	.LASF33:
+ 2069 003b 42617365 		.ascii	"BaseAndJaw_WriteCompare2\000"
+ 2069      416E644A 
+ 2069      61775F57 
+ 2069      72697465 
+ 2069      436F6D70 
+ 2070              	.LASF41:
+ 2071 0054 4C697073 		.ascii	"Lips_Start\000"
+ 2071      5F537461 
+ 2071      727400
+ 2072              	.LASF22:
+ 2073 005f 65796562 		.ascii	"eyebrow_init\000"
+ 2073      726F775F 
+ 2073      696E6974 
+ 2073      00
+ 2074              	.LASF15:
+ 2075 006c 646F7562 		.ascii	"double\000"
+ 2075      6C6500
+ 2076              	.LASF42:
+ 2077 0073 4579656C 		.ascii	"Eyelid_WriteCompare2\000"
+ 2077      69645F57 
+ 2077      72697465 
+ 2077      436F6D70 
+ 2077      61726532 
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 42
+
+
+ 2078              	.LASF18:
+ 2079 0088 6C656674 		.ascii	"left_eyebrow_down\000"
+ 2079      5F657965 
+ 2079      62726F77 
+ 2079      5F646F77 
+ 2079      6E00
+ 2080              	.LASF47:
+ 2081 009a 52696768 		.ascii	"Right_Eyeball_WriteCompare1\000"
+ 2081      745F4579 
+ 2081      6562616C 
+ 2081      6C5F5772 
+ 2081      69746543 
+ 2082              	.LASF48:
+ 2083 00b6 52696768 		.ascii	"Right_Eyeball_WriteCompare2\000"
+ 2083      745F4579 
+ 2083      6562616C 
+ 2083      6C5F5772 
+ 2083      69746543 
+ 2084              	.LASF14:
+ 2085 00d2 666C6F61 		.ascii	"float\000"
+ 2085      7400
+ 2086              	.LASF30:
+ 2087 00d8 52696768 		.ascii	"Right_Eyebrow_WriteCompare1\000"
+ 2087      745F4579 
+ 2087      6562726F 
+ 2087      775F5772 
+ 2087      69746543 
+ 2088              	.LASF31:
+ 2089 00f4 52696768 		.ascii	"Right_Eyebrow_WriteCompare2\000"
+ 2089      745F4579 
+ 2089      6562726F 
+ 2089      775F5772 
+ 2089      69746543 
+ 2090              	.LASF50:
+ 2091 0110 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2091      43313120 
+ 2091      352E342E 
+ 2091      31203230 
+ 2091      31363036 
+ 2092 0143 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2092      20726576 
+ 2092      6973696F 
+ 2092      6E203233 
+ 2092      37373135 
+ 2093 0176 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2093      66756E63 
+ 2093      74696F6E 
+ 2093      2D736563 
+ 2093      74696F6E 
+ 2094              	.LASF5:
+ 2095 019e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2095      20756E73 
+ 2095      69676E65 
+ 2095      6420696E 
+ 2095      7400
+ 2096              	.LASF3:
+ 2097 01b0 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 43
+
+
+ 2097      7420756E 
+ 2097      7369676E 
+ 2097      65642069 
+ 2097      6E7400
+ 2098              	.LASF21:
+ 2099 01c3 72657365 		.ascii	"reset_right\000"
+ 2099      745F7269 
+ 2099      67687400 
+ 2100              	.LASF49:
+ 2101 01cf 52696768 		.ascii	"Right_Eyebrow_Start\000"
+ 2101      745F4579 
+ 2101      6562726F 
+ 2101      775F5374 
+ 2101      61727400 
+ 2102              	.LASF1:
+ 2103 01e3 756E7369 		.ascii	"unsigned char\000"
+ 2103      676E6564 
+ 2103      20636861 
+ 2103      7200
+ 2104              	.LASF52:
+ 2105 01f1 433A5C55 		.ascii	"C:\\Users\\teju\\Desktop\\CSE564\\Workspace03\\Desi"
+ 2105      73657273 
+ 2105      5C74656A 
+ 2105      755C4465 
+ 2105      736B746F 
+ 2106 021e 676E3031 		.ascii	"gn01.cydsn\000"
+ 2106      2E637964 
+ 2106      736E00
+ 2107              	.LASF46:
+ 2108 0229 52696768 		.ascii	"Right_Eyeball_Start\000"
+ 2108      745F4579 
+ 2108      6562616C 
+ 2108      6C5F5374 
+ 2108      61727400 
+ 2109              	.LASF37:
+ 2110 023d 4E65636B 		.ascii	"Neck_WriteCompare2\000"
+ 2110      5F577269 
+ 2110      7465436F 
+ 2110      6D706172 
+ 2110      653200
+ 2111              	.LASF53:
+ 2112 0250 6D61696E 		.ascii	"main\000"
+ 2112      00
+ 2113              	.LASF32:
+ 2114 0255 42617365 		.ascii	"BaseAndJaw_WriteCompare1\000"
+ 2114      416E644A 
+ 2114      61775F57 
+ 2114      72697465 
+ 2114      436F6D70 
+ 2115              	.LASF28:
+ 2116 026e 4C656674 		.ascii	"Left_Eyebrow_WriteCompare1\000"
+ 2116      5F457965 
+ 2116      62726F77 
+ 2116      5F577269 
+ 2116      7465436F 
+ 2117              	.LASF29:
+ 2118 0289 4C656674 		.ascii	"Left_Eyebrow_WriteCompare2\000"
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 44
+
+
+ 2118      5F457965 
+ 2118      62726F77 
+ 2118      5F577269 
+ 2118      7465436F 
+ 2119              	.LASF54:
+ 2120 02a4 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2120      52784275 
+ 2120      66666572 
+ 2120      00
+ 2121              	.LASF8:
+ 2122 02b1 756E7369 		.ascii	"unsigned int\000"
+ 2122      676E6564 
+ 2122      20696E74 
+ 2122      00
+ 2123              	.LASF7:
+ 2124 02be 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2124      206C6F6E 
+ 2124      6720756E 
+ 2124      7369676E 
+ 2124      65642069 
+ 2125              	.LASF44:
+ 2126 02d5 4C656674 		.ascii	"Left_Eyeball_WriteCompare2\000"
+ 2126      5F457965 
+ 2126      62616C6C 
+ 2126      5F577269 
+ 2126      7465436F 
+ 2127              	.LASF35:
+ 2128 02f0 42617365 		.ascii	"BaseAndJaw_Start\000"
+ 2128      416E644A 
+ 2128      61775F53 
+ 2128      74617274 
+ 2128      00
+ 2129              	.LASF26:
+ 2130 0301 6579656C 		.ascii	"eyelid_openclose\000"
+ 2130      69645F6F 
+ 2130      70656E63 
+ 2130      6C6F7365 
+ 2130      00
+ 2131              	.LASF20:
+ 2132 0312 72657365 		.ascii	"reset_left\000"
+ 2132      745F6C65 
+ 2132      667400
+ 2133              	.LASF17:
+ 2134 031d 72696768 		.ascii	"right_eyebrow_lift\000"
+ 2134      745F6579 
+ 2134      6562726F 
+ 2134      775F6C69 
+ 2134      667400
+ 2135              	.LASF27:
+ 2136 0330 6579656D 		.ascii	"eyemovement\000"
+ 2136      6F76656D 
+ 2136      656E7400 
+ 2137              	.LASF13:
+ 2138 033c 696E7433 		.ascii	"int32_t\000"
+ 2138      325F7400 
+ 2139              	.LASF10:
+ 2140 0344 73697A65 		.ascii	"sizetype\000"
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 45
+
+
+ 2140      74797065 
+ 2140      00
+ 2141              	.LASF6:
+ 2142 034d 6C6F6E67 		.ascii	"long long int\000"
+ 2142      206C6F6E 
+ 2142      6720696E 
+ 2142      7400
+ 2143              	.LASF40:
+ 2144 035b 4C697073 		.ascii	"Lips_WriteCompare2\000"
+ 2144      5F577269 
+ 2144      7465436F 
+ 2144      6D706172 
+ 2144      653200
+ 2145              	.LASF51:
+ 2146 036e 6D61696E 		.ascii	"main.c\000"
+ 2146      2E6300
+ 2147              	.LASF11:
+ 2148 0375 63686172 		.ascii	"char\000"
+ 2148      00
+ 2149              	.LASF23:
+ 2150 037a 6A61776F 		.ascii	"jawopen\000"
+ 2150      70656E00 
+ 2151              	.LASF24:
+ 2152 0382 62617365 		.ascii	"baseturn\000"
+ 2152      7475726E 
+ 2152      00
+ 2153              	.LASF36:
+ 2154 038b 4E65636B 		.ascii	"Neck_WriteCompare1\000"
+ 2154      5F577269 
+ 2154      7465436F 
+ 2154      6D706172 
+ 2154      653100
+ 2155              	.LASF2:
+ 2156 039e 73686F72 		.ascii	"short int\000"
+ 2156      7420696E 
+ 2156      7400
+ 2157              	.LASF43:
+ 2158 03a8 4C656674 		.ascii	"Left_Eyeball_WriteCompare1\000"
+ 2158      5F457965 
+ 2158      62616C6C 
+ 2158      5F577269 
+ 2158      7465436F 
+ 2159              	.LASF39:
+ 2160 03c3 4C697073 		.ascii	"Lips_WriteCompare1\000"
+ 2160      5F577269 
+ 2160      7465436F 
+ 2160      6D706172 
+ 2160      653100
+ 2161              	.LASF4:
+ 2162 03d6 6C6F6E67 		.ascii	"long int\000"
+ 2162      20696E74 
+ 2162      00
+ 2163              	.LASF9:
+ 2164 03df 6C6F6E67 		.ascii	"long double\000"
+ 2164      20646F75 
+ 2164      626C6500 
+ 2165              	.LASF0:
+ARM GAS  C:\Users\teju\AppData\Local\Temp\cc6dVdYf.s 			page 46
+
+
+ 2166 03eb 7369676E 		.ascii	"signed char\000"
+ 2166      65642063 
+ 2166      68617200 
+ 2167              	.LASF25:
+ 2168 03f7 6C69706D 		.ascii	"lipmovement\000"
+ 2168      6F76656D 
+ 2168      656E7400 
+ 2169              	.LASF16:
+ 2170 0403 6C656674 		.ascii	"left_eyebrow_lift\000"
+ 2170      5F657965 
+ 2170      62726F77 
+ 2170      5F6C6966 
+ 2170      7400
+ 2171              	.LASF34:
+ 2172 0415 43794465 		.ascii	"CyDelay\000"
+ 2172      6C617900 
+ 2173              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

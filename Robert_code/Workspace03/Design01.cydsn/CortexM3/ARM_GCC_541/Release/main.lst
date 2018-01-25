@@ -1,0 +1,854 @@
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.startup.main,"ax",%progbits
+  20              		.align	1
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** 
+  14:main.c        **** int main(void)
+  15:main.c        **** {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  16:main.c        ****     
+  17:main.c        **** 
+  18:main.c        ****     
+  19:main.c        ****      Right_Eyebrow_Start();
+  36              		.loc 1 19 0
+  37 0002 FFF7FEFF 		bl	Right_Eyebrow_Start
+  38              	.LVL0:
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 2
+
+
+  20:main.c        ****     Left_Eyebrow_Start();
+  39              		.loc 1 20 0
+  40 0006 FFF7FEFF 		bl	Left_Eyebrow_Start
+  41              	.LVL1:
+  42 000a 0A24     		movs	r4, #10
+  43              	.LVL2:
+  44              	.L2:
+  45              	.LBB2:
+  21:main.c        ****     for(int i=0;i<10;i++)
+  22:main.c        ****     {
+  23:main.c        ****         Right_Eyebrow_WriteCompare1(1500);
+  46              		.loc 1 23 0 discriminator 3
+  47 000c 40F2DC50 		movw	r0, #1500
+  48 0010 FFF7FEFF 		bl	Right_Eyebrow_WriteCompare1
+  49              	.LVL3:
+  24:main.c        ****         Right_Eyebrow_WriteCompare2(2500);
+  50              		.loc 1 24 0 discriminator 3
+  51 0014 40F6C410 		movw	r0, #2500
+  52 0018 FFF7FEFF 		bl	Right_Eyebrow_WriteCompare2
+  53              	.LVL4:
+  25:main.c        ****         
+  26:main.c        ****         Left_Eyebrow_WriteCompare1(1500);
+  54              		.loc 1 26 0 discriminator 3
+  55 001c 40F2DC50 		movw	r0, #1500
+  56 0020 FFF7FEFF 		bl	Left_Eyebrow_WriteCompare1
+  57              	.LVL5:
+  27:main.c        ****         Left_Eyebrow_WriteCompare2(2500);
+  58              		.loc 1 27 0 discriminator 3
+  59 0024 40F6C410 		movw	r0, #2500
+  60 0028 FFF7FEFF 		bl	Left_Eyebrow_WriteCompare2
+  61              	.LVL6:
+  28:main.c        ****         CyDelay(1000);
+  62              		.loc 1 28 0 discriminator 3
+  63 002c 4FF47A70 		mov	r0, #1000
+  64 0030 FFF7FEFF 		bl	CyDelay
+  65              	.LVL7:
+  29:main.c        ****         
+  30:main.c        ****         Left_Eyebrow_WriteCompare1(2500);
+  66              		.loc 1 30 0 discriminator 3
+  67 0034 40F6C410 		movw	r0, #2500
+  68 0038 FFF7FEFF 		bl	Left_Eyebrow_WriteCompare1
+  69              	.LVL8:
+  31:main.c        ****         Left_Eyebrow_WriteCompare2(1500);
+  70              		.loc 1 31 0 discriminator 3
+  71 003c 40F2DC50 		movw	r0, #1500
+  72 0040 FFF7FEFF 		bl	Left_Eyebrow_WriteCompare2
+  73              	.LVL9:
+  32:main.c        ****        // CyDelay(1000);
+  33:main.c        ****         //CyDelay(1000);
+  34:main.c        ****         Right_Eyebrow_WriteCompare1(2500);
+  74              		.loc 1 34 0 discriminator 3
+  75 0044 40F6C410 		movw	r0, #2500
+  76 0048 FFF7FEFF 		bl	Right_Eyebrow_WriteCompare1
+  77              	.LVL10:
+  35:main.c        ****         Right_Eyebrow_WriteCompare2(1500);
+  78              		.loc 1 35 0 discriminator 3
+  79 004c 40F2DC50 		movw	r0, #1500
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 3
+
+
+  80 0050 FFF7FEFF 		bl	Right_Eyebrow_WriteCompare2
+  81              	.LVL11:
+  36:main.c        ****         CyDelay(1000);
+  82              		.loc 1 36 0 discriminator 3
+  83 0054 4FF47A70 		mov	r0, #1000
+  84 0058 FFF7FEFF 		bl	CyDelay
+  85              	.LVL12:
+  21:main.c        ****     {
+  86              		.loc 1 21 0 discriminator 3
+  87 005c 013C     		subs	r4, r4, #1
+  88              	.LVL13:
+  89 005e D5D1     		bne	.L2
+  90              	.LBE2:
+  37:main.c        ****     }
+  38:main.c        ****     
+  39:main.c        ****     for(int i=0;i<20;i+=1)
+  40:main.c        ****     {
+  41:main.c        ****         //Right_Eyeball_WriteCompare1(4000);
+  42:main.c        ****         //Right_Eyeball_WriteCompare2(4000);
+  43:main.c        ****         //CyDelay(1000);
+  44:main.c        ****     }
+  45:main.c        **** }
+  91              		.loc 1 45 0
+  92 0060 2046     		mov	r0, r4
+  93 0062 10BD     		pop	{r4, pc}
+  94              		.cfi_endproc
+  95              	.LFE63:
+  96              		.size	main, .-main
+  97              		.text
+  98              	.Letext0:
+  99              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 100              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 101              		.file 4 "Generated_Source\\PSoC5/Right_Eyebrow.h"
+ 102              		.file 5 "Generated_Source\\PSoC5/Left_Eyebrow.h"
+ 103              		.file 6 "Generated_Source\\PSoC5/CyLib.h"
+ 104              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
+ 105              		.section	.debug_info,"",%progbits
+ 106              	.Ldebug_info0:
+ 107 0000 14020000 		.4byte	0x214
+ 108 0004 0400     		.2byte	0x4
+ 109 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 110 000a 04       		.byte	0x4
+ 111 000b 01       		.uleb128 0x1
+ 112 000c 10010000 		.4byte	.LASF23
+ 113 0010 0C       		.byte	0xc
+ 114 0011 2E000000 		.4byte	.LASF24
+ 115 0015 D3010000 		.4byte	.LASF25
+ 116 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 117 001d 00000000 		.4byte	0
+ 118 0021 00000000 		.4byte	.Ldebug_line0
+ 119 0025 02       		.uleb128 0x2
+ 120 0026 01       		.byte	0x1
+ 121 0027 06       		.byte	0x6
+ 122 0028 AB010000 		.4byte	.LASF0
+ 123 002c 02       		.uleb128 0x2
+ 124 002d 01       		.byte	0x1
+ 125 002e 08       		.byte	0x8
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 4
+
+
+ 126 002f A1000000 		.4byte	.LASF1
+ 127 0033 02       		.uleb128 0x2
+ 128 0034 02       		.byte	0x2
+ 129 0035 05       		.byte	0x5
+ 130 0036 14020000 		.4byte	.LASF2
+ 131 003a 02       		.uleb128 0x2
+ 132 003b 02       		.byte	0x2
+ 133 003c 07       		.byte	0x7
+ 134 003d 0E000000 		.4byte	.LASF3
+ 135 0041 03       		.uleb128 0x3
+ 136 0042 C3010000 		.4byte	.LASF9
+ 137 0046 02       		.byte	0x2
+ 138 0047 3F       		.byte	0x3f
+ 139 0048 4C000000 		.4byte	0x4c
+ 140 004c 02       		.uleb128 0x2
+ 141 004d 04       		.byte	0x4
+ 142 004e 05       		.byte	0x5
+ 143 004f EC000000 		.4byte	.LASF4
+ 144 0053 02       		.uleb128 0x2
+ 145 0054 04       		.byte	0x4
+ 146 0055 07       		.byte	0x7
+ 147 0056 42000000 		.4byte	.LASF5
+ 148 005a 02       		.uleb128 0x2
+ 149 005b 08       		.byte	0x8
+ 150 005c 05       		.byte	0x5
+ 151 005d 00000000 		.4byte	.LASF6
+ 152 0061 02       		.uleb128 0x2
+ 153 0062 08       		.byte	0x8
+ 154 0063 07       		.byte	0x7
+ 155 0064 54000000 		.4byte	.LASF7
+ 156 0068 04       		.uleb128 0x4
+ 157 0069 04       		.byte	0x4
+ 158 006a 05       		.byte	0x5
+ 159 006b 696E7400 		.ascii	"int\000"
+ 160 006f 02       		.uleb128 0x2
+ 161 0070 04       		.byte	0x4
+ 162 0071 07       		.byte	0x7
+ 163 0072 21000000 		.4byte	.LASF8
+ 164 0076 03       		.uleb128 0x3
+ 165 0077 1E020000 		.4byte	.LASF10
+ 166 007b 03       		.byte	0x3
+ 167 007c 2C       		.byte	0x2c
+ 168 007d 41000000 		.4byte	0x41
+ 169 0081 02       		.uleb128 0x2
+ 170 0082 04       		.byte	0x4
+ 171 0083 04       		.byte	0x4
+ 172 0084 CD010000 		.4byte	.LASF11
+ 173 0088 02       		.uleb128 0x2
+ 174 0089 08       		.byte	0x8
+ 175 008a 04       		.byte	0x4
+ 176 008b 09010000 		.4byte	.LASF12
+ 177 008f 02       		.uleb128 0x2
+ 178 0090 01       		.byte	0x1
+ 179 0091 08       		.byte	0x8
+ 180 0092 AF000000 		.4byte	.LASF13
+ 181 0096 02       		.uleb128 0x2
+ 182 0097 08       		.byte	0x8
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 5
+
+
+ 183 0098 04       		.byte	0x4
+ 184 0099 B7010000 		.4byte	.LASF14
+ 185 009d 02       		.uleb128 0x2
+ 186 009e 04       		.byte	0x4
+ 187 009f 07       		.byte	0x7
+ 188 00a0 39020000 		.4byte	.LASF15
+ 189 00a4 05       		.uleb128 0x5
+ 190 00a5 35000000 		.4byte	.LASF26
+ 191 00a9 01       		.byte	0x1
+ 192 00aa 0E       		.byte	0xe
+ 193 00ab 68000000 		.4byte	0x68
+ 194 00af 00000000 		.4byte	.LFB63
+ 195 00b3 64000000 		.4byte	.LFE63-.LFB63
+ 196 00b7 01       		.uleb128 0x1
+ 197 00b8 9C       		.byte	0x9c
+ 198 00b9 B9010000 		.4byte	0x1b9
+ 199 00bd 06       		.uleb128 0x6
+ 200 00be 0C000000 		.4byte	.LBB2
+ 201 00c2 54000000 		.4byte	.LBE2-.LBB2
+ 202 00c6 A6010000 		.4byte	0x1a6
+ 203 00ca 07       		.uleb128 0x7
+ 204 00cb 6900     		.ascii	"i\000"
+ 205 00cd 01       		.byte	0x1
+ 206 00ce 15       		.byte	0x15
+ 207 00cf 68000000 		.4byte	0x68
+ 208 00d3 00000000 		.4byte	.LLST0
+ 209 00d7 08       		.uleb128 0x8
+ 210 00d8 14000000 		.4byte	.LVL3
+ 211 00dc CA010000 		.4byte	0x1ca
+ 212 00e0 EC000000 		.4byte	0xec
+ 213 00e4 09       		.uleb128 0x9
+ 214 00e5 01       		.uleb128 0x1
+ 215 00e6 50       		.byte	0x50
+ 216 00e7 03       		.uleb128 0x3
+ 217 00e8 0A       		.byte	0xa
+ 218 00e9 DC05     		.2byte	0x5dc
+ 219 00eb 00       		.byte	0
+ 220 00ec 08       		.uleb128 0x8
+ 221 00ed 1C000000 		.4byte	.LVL4
+ 222 00f1 D5010000 		.4byte	0x1d5
+ 223 00f5 01010000 		.4byte	0x101
+ 224 00f9 09       		.uleb128 0x9
+ 225 00fa 01       		.uleb128 0x1
+ 226 00fb 50       		.byte	0x50
+ 227 00fc 03       		.uleb128 0x3
+ 228 00fd 0A       		.byte	0xa
+ 229 00fe C409     		.2byte	0x9c4
+ 230 0100 00       		.byte	0
+ 231 0101 08       		.uleb128 0x8
+ 232 0102 24000000 		.4byte	.LVL5
+ 233 0106 E0010000 		.4byte	0x1e0
+ 234 010a 16010000 		.4byte	0x116
+ 235 010e 09       		.uleb128 0x9
+ 236 010f 01       		.uleb128 0x1
+ 237 0110 50       		.byte	0x50
+ 238 0111 03       		.uleb128 0x3
+ 239 0112 0A       		.byte	0xa
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 6
+
+
+ 240 0113 DC05     		.2byte	0x5dc
+ 241 0115 00       		.byte	0
+ 242 0116 08       		.uleb128 0x8
+ 243 0117 2C000000 		.4byte	.LVL6
+ 244 011b EB010000 		.4byte	0x1eb
+ 245 011f 2B010000 		.4byte	0x12b
+ 246 0123 09       		.uleb128 0x9
+ 247 0124 01       		.uleb128 0x1
+ 248 0125 50       		.byte	0x50
+ 249 0126 03       		.uleb128 0x3
+ 250 0127 0A       		.byte	0xa
+ 251 0128 C409     		.2byte	0x9c4
+ 252 012a 00       		.byte	0
+ 253 012b 08       		.uleb128 0x8
+ 254 012c 34000000 		.4byte	.LVL7
+ 255 0130 F6010000 		.4byte	0x1f6
+ 256 0134 40010000 		.4byte	0x140
+ 257 0138 09       		.uleb128 0x9
+ 258 0139 01       		.uleb128 0x1
+ 259 013a 50       		.byte	0x50
+ 260 013b 03       		.uleb128 0x3
+ 261 013c 0A       		.byte	0xa
+ 262 013d E803     		.2byte	0x3e8
+ 263 013f 00       		.byte	0
+ 264 0140 08       		.uleb128 0x8
+ 265 0141 3C000000 		.4byte	.LVL8
+ 266 0145 E0010000 		.4byte	0x1e0
+ 267 0149 55010000 		.4byte	0x155
+ 268 014d 09       		.uleb128 0x9
+ 269 014e 01       		.uleb128 0x1
+ 270 014f 50       		.byte	0x50
+ 271 0150 03       		.uleb128 0x3
+ 272 0151 0A       		.byte	0xa
+ 273 0152 C409     		.2byte	0x9c4
+ 274 0154 00       		.byte	0
+ 275 0155 08       		.uleb128 0x8
+ 276 0156 44000000 		.4byte	.LVL9
+ 277 015a EB010000 		.4byte	0x1eb
+ 278 015e 6A010000 		.4byte	0x16a
+ 279 0162 09       		.uleb128 0x9
+ 280 0163 01       		.uleb128 0x1
+ 281 0164 50       		.byte	0x50
+ 282 0165 03       		.uleb128 0x3
+ 283 0166 0A       		.byte	0xa
+ 284 0167 DC05     		.2byte	0x5dc
+ 285 0169 00       		.byte	0
+ 286 016a 08       		.uleb128 0x8
+ 287 016b 4C000000 		.4byte	.LVL10
+ 288 016f CA010000 		.4byte	0x1ca
+ 289 0173 7F010000 		.4byte	0x17f
+ 290 0177 09       		.uleb128 0x9
+ 291 0178 01       		.uleb128 0x1
+ 292 0179 50       		.byte	0x50
+ 293 017a 03       		.uleb128 0x3
+ 294 017b 0A       		.byte	0xa
+ 295 017c C409     		.2byte	0x9c4
+ 296 017e 00       		.byte	0
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 7
+
+
+ 297 017f 08       		.uleb128 0x8
+ 298 0180 54000000 		.4byte	.LVL11
+ 299 0184 D5010000 		.4byte	0x1d5
+ 300 0188 94010000 		.4byte	0x194
+ 301 018c 09       		.uleb128 0x9
+ 302 018d 01       		.uleb128 0x1
+ 303 018e 50       		.byte	0x50
+ 304 018f 03       		.uleb128 0x3
+ 305 0190 0A       		.byte	0xa
+ 306 0191 DC05     		.2byte	0x5dc
+ 307 0193 00       		.byte	0
+ 308 0194 0A       		.uleb128 0xa
+ 309 0195 5C000000 		.4byte	.LVL12
+ 310 0199 F6010000 		.4byte	0x1f6
+ 311 019d 09       		.uleb128 0x9
+ 312 019e 01       		.uleb128 0x1
+ 313 019f 50       		.byte	0x50
+ 314 01a0 03       		.uleb128 0x3
+ 315 01a1 0A       		.byte	0xa
+ 316 01a2 E803     		.2byte	0x3e8
+ 317 01a4 00       		.byte	0
+ 318 01a5 00       		.byte	0
+ 319 01a6 0B       		.uleb128 0xb
+ 320 01a7 06000000 		.4byte	.LVL0
+ 321 01ab 01020000 		.4byte	0x201
+ 322 01af 0B       		.uleb128 0xb
+ 323 01b0 0A000000 		.4byte	.LVL1
+ 324 01b4 0C020000 		.4byte	0x20c
+ 325 01b8 00       		.byte	0
+ 326 01b9 0C       		.uleb128 0xc
+ 327 01ba 9E010000 		.4byte	.LASF27
+ 328 01be 07       		.byte	0x7
+ 329 01bf 1207     		.2byte	0x712
+ 330 01c1 C5010000 		.4byte	0x1c5
+ 331 01c5 0D       		.uleb128 0xd
+ 332 01c6 76000000 		.4byte	0x76
+ 333 01ca 0E       		.uleb128 0xe
+ 334 01cb B4000000 		.4byte	.LASF16
+ 335 01cf B4000000 		.4byte	.LASF16
+ 336 01d3 04       		.byte	0x4
+ 337 01d4 C7       		.byte	0xc7
+ 338 01d5 0E       		.uleb128 0xe
+ 339 01d6 D0000000 		.4byte	.LASF17
+ 340 01da D0000000 		.4byte	.LASF17
+ 341 01de 04       		.byte	0x4
+ 342 01df CA       		.byte	0xca
+ 343 01e0 0E       		.uleb128 0xe
+ 344 01e1 6B000000 		.4byte	.LASF18
+ 345 01e5 6B000000 		.4byte	.LASF18
+ 346 01e9 05       		.byte	0x5
+ 347 01ea C7       		.byte	0xc7
+ 348 01eb 0E       		.uleb128 0xe
+ 349 01ec 86000000 		.4byte	.LASF19
+ 350 01f0 86000000 		.4byte	.LASF19
+ 351 01f4 05       		.byte	0x5
+ 352 01f5 CA       		.byte	0xca
+ 353 01f6 0E       		.uleb128 0xe
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 8
+
+
+ 354 01f7 3A000000 		.4byte	.LASF20
+ 355 01fb 3A000000 		.4byte	.LASF20
+ 356 01ff 06       		.byte	0x6
+ 357 0200 76       		.byte	0x76
+ 358 0201 0E       		.uleb128 0xe
+ 359 0202 F5000000 		.4byte	.LASF21
+ 360 0206 F5000000 		.4byte	.LASF21
+ 361 020a 04       		.byte	0x4
+ 362 020b 92       		.byte	0x92
+ 363 020c 0E       		.uleb128 0xe
+ 364 020d 26020000 		.4byte	.LASF22
+ 365 0211 26020000 		.4byte	.LASF22
+ 366 0215 05       		.byte	0x5
+ 367 0216 92       		.byte	0x92
+ 368 0217 00       		.byte	0
+ 369              		.section	.debug_abbrev,"",%progbits
+ 370              	.Ldebug_abbrev0:
+ 371 0000 01       		.uleb128 0x1
+ 372 0001 11       		.uleb128 0x11
+ 373 0002 01       		.byte	0x1
+ 374 0003 25       		.uleb128 0x25
+ 375 0004 0E       		.uleb128 0xe
+ 376 0005 13       		.uleb128 0x13
+ 377 0006 0B       		.uleb128 0xb
+ 378 0007 03       		.uleb128 0x3
+ 379 0008 0E       		.uleb128 0xe
+ 380 0009 1B       		.uleb128 0x1b
+ 381 000a 0E       		.uleb128 0xe
+ 382 000b 55       		.uleb128 0x55
+ 383 000c 17       		.uleb128 0x17
+ 384 000d 11       		.uleb128 0x11
+ 385 000e 01       		.uleb128 0x1
+ 386 000f 10       		.uleb128 0x10
+ 387 0010 17       		.uleb128 0x17
+ 388 0011 00       		.byte	0
+ 389 0012 00       		.byte	0
+ 390 0013 02       		.uleb128 0x2
+ 391 0014 24       		.uleb128 0x24
+ 392 0015 00       		.byte	0
+ 393 0016 0B       		.uleb128 0xb
+ 394 0017 0B       		.uleb128 0xb
+ 395 0018 3E       		.uleb128 0x3e
+ 396 0019 0B       		.uleb128 0xb
+ 397 001a 03       		.uleb128 0x3
+ 398 001b 0E       		.uleb128 0xe
+ 399 001c 00       		.byte	0
+ 400 001d 00       		.byte	0
+ 401 001e 03       		.uleb128 0x3
+ 402 001f 16       		.uleb128 0x16
+ 403 0020 00       		.byte	0
+ 404 0021 03       		.uleb128 0x3
+ 405 0022 0E       		.uleb128 0xe
+ 406 0023 3A       		.uleb128 0x3a
+ 407 0024 0B       		.uleb128 0xb
+ 408 0025 3B       		.uleb128 0x3b
+ 409 0026 0B       		.uleb128 0xb
+ 410 0027 49       		.uleb128 0x49
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 9
+
+
+ 411 0028 13       		.uleb128 0x13
+ 412 0029 00       		.byte	0
+ 413 002a 00       		.byte	0
+ 414 002b 04       		.uleb128 0x4
+ 415 002c 24       		.uleb128 0x24
+ 416 002d 00       		.byte	0
+ 417 002e 0B       		.uleb128 0xb
+ 418 002f 0B       		.uleb128 0xb
+ 419 0030 3E       		.uleb128 0x3e
+ 420 0031 0B       		.uleb128 0xb
+ 421 0032 03       		.uleb128 0x3
+ 422 0033 08       		.uleb128 0x8
+ 423 0034 00       		.byte	0
+ 424 0035 00       		.byte	0
+ 425 0036 05       		.uleb128 0x5
+ 426 0037 2E       		.uleb128 0x2e
+ 427 0038 01       		.byte	0x1
+ 428 0039 3F       		.uleb128 0x3f
+ 429 003a 19       		.uleb128 0x19
+ 430 003b 03       		.uleb128 0x3
+ 431 003c 0E       		.uleb128 0xe
+ 432 003d 3A       		.uleb128 0x3a
+ 433 003e 0B       		.uleb128 0xb
+ 434 003f 3B       		.uleb128 0x3b
+ 435 0040 0B       		.uleb128 0xb
+ 436 0041 27       		.uleb128 0x27
+ 437 0042 19       		.uleb128 0x19
+ 438 0043 49       		.uleb128 0x49
+ 439 0044 13       		.uleb128 0x13
+ 440 0045 11       		.uleb128 0x11
+ 441 0046 01       		.uleb128 0x1
+ 442 0047 12       		.uleb128 0x12
+ 443 0048 06       		.uleb128 0x6
+ 444 0049 40       		.uleb128 0x40
+ 445 004a 18       		.uleb128 0x18
+ 446 004b 9742     		.uleb128 0x2117
+ 447 004d 19       		.uleb128 0x19
+ 448 004e 01       		.uleb128 0x1
+ 449 004f 13       		.uleb128 0x13
+ 450 0050 00       		.byte	0
+ 451 0051 00       		.byte	0
+ 452 0052 06       		.uleb128 0x6
+ 453 0053 0B       		.uleb128 0xb
+ 454 0054 01       		.byte	0x1
+ 455 0055 11       		.uleb128 0x11
+ 456 0056 01       		.uleb128 0x1
+ 457 0057 12       		.uleb128 0x12
+ 458 0058 06       		.uleb128 0x6
+ 459 0059 01       		.uleb128 0x1
+ 460 005a 13       		.uleb128 0x13
+ 461 005b 00       		.byte	0
+ 462 005c 00       		.byte	0
+ 463 005d 07       		.uleb128 0x7
+ 464 005e 34       		.uleb128 0x34
+ 465 005f 00       		.byte	0
+ 466 0060 03       		.uleb128 0x3
+ 467 0061 08       		.uleb128 0x8
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 10
+
+
+ 468 0062 3A       		.uleb128 0x3a
+ 469 0063 0B       		.uleb128 0xb
+ 470 0064 3B       		.uleb128 0x3b
+ 471 0065 0B       		.uleb128 0xb
+ 472 0066 49       		.uleb128 0x49
+ 473 0067 13       		.uleb128 0x13
+ 474 0068 02       		.uleb128 0x2
+ 475 0069 17       		.uleb128 0x17
+ 476 006a 00       		.byte	0
+ 477 006b 00       		.byte	0
+ 478 006c 08       		.uleb128 0x8
+ 479 006d 898201   		.uleb128 0x4109
+ 480 0070 01       		.byte	0x1
+ 481 0071 11       		.uleb128 0x11
+ 482 0072 01       		.uleb128 0x1
+ 483 0073 31       		.uleb128 0x31
+ 484 0074 13       		.uleb128 0x13
+ 485 0075 01       		.uleb128 0x1
+ 486 0076 13       		.uleb128 0x13
+ 487 0077 00       		.byte	0
+ 488 0078 00       		.byte	0
+ 489 0079 09       		.uleb128 0x9
+ 490 007a 8A8201   		.uleb128 0x410a
+ 491 007d 00       		.byte	0
+ 492 007e 02       		.uleb128 0x2
+ 493 007f 18       		.uleb128 0x18
+ 494 0080 9142     		.uleb128 0x2111
+ 495 0082 18       		.uleb128 0x18
+ 496 0083 00       		.byte	0
+ 497 0084 00       		.byte	0
+ 498 0085 0A       		.uleb128 0xa
+ 499 0086 898201   		.uleb128 0x4109
+ 500 0089 01       		.byte	0x1
+ 501 008a 11       		.uleb128 0x11
+ 502 008b 01       		.uleb128 0x1
+ 503 008c 31       		.uleb128 0x31
+ 504 008d 13       		.uleb128 0x13
+ 505 008e 00       		.byte	0
+ 506 008f 00       		.byte	0
+ 507 0090 0B       		.uleb128 0xb
+ 508 0091 898201   		.uleb128 0x4109
+ 509 0094 00       		.byte	0
+ 510 0095 11       		.uleb128 0x11
+ 511 0096 01       		.uleb128 0x1
+ 512 0097 31       		.uleb128 0x31
+ 513 0098 13       		.uleb128 0x13
+ 514 0099 00       		.byte	0
+ 515 009a 00       		.byte	0
+ 516 009b 0C       		.uleb128 0xc
+ 517 009c 34       		.uleb128 0x34
+ 518 009d 00       		.byte	0
+ 519 009e 03       		.uleb128 0x3
+ 520 009f 0E       		.uleb128 0xe
+ 521 00a0 3A       		.uleb128 0x3a
+ 522 00a1 0B       		.uleb128 0xb
+ 523 00a2 3B       		.uleb128 0x3b
+ 524 00a3 05       		.uleb128 0x5
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 11
+
+
+ 525 00a4 49       		.uleb128 0x49
+ 526 00a5 13       		.uleb128 0x13
+ 527 00a6 3F       		.uleb128 0x3f
+ 528 00a7 19       		.uleb128 0x19
+ 529 00a8 3C       		.uleb128 0x3c
+ 530 00a9 19       		.uleb128 0x19
+ 531 00aa 00       		.byte	0
+ 532 00ab 00       		.byte	0
+ 533 00ac 0D       		.uleb128 0xd
+ 534 00ad 35       		.uleb128 0x35
+ 535 00ae 00       		.byte	0
+ 536 00af 49       		.uleb128 0x49
+ 537 00b0 13       		.uleb128 0x13
+ 538 00b1 00       		.byte	0
+ 539 00b2 00       		.byte	0
+ 540 00b3 0E       		.uleb128 0xe
+ 541 00b4 2E       		.uleb128 0x2e
+ 542 00b5 00       		.byte	0
+ 543 00b6 3F       		.uleb128 0x3f
+ 544 00b7 19       		.uleb128 0x19
+ 545 00b8 3C       		.uleb128 0x3c
+ 546 00b9 19       		.uleb128 0x19
+ 547 00ba 6E       		.uleb128 0x6e
+ 548 00bb 0E       		.uleb128 0xe
+ 549 00bc 03       		.uleb128 0x3
+ 550 00bd 0E       		.uleb128 0xe
+ 551 00be 3A       		.uleb128 0x3a
+ 552 00bf 0B       		.uleb128 0xb
+ 553 00c0 3B       		.uleb128 0x3b
+ 554 00c1 0B       		.uleb128 0xb
+ 555 00c2 00       		.byte	0
+ 556 00c3 00       		.byte	0
+ 557 00c4 00       		.byte	0
+ 558              		.section	.debug_loc,"",%progbits
+ 559              	.Ldebug_loc0:
+ 560              	.LLST0:
+ 561 0000 0A000000 		.4byte	.LVL1
+ 562 0004 0C000000 		.4byte	.LVL2
+ 563 0008 0200     		.2byte	0x2
+ 564 000a 30       		.byte	0x30
+ 565 000b 9F       		.byte	0x9f
+ 566 000c 0C000000 		.4byte	.LVL2
+ 567 0010 5C000000 		.4byte	.LVL12
+ 568 0014 0500     		.2byte	0x5
+ 569 0016 3A       		.byte	0x3a
+ 570 0017 74       		.byte	0x74
+ 571 0018 00       		.sleb128 0
+ 572 0019 1C       		.byte	0x1c
+ 573 001a 9F       		.byte	0x9f
+ 574 001b 5C000000 		.4byte	.LVL12
+ 575 001f 5E000000 		.4byte	.LVL13
+ 576 0023 0500     		.2byte	0x5
+ 577 0025 3B       		.byte	0x3b
+ 578 0026 74       		.byte	0x74
+ 579 0027 00       		.sleb128 0
+ 580 0028 1C       		.byte	0x1c
+ 581 0029 9F       		.byte	0x9f
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 12
+
+
+ 582 002a 5E000000 		.4byte	.LVL13
+ 583 002e 64000000 		.4byte	.LFE63
+ 584 0032 0500     		.2byte	0x5
+ 585 0034 3A       		.byte	0x3a
+ 586 0035 74       		.byte	0x74
+ 587 0036 00       		.sleb128 0
+ 588 0037 1C       		.byte	0x1c
+ 589 0038 9F       		.byte	0x9f
+ 590 0039 00000000 		.4byte	0
+ 591 003d 00000000 		.4byte	0
+ 592              		.section	.debug_aranges,"",%progbits
+ 593 0000 1C000000 		.4byte	0x1c
+ 594 0004 0200     		.2byte	0x2
+ 595 0006 00000000 		.4byte	.Ldebug_info0
+ 596 000a 04       		.byte	0x4
+ 597 000b 00       		.byte	0
+ 598 000c 0000     		.2byte	0
+ 599 000e 0000     		.2byte	0
+ 600 0010 00000000 		.4byte	.LFB63
+ 601 0014 64000000 		.4byte	.LFE63-.LFB63
+ 602 0018 00000000 		.4byte	0
+ 603 001c 00000000 		.4byte	0
+ 604              		.section	.debug_ranges,"",%progbits
+ 605              	.Ldebug_ranges0:
+ 606 0000 00000000 		.4byte	.LFB63
+ 607 0004 64000000 		.4byte	.LFE63
+ 608 0008 00000000 		.4byte	0
+ 609 000c 00000000 		.4byte	0
+ 610              		.section	.debug_line,"",%progbits
+ 611              	.Ldebug_line0:
+ 612 0000 C2010000 		.section	.debug_str,"MS",%progbits,1
+ 612      02006F01 
+ 612      00000201 
+ 612      FB0E0D00 
+ 612      01010101 
+ 613              	.LASF6:
+ 614 0000 6C6F6E67 		.ascii	"long long int\000"
+ 614      206C6F6E 
+ 614      6720696E 
+ 614      7400
+ 615              	.LASF3:
+ 616 000e 73686F72 		.ascii	"short unsigned int\000"
+ 616      7420756E 
+ 616      7369676E 
+ 616      65642069 
+ 616      6E7400
+ 617              	.LASF8:
+ 618 0021 756E7369 		.ascii	"unsigned int\000"
+ 618      676E6564 
+ 618      20696E74 
+ 618      00
+ 619              	.LASF24:
+ 620 002e 6D61696E 		.ascii	"main.c\000"
+ 620      2E6300
+ 621              	.LASF26:
+ 622 0035 6D61696E 		.ascii	"main\000"
+ 622      00
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 13
+
+
+ 623              	.LASF20:
+ 624 003a 43794465 		.ascii	"CyDelay\000"
+ 624      6C617900 
+ 625              	.LASF5:
+ 626 0042 6C6F6E67 		.ascii	"long unsigned int\000"
+ 626      20756E73 
+ 626      69676E65 
+ 626      6420696E 
+ 626      7400
+ 627              	.LASF7:
+ 628 0054 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 628      206C6F6E 
+ 628      6720756E 
+ 628      7369676E 
+ 628      65642069 
+ 629              	.LASF18:
+ 630 006b 4C656674 		.ascii	"Left_Eyebrow_WriteCompare1\000"
+ 630      5F457965 
+ 630      62726F77 
+ 630      5F577269 
+ 630      7465436F 
+ 631              	.LASF19:
+ 632 0086 4C656674 		.ascii	"Left_Eyebrow_WriteCompare2\000"
+ 632      5F457965 
+ 632      62726F77 
+ 632      5F577269 
+ 632      7465436F 
+ 633              	.LASF1:
+ 634 00a1 756E7369 		.ascii	"unsigned char\000"
+ 634      676E6564 
+ 634      20636861 
+ 634      7200
+ 635              	.LASF13:
+ 636 00af 63686172 		.ascii	"char\000"
+ 636      00
+ 637              	.LASF16:
+ 638 00b4 52696768 		.ascii	"Right_Eyebrow_WriteCompare1\000"
+ 638      745F4579 
+ 638      6562726F 
+ 638      775F5772 
+ 638      69746543 
+ 639              	.LASF17:
+ 640 00d0 52696768 		.ascii	"Right_Eyebrow_WriteCompare2\000"
+ 640      745F4579 
+ 640      6562726F 
+ 640      775F5772 
+ 640      69746543 
+ 641              	.LASF4:
+ 642 00ec 6C6F6E67 		.ascii	"long int\000"
+ 642      20696E74 
+ 642      00
+ 643              	.LASF21:
+ 644 00f5 52696768 		.ascii	"Right_Eyebrow_Start\000"
+ 644      745F4579 
+ 644      6562726F 
+ 644      775F5374 
+ 644      61727400 
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 14
+
+
+ 645              	.LASF12:
+ 646 0109 646F7562 		.ascii	"double\000"
+ 646      6C6500
+ 647              	.LASF23:
+ 648 0110 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 648      43313120 
+ 648      352E342E 
+ 648      31203230 
+ 648      31363036 
+ 649 0143 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 649      20726576 
+ 649      6973696F 
+ 649      6E203233 
+ 649      37373135 
+ 650 0176 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 650      66756E63 
+ 650      74696F6E 
+ 650      2D736563 
+ 650      74696F6E 
+ 651              	.LASF27:
+ 652 019e 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 652      52784275 
+ 652      66666572 
+ 652      00
+ 653              	.LASF0:
+ 654 01ab 7369676E 		.ascii	"signed char\000"
+ 654      65642063 
+ 654      68617200 
+ 655              	.LASF14:
+ 656 01b7 6C6F6E67 		.ascii	"long double\000"
+ 656      20646F75 
+ 656      626C6500 
+ 657              	.LASF9:
+ 658 01c3 5F5F696E 		.ascii	"__int32_t\000"
+ 658      7433325F 
+ 658      7400
+ 659              	.LASF11:
+ 660 01cd 666C6F61 		.ascii	"float\000"
+ 660      7400
+ 661              	.LASF25:
+ 662 01d3 433A5C55 		.ascii	"C:\\Users\\vivek\\Documents\\PSoC Creator\\Workspac"
+ 662      73657273 
+ 662      5C766976 
+ 662      656B5C44 
+ 662      6F63756D 
+ 663 0201 6530335C 		.ascii	"e03\\Design01.cydsn\000"
+ 663      44657369 
+ 663      676E3031 
+ 663      2E637964 
+ 663      736E00
+ 664              	.LASF2:
+ 665 0214 73686F72 		.ascii	"short int\000"
+ 665      7420696E 
+ 665      7400
+ 666              	.LASF10:
+ 667 021e 696E7433 		.ascii	"int32_t\000"
+ 667      325F7400 
+ARM GAS  C:\Users\vivek\AppData\Local\Temp\cczZW2eQ.s 			page 15
+
+
+ 668              	.LASF22:
+ 669 0226 4C656674 		.ascii	"Left_Eyebrow_Start\000"
+ 669      5F457965 
+ 669      62726F77 
+ 669      5F537461 
+ 669      727400
+ 670              	.LASF15:
+ 671 0239 73697A65 		.ascii	"sizetype\000"
+ 671      74797065 
+ 671      00
+ 672              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

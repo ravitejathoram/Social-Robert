@@ -1,0 +1,137 @@
+--------------- Rebuild Started: 11/26/2017 19:04:05 Project: Design01, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\main.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cymetadata.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Clock_1.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Cm3Start.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyDmac.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyFlash.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyLib.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cyPm.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CySpc.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cyutils.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Left_Eyebrow.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Left_Eyebrow_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Clock_2.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Right_Eyebrow.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Right_Eyebrow_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Right_Eyebrow_Inner.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Right_Eyebrow_Outer.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Left_Eyebrow_Inner.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Left_Eyebrow_Outer.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\EyeballVertical.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\EyeballVertical_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Clock_3.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\RightEyeball_Vertical.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\LeftEyeball_Vertical.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\EyeballHorizontal.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\EyeballHorizontal_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\RightEyeball_Horizontal.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\LeftEyeball_Horizontal.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Clock_4.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Eyelid.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Eyelid_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Clock_5.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\EyelidVertical.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Eyelid_Open_Close.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\BaseAndJaw.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\BaseAndJaw_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Base.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Jaw.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Clock_6.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Lips.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Lips_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\RightLip.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\LeftLip.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Clock_7.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Neck.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Neck_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Clock_8.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\RightNeck.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\LeftNeck.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Design01.hex"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Design01.elf"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Design01.map"
+Deleting file ".\Design01.cycdx"
+Deleting file ".\Design01.svd"
+Deleting file ".\Design01.rpt"
+Deleting file ".\Design01_timing.html"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\.deps\SOURCE_C__ARM_GCC_GENERIC.P"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\.deps\SOURCE_ASM__ARM_GCC_GENERIC.P"
+cydsfit.exe -.appdatapath "C:\Users\teju\AppData\Local\Cypress Semiconductor\PSoC Creator\4.1" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\teju\Desktop\CSE564\Workspace03\Design01.cydsn\Design01.cyprj -d CY8C5888LTQ-LP097 -s C:\Users\teju\Desktop\CSE564\Workspace03\Design01.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+HDL Generation...
+Synthesis...
+Tech Mapping...
+ADD: pft.M0040: information: The following 11 pin(s) will be assigned a location by the fitter: Base(0), Eyelid_Open_Close(0), EyelidVertical(0), LeftEyeball_Horizontal(0), LeftEyeball_Vertical(0), LeftLip(0), LeftNeck(0), RightEyeball_Horizontal(0), RightEyeball_Vertical(0), RightLip(0), RightNeck(0)
+Analog Placement...
+Analog Routing...
+Analog Code Generation...
+Digital Placement...
+Digital Routing...
+Bitstream Generation...
+Bitstream Verification...
+Static timing analysis...
+API Generation...
+Dependency Generation...
+Cleanup...
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cyfitter_cfg.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cyfitter_cfg.c -o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cymetadata.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cymetadata.c -o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Clock_1.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Clock_1.c -o .\CortexM3\ARM_GCC_541\Debug\Clock_1.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Cm3Start.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Cm3Start.c -o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CyDmac.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\CyDmac.c -o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CyFlash.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\CyFlash.c -o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CyLib.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\CyLib.c -o .\CortexM3\ARM_GCC_541\Debug\CyLib.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cyPm.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cyPm.c -o .\CortexM3\ARM_GCC_541\Debug\cyPm.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CySpc.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\CySpc.c -o .\CortexM3\ARM_GCC_541\Debug\CySpc.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cyutils.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cyutils.c -o .\CortexM3\ARM_GCC_541\Debug\cyutils.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Left_Eyebrow.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Left_Eyebrow.c -o .\CortexM3\ARM_GCC_541\Debug\Left_Eyebrow.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Left_Eyebrow_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Left_Eyebrow_PM.c -o .\CortexM3\ARM_GCC_541\Debug\Left_Eyebrow_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Clock_2.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Clock_2.c -o .\CortexM3\ARM_GCC_541\Debug\Clock_2.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Right_Eyebrow.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Right_Eyebrow.c -o .\CortexM3\ARM_GCC_541\Debug\Right_Eyebrow.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Right_Eyebrow_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Right_Eyebrow_PM.c -o .\CortexM3\ARM_GCC_541\Debug\Right_Eyebrow_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Right_Eyebrow_Inner.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Right_Eyebrow_Inner.c -o .\CortexM3\ARM_GCC_541\Debug\Right_Eyebrow_Inner.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Right_Eyebrow_Outer.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Right_Eyebrow_Outer.c -o .\CortexM3\ARM_GCC_541\Debug\Right_Eyebrow_Outer.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Left_Eyebrow_Inner.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Left_Eyebrow_Inner.c -o .\CortexM3\ARM_GCC_541\Debug\Left_Eyebrow_Inner.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Left_Eyebrow_Outer.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Left_Eyebrow_Outer.c -o .\CortexM3\ARM_GCC_541\Debug\Left_Eyebrow_Outer.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/EyeballVertical.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\EyeballVertical.c -o .\CortexM3\ARM_GCC_541\Debug\EyeballVertical.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/EyeballVertical_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\EyeballVertical_PM.c -o .\CortexM3\ARM_GCC_541\Debug\EyeballVertical_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Clock_3.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Clock_3.c -o .\CortexM3\ARM_GCC_541\Debug\Clock_3.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/RightEyeball_Vertical.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\RightEyeball_Vertical.c -o .\CortexM3\ARM_GCC_541\Debug\RightEyeball_Vertical.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/LeftEyeball_Vertical.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\LeftEyeball_Vertical.c -o .\CortexM3\ARM_GCC_541\Debug\LeftEyeball_Vertical.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/EyeballHorizontal.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\EyeballHorizontal.c -o .\CortexM3\ARM_GCC_541\Debug\EyeballHorizontal.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/EyeballHorizontal_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\EyeballHorizontal_PM.c -o .\CortexM3\ARM_GCC_541\Debug\EyeballHorizontal_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/RightEyeball_Horizontal.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\RightEyeball_Horizontal.c -o .\CortexM3\ARM_GCC_541\Debug\RightEyeball_Horizontal.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/LeftEyeball_Horizontal.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\LeftEyeball_Horizontal.c -o .\CortexM3\ARM_GCC_541\Debug\LeftEyeball_Horizontal.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Clock_4.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Clock_4.c -o .\CortexM3\ARM_GCC_541\Debug\Clock_4.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Eyelid.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Eyelid.c -o .\CortexM3\ARM_GCC_541\Debug\Eyelid.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Eyelid_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Eyelid_PM.c -o .\CortexM3\ARM_GCC_541\Debug\Eyelid_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Clock_5.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Clock_5.c -o .\CortexM3\ARM_GCC_541\Debug\Clock_5.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/EyelidVertical.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\EyelidVertical.c -o .\CortexM3\ARM_GCC_541\Debug\EyelidVertical.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Eyelid_Open_Close.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Eyelid_Open_Close.c -o .\CortexM3\ARM_GCC_541\Debug\Eyelid_Open_Close.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/BaseAndJaw.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\BaseAndJaw.c -o .\CortexM3\ARM_GCC_541\Debug\BaseAndJaw.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/BaseAndJaw_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\BaseAndJaw_PM.c -o .\CortexM3\ARM_GCC_541\Debug\BaseAndJaw_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Base.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Base.c -o .\CortexM3\ARM_GCC_541\Debug\Base.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Jaw.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Jaw.c -o .\CortexM3\ARM_GCC_541\Debug\Jaw.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Clock_6.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Clock_6.c -o .\CortexM3\ARM_GCC_541\Debug\Clock_6.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Lips.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Lips.c -o .\CortexM3\ARM_GCC_541\Debug\Lips.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Lips_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Lips_PM.c -o .\CortexM3\ARM_GCC_541\Debug\Lips_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/RightLip.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\RightLip.c -o .\CortexM3\ARM_GCC_541\Debug\RightLip.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/LeftLip.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\LeftLip.c -o .\CortexM3\ARM_GCC_541\Debug\LeftLip.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Clock_7.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Clock_7.c -o .\CortexM3\ARM_GCC_541\Debug\Clock_7.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Neck.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Neck.c -o .\CortexM3\ARM_GCC_541\Debug\Neck.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Neck_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Neck_PM.c -o .\CortexM3\ARM_GCC_541\Debug\Neck_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Clock_8.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Clock_8.c -o .\CortexM3\ARM_GCC_541\Debug\Clock_8.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/RightNeck.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\RightNeck.c -o .\CortexM3\ARM_GCC_541\Debug\RightNeck.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/LeftNeck.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\LeftNeck.c -o .\CortexM3\ARM_GCC_541\Debug\LeftNeck.o
+arm-none-eabi-as.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -alh=.\CortexM3\ARM_GCC_541\Debug/CyBootAsmGnu.lst -g -W -o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o Generated_Source\PSoC5\CyBootAsmGnu.s
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\Design01.a .\CortexM3\ARM_GCC_541\Debug\Clock_1.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\Left_Eyebrow.o .\CortexM3\ARM_GCC_541\Debug\Left_Eyebrow_PM.o .\CortexM3\ARM_GCC_541\Debug\Clock_2.o .\CortexM3\ARM_GCC_541\Debug\Right_Eyebrow.o .\CortexM3\ARM_GCC_541\Debug\Right_Eyebrow_PM.o .\CortexM3\ARM_GCC_541\Debug\Right_Eyebrow_Inner.o .\CortexM3\ARM_GCC_541\Debug\Right_Eyebrow_Outer.o .\CortexM3\ARM_GCC_541\Debug\Left_Eyebrow_Inner.o .\CortexM3\ARM_GCC_541\Debug\Left_Eyebrow_Outer.o .\CortexM3\ARM_GCC_541\Debug\EyeballVertical.o .\CortexM3\ARM_GCC_541\Debug\EyeballVertical_PM.o .\CortexM3\ARM_GCC_541\Debug\Clock_3.o .\CortexM3\ARM_GCC_541\Debug\RightEyeball_Vertical.o .\CortexM3\ARM_GCC_541\Debug\LeftEyeball_Vertical.o .\CortexM3\ARM_GCC_541\Debug\EyeballHorizontal.o .\CortexM3\ARM_GCC_541\Debug\EyeballHorizontal_PM.o .\CortexM3\ARM_GCC_541\Debug\RightEyeball_Horizontal.o .\CortexM3\ARM_GCC_541\Debug\LeftEyeball_Horizontal.o .\CortexM3\ARM_GCC_541\Debug\Clock_4.o .\CortexM3\ARM_GCC_541\Debug\Eyelid.o .\CortexM3\ARM_GCC_541\Debug\Eyelid_PM.o .\CortexM3\ARM_GCC_541\Debug\Clock_5.o .\CortexM3\ARM_GCC_541\Debug\EyelidVertical.o .\CortexM3\ARM_GCC_541\Debug\Eyelid_Open_Close.o .\CortexM3\ARM_GCC_541\Debug\BaseAndJaw.o .\CortexM3\ARM_GCC_541\Debug\BaseAndJaw_PM.o .\CortexM3\ARM_GCC_541\Debug\Base.o .\CortexM3\ARM_GCC_541\Debug\Jaw.o .\CortexM3\ARM_GCC_541\Debug\Clock_6.o .\CortexM3\ARM_GCC_541\Debug\Lips.o .\CortexM3\ARM_GCC_541\Debug\Lips_PM.o .\CortexM3\ARM_GCC_541\Debug\RightLip.o .\CortexM3\ARM_GCC_541\Debug\LeftLip.o .\CortexM3\ARM_GCC_541\Debug\Clock_7.o .\CortexM3\ARM_GCC_541\Debug\Neck.o .\CortexM3\ARM_GCC_541\Debug\Neck_PM.o .\CortexM3\ARM_GCC_541\Debug\Clock_8.o .\CortexM3\ARM_GCC_541\Debug\RightNeck.o .\CortexM3\ARM_GCC_541\Debug\LeftNeck.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\Design01.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o C:\Users\teju\Desktop\CSE564\Workspace03\Design01.cydsn\CortexM3\ARM_GCC_541\Debug\Design01.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\Design01.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/Design01.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C C:\Users\teju\Desktop\CSE564\Workspace03\Design01.cydsn\CortexM3\ARM_GCC_541\Debug\Design01.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
+cyelftool.exe -S C:\Users\teju\Desktop\CSE564\Workspace03\Design01.cydsn\CortexM3\ARM_GCC_541\Debug\Design01.elf
+Flash used: 5632 of 262144 bytes (2.1 %).
+SRAM used: 2545 of 65536 bytes (3.9 %). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Rebuild Succeeded: 11/26/2017 19:04:50 ---------------

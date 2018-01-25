@@ -1,0 +1,6 @@
+C:\Users\teju\Desktop\CSE564\Workspace03\Design01.cydsn\Design01.cyprj|0f41397e-1490-4f33-a189-64ae916551da
+C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|8e05caa6-5ae2-47fe-9199-28f8975d04f3
+C:\Users\teju\Documents\PSoC Creator\4.1\Downloads ( 4.1).cylib\Downloads ( 4.1).cyprj|e3599794-f3c8-4759-a0f5-2cc8e6e13806
+C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|2e4a4ce6-c73e-4af1-af03-70bb12baf721
+C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|b230ad86-28bc-4916-a7e9-ff3f822a87ec
+C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a22f5f5a-1b4a-4fdc-9ba4-da71eae00369
